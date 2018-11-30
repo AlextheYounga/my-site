@@ -23,10 +23,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
+gem 'bootstrap'
 gem 'bcrypt'
 gem 'material_icons'
 gem 'font-awesome-rails'
 gem 'stock_quote'
+gem 'meta-tags'
 
 
 # Use ActiveStorage variant
