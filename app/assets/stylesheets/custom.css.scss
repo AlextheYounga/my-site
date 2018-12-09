@@ -5,8 +5,33 @@
   display: block;
 }
 
-.header-margin-top{
+.header-margin-top {
   margin-top: 2cm;
+}
+
+.normal-font {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 400;
+
+}
+
+.fancy-font {
+  font-family: 'Alegreya SC', serif !important;
+}
+
+.txt-20{
+  font-size: 20px;
+}
+
+/*------ Navbar --------*/
+.navbar{
+  font-size: 1.25rem;
+}
+
+/*------- Home --------*/
+.main-title{
+  font-size: 72px;
 }
 
 /*------- Colors --------*/
@@ -16,7 +41,6 @@ $border-grey: #e3e3e3;
 $text: #FFFFFF;
 $primary-text: #212121;
 $secondary-text: #757575;
-
 
 /*------ Footer --------*/
 .footer {
@@ -61,6 +85,7 @@ a, a:hover {
   background-color: #000;
   border: 1px solid #000;
 }
+
 /*--end Social Media---*/
 
 /*------Prism-------*/
@@ -189,6 +214,7 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
+
 /*--end Prism --*/
 
 /*------ Libraries ------*/

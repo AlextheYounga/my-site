@@ -1,9 +1,42 @@
-
 <div align="center" class="container-fluid header-margin-top">
     <p align="center"><%= image_tag("hammock_cutout.png", :alt => "hammock_cutout") %></p>
-    <h1>Alex Younger</h1>
-    <p align="center">I'm a web developer, a marketing analyst, and I write articles that make you question your existence.</p>
-    <p align="center"><i>It is what it is, and it's pretty good.</i></p>
+    <h1 class="main-title fancy-font">Alex Younger</h1>
+    <p align="center" class="normal-font txt-20">I'm a web developer, a marketing analyst, and I write articles that make you question your existence.</p>
+    <p align="center" class="normal-font txt-20"><i>It is what it is, and it's pretty good.</i></p>
 </div>
 <hr>
+<section class="normal-font">
+<h1 align="center">The Dev Blog</h1>
+<div align="center"><%= link_to "View All", articles_path, class: "btn btn-lg btn-success" %></div>
+</section>
 
+<%= if @articles.any?
+    then
+      @articles.each do |article| %>
+
+<!--        <div class="row">
+            <div class="col-xs-8" id="article-index-div">
+                <div id="home-teaser-article" class="well well-lg">
+                    <div class="article-title">
+                        <%= link_to article.title, article_path(article) %>
+                    </div>
+
+                    <div class="article-teaser-body">
+                        <%= truncate(strip_tags(article.description), length: 280) %>
+                        <!-- strip_tags removes HTML tags from description-->
+
+                        <div class="article-meta-details">
+                            <small>Created<%= article.user.username if article.user %>
+                                <%= time_ago_in_words(article.created_at) %> ago,
+                                Last updated: <%= time_ago_in_words(article.updated_at) %> ago
+                            </small>
+                            <% if article.categories.any? %>
+                                <p> Categories: <%= render article.categories %> </p>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+<% end %>
