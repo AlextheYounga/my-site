@@ -31,7 +31,6 @@ gem 'font-awesome-rails'
 gem 'stock_quote'
 gem 'meta-tags'
 
-
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

@@ -1,42 +1,58 @@
-<div align="center" class="container-fluid header-margin-top">
+<section id="main">
+<div align="center" class="container-fluid margin-top-2cm">
     <p align="center"><%= image_tag("hammock_cutout.png", :alt => "hammock_cutout") %></p>
     <h1 class="main-title fancy-font">Alex Younger</h1>
     <p align="center" class="normal-font txt-20">I'm a web developer, a marketing analyst, and I write articles that make you question your existence.</p>
     <p align="center" class="normal-font txt-20"><i>It is what it is, and it's pretty good.</i></p>
 </div>
+</section>
 <hr>
-<section class="normal-font">
-<h1 align="center">The Dev Blog</h1>
-<div align="center"><%= link_to "View All", articles_path, class: "btn btn-lg btn-success" %></div>
+<section class="normal-font" id="articles">
+    <h1 align="center" class="fancy-font">The Dev Blog</h1>
+    <div align="center"><%= link_to "View All", articles_path, class: "btn btn-lg btn-success" %></div>
+</section>
+<hr>
+
+<%# if @articles.any? then %>
+    <%#= @articles.each do |article| %>
+
+<!--        <div class="row">-->
+<!--            <div class="col-xs-8" id="article-index-div">-->
+<!--                <div id="home-teaser-article" class="well well-lg">-->
+<!--                    <div class="article-title">-->
+                        <%#= link_to article.title, article_path(article) %>
+<!--                    </div>-->
+
+<!--                    <div class="article-teaser-body">-->
+                        <%#= truncate(strip_tags(article.description), length: 280) %>
+<!--                        <!-- strip_tags removes HTML tags from description-->
+
+<!--                        <div class="article-meta-details">-->
+<!--                            <small>Created<%#= article.user.username if article.user %>-->
+<!--                                <%#= time_ago_in_words(article.created_at) %> ago,-->
+<!--                                Last updated: <%#= time_ago_in_words(article.updated_at) %> ago-->
+<!--                            </small>-->
+                            <%# if article.categories.any? %>
+<!--                                <p> Categories: <%#= render article.categories %> </p>-->
+                            <%# end %>
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    <%# end %>
+<%# end %>
+
+<section id="about-home">
+<h1 align="center" class="fancy-font margin-top-2cm margin-bottom-1cm">About Me</h1>
+<div class="row">
+<div class="col-md-5 xs-5">
+    <%=image_tag("roundheadshot.png", alt: "Alex Younger Round Headshot", class: "center-block") %>
+</div>
+    <div class="col-md-7 xs-12 txt-20">
+        <p class="normal-font">I'm Alex. I create/design websites and applications. My greatest strength is my love of learning, and my endless curiosity that motivates me to learn everything I can. </p>
+        <p class="normal-font">I have a love for adventure, thrill and adrenaline. Programming is my day job. I ride ziplines by day.</p>
+    </div>
+</div>
 </section>
 
-<%= if @articles.any?
-    then
-      @articles.each do |article| %>
-
-<!--        <div class="row">
-            <div class="col-xs-8" id="article-index-div">
-                <div id="home-teaser-article" class="well well-lg">
-                    <div class="article-title">
-                        <%= link_to article.title, article_path(article) %>
-                    </div>
-
-                    <div class="article-teaser-body">
-                        <%= truncate(strip_tags(article.description), length: 280) %>
-                        <!-- strip_tags removes HTML tags from description-->
-
-                        <div class="article-meta-details">
-                            <small>Created<%= article.user.username if article.user %>
-                                <%= time_ago_in_words(article.created_at) %> ago,
-                                Last updated: <%= time_ago_in_words(article.updated_at) %> ago
-                            </small>
-                            <% if article.categories.any? %>
-                                <p> Categories: <%= render article.categories %> </p>
-                            <% end %>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <% end %>
-<% end %>
