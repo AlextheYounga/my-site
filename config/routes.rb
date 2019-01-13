@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :articles, except: [:signup]
 
-  get 'signup', to: 'users#signup'
+  # get 'signup', to: 'users#signup'
   resources :users, except: [:signup]
 
   get 'login', to: 'sessions#login'

@@ -1,6 +1,7 @@
 <!-- CATEGORIES INDEX -->
 
-<h1 id="page-header" align="center">Today I Learned, In:</h1>
+<h1 class="fancy-font margin-top-2cm" align="center">Dev Blog Categories</h1>
+<p align="center"><%= link_to "Create New Category", new_category_path, class: "btn btn-lg btn-primary" %></p>
 
 
 <% @categories.each do |category| %> <!-- Mind the %= -->

@@ -56,19 +56,18 @@ class ArticlesController < ApplicationController
 
   private
 
+  def restrict
+    if not logged_in?
+      redirect_to root_path
+    end
+  end
+
   def set_article
     @article = Article.find(params[:id])
 
     def article_params
-      params.require(:article).permit(:title, :description, category_ids: [])
+      params.require(:article).permit(:title, :description, category_ids: [], user_id: [2])
     end
-
-    def restrict
-      if not logged_in?
-        redirect_to root_path
-      end
-    end
-
   end
 end
 
