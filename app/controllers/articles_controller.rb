@@ -64,11 +64,12 @@ class ArticlesController < ApplicationController
 
   def set_article
     @article = Article.find(params[:id])
-
-    def article_params
-      params.require(:article).permit(:title, :description, category_ids: [], user_id: [2])
-    end
   end
+
+  def article_params
+    params.require(:article).permit(:title, :description, category_ids: [])
+  end
+
 end
 
 
