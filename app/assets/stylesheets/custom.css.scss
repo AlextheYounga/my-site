@@ -48,7 +48,7 @@ $secondary-text: #757575;
 hr {
   text-align: center;
   border-radius: 95%;
-  border-top: 3px solid $nav-grey !important;
+  border-top: 3px solid $border-grey !important;
   width: 95%;
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
@@ -87,8 +87,9 @@ hr:after {
 #main {
 
   img {
-    border-style: ridge;
+    border-style: solid;
     border-radius: 50%;
+    border-color: $primary-grey;
   }
 
   .main-title {
