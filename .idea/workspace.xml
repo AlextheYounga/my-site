@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3a6dcaf-e1d7-4e10-a989-fa9eff512f33" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/moutains.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/images/moutains.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="d3a6dcaf-e1d7-4e10-a989-fa9eff512f33" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -26,7 +21,7 @@
     <session id="170917338">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="2" />
@@ -48,7 +43,7 @@
           <entry key="rb" value="46" />
           <entry key="scss" value="7" />
           <entry key="svg" value="4" />
-          <entry key="xml" value="1" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -60,7 +55,7 @@
           <entry key="Ruby" value="50" />
           <entry key="SCSS" value="7" />
           <entry key="SVG" value="4" />
-          <entry key="XML" value="1" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -72,13 +67,13 @@
           <entry key="rb" value="306" />
           <entry key="scss" value="2118" />
           <entry key="svg" value="43" />
-          <entry key="txt" value="451" />
+          <entry key="txt" value="467" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="21" />
-          <entry key="PLAIN_TEXT" value="454" />
+          <entry key="PLAIN_TEXT" value="470" />
           <entry key="RHTML" value="1962" />
           <entry key="Ruby" value="585" />
           <entry key="SCSS" value="2118" />
@@ -97,11 +92,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
               <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2904">
+              <caret line="682" column="12" lean-forward="true" selection-start-line="682" selection-start-column="12" selection-end-line="682" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -495,7 +499,7 @@
       <workItem from="1544330260209" duration="4380000" />
       <workItem from="1547352166071" duration="11791000" />
       <workItem from="1547416547651" duration="8966000" />
-      <workItem from="1547531906207" duration="609000" />
+      <workItem from="1547531906207" duration="772000" />
     </task>
     <task id="LOCAL-00001" summary="Restructured Gemfile">
       <created>1543544034936</created>
@@ -574,11 +578,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547427264546</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Styling Homepage">
+      <created>1547532724839</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1547532724839</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37796000" />
+    <option name="totallyTimeSpent" value="37959000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -591,21 +602,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983871" visible="true" weight="0.15785499" />
       <window_info id="Structure" order="1" sideWeight="0.5016129" side_tool="true" weight="0.21501926" />
       <window_info id="Favorites" order="2" sideWeight="0.5016129" side_tool="true" weight="0.21501926" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293124" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49935815" visible="true" weight="0.26542324" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49935815" weight="0.26542324" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32855093" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49935815" weight="0.22525108" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49935815" visible="true" weight="0.22525108" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006418" side_tool="true" weight="0.22798553" />
       <window_info anchor="bottom" x="1387" y="20" width="1558" height="209" id="Terminal" order="11" sideWeight="0.49935815" weight="0.24533716" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -635,7 +645,8 @@
     <MESSAGE value="Trying to get articles to work" />
     <MESSAGE value="Fixed articles, styling homepage" />
     <MESSAGE value="New Background" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Background" />
+    <MESSAGE value="Styling Homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Styling Homepage" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -702,13 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="682" column="12" lean-forward="true" selection-start-line="682" selection-start-column="12" selection-end-line="682" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -906,6 +910,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2904">
+          <caret line="682" column="12" lean-forward="true" selection-start-line="682" selection-start-column="12" selection-end-line="682" selection-end-column="12" />
         </state>
       </provider>
     </entry>
