@@ -14,6 +14,12 @@ class PagesController < ApplicationController
   end
 
   def readinglist
+    @books = Book.all
+    # @category = Book.category
+    # @image_address = Book.image_address
+    # @image_alt = Book.image_alt
+    # @book_id = Book.book_id
+    # @link = Book.book_link
   end
 
   def projects
