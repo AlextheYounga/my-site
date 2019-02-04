@@ -170,15 +170,69 @@ hr:after {
   }
 }
 
-button:hover {
-  color: #FFF;
-  background-color: $primary-blue;
+//button:hover {
+//  color: #FFF;
+//  background-color: $primary-blue;
+//
+//}
+
+
+
+
+
+#category-filter {
+  width: 300px;
+  background: #d9d9d9;
+  margin: 40px auto;
+
+  li a {text-decoration : none; color : #2d2f31;}
+
+  span {
+    padding: 30px;
+    background: #2d2f31;
+    color: white;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    cursor: pointer;
+    display: block;
+  }
+
+  span::after {
+    float: right;
+    right: 10%;
+    content: "+";
+  }
+
+  .slide {
+    clear: both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+  }
+
+  .slide li {
+    padding: 30px;
+  }
+
+  #touch {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+  }
+
+  #touch:checked + .slide {
+    height: 300px;
+  }
 
 }
 
+
+
 #list-container {
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   margin: 0 auto;
 
 }
@@ -186,10 +240,18 @@ button:hover {
 .covers{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+
+  .row {
+    justify-content: center;
+  }
 
   div {
-    margin: 2%;
+    margin: 15px;
+
+    @media (max-width: $small-screen) {
+      margin: 3px 3px 10px 3px;
+    }
+
   }
 
   img {
