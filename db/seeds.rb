@@ -9,7 +9,6 @@ Book.destroy_all
 
 Book.create([
                 {
-                    book_id: 1,
                     title: "How to Win Friends and Influence People",
                     subtitle: "The Only Book You Ned to Lead You to Success",
                     author: "Dale Carnegie",
@@ -19,7 +18,6 @@ Book.create([
                     book_link: "http://www.alextheyounger.me/articles/24",
                 },
                 {
-                    book_id: 2,
                     title: "The Daily Stoic",
                     subtitle: "366 Meditations on Wisdom, Perseverance, and the Art of Living",
                     author: "Ryan Holiday",
@@ -29,7 +27,6 @@ Book.create([
                     book_link: "http://www.alextheyounger.me/articles/25",
                 },
                 {
-                    book_id: 3,
                     title: "Foundations of Morality",
                     author: "Henry Hazlitt",
                     image_address: "foundations_morality.jpg",
@@ -38,7 +35,6 @@ Book.create([
                     book_link: "https://mises.org/library/foundations-morality"
                 },
                 {
-                    book_id: 4,
                     title: "The Antidote",
                     subtitle: "Happiness For People Who Can't Stand Positive Thinking",
                     author: "Oliver Burkeman",
@@ -48,7 +44,6 @@ Book.create([
                     book_link: "https://www.amazon.com/Antidote-Happiness-People-Positive-Thinking/dp/0865478015/ref=sr_1_1?s=books&ie=UTF8&qid=1515919681&sr=1-1&keywords=the+antidote+happiness+for+people+who+can%27t+stand+positive+thinking"
                 },
                 {
-                    book_id: 5,
                     title: "Square One",
                     subtitle: "The Foundations of Knowledge",
                     author: "Steve Patterson",
@@ -58,7 +53,6 @@ Book.create([
                     book_link: "https://www.amazon.com/Square-One-Foundations-Steve-Patterson-ebook/dp/B01M9JL27L/ref=sr_1_1?ie=UTF8&qid=1515980663&sr=8-1&keywords=square+one+steve+patterson",
                 },
                 {
-                    book_id: 6,
                     title: "Making Economic Sense",
                     author: "Murray Rothbard",
                     image_address: "making_economic_sense.jpg",
@@ -67,7 +61,6 @@ Book.create([
                     book_link: "https://mises.org/library/making-economic-sense",
                 },
                 {
-                    book_id: 7,
                     title: "Good Profit",
                     subtitle: "How Creating Value for Others Built One of the World's Most Successful Companies",
                     author: "Charles Koch",
@@ -77,7 +70,6 @@ Book.create([
                     book_link: "https://www.amazon.com/Good-Profit-Creating-Successful-Companies/dp/1101904135/ref=sr_1_1?s=books&ie=UTF8&qid=1515919796&sr=1-1&keywords=good+profit+charles+koch",
                 },
                 {
-                    book_id: 8,
                     title: "A Guide to the Good Life",
                     subtitle: "The Ancient Art of Stoic Joy",
                     author: "William B. Irvine",
@@ -87,7 +79,6 @@ Book.create([
                     book_link: "https://www.amazon.com/Guide-Good-Life-Ancient-Stoic/dp/0195374614/ref=sr_1_1?s=books&ie=UTF8&qid=1515918746&sr=1-1&keywords=a+guide+to+the+good+life",
                 },
                 {
-                    book_id: 9,
                     title: "The Solution to Social Anxiety",
                     subtitle: "Break Free from the Shyness That Holds You Back",
                     author: "Dr. Aziz Gazipura",
@@ -97,7 +88,6 @@ Book.create([
                     book_link: "https://www.amazon.com/Solution-Social-Anxiety-Break-Shyness-ebook/dp/B00F5IU5CU/ref=sr_1_2_sspa?s=books&ie=UTF8&qid=1515919521&sr=1-2-spons&keywords=solution+to+social+anxiety&psc=1",
                 },
                 {
-                    book_id: 10,
                     title: "Notes on Democracy",
                     author: "H.L. Mencken",
                     image_address: "notes_on_democracy.jpg",
@@ -106,7 +96,6 @@ Book.create([
                     book_link: "https://www.amazon.com/Notes-Democracy-Large-Print-Mencken/dp/1494288648/ref=sr_1_1?s=books&ie=UTF8&qid=1515919184&sr=1-1&keywords=notes+on+democracy",
                 },
                 {
-                    book_id: 11,
                     title: "Waking Up",
                     subtitle: "A Guide to Spirituality Without Religion",
                     author: "Sam Harris",
@@ -116,7 +105,6 @@ Book.create([
                     book_link: "https://www.amazon.com/Waking-Up-Spirituality-Without-Religion/dp/1451636024/ref=sr_1_1?s=books&ie=UTF8&qid=1515920029&sr=1-1&keywords=waking+up+sam+harris",
                 },
                 {
-                    book_id: 12,
                     title: "Out of Your Mind",
                     subtitle: "Essential Listening from the Alan Watts Archives",
                     author: "Alan Watts",
@@ -126,7 +114,6 @@ Book.create([
                     book_link: "https://www.amazon.com/Out-of-Your-Mind/dp/B0162WIRKY/ref=sr_1_2?ie=UTF8&qid=1517010662&sr=8-2&keywords=out+of+your+mind+by+alan+watts",
                 },
                 {
-                    book_id: 13,
                     title: "You're It",
                     subtitle: "On Hiding, Seeking, and Being Found",
                     category: "phil",
@@ -136,7 +123,6 @@ Book.create([
                     author: "Alan Watts",
                 },
                 {
-                    book_id: 14,
                     title: "Street Smarts",
                     subtitle: "",
                     category: "finance",
@@ -146,7 +132,6 @@ Book.create([
                     author: "Jim Rogers",
                 },
                 {
-                    book_id: 15,
                     title: "The Charisma Myth",
                     subtitle: "How Anyone Can Master the Art and Science of Personal Magnetism",
                     category: "peopleskill",
@@ -156,7 +141,6 @@ Book.create([
                     author: "Olivia Fox Cabane",
                 },
                 {
-                    book_id: 16,
                     title: "Extraordinary Popular Delusions and the Madness of Crowds",
                     category: "finance",
                     image_address: "madness_of_crowds.jpg",
@@ -165,7 +149,6 @@ Book.create([
                     author: "Charles Mackay",
                 },
                 {
-                    book_id: 17,
                     title: "A Troublesome Inheritance",
                     subtitle: "Genes, Race, and Human History",
                     category: "sci",
@@ -175,7 +158,6 @@ Book.create([
                     author: "Nicholas Wade",
                 },
                 {
-                    book_id: 18,
                     title: "Why We Sleep",
                     subtitle: "Unlocking the Power of Sleep and Dreams",
                     category: "sci",
@@ -185,7 +167,6 @@ Book.create([
                     author: "Matthew Walker, PhD",
                 },
                 {
-                    book_id: 19,
                     title: "Fool's Errand",
                     subtitle: "Time to End the War in Afghanistan",
                     category: "pol",
@@ -195,7 +176,6 @@ Book.create([
                     author: "Scott Horton",
                 },
                 {
-                    book_id: 20,
                     title: "The Failure of the New Economics",
                     subtitle: "An Analysis of the Keynesian Fallacies",
                     category: "econ",
@@ -205,7 +185,6 @@ Book.create([
                     author: "Henry Hazlitt",
                 },
                 {
-                    book_id: 21,
                     title: "The Righteous Mind",
                     subtitle: "Why Good People are Divided by Politics and Religion",
                     category: "pol",
@@ -215,7 +194,6 @@ Book.create([
                     author: "Jonathan Haidt",
                 },
                 {
-                    book_id: 22,
                     title: "Do What You Are",
                     subtitle: "Discover the Perfect Career for You Through the Secrets of Personality Type",
                     category: "better-liv",
@@ -225,7 +203,6 @@ Book.create([
                     author: "Paul D. Tieger, Barbara Barron, and Kelly Tieger",
                 },
                 {
-                    book_id: 23,
                     title: "Mindfulness in Plain English",
                     category: "better-liv",
                     image_address: "mindfulness_plain_english.jpg",
@@ -234,7 +211,6 @@ Book.create([
                     author: "Bhante Gunaratana",
                 },
                 {
-                    book_id: 24,
                     title: "Deep Work",
                     subtitle: "Rules for Focused Success in a Distracted World",
                     category: "better-liv",
@@ -244,7 +220,6 @@ Book.create([
                     author: "Cal Newport",
                 },
                 {
-                    book_id: 25,
                     title: "Deep Thoughts",
                     subtitle: "Inspiration for the Uninspired",
                     category: "misc",
@@ -254,7 +229,6 @@ Book.create([
                     author: "Jack Handey",
                 },
                 {
-                    book_id: 26,
                     title: "Total Recall",
                     subtitle: "My Unbelievably True Life Story",
                     category: "misc",
@@ -264,7 +238,6 @@ Book.create([
                     author: "Arnold Schwarzenegger",
                 },
                 {
-                    book_id: 27,
                     title: "Hawk",
                     subtitle: "Occupation: Skateboarder",
                     category: "misc",
@@ -274,7 +247,6 @@ Book.create([
                     author: "Tony Hawk",
                 },
                 {
-                    book_id: 28,
                     title: "Hot Commodities",
                     subtitle: "How Anyone Can Invest Profitably in the World's Best Market",
                     category: "finance",
@@ -284,7 +256,6 @@ Book.create([
                     author: "Jim Rogers",
                 },
                 {
-                    book_id: 29,
                     title: "The Road to Ruin",
                     subtitle: "The Global Elites' Secret Plan for the Next Financial Crisis",
                     category: "pol",
@@ -294,7 +265,6 @@ Book.create([
                     author: "Jim Rickards",
                 },
                 {
-                    book_id: 30,
                     title: "Enlightenment Now",
                     subtitle: "The Case for Reason, Science, Humanism, and Progress",
                     category: "sci",
@@ -304,7 +274,6 @@ Book.create([
                     author: "Steven Pinker",
                 },
                 {
-                    book_id: 31,
                     title: "The Willpower Instinct",
                     subtitle: "How Self Control Works, Why it Matters, and What You Can Do to Get More of It",
                     category: "better-liv",
@@ -314,7 +283,6 @@ Book.create([
                     author: "Kelly McGonigal, Phd",
                 },
                 {
-                    book_id: 32,
                     title: "Economics in One Lesson",
                     subtitle: "The Shortest and Surest Way to Understand Basic Economics",
                     category: "econ",
@@ -324,7 +292,6 @@ Book.create([
                     author: "Henry Hazlitt",
                 },
                 {
-                    book_id: 33,
                     title: "The Richest Man in Babylon",
                     category: "finance",
                     image_address: "richest_man_babylon.jpg",
@@ -333,7 +300,6 @@ Book.create([
                     author: "George Clason",
                 },
                 {
-                    book_id: 34,
                     title: "Free Will",
                     category: "phil",
                     image_address: "free_will.jpg",
@@ -342,7 +308,6 @@ Book.create([
                     author: "Sam Harris",
                 },
                 {
-                    book_id: 35,
                     title: "Influence",
                     subtitle: "The Psychology of Persuasion",
                     category: "peopleskill",
@@ -352,7 +317,6 @@ Book.create([
                     author: "Robert Cialdini",
                 },
                 {
-                    book_id: 36,
                     title: "Socialism",
                     subtitle: "An Economic and Sociological Analysis",
                     category: "econ",
@@ -362,7 +326,6 @@ Book.create([
                     author: "Ludwig Von Mises",
                 },
                 {
-                    book_id: 37,
                     title: "The Power of Body Language",
                     subtitle: "An Ex-FBI Agent's System for Speed Reading People",
                     category: "peopleskill",
@@ -372,7 +335,6 @@ Book.create([
                     author: "Joe Navarro",
                 },
                 {
-                    book_id: 38,
                     title: "What Has Government Done to Our Money",
                     subtitle: "and The Case for a 100 Percent Gold Dollar",
                     category: "econ",
@@ -382,7 +344,6 @@ Book.create([
                     author: "Murray Rothbard",
                 },
                 {
-                    book_id: 39,
                     title: "Show Your Work",
                     subtitle: "10 Ways to Share Your Creativity and Get Discovered",
                     category: "biz",
@@ -392,7 +353,6 @@ Book.create([
                     author: "Austin Kleon",
                 },
                 {
-                    book_id: 40,
                     title: "The Book on Rental Property Investing",
                     subtitle: "How to create wealth and passive income through smart buy & hold real estate investing",
                     category: "finance",
@@ -402,7 +362,6 @@ Book.create([
                     author: "Brandon Turner",
                 },
                 {
-                    book_id: 41,
                     title: "Steal the Show",
                     subtitle: "How to Guarantee a Standing Ovation for All the Performances in Your Life",
                     category: "peopleskill",
@@ -412,7 +371,6 @@ Book.create([
                     author: "Michael Port",
                 },
                 {
-                    book_id: 42,
                     title: "Crucial Conversations",
                     subtitle: "Tools for Talking When the Stakes are High",
                     category: "peopleskill",
@@ -422,7 +380,6 @@ Book.create([
                     author: "Kelly Patterson",
                 },
                 {
-                    book_id: 43,
                     title: "What You Should Know About Inflation",
                     category: "econ",
                     image_address: "inflation.jpg",
@@ -431,7 +388,6 @@ Book.create([
                     author: "Henry Hazlitt",
                 },
                 {
-                    book_id: 44,
                     title: "Behave",
                     subtitle: "The Biology of Humans at Our Best and at Our Worst",
                     category: "sci",
@@ -441,7 +397,6 @@ Book.create([
                     author: "Robert M. Sapolsky",
                 },
                 {
-                    book_id: 45,
                     title: "America's Great Depression",
                     category: "econ",
                     image_address: "great_depression.jpg",
@@ -450,7 +405,6 @@ Book.create([
                     author: "Murray Rothbard",
                 },
                 {
-                    book_id: 46,
                     title: "A Short History of Man",
                     subtitle: "Progress and Decline",
                     category: "misc",
@@ -460,7 +414,6 @@ Book.create([
                     author: "Hans-Hermann Hoppe",
                 },
                 {
-                    book_id: 47,
                     title: "The CEO Tightrope",
                     subtitle: "How to Master the Balancing Act of a CEO",
                     category: "biz",
@@ -470,7 +423,6 @@ Book.create([
                     author: "Joel Trammell",
                 },
                 {
-                    book_id: 48,
                     title: "The Little Book of Bull Moves",
                     subtitle: "How to Keep Your Portfolio Up When the Market is Up, Down, or Sideways",
                     category: "finance",
@@ -480,7 +432,6 @@ Book.create([
                     author: "Peter Schiff",
                 },
                 {
-                    book_id: 49,
                     title: "The 4-Hour Workweek",
                     subtitle: "Escape 9-5, Live Anywhere, and Join the New Rich",
                     category: "biz",
@@ -490,7 +441,6 @@ Book.create([
                     author: "Tim Ferriss",
                 },
                 {
-                    book_id: 50,
                     title: "The 48 Laws of Power",
                     category: "misc",
                     image_address: "48_laws.jpg",
@@ -500,7 +450,6 @@ Book.create([
                 },
 
                 {
-                    book_id: 51,
                     title: "The Intelligent Investor",
                     subtitle: "The Definitive Book on Value Investing",
                     category: "finance",
@@ -510,7 +459,6 @@ Book.create([
                     author: "Benjamin Graham",
                 },
                 {
-                    book_id: 52,
                     title: "The Lean Startup",
                     subtitle: "How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses",
                     category: "biz",
@@ -520,7 +468,6 @@ Book.create([
                     author: "Eric Ries",
                 },
                 {
-                    book_id: 53,
                     title: "The Politically Incorrect Guide to American History",
                     category: "pol",
                     image_address: "politically_incorrect.jpg",
@@ -529,7 +476,6 @@ Book.create([
                     author: "Thomas E. Woods",
                 },
                 {
-                    book_id: 54,
                     title: "To Sell is Human",
                     subtitle: "The Surprising Truth About Moving Others",
                     category: "biz",
@@ -539,7 +485,6 @@ Book.create([
                     author: "Daniel H. Pink",
                 },
                 {
-                    book_id: 55,
                     title: "Born for This",
                     category: "biz",
                     image_address: "born_for_this.jpg",
@@ -548,7 +493,6 @@ Book.create([
                     author: "Chris Guillebeau",
                 },
                 {
-                    book_id: 56,
                     title: "The $100 Startup",
                     subtitle: "Reinvent the Way You Make a Living, Do What You Love, and Create a New Future",
                     category: "biz",
@@ -558,7 +502,6 @@ Book.create([
                     author: "Chris Guillebeau",
                 },
                 {
-                    book_id: 57,
                     title: "The Law",
                     category: "econ",
                     image_address: "the_law.jpg",
@@ -567,7 +510,6 @@ Book.create([
                     author: "Frederic Bastiat",
                 },
                 {
-                    book_id: 58,
                     title: "Why Zebras Don't Get Ulcers",
                     subtitle: "The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping",
                     category: "sci",
@@ -577,7 +519,6 @@ Book.create([
                     author: "Robert M. Sapolsky",
                 },
                 {
-                    book_id: 59,
                     title: "The Three Languages of Politics",
                     subtitle: "Talking Across the Political Divides",
                     category: "pol",
@@ -587,7 +528,6 @@ Book.create([
                     author: "Arnold Kling",
                 },
                 {
-                    book_id: 60,
                     title: "Never Eat Alone",
                     subtitle: "And Other Secrets to Success, One Relationship at a Time",
                     category: "peopleskill",
@@ -597,7 +537,6 @@ Book.create([
                     author: "Keith Ferrazzi",
                 },
                 {
-                    book_id: 61,
                     title: "Darkness Visible",
                     subtitle: "A Memoir of Madness",
                     category: "misc",
@@ -607,7 +546,6 @@ Book.create([
                     author: "William Styron",
                 },
                 {
-                    book_id: 62,
                     title: "Ignore Everybody",
                     subtitle: "And 39 Other Keys to Creativity",
                     category: "misc",
@@ -617,7 +555,6 @@ Book.create([
                     author: "Hugh MacLeod",
                 },
                 {
-                    book_id: 63,
                     title: "Economic Controversies",
                     category: "econ",
                     image_address: "economic_controversies",
@@ -626,7 +563,6 @@ Book.create([
                     author: "Murray Rothbard",
                 },
                 {
-                    book_id: 64,
                     title: "The Ruby on Rails Tutorial",
                     subtitle: "Learn Web Development with Rails",
                     category: "misc",
@@ -636,7 +572,6 @@ Book.create([
                     author: "Michael Hartl",
                 },
                 {
-                    book_id: 65,
                     title: "Spacetime Physics",
                     subtitle: "Introduction to Special Relativity; Second Edition",
                     category: "sci",
