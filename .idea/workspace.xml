@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3a6dcaf-e1d7-4e10-a989-fa9eff512f33" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/readinglist.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/readinglist.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-    </list>
+    <list default="true" id="d3a6dcaf-e1d7-4e10-a989-fa9eff512f33" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -69,12 +64,12 @@
           <entry key="erb" value="939" />
           <entry key="rb" value="8057" />
           <entry key="scss" value="754" />
-          <entry key="txt" value="32" />
+          <entry key="txt" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="32" />
+          <entry key="PLAIN_TEXT" value="68" />
           <entry key="RHTML" value="939" />
           <entry key="Ruby" value="8093" />
           <entry key="SCSS" value="754" />
@@ -82,7 +77,7 @@
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -505,7 +500,7 @@
       <workItem from="1547416547651" duration="8966000" />
       <workItem from="1547531906207" duration="772000" />
       <workItem from="1547950654269" duration="14819000" />
-      <workItem from="1549238580743" duration="10325000" />
+      <workItem from="1549238580743" duration="10355000" />
     </task>
     <task id="LOCAL-00001" summary="Set Up Reading List Seeder">
       <created>1547966080402</created>
@@ -514,12 +509,12 @@
       <option name="project" value="LOCAL" />
       <updated>1547966080402</updated>
     </task>
-    <task id="LOCAL-00002" summary="Created custom css file, updated gem file">
-      <created>1543544976848</created>
+    <task id="LOCAL-00002" summary="Added all books, started on toggles">
+      <created>1549250871136</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1543544976848</updated>
+      <updated>1549250871136</updated>
     </task>
     <task id="LOCAL-00003" summary="Updated app.js">
       <created>1543545104254</created>
@@ -598,11 +593,11 @@
       <option name="project" value="LOCAL" />
       <updated>1547950780238</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24959000" />
+    <option name="totallyTimeSpent" value="24989000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -619,9 +614,9 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32855093" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32998565" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49935815" weight="0.2822086" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49935815" visible="true" weight="0.28120518" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006418" side_tool="true" weight="0.22798553" />
-      <window_info active="true" anchor="bottom" x="1387" y="20" width="1558" height="209" id="Terminal" order="11" sideWeight="0.49935815" visible="true" weight="0.15781923" />
+      <window_info anchor="bottom" x="1387" y="20" width="1558" height="209" id="Terminal" order="11" sideWeight="0.49935815" weight="0.15781923" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -652,7 +647,8 @@
     <MESSAGE value="Styling Homepage" />
     <MESSAGE value="Adding workspace.xml to gitignore" />
     <MESSAGE value="Set Up Reading List Seeder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set Up Reading List Seeder" />
+    <MESSAGE value="Added all books, started on toggles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added all books, started on toggles" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">

@@ -1,9 +1,10 @@
-<section id="main">
+<section id="main-home">
     <div class="jumbotron">
         <div align="center" class="container-fluid margin-top-2cm">
             <p align="center"><%= image_tag("main/hammock_cutout.gif", :alt => "hammock_cutout") %></p>
             <h1 class="main-title fancy-font">Alex Younger</h1>
-            <p align="center" class="normal-font txt-20">I'm a web developer, a marketing analyst, and I write articles that make you question your
+            <p align="center" class="normal-font txt-20">I'm a web developer, a marketing analyst, and I write articles
+                that make you question your
                 existence.</p>
             <p align="center" class="normal-font txt-20"><i>It is what it is, and it's pretty good.</i></p>
         </div>
@@ -11,53 +12,55 @@
 </section>
 <hr>
 <section id="articles-home">
-    <h1 align="center" class="fancy-font">The Dev Blog</h1>
-    <div align="center" class="margin-bottom-1cm"><%= link_to "View All", articles_path, class: "btn btn-lg btn-success" %></div>
-
-    <div class="container">
+    <h1 align="center" class="fancy-font margin-top-2cm">The Dev Blog</h1>
+    <div align="center" class="margin-bottom-1cm">
+        <%= link_to "View All", articles_path, class: "btn btn-lg btn-success" %></div>
+        <div class="container">
         <% if @articles.any?
            then %>
-            <% @articles.each do |article| %>
-                <div class="row">
-                    <div class="col-md-12 xs-12 container paper">
-                        <div class="well well-lg">
-                            <div>
-                                <%= link_to article.title, article_path(article) %>
-                            </div>
-
-                            <div>
-                                <%= truncate(strip_tags(article.description), length: 280) %>
-
-                                <div>
-                                    <small>Created by <%= article.user.username if article.user %>
-                                        <%= time_ago_in_words(article.created_at) %> ago,
-                                        Last updated: <%= time_ago_in_words(article.updated_at) %> ago
-                                    </small>
-                                    <% if article.categories.any? %>
-                                        <p> Categories: <%= render article.categories %> </p>
-                                    <% end %>
-                                </div>
-                            </div>
+        <% @articles.each do |article| %>
+        
+        <div class="row">
+            <div class="col-md-12 xs-12 container paper">
+                <div class="well well-lg">
+                    <div>
+                        <%= link_to article.title, article_path(article) %>
+                    </div>
+                    <div>
+                        <%= truncate(strip_tags(article.description), length: 280) %>
+                        <div>
+                            <small>Created by <%= article.user.username if article.user %>
+                                <%= time_ago_in_words(article.created_at) %> ago,
+                                Last updated: <%= time_ago_in_words(article.updated_at) %> ago
+                            </small>
+                            <% if article.categories.any? %>
+                            <p> Categories: <%= render article.categories %> </p>
+                            <% end %>
                         </div>
                     </div>
                 </div>
-            <% end %>
+            </div>
+        </div>
+        <% end %>
         <% end %>
     </div>
 </section>
 <hr>
 
 <section id="about-home">
-    <h1 align="center" class="fancy-font margin-top-2cm margin-bottom-1cm">About Me</h1>
-    <div class="row">
-        <div class="col-md-5 xs-5">
-            <%= image_tag("main/roundheadshot.png", alt: "Alex Younger Round Headshot", class: "center-block") %>
-        </div>
-        <div class="col-md-7 xs-12 txt-20">
-            <p class="normal-font">I'm Alex. I create/design websites and applications. My greatest strength is my love of learning, and my endless curiosity
-                that motivates me to learn everything I can. </p>
-            <p class="normal-font">I have a love for adventure, thrill and adrenaline. Programming is my day job. I ride ziplines by day.</p>
+    <div class="container">
+        <h1 align="center" class="fancy-font margin-top-2cm margin-bottom-1cm">About Me</h1>
+        <div class="row">
+            <div class="col-md-5 xs-5">
+                <%= image_tag("main/roundheadshot.png", alt: "Alex Younger Round Headshot", class: "center-block") %>
+            </div>
+            <div class="col-md-7 xs-12 txt-20">
+                <p class="normal-font">I'm Alex. I create/design websites and applications. My greatest strength is my
+                    love of learning, and my endless curiosity
+                    that motivates me to learn everything I can. </p>
+                <p class="normal-font">I have a love for adventure, thrill and adrenaline. Programming is my day job. I
+                    ride ziplines by day.</p>
+            </div>
         </div>
     </div>
 </section>
-

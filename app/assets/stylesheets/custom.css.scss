@@ -20,6 +20,16 @@ $primary-text: #212121;
 $secondary-text: #757575;
 
 /*------ Shared  ------*/
+section {
+  margin-bottom: 6rem;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px 0 15px;
+}
+
 .center-block {
   margin-right: auto;
   margin-left: auto;
@@ -84,7 +94,7 @@ hr:after {
 
 /*------- Home --------*/
 
-#main {
+#main-home {
 
   img {
     border-style: solid;
@@ -108,6 +118,8 @@ hr:after {
   }
 }
 
+
+
 #about-home {
   div {
     img {
@@ -117,11 +129,9 @@ hr:after {
     }
     div {
       p {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 0 15px 0 15px;
         @media (min-width: $medium-screen-up) {
-          padding-left: 45px;
-          padding-right: 150px;
+          padding: 0 150px 0 45px;
         }
       }
       text-align: center;
@@ -133,7 +143,7 @@ hr:after {
 /*------ Cards -------*/
 .container.paper {
   padding: 19px;
-  margin-bottom: 15px;
+  margin: 0 15px 15px 15px;
   background-color: $nav-grey;
   border: 1px solid $border-grey;
   border-radius: 4px;
@@ -169,15 +179,6 @@ hr:after {
     }
   }
 }
-
-//button:hover {
-//  color: #FFF;
-//  background-color: $primary-blue;
-//
-//}
-
-
-
 
 
 #category-filter {
