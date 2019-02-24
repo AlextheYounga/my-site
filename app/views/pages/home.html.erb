@@ -11,32 +11,30 @@
     </div>
 </section>
 <hr>
+
 <section id="articles-home">
     <h1 align="center" class="fancy-font margin-top-2cm">The Dev Blog</h1>
     <div align="center" class="margin-bottom-1cm">
         <%= link_to "View All", articles_path, class: "btn btn-lg btn-success" %></div>
-        <div class="container">
+    <div class="container">
         <% if @articles.any?
            then %>
         <% @articles.each do |article| %>
-        
         <div class="row">
-            <div class="col-md-12 xs-12 container paper">
-                <div class="well well-lg">
-                    <div>
-                        <%= link_to article.title, article_path(article) %>
-                    </div>
-                    <div>
-                        <%= truncate(strip_tags(article.description), length: 280) %>
-                        <div>
-                            <small>Created by <%= article.user.username if article.user %>
-                                <%= time_ago_in_words(article.created_at) %> ago,
-                                Last updated: <%= time_ago_in_words(article.updated_at) %> ago
-                            </small>
-                            <% if article.categories.any? %>
-                            <p> Categories: <%= render article.categories %> </p>
-                            <% end %>
-                        </div>
+            <div class="col-md-10 xs-12 container paper">
+                <div class="title fancy-font">
+                    <%= link_to article.title, article_path(article) %>
+                </div>
+                <div>
+                    <%= truncate(strip_tags(article.description), length: 600) %>
+                    <div class="created-at">
+                        <small>Created by <%= article.user.username if article.user %>
+                            <%= time_ago_in_words(article.created_at) %> ago,
+                            Last updated: <%= time_ago_in_words(article.updated_at) %> ago
+                        </small>
+                        <% if article.categories.any? %>
+                        <p> Categories: <%= render article.categories %> </p>
+                        <% end %>
                     </div>
                 </div>
             </div>

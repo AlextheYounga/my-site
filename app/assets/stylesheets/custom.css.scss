@@ -30,6 +30,10 @@ section {
   padding: 0 15px 0 15px;
 }
 
+.center {
+  margin: 0 auto;
+}
+
 .center-block {
   margin-right: auto;
   margin-left: auto;
@@ -48,7 +52,11 @@ section {
   margin-bottom: 1cm;
 }
 
-.normal-font {
+.fancy-font, .title, .created-at {
+  font-family: 'Alegreya SC', serif !important;
+}
+
+.normal-font, .description {
   font-family: 'Alegreya Sans';
   font-style: normal;
   font-weight: 400;
@@ -73,10 +81,6 @@ hr:after {
   padding: 0 0.25em;
   background: white;
   z-index: -1;
-}
-
-.fancy-font {
-  font-family: 'Alegreya SC', serif !important;
 }
 
 .txt-20 {
@@ -142,8 +146,8 @@ hr:after {
 
 /*------ Cards -------*/
 .container.paper {
-  padding: 19px;
-  margin: 0 15px 15px 15px;
+  padding: 25px;
+  margin: 0 auto 30px auto;
   background-color: $nav-grey;
   border: 1px solid $border-grey;
   border-radius: 4px;
@@ -151,6 +155,19 @@ hr:after {
   0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.title {
+  font-size: 36px;
+  color: $primary-blue;
+
+  a {
+    color: $primary-blue;
+  }
+}
+
+.created-at {
+  padding-top: 8px;
+  color: $primary-blue;
+}
 
 /*------- Reading List ------*/
 

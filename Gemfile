@@ -30,6 +30,7 @@ gem 'material_icons'
 gem 'font-awesome-rails'
 gem 'stock_quote'
 gem 'meta-tags'
+gem 'hirb'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
