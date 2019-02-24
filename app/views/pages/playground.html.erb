@@ -1,116 +1,95 @@
-<h1 align="center" id="page-header">Playground</h1>
-<p align="center" id="need-font" style="font-size: 18px;">
-  A space for random, fun, interactive projects
-</p>
-
-<!-- halfway open book
-<div id="project-box" 
-      style="margin-bottom: 2cm; height: 270px">
-  <div id="book" class="book">
-    <div class="book-cover">
-      <img <#%= image_tag("win_friends_influence.jpg", :alt => "Win Friends Influence People Open Book CSS", id: "book-img") %>
-    </div>
-  <div class="page"></div>
-    <div class="page">
-      <p>Be more concerned with your character than with your reputation, for your character is what you are, while your reputation 
-        is merely what others think you are. It isn't what you have or who you are or where you are or what you are doing that makes 
-        you happy or unhappy. It is what you think about it.</p>
-    </div>
-  </div>
-</div>
-
-<!-- end halfway open book -->
-
- <!--goal update tool -->
-<div id="project-box" style="margin-bottom: 2cm;">
-  <h3 id="need-font" align="center">Task Update Tool Proof of Concept</h3>
- <div id="goal-update">
-   <form id="smileys">
-    <div>How confident are you about completing this task on time?</div>
-      <input type="radio" name="smiley" value="hopeless" class="hopeless">
-    	<input type="radio" name="smiley" value="worrisome" class="worrisome">
-    	<input type="radio" name="smiley" value="neutral" class="neutral">
-    	<input type="radio" name="smiley" value="confident" class="confident" checked="checked">
-    	<input type="radio" name="smiley" value="certain" class="certain">
-    </form>
-  </div>
-  <div id="goal-update">
-    <form id="smileys">
-    <div>How do you feel about your current progress?</div>
-      <input type="radio" name="smiley" value="hopeless" class="hopeless">
-    	<input type="radio" name="smiley" value="worrisome" class="worrisome">
-    	<input type="radio" name="smiley" value="neutral" class="neutral">
-    	<input type="radio" name="smiley" value="confident" class="confident" checked="checked">
-    	<input type="radio" name="smiley" value="certain" class="certain">
-    </form>
-  </div>
-    
-    <div id="question3">
-      <p>Do you think this task needs reconsideration or updating?</p>
-        <div style="padding-bottom: 1cm;">
-          <button class="astext">Yes</button>
-          <button class="astext" class="button active">No</button>
-        </div>
-    </div>
-</div>
-
-  <!-- end goal update -->
-  <!-- stock lookup -->
-<div id="project-box">
-  <h3 align="center" id="need-font" style="margin-top: 1.5cm; font-size: 28px;">Search for Stocks</h3>
-    <div>
-      <%= form_tag search_stocks_path, remote: true, method: :get do %>
-        <div id="stock-lookup" class="form-group row no-padding text-center col-md-10">
-          <div class="col-md-8">
-            <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: false,
+<h1 align="center">Playground</h1>
+<p align="center">A space for random, fun, interactive projects</p>
+<!-- stock lookup -->
+<div>
+  <h3 align="center">Search for Stocks</h3>
+  <div>
+    <%= form_tag search_stocks_path, remote: true, method: :get do %>
+    <div id="stock-lookup" class="form-group row no-padding text-center col-md-10">
+      <div class="col-md-8">
+        <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: false,
                                         class: "form-control search-box input lg" %>
-          </div>
-          <div class="col-md-2">
-            <%= button_tag(type: :submit, class: "btn btn-sm btn-success") do %>
-              <i class="fa fa-search"></i> Search Stock Prices
-            <% end %>
-          </div>
-          <% end %>
-        </div>
-      <div id="results">
-        <%= render 'layouts/result' %>
       </div>
+      <div class="col-md-2">
+        <%= button_tag(type: :submit, class: "btn btn-sm btn-success") do %>
+        <i class="fa fa-search"></i> Search Stock Prices
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+    <div id="results">
+      <%= render 'layouts/result' %>
+    </div>
   </div>
-
   <!-- end stock-lookup -->
-  
+
   <!-- watchlist -->
   <h3 align="center" id="need-font" style="margin-top: 2cm; font-size: 28px;">My Stock WatchList</h3>
   <%= render 'user_stocks/watchlist'%>
   <!-- end watchlist -->
 </div>
 
-  <!--map-->
-  <div>
-    <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1xjnP9IvzZ5YARi0kVmI3FsPeLi7Yb0y9" 
-    width="700" height="480"></iframe>
+<!--map-->
+<div>
+  <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1xjnP9IvzZ5YARi0kVmI3FsPeLi7Yb0y9" width="700"
+    height="480"></iframe>
+</div>
+<!-- end map -->
+
+<!--quote generator-->
+<div id="quote-generator">
+  <h2>My Favorite Quotes</h2>
+  <div id="quoteContainer">
+    <p></p>
+    <p id="quoteGenius"></p>
   </div>
-  <!-- end map -->
-  
-  <!--quote generator-->
-  <div id="quote-generator">
-    <h2>My Favorite Quotes</h2>
-      <div id="quoteContainer">
-      <p></p>
-    <p id="quoteGenius"></p>      
-  </div><!--end quoteContainer-->
-      
+  <!--end quoteContainer-->
+
   <div id="buttonContainer">
-      <a href="#" id="quoteButton">Quote Me</a>
-  </div><!--end buttonContainer-->
-</div><!--end quote generator-->
+    <a href="#" id="quoteButton">Quote Me</a>
+  </div>
+  <!--end buttonContainer-->
+</div>
+<!--end quote generator-->
 </div>
 
 <script>
-  document.getElementById('book').addEventListener('click', function() {
-  this.classList.toggle('open');
-});
-</script>
+  $(document).ready(function () {
+    var quoteSource = [
+      {
+        quote: "<%= @quote %>",
+        name: "<%= @name %>"
+      },
+    ];
 
-<%#= javascript_include_tag('quote_generator.js')%>
-<%#= javascript_include_tag('result.js')%>
+
+    $('#quoteButton').click(function (evt) {
+      //define the containers of the info we target
+      var quote = $('#quoteContainer p').text();
+      var quoteGenius = $('#quoteGenius').text();
+      //prevent browser's default action
+      evt.preventDefault();
+      //getting a new random number to attach to a quote and setting a limit
+      var sourceLength = quoteSource.length;
+      var randomNumber = Math.floor(Math.random() * sourceLength);
+      //set a new quote
+      for (i = 0; i <= sourceLength; i += 1) {
+        var newQuoteText = quoteSource[randomNumber].quote;
+        var newQuoteGenius = quoteSource[randomNumber].name;
+        //console.log(newQuoteText,newQuoteGenius);
+        var timeAnimation = 500;
+        var quoteContainer = $('#quoteContainer');
+        //fade out animation with callback
+        quoteContainer.fadeOut(timeAnimation, function () {
+          quoteContainer.html('');
+          quoteContainer.append('<p>' + newQuoteText + '</p>' + '<p id="quoteGenius">' + '-' + newQuoteGenius + '</p>');
+
+          //fadein animation.
+          quoteContainer.fadeIn(timeAnimation);
+        });
+
+        break;
+      };//end for loop
+    });//end quoteButton function
+  });//end document ready
+</script>

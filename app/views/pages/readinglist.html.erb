@@ -17,23 +17,29 @@
 <!--        </ul>-->
 <!--</div>-->
 
-<nav id="category-filter">
-    <label for="touch"><span>titre</span></label>
-    <input type="checkbox" id="touch">
-
-    <ul class="slide">
-        <li><button id="showall">Show All</button></li>
-        <li><button id="better-liv">Better Living</button></li>
-        <li><button id="phil">Philosophy</button></li>
-        <li><button id="peopleskill">People Skills</button></li>
-        <li><button id="econ">Economics</button></li>
-        <li><button id="finance">Finance</button></li>
-        <li><button id="sci">Science</button></li>
-        <li><button id="pol">Politics</button></li>
-        <li><button id="biz">Business</button></li>
-        <li><button id="misc">Misc</button></li>
+<div class="container">
+    <h1 class="title">Dropdown Menu</h1>
+    <ul>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown">First Menu <i class="icon-arrow"></i></a>
+            <ul class="dropdown-menu">
+                <li><button id="showall">Show All</button></li>
+                <li><button id="better-liv">Better Living</button></li>
+                <li><button id="phil">Philosophy</button></li>
+                <li><button id="peopleskill">People Skills</button></li>
+                <li><button id="econ">Economics</button></li>
+                <li><button id="finance">Finance</button></li>
+                <li><button id="sci">Science</button></li>
+                <li><button id="pol">Politics</button></li>
+                <li><button id="biz">Business</button></li>
+                <li><button id="misc">Misc</button></li>
+            </ul>
+        </li>
     </ul>
-</nav>
+</div>
+
+
+
 
 
 
@@ -43,15 +49,15 @@
         <div class="row">
             <% if @books.any?
                then %>
-                <% @books.each do |book| %>
-                    <div class="<%= book.category %> cover">
-                        <div>
-                            <a href="<%= book.book_link %>" target="_blank" rel="nofollow">
-                                <%= image_tag(book.image_address, :alt => book.image_alt, class: "media-object") %>
-                            </a>
-                        </div>
-                    </div>
-                <% end %>
+            <% @books.each do |book| %>
+            <div class="<%= book.category %> cover">
+                <div>
+                    <a href="<%= book.book_link %>" target="_blank" rel="nofollow">
+                        <%= image_tag(book.image_address, :alt => book.image_alt, class: "media-object") %>
+                    </a>
+                </div>
+            </div>
+            <% end %>
             <% end %>
         </div>
     </div>
