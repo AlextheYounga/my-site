@@ -56,10 +56,12 @@
 <script>
   $(document).ready(function () {
     var quoteSource = [
+      <% @quotes.each do |quote |%>
       {
         quote: "<%= @quote %>",
         name: "<%= @name %>"
       },
+      <% end %>
     ];
 
 

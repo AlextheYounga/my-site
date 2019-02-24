@@ -27,8 +27,9 @@ class PagesController < ApplicationController
 
   def playground
     # @user_stocks = User.last.stocks
-    @quote = Favorite_Quotes.quote
-    @name = Favorite_Quotes.name
+    @quotes = Quote.all
+    @quote = Quote.quote
+    @name = Quote.name
   end
 
 end
