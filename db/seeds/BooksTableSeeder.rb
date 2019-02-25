@@ -15,7 +15,7 @@ Book.create([
         author: "Ryan Holiday",
         image_address: "daily_stoic.jpg",
         image_alt: "The Daily Stoic by Ryan Holiday",
-        category: "better-liv",
+        category: "philosophy",
         book_link: "http://www.alextheyounger.me/articles/25",
     },
     {
@@ -23,7 +23,7 @@ Book.create([
         author: "Henry Hazlitt",
         image_address: "foundations_morality.jpg",
         image_alt: "Foundations of Morality by Henry Hazlitt",
-        category: "phil",
+        category: "philosophy",
         book_link: "https://mises.org/library/foundations-morality"
     },
     {
@@ -32,7 +32,7 @@ Book.create([
         author: "Oliver Burkeman",
         image_address: "the_antidote.jpg",
         image_alt: "The Antidote: Happiness For People Who Can't Stand Positive Thinking by Oliver Burkeman",
-        category: "better-liv",
+        category: "better-living",
         book_link: "https://www.amazon.com/Antidote-Happiness-People-Positive-Thinking/dp/0865478015/ref=sr_1_1?s=books&ie=UTF8&qid=1515919681&sr=1-1&keywords=the+antidote+happiness+for+people+who+can%27t+stand+positive+thinking"
     },
     {
@@ -41,7 +41,7 @@ Book.create([
         author: "Steve Patterson",
         image_address: "square_one.jpg",
         image_alt: "Square One: The Foundations of Knowledge by Steve Patterson",
-        category: "phil",
+        category: "philosophy",
         book_link: "https://www.amazon.com/Square-One-Foundations-Steve-Patterson-ebook/dp/B01M9JL27L/ref=sr_1_1?ie=UTF8&qid=1515980663&sr=8-1&keywords=square+one+steve+patterson",
     },
     {
@@ -67,7 +67,7 @@ Book.create([
         author: "William B. Irvine",
         image_address: "good_life.jpg",
         image_alt: "A Guide to the Good Life by William B. Irvine",
-        category: "better-liv",
+        category: "better-living",
         book_link: "https://www.amazon.com/Guide-Good-Life-Ancient-Stoic/dp/0195374614/ref=sr_1_1?s=books&ie=UTF8&qid=1515918746&sr=1-1&keywords=a+guide+to+the+good+life",
     },
     {
@@ -76,7 +76,7 @@ Book.create([
         author: "Dr. Aziz Gazipura",
         image_address: "social_anxiety.jpg",
         image_alt: "The Solution to Social Anxiety by Dr. Aziz Gazipura",
-        category: "peopleskill",
+        category: "better-living",
         book_link: "https://www.amazon.com/Solution-Social-Anxiety-Break-Shyness-ebook/dp/B00F5IU5CU/ref=sr_1_2_sspa?s=books&ie=UTF8&qid=1515919521&sr=1-2-spons&keywords=solution+to+social+anxiety&psc=1",
     },
     {
@@ -93,7 +93,7 @@ Book.create([
         author: "Sam Harris",
         image_address: "waking_up.jpg",
         image_alt: "Waking Up by Sam Harris",
-        category: "better-liv",
+        category: "philosophy",
         book_link: "https://www.amazon.com/Waking-Up-Spirituality-Without-Religion/dp/1451636024/ref=sr_1_1?s=books&ie=UTF8&qid=1515920029&sr=1-1&keywords=waking+up+sam+harris",
     },
     {
@@ -102,13 +102,13 @@ Book.create([
         author: "Alan Watts",
         image_address: "out_of_your_mind.jpg",
         image_alt: "Out of Your Mind",
-        category: "phil",
+        category: "philosophy",
         book_link: "https://www.amazon.com/Out-of-Your-Mind/dp/B0162WIRKY/ref=sr_1_2?ie=UTF8&qid=1517010662&sr=8-2&keywords=out+of+your+mind+by+alan+watts",
     },
     {
         title: "You're It",
         subtitle: "On Hiding, Seeking, and Being Found",
-        category: "phil",
+        category: "philosophy",
         image_address: "youre_it.jpg",
         book_link: "https://www.amazon.com/Youre-Hiding-Seeking-Being-Found/dp/1591797349",
         image_alt: "You're It by Alan Watts",
@@ -116,7 +116,6 @@ Book.create([
     },
     {
         title: "Street Smarts",
-        subtitle: "",
         category: "finance",
         image_address: "street_smarts.jpg",
         book_link: "https://www.amazon.com/Street-Smarts-Adventures-Road-Markets/dp/0307986071/ref=sr_1_1?s=books&ie=UTF8&qid=1515923486&sr=1-1&keywords=street+smarts+jim+rogers",
@@ -134,7 +133,7 @@ Book.create([
     },
     {
         title: "Extraordinary Popular Delusions and the Madness of Crowds",
-        category: "finance",
+        category: "history",
         image_address: "madness_of_crowds.jpg",
         book_link: "https://www.amazon.com/Extraordinary-Popular-Delusions-Madness-Crowds/dp/1463740514/ref=sr_1_1?s=books&ie=UTF8&qid=1515920340&sr=1-1&keywords=extraordinary+popular+delusions+and+the+madness+of+crowds",
         image_alt: "Extraordinary Popular Delusions and the Madness of Crowds by Charles Mackay",
@@ -143,7 +142,7 @@ Book.create([
     {
         title: "A Troublesome Inheritance",
         subtitle: "Genes, Race, and Human History",
-        category: "sci",
+        category: "science",
         image_address: "troublesome_inheritance.jpg",
         book_link: "https://www.amazon.com/Troublesome-Inheritance-Genes-Human-History/dp/0143127160/ref=sr_1_1?s=books&ie=UTF8&qid=1515921233&sr=1-1&keywords=a+troublesome+inheritance+by+nicholas+wade",
         image_alt: "A Troublesome Inheritance by Nicholas Wade",
@@ -152,7 +151,7 @@ Book.create([
     {
         title: "Why We Sleep",
         subtitle: "Unlocking the Power of Sleep and Dreams",
-        category: "sci",
+        category: "science",
         image_address: "why_we_sleep.jpg",
         book_link: "https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316",
         image_alt: "Unlocking the Power of Sleep and Dreams by Matthew Walker, PhD",
@@ -161,7 +160,7 @@ Book.create([
     {
         title: "Fool's Errand",
         subtitle: "Time to End the War in Afghanistan",
-        category: "pol",
+        category: "history",
         image_address: "fools_errand.jpg",
         book_link: "https://www.amazon.com/Fools-Errand-Time-End-Afghanistan/dp/1548650218",
         image_alt: "https://images-na.ssl-images-amazon.com/images/I/51zrL6zS1ZL._SX331_BO1,204,203,200_.jpg",
@@ -179,7 +178,7 @@ Book.create([
     {
         title: "The Righteous Mind",
         subtitle: "Why Good People are Divided by Politics and Religion",
-        category: "pol",
+        category: "psych",
         image_address: "righteous_mind.jpg",
         book_link: "https://www.amazon.com/Righteous-Mind-Divided-Politics-Religion/dp/0307455777/ref=sr_1_1?s=books&ie=UTF8&qid=1515921478&sr=1-1&keywords=jonathan+haidt+the+righteous+mind",
         image_alt: "The Righteous Mind by Jonathan Haidt",
@@ -188,7 +187,7 @@ Book.create([
     {
         title: "Do What You Are",
         subtitle: "Discover the Perfect Career for You Through the Secrets of Personality Type",
-        category: "better-liv",
+        category: "psych",
         image_address: "do_what_you_are.jpg",
         book_link: "https://www.amazon.com/Do-What-You-Are-Personality/dp/031623673X/ref=sr_1_2?s=books&ie=UTF8&qid=1515924039&sr=1-2&keywords=do+what+you+are+paul+tieger",
         image_alt: "Do What You Are by Paul D. Tieger, Barbara Barron, and Kelly Tieger",
@@ -196,7 +195,7 @@ Book.create([
     },
     {
         title: "Mindfulness in Plain English",
-        category: "better-liv",
+        category: "productivity",
         image_address: "mindfulness_plain_english.jpg",
         book_link: "https://www.amazon.com/Mindfulness-Plain-English-Revised-Expanded/dp/0861713214/ref=sr_1_3?s=books&ie=UTF8&qid=1517263300&sr=1-3&keywords=mindfulness+in+plain+english",
         image_alt: "Mindfulness in Plain English by Bhante Gunaratana",
@@ -205,7 +204,7 @@ Book.create([
     {
         title: "Deep Work",
         subtitle: "Rules for Focused Success in a Distracted World",
-        category: "better-liv",
+        category: "productivity",
         image_address: "deep_work.jpg",
         book_link: "https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692/ref=sr_1_1?s=books&ie=UTF8&qid=1515921725&sr=1-1&keywords=cal+newport+deep+work",
         image_alt: "Deep Work by Cal Newport",
@@ -223,7 +222,7 @@ Book.create([
     {
         title: "Total Recall",
         subtitle: "My Unbelievably True Life Story",
-        category: "misc",
+        category: "autobio",
         image_address: "total_recall.jpg",
         book_link: "https://www.amazon.com/Total-Recall-Unbelievably-True-Story/dp/1451662440/ref=sr_1_1?s=books&ie=UTF8&qid=1521363393&sr=1-1&keywords=total+recall+arnold+schwarzenegger",
         image_alt: "Total Recall by Arnold Schwarzenegger",
@@ -259,7 +258,7 @@ Book.create([
     {
         title: "Enlightenment Now",
         subtitle: "The Case for Reason, Science, Humanism, and Progress",
-        category: "sci",
+        category: "science",
         image_address: "enlightenment_now.jpg",
         book_link: "https://www.amazon.com/Enlightenment-Now-Science-Humanism-Progress/dp/0525427570/ref=sr_1_2?s=books&ie=UTF8&qid=1526181530&sr=1-2&keywords=enlightenment+now+by+steven+pinker",
         image_alt: "Enlightenment Now by Steven Pinker",
@@ -268,7 +267,7 @@ Book.create([
     {
         title: "The Willpower Instinct",
         subtitle: "How Self Control Works, Why it Matters, and What You Can Do to Get More of It",
-        category: "better-liv",
+        category: "productivity",
         image_address: "willpower_instinct.jpg",
         book_link: "https://www.amazon.com/Willpower-Instinct-Self-Control-Works-Matters/dp/1583335080/ref=sr_1_2?s=books&ie=UTF8&qid=1515923129&sr=1-2&keywords=willpower+instinct+by+kelly+mcgonigal",
         image_alt: "https://images.gr-assets.com/books/1436737104l/10865206.jpg",
@@ -311,7 +310,7 @@ Book.create([
     },
     {
         title: "Free Will",
-        category: "phil",
+        category: "philosophy",
         image_address: "free_will.jpg",
         book_link: "https://www.amazon.com/Free-Will-Harris-Sam-Paperback/dp/B011SJZJ8O/ref=sr_1_3?s=books&ie=UTF8&qid=1517011043&sr=1-3&keywords=free+will+sam+harris",
         image_alt: "Free Will by Sam Harris",
@@ -320,7 +319,7 @@ Book.create([
     {
         title: "Influence",
         subtitle: "The Psychology of Persuasion",
-        category: "peopleskill",
+        category: "psych",
         image_address: "influence.jpg",
         book_link: "https://www.amazon.com/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X/ref=sr_1_1?s=books&ie=UTF8&qid=1515922756&sr=1-1&keywords=influence+robert+cialdini",
         image_alt: "Influence by Robert Cialdini",
@@ -338,7 +337,7 @@ Book.create([
     {
         title: "The Power of Body Language",
         subtitle: "An Ex-FBI Agent's System for Speed Reading People",
-        category: "peopleskill",
+        category: "psych",
         image_address: "body_language.jpg",
         book_link: "https://www.amazon.com/Power-Body-Language-Ex-FBI-Speed-Reading/dp/B00OH795TO/ref=sr_1_2?ie=UTF8&qid=1515983461&sr=8-2&keywords=the+power+of+body+language+joe+navarro",
         image_alt: "The Power of Body Language by Joe Navarro",
@@ -356,7 +355,7 @@ Book.create([
     {
         title: "Computer Science Distilled",
         subtitle: "Learn the Art of Computational Problem Solving",
-        category: "sci",
+        category: "tech",
         image_address: "computer_science_distilled.jpg",
         book_link: "https://www.amazon.com/Computer-Science-Distilled-Computational-Problems/dp/0997316020",
         image_alt: "Computer Science Distilled by Wladston Ferreira Filho",
@@ -365,7 +364,7 @@ Book.create([
     {
         title: "Show Your Work",
         subtitle: "10 Ways to Share Your Creativity and Get Discovered",
-        category: "biz",
+        category: "productivity",
         image_address: "show_your_work.jpg",
         book_link: "https://www.amazon.com/Show-Your-Work-Austin-Kleon/dp/076117897X/ref=sr_1_1?s=books&ie=UTF8&qid=1520050953&sr=1-1&keywords=show+your+work",
         image_alt: "Show Your Work by Austin Kleon",
@@ -392,7 +391,7 @@ Book.create([
     {
         title: "Steal the Show",
         subtitle: "How to Guarantee a Standing Ovation for All the Performances in Your Life",
-        category: "peopleskill",
+        category: "productivity",
         image_address: "steal_the_show.jpg",
         book_link: "https://www.amazon.com/Steal-Show-Interviews-Deal-Closing-Performances/dp/0544800842/ref=sr_1_1?s=books&ie=UTF8&qid=1515984539&sr=1-1&keywords=Steal+the+Show+by+Michael+Port",
         image_alt: "Steal the Show by Michael Port",
@@ -418,7 +417,7 @@ Book.create([
     {
         title: "Behave",
         subtitle: "The Biology of Humans at Our Best and at Our Worst",
-        category: "sci",
+        category: "science",
         image_address: "behave.jpg",
         book_link: "https://www.amazon.com/Behave-Biology-Humans-Best-Worst-ebook/dp/B01IAUGC5S/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1515981537&sr=1-1&keywords=behave+robert+sapolsky",
         image_alt: "Behave by Robert M. Sapolsky",
@@ -435,7 +434,7 @@ Book.create([
     },
     {
         title: "America's Great Depression",
-        category: "econ",
+        category: "history",
         image_address: "great_depression.jpg",
         book_link: "https://mises.org/library/americas-great-depression",
         image_alt: "America's Great Depression by Murray Rothbard",
@@ -453,7 +452,7 @@ Book.create([
     {
         title: "A Short History of Man",
         subtitle: "Progress and Decline",
-        category: "misc",
+        category: "history",
         image_address: "history_of_man.jpg",
         book_link: "https://www.amazon.com/Short-History-Man-Progress-Decline/dp/1610165918/ref=sr_1_1?s=books&ie=UTF8&qid=1515984984&sr=1-1&keywords=a+short+history+of+man+hoppe",
         image_alt: "A Short History of Man by Hans-Hermann Hoppe",
@@ -488,7 +487,7 @@ Book.create([
     },
     {
         title: "The 48 Laws of Power",
-        category: "misc",
+        category: "productivity",
         image_address: "48_laws.jpg",
         book_link: "https://www.amazon.com/Summary-Power-Robert-Greene-Ideas-ebook/dp/B0776CLL6V/ref=sr_1_1_sspa?s=books&ie=UTF8&qid=1515986892&sr=1-1-spons&keywords=the+48+laws+of+power&psc=1",
         image_alt: "The 48 Laws of Power by Robert Greene",
@@ -497,7 +496,7 @@ Book.create([
     {
         title: "Hawk",
         subtitle: "Occupation: Skateboarder",
-        category: "misc",
+        category: "autobio",
         image_address: "hawk.jpg",
         book_link: "https://www.amazon.com/Hawk-Occupation-Skateboarder-Tony/dp/0060958316/ref=sr_1_2?ie=UTF8&qid=1521363258&sr=8-2&keywords=hawk+by+tony+hawk&dpID=51TnMCb8ToL&preST=_SY291_BO1,204,203,200_QL40_&dpSrc=srch",
         image_alt: "Hawk by Tony Hawk",
@@ -523,7 +522,7 @@ Book.create([
     },
     {
         title: "The Politically Incorrect Guide to American History",
-        category: "pol",
+        category: "history",
         image_address: "politically_incorrect.jpg",
         book_link: "https://www.amazon.com/Politically-Incorrect-Guide-American-History/dp/B000CCE4JE/ref=sr_1_1?ie=UTF8&qid=1517017239&sr=8-1&keywords=politically+incorrect+guide+to+american+history",
         image_alt: "The Politically Correct Guide to American History by Thomas e. Woods",
@@ -574,7 +573,7 @@ Book.create([
     {
         title: "Why Zebras Don't Get Ulcers",
         subtitle: "The Acclaimed Guide to Stress, Stress-Related Diseases, and Coping",
-        category: "sci",
+        category: "science",
         image_address: "zebras_dont_get_ulcers.jpg",
         book_link: "https://www.amazon.com/Why-Zebras-Dont-Ulcers-Third/dp/0805073698/ref=sr_1_1?s=books&ie=UTF8&qid=1515986523&sr=1-1&keywords=Why+Zebras+Don%27t+Get+Ulcers+by+Robert+M.+Sapolsky",
         image_alt: "Why Zebras Don't Get Ulcers by Robert M. Sapolsky",
@@ -627,7 +626,7 @@ Book.create([
     {
         title: "The Ruby on Rails Tutorial",
         subtitle: "Learn Web Development with Rails",
-        category: "misc",
+        category: "tech",
         image_address: "ruby_tutorial.jpg",
         book_link: "https://www.railstutorial.org/",
         image_alt: "The Ruby on Rails Tutorial by Michael Hartl",
@@ -636,7 +635,7 @@ Book.create([
     {
         title: "Spacetime Physics",
         subtitle: "Introduction to Special Relativity; Second Edition",
-        category: "sci",
+        category: "science",
         image_address: "spacetime_physics.jpg",
         book_link: "https://www.amazon.com/Spacetime-Physics-Edwin-F-Taylor/dp/0716723271/ref=sr_1_1?s=books&ie=UTF8&qid=1517016672&sr=1-1&keywords=spacetime+physics+taylor+and+wheeler",
         image_alt: "Spacetime Physics by Edwin F. Taylor & John Archibald Wheeler",

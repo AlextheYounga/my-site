@@ -11,8 +11,11 @@ $large-screen: $large-screen-up - 1px !default;
 $extra-large-screen: $extra-large-screen-up - 1px !default;
 
 /*------- Colors --------*/
-$primary-blue: #337ab7;
+$primary-blue: #0E4EE2;
+$burgandy: #800020;
+$burgandy-hover: #3d0303;
 $primary-grey: #f5f5f5;
+$light-grey: #A3ACC1;
 $nav-grey: #f8f9fa;
 $border-grey: #e3e3e3;
 $text: #FFFFFF;
@@ -22,6 +25,14 @@ $secondary-text: #757575;
 /*------ Shared  ------*/
 section {
     margin-bottom: 6rem;
+}
+
+a {
+  color: $burgandy !important;
+
+  &:hover {
+    color: $burgandy-hover !important;
+  }
 }
 
 .container {
@@ -60,6 +71,16 @@ section {
     font-family: 'Alegreya Sans';
     font-style: normal;
     font-weight: 400;
+}
+
+.btn.btn-lg {
+  background-color: $burgandy;
+  border: 1.4px solid $burgandy-hover;
+  color: white;
+
+  &:hover {
+    background-color: $burgandy-hover;
+  }
 }
 
 hr {
@@ -155,16 +176,12 @@ hr:after {
 
 .title {
     font-size: 36px;
-    color: $primary-blue;
-
-    a {
-        color: $primary-blue;
-    }
+    color: $burgandy;
 }
 
 .created-at {
     padding-top: 8px;
-    color: $primary-blue;
+    color: $burgandy;
 }
 
 /*------- Reading List ------*/
@@ -187,7 +204,7 @@ $menu_WIDTH: 200px;
     margin: 0 auto;
     width: 200px;
     padding: 13px 0 0px;
-    background: $primary-blue;
+    background: $burgandy;
     text-align: center;
     color: #ffffff;
     font-weight: bold;
@@ -199,10 +216,10 @@ $menu_WIDTH: 200px;
     content: "";
     display: block;
     height: 0;
-    border-top: 5px solid $primary-blue;
+    border-top: 5px solid $burgandy;
     border-left: ($menu_WIDTH / 2) solid transparent;
     border-right: ($menu_WIDTH / 2) solid transparent;
-    border-bottom: 0 solid #dddddd;
+    border-bottom: 0 solid $nav-grey;
     position: absolute;
     top: 100%;
     left: 0;
@@ -211,14 +228,14 @@ $menu_WIDTH: 200px;
 }
 
 .menu-title:hover {
-    background: $primary-blue;
+    background: $burgandy-hover;
 }
 
 .menu-title:hover:before {
-    border-top-color: $primary-blue;
+    border-top-color: $burgandy-hover;
 }
 
-.menu:hover > .menu-title:before {
+.menu:focus > .menu-title:before {
     border-top-width: 0;
     transition: 0.2s border-top-width ease-in, 0.3s border-top-color;
 }
@@ -237,7 +254,7 @@ $menu_WIDTH: 200px;
     transition: 0.2s border-bottom ease-in;
 }
 
-.menu:hover > .menu-title:after {
+.menu:focus > .menu-title:after {
     border-bottom-width: 5px;
     transition: 0.2s 0.2s border-bottom-width ease-out;
 }
@@ -246,7 +263,7 @@ $menu_WIDTH: 200px;
     min-width: 100%;
     padding: 15px 0;
     position: absolute;
-    background: #ebebeb;
+    background: $nav-grey;
     z-index: 100;
     transition: 0.5s padding, 0.5s background;
 }
@@ -265,40 +282,43 @@ $menu_WIDTH: 200px;
     transition: 0.5s border-top;
 }
 
-.menu:not(:hover) > .menu-dropdown {
+.menu:not(:focus) > .menu-dropdown {
     padding: 4px 0;
-    background: #dddddd;
+    background: $nav-grey;
     z-index: 99;
 }
 
-.menu:not(:hover) > .menu-dropdown:after {
-    border-top-color: #dddddd;
+.menu:not(:focus) > .menu-dropdown:after {
+    border-top-color: $nav-grey;
 }
 
-.menu:not(:hover) > .menu-title:after {
-    border-bottom-color: #dddddd;
+.menu:not(:focus) > .menu-title:after {
+    border-bottom-color: $nav-grey;
 }
 
 .menu-dropdown > * {
     overflow: hidden;
-    height: 30px;
-    padding: 5px 10px;
     background: rgba(0, 0, 0, 0);
     white-space: nowrap;
     transition: 0.5s height cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s padding cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s margin cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s 0.2s color, 0.2s background-color;
+
+    li {
+      &:hover {
+        background-color: white;
+      }
+    }
 }
 
 .menu-dropdown > *:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: $nav-grey;
 }
 
-.menu:not(:hover) > .menu-dropdown > * {
+.menu:not(:focus) > .menu-dropdown > * {
     visibility: hidden;
     height: 0;
     padding-top: 0;
     padding-bottom: 0;
     margin: 0;
-    color: rgba(25, 25, 25, 0);
     transition: 0.5s 0.1s height, 0.5s 0.1s padding, 0.5s 0.1s margin, 0.3s color, 0.6s visibility;
     z-index: 99;
 }
@@ -306,6 +326,25 @@ $menu_WIDTH: 200px;
 .hList {
     list-style: none;
     padding-left: 50px;
+
+    button {
+      border: none;
+      padding: 3px;
+      background-color: inherit;
+      display: block;
+      height: 100%;
+      width: 100%;
+    
+      &:hover {
+        background-color: $burgandy;
+        color: white;
+        transition: 400ms background-color ease-in;
+      }
+    
+      &:focus {
+        background-color: $burgandy-hover !important;
+      }
+    }
 }
 
 .hList > * {
@@ -317,15 +356,6 @@ $menu_WIDTH: 200px;
 }
 
 /*-- --*/
-button {
-  border: none;
-  padding: 5px auto;
-  background-color: inherit;
-  margin: 0 auto;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
 
 #list-container {
     padding-left: 0 !important;

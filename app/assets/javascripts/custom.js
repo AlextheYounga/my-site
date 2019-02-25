@@ -1,7 +1,7 @@
 //Reading List
 $(function() {
 
-    $('.toggles button').click(function(){
+    $('.menu-dropdown button').click(function(){
       var get_id = this.id;
       var get_current = $('.covers .' + get_id);
   
