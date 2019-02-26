@@ -27,14 +27,6 @@ section {
     margin-bottom: 6rem;
 }
 
-a {
-  color: $burgandy !important;
-
-  &:hover {
-    color: $burgandy-hover !important;
-  }
-}
-
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -74,13 +66,13 @@ a {
 }
 
 .btn.btn-lg {
-  background-color: $burgandy;
-  border: 1.4px solid $burgandy-hover;
-  color: white;
+    background-color: $burgandy;
+    border: 1.4px solid $burgandy-hover;
+    color: white;
 
-  &:hover {
-    background-color: $burgandy-hover;
-  }
+    &:hover {
+        background-color: $burgandy-hover;
+    }
 }
 
 hr {
@@ -108,11 +100,19 @@ hr:after {
 }
 
 /*------ Navbar --------*/
-.navbar {
+#mainNav {
     font-size: 1.25rem;
 
     .navbar-toggler {
         margin-right: 20px;
+    }
+
+    a {
+        color: $burgandy;
+
+        &:hover {
+            color: $burgandy-hover;
+        }
     }
 }
 
@@ -233,11 +233,14 @@ $menu_WIDTH: 200px;
 
 .menu-title:hover:before {
     border-top-color: $burgandy-hover;
+    transition: all 0.2s ease-out;
 }
 
-.menu:focus > .menu-title:before {
+.menu:hover > .menu-title:before {
     border-top-width: 0;
-    transition: 0.2s border-top-width ease-in, 0.3s border-top-color;
+    transition:
+    0.2s border-top-width ease-in,
+    0.3s border-top-color;
 }
 
 .menu-title:after {
@@ -254,7 +257,7 @@ $menu_WIDTH: 200px;
     transition: 0.2s border-bottom ease-in;
 }
 
-.menu:focus > .menu-title:after {
+.menu:hover > .menu-title:after {
     border-bottom-width: 5px;
     transition: 0.2s 0.2s border-bottom-width ease-out;
 }
@@ -282,30 +285,44 @@ $menu_WIDTH: 200px;
     transition: 0.5s border-top;
 }
 
-.menu:not(:focus) > .menu-dropdown {
+.menu:not(:hover) > .menu-dropdown {
     padding: 4px 0;
     background: $nav-grey;
     z-index: 99;
 }
 
-.menu:not(:focus) > .menu-dropdown:after {
+.menu:not(:hover) > .menu-dropdown:after {
     border-top-color: $nav-grey;
 }
 
-.menu:not(:focus) > .menu-title:after {
+.menu:not(:hover) > .menu-title:after {
     border-bottom-color: $nav-grey;
 }
 
 .menu-dropdown > * {
     overflow: hidden;
+    height: 30px;
     background: rgba(0, 0, 0, 0);
     white-space: nowrap;
-    transition: 0.5s height cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s padding cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s margin cubic-bezier(0.73, 0.32, 0.34, 1.5), 0.5s 0.2s color, 0.2s background-color;
+    transition: 
+    0.5s height cubic-bezier(.73,.32,.34,1.5),
+    0.5s padding cubic-bezier(.73,.32,.34,1.5),
+    0.5s margin cubic-bezier(.73,.32,.34,1.5),
+    0.5s 0.2s color,
+    0.2s background-color;
 
     li {
-      &:hover {
-        background-color: white;
-      }
+        &:hover {
+            background-color: white;
+
+            a {
+                color: $burgandy !important;
+
+                &:hover {
+                    color: $burgandy-hover !important;
+                }
+            }
+        }
     }
 }
 
@@ -313,38 +330,29 @@ $menu_WIDTH: 200px;
     background: $nav-grey;
 }
 
-.menu:not(:focus) > .menu-dropdown > * {
+.menu:not(:hover) > .menu-dropdown > * {
     visibility: hidden;
     height: 0;
     padding-top: 0;
     padding-bottom: 0;
     margin: 0;
-    transition: 0.5s 0.1s height, 0.5s 0.1s padding, 0.5s 0.1s margin, 0.3s color, 0.6s visibility;
+    transition: 
+    0.5s 0.1s height,
+    0.5s 0.1s padding,
+    0.5s 0.1s margin,
+    0.3s color,
+    0.6s visibility;
     z-index: 99;
 }
 
 .hList {
     list-style: none;
-    padding-left: 50px;
-
-    button {
-      border: none;
-      padding: 3px;
-      background-color: inherit;
-      display: block;
-      height: 100%;
-      width: 100%;
-    
-      &:hover {
-        background-color: $burgandy;
-        color: white;
-        transition: 400ms background-color ease-in;
-      }
-    
-      &:focus {
-        background-color: $burgandy-hover !important;
-      }
+    float: right;
+    a:hover {
+        text-decoration: none !important;
     }
+
+    
 }
 
 .hList > * {
@@ -355,9 +363,28 @@ $menu_WIDTH: 200px;
     margin-left: 0;
 }
 
+button {
+        border: none;
+        padding: 3px;
+        background-color: inherit;
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        &:hover {
+            background-color: $burgandy;
+            color: white;
+            transition: 400ms background-color ease-in;
+        }
+
+        &:focus {
+            background-color: $burgandy-hover !important;
+        }
+    }
+
 /*-- --*/
 
-#list-container {
+.list-container {
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin: 0 auto;
