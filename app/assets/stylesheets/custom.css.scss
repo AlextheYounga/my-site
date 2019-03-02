@@ -105,6 +105,8 @@ hr:after {
 
     .navbar-toggler {
         margin-right: 20px;
+        width: 70px;
+        background-color: $burgandy;
     }
 
     a {
@@ -312,13 +314,13 @@ $menu_WIDTH: 200px;
     0.2s background-color;
 
     li {
-        &:hover {
+        &:hover, &:active {
             background-color: white;
 
             a {
                 color: $burgandy !important;
 
-                &:hover {
+                &:hover, &:active{
                     color: $burgandy-hover !important;
                 }
             }
@@ -326,7 +328,7 @@ $menu_WIDTH: 200px;
     }
 }
 
-.menu-dropdown > *:hover {
+.menu-dropdown > *:hover, *:active {
     background: $nav-grey;
 }
 

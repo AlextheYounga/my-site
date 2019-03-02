@@ -13,8 +13,6 @@ $(function() {
     $('#showall').click(function() {
         $('.cover').show(500);
     });
-
-
 }); 
 
 //Stock Result
