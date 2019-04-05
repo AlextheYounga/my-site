@@ -5,8 +5,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+      <%= javascript_pack_tag 'application' %>
+      <%= stylesheet_pack_tag 'application' %>
       <%=render 'layouts/navigation' %>
       <link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400" rel="stylesheet">

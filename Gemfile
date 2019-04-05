@@ -24,13 +24,14 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'jquery-rails'
-gem 'bootstrap'
 gem 'bcrypt'
 gem 'material_icons'
 gem 'font-awesome-rails'
 gem 'stock_quote'
 gem 'meta-tags'
 gem 'hirb'
+gem 'webp-ffi'
+gem 'webpacker'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
