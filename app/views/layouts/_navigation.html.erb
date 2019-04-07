@@ -1,21 +1,17 @@
-<% if current_page?(root_path) %>
-<nav class="fancy-font py-8" style="background-color: rgba(31,45,61,.5);">
-    <% else %>
-    <nav class="fancy-font py-8 bg-transparent">
-        <% end %>
-        <div class="container flex justify-between mx-auto">
-            <a href="<%= root_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-orange-lighter <% end %>">Home</a>
-            <div class="w-1/2 flex justify-between">
-                <a href="<%= articles_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-orange-lighter <% end %>">Blog</a>
-                <a href="<%= about_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-orange-lighter <% end %>">About</a>
-                <a href="<%= readinglist_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-orange-lighter <% end %>">Reading List</a>
-                <a href="<%= projects_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-orange-lighter <% end %>">Projects</a>
-                <a href="<%= playground_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-orange-lighter <% end %>">Playground</a>
-                <% if logged_in? %>
-                <%= link_to "Log Out", logout_path, method: :delete, class: "no-underline text-2xl"%>
-                <% else %>
-                <%= nil %>
-                <% end %>
-            </div>
+<nav class="fancy-font py-8 relative z-10" style="background-color: rgba(60,40,40,.8);">
+    <div class="container flex justify-between mx-auto">
+        <a href="<%= root_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-yellow-lightest <% end %>">Home</a>
+        <div class="w-1/2 flex justify-between">
+            <a href="<%= articles_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-yellow-lightest <% end %>">Blog</a>
+            <a href="<%= about_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-yellow-lightest <% end %>">About</a>
+            <a href="<%= readinglist_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-yellow-lightest <% end %>">Reading List</a>
+            <a href="<%= projects_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-yellow-lightest <% end %>">Projects</a>
+            <a href="<%= playground_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-yellow-lightest <% end %>">Playground</a>
+            <% if logged_in? %>
+            <%= link_to "Log Out", logout_path, method: :delete, class: "no-underline text-2xl"%>
+            <% else %>
+            <%= nil %>
+            <% end %>
         </div>
-    </nav>
+    </div>
+</nav>
