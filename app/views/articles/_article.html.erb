@@ -1,53 +1,38 @@
-<div align="center" id="create-button">
-      <% if logged_in? %>
-        <%= link_to "Create New Article", new_article_path, class: "btn btn-lg btn-primary" %>
-      <% else %>
-        <%= nil %>
-      <% end %>
-      
-      <%= link_to "Categories", categories_path, class: "btn btn-lg btn-primary" %>
-    </div>
-  <!-- Because there's |article| as the key, we have to refer to each article as (article) not (@article)-->
-  
-  <% obj.each do |article| %>
-     <div class="row">
-        <div id="article-index-div" class="col-xs-8">
-          <div class= "well well-lg">
-            <div class= "article-title">
-              <%= link_to article.title, article_path(article) %>
-            </div>
-          
-            <div class="article-teaser-body">
-              <%= truncate(strip_tags(article.description), length: 280) %>
-              
-              <div class= "article-meta-details">
-                <small>Created <%= time_ago_in_words(article.created_at) %> ago, 
-                       Last updated: <%= time_ago_in_words(article.updated_at) %> ago 
-                </small>
-            
-             
-           <div class="article-actions">
-              <% if article.categories.any? %>
-                <p> Categories: <%= render article.categories %> </p>
-              <% end %>
-              <% if logged_in? %>
-              <%= link_to "Edit", edit_article_path(article), class: "btn btn-xs btn-primary" %>
-              <%= link_to "Destroy", article_path(article), method: :delete,
+<section class="text-center py-4">
+  <% if logged_in? %>
+  <%= link_to "Create New Article", new_article_path, class: "" %>
+  <% else %>
+  <%= nil %>
+  <% end %>
+  <a href="<%= categories_path %>"
+    class="bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
+    Categories
+  </a>
+</section>
+<!-- Because there's |article| as the key, we have to refer to each article as (article) not (@article)-->
+<section class="text-center">
+<% obj.each do |article| %>
+<a href="<%= article_path(article) %>" class="no-underline">
+  <div class="teaser bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg w-3/4">
+    <h1 class="fancy-font burgandy"><%= article.title %></h1>
+    <p class="leading-normal normal-font p-8 text-black text-lg"><%= truncate(strip_tags(article.description), length: 600) %></p>
+    <small class="burgandy">Created by <%= article.user.username if article.user %>
+      <%= time_ago_in_words(article.created_at) %> ago,
+      Last updated: <%= time_ago_in_words(article.updated_at) %> ago
+    </small>
+    <% if article.categories.any? %>
+    <p class="burgandy"> Categories: <%= render article.categories %> </p>
+    <% end %>
+  </div>
+</a>
+<% if logged_in? %>
+<%= link_to "Edit", edit_article_path(article), class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48" %>
+<%= link_to "Destroy", article_path(article), method: :delete,
               
                                           data: {confirm: "Are you sure you want to delete the article?"},
-                                          class: "btn btn-xs btn-danger" %>
-              <% else %>
-            <%= nil %>
-          <% end %>
-              
-                                          
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  </br>
-  
-  <% end %>
+                                          class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:btext-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48" %>
+<% else %>
+<%= nil %>
+<% end %>
+<% end %>
+</section>

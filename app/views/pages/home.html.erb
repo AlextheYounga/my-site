@@ -1,28 +1,28 @@
-<section class="hero min-h-screen bg-cover bg-center">
-    <div class="absolute px-8 py-12 rounded-lg shadow-lg">
-        <h1 class="fancy-font text-4xl text-yellow-lightest text-center">Alex Younger</h1>
-        <p class="fancy-font py-2 text-yellow-lighter">Web Developer, Marketing Analyst, Economic Analyst, Financier and Much More</p>
+<section class="bg-center bg-cover hero md:bg-bottom min-h-screen sm:bg-bottom xs:bg-bottom">
+    <div class="absolute align-baseline mx-auto pin-l pin-r px-8 py-12 w-2/3">
+        <h1 class="fancy-font text-5xl text-blue-lightest text-center">Alex Younger</h1>
+        <p class="fancy-font py-2 text-blue-lighter text-center">Web Developer, Marketing Analyst, Economic Analyst, Financier and Much More</p>
     </div>
 </section>
 <section class="articles-home py-16 bg-grey-lighter">
     <div class="container mx-auto text-center">
-        <h1 class="fancy-font burgandy">Development Blog</h1>
+        <h1 class="fancy-font text-blue">Development Blog</h1>
         <a href="<%= articles_path %>"
-            class="bg-white block border border-red-darker burgandy button hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">View
+            class="bg-white block border border-blue-darker text-blue button hover:text-blue-lightest hover:bg-blue-darkest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">View
             All</a>
         <% if @articles.any?
            then %>
         <% @articles.each do |article| %>
         <a href="<%= article_path(article) %>" class="no-underline">
-            <div class="teaser bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow-lg w-3/4">
-                <h1 class="fancy-font burgandy"><%= article.title %></h1>
+            <div class="teaser bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg w-4/5">
+                <h1 class="fancy-font text-blue"><%= article.title %></h1>
                 <p class="leading-normal normal-font p-8 text-black text-lg"><%= truncate(strip_tags(article.description), length: 600) %></p>
-                <small class="burgandy">Created by <%= article.user.username if article.user %>
+                <small class="text-blue">Created by <%= article.user.username if article.user %>
                     <%= time_ago_in_words(article.created_at) %> ago,
                     Last updated: <%= time_ago_in_words(article.updated_at) %> ago
                 </small>
                 <% if article.categories.any? %>
-                <p class="burgandy"> Categories: <%= render article.categories %> </p>
+                <p class="text-blue"> Categories: <%= render article.categories %> </p>
                 <% end %>
 
             </div>
@@ -32,16 +32,20 @@
     </div>
 </section>
 <section class="about-home bg-white py-16">
-    <div class="inline-flex">
-        <div class="w-1/2">
-            <%= image_tag("main/roundheadshot.png", alt: "alex younger developer marketing about me", class: "w-1/2") %>
+    <div class="flex flex-wrap">
+        <div class="lg:w-1/2 md:w-full sm:w-full text-center mx-auto">
+            <%= image_tag("main/roundheadshot.png", alt: "alex younger developer marketing about me", class: "lg:w-1/2 md:w-1/2 sm:3/4") %>
         </div>
-        <div class="w-1/2">
-            <p class="normal-font">I'm Alex. I create/design websites and applications. My greatest strength is my
+        <div class="lg:w-1/2 md:w-full sm:w-full text-center mx-auto py-12">
+            <p class="leading-normal mx-auto normal-font text-center w-3/4 text-lg">I'm Alex. I create/design websites and applications. My greatest strength is my
                 love of learning, and my endless curiosity
                 that motivates me to learn everything I can. </p>
-            <p class="normal-font">I have a love for adventure, thrill and adrenaline. Programming is my day job. I
+            <p class="leading-normal mx-auto normal-font pt-6 text-center w-3/4 text-lg">I have a love for adventure, thrill and adrenaline. Programming is my day job. I
                 ride ziplines by day.</p>
+                <a href="<%= about_path %>"
+                        class="bg-white block border border-blue-darker hover:bg-blue-darkest text-blue button hover:text-blue-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
+                        My Story
+                    </a>
         </div>
     </div>
 </section>
