@@ -1,4 +1,7 @@
 /*---- Colors ----*/
+$burgandy: #800020;
+$burgandy-hover: #3d0303;
+
 .burgandy {
     color: #800020;
 }
@@ -48,4 +51,31 @@ section.articles-home {
 /*---- Articles ----*/
 section.articles {
     background-image: url("main/articles-index.svg");
+}
+
+/*---- Reading List ----*/
+.list-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 auto;
+}
+
+.covers {
+    display: flex;
+    flex-wrap: wrap;
+
+    .row {
+        justify-content: center;
+    }
+
+    div {
+        margin: 15px;
+    }
+
+    img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 145px;
+    }
 }
