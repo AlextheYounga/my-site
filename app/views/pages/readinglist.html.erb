@@ -1,64 +1,73 @@
 <h1 class="my-16 fancy-font text-center">My Favorite Books & Audio</h1>
 <div class="container mx-auto">
-            <li>
-                <a href="#click" class="menu block relative">
-                    <h2 class="menu-title fancy-font block mx-auto bg-red-darkest rounded text-center w-1/6 p-2 text-white">Category</h2>
-                    <ul class="menu-dropdown absolute py-3 bg-grey-lighter z-10">
-                        <li><button id="showall">Show All</button></li>
-                        <li><button id="better-living">Better Living</button></li>
-                        <li><button id="philosophy">Philosophy</button></li>
-                        <li><button id="peopleskill">People Skills</button></li>
-                        <li><button id="econ">Economics</button></li>
-                        <li><button id="history">History</button></li>
-                        <li><button id="finance">Finance</button></li>
-                        <li><button id="tech">Technology</button></li>
-                        <li><button id="science">Science</button></li>
-                        <li><button id="psych">Psychology</button></li>
-                        <li><button id="productivity">Productivity</button></li>
-                        <li><button id="autobio">Autobiography</button></li>
-                        <li><button id="pol">Politics</button></li>
-                        <li><button id="biz">Business</button></li>
-                        <li><button id="misc">Miscellaneous</button></li>
-                    </ul>
-                </a>
-            </li>
+
+    <div class="category-btn block relative no-underline">
+        <h2 class="fancy-font block mx-auto bg-red-darkest rounded text-center w-1/6 p-2 text-white">Category</h2>
+    </div>
+    <div class="category-menu z-40 block max-w-md w-1/4 h-screen pin-t absolute bg-red-darkest">
+        <ul class="relative p-0">
+            <li><button id="showall" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Show All</button></li>
+            <li><button id="better-living" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Better Living</button></li>
+            <li><button id="philosophy" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Philosophy</button></li>
+            <li><button id="peopleskill" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">People Skills</button></li>
+            <li><button id="econ" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Economics</button></li>
+            <li><button id="history" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">History</button></li>
+            <li><button id="finance" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Finance</button></li>
+            <li><button id="tech" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Technology</button></li>
+            <li><button id="science" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Science</button></li>
+            <li><button id="psych" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Psychology</button></li>
+            <li><button id="productivity" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Productivity</button></li>
+            <li><button id="autobio" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Autobiography</button></li>
+            <li><button id="pol" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Politics</button></li>
+            <li><button id="biz" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Business</button></li>
+            <li><button id="misc" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Miscellaneous</button></li>
         </ul>
     </div>
+</div>
 
-<div class="list-container container">
-    <div class="covers">
-        <div class="row">
-            <% if @books.any?
+<div class="container px-0 mx-auto">
+    <div class="covers flex flex-wrap justify-between my-8 w-full">
+        <% if @books.any?
                then %>
-            <% @books.each do |book| %>
-            <div class="<%= book.category %> cover">
-                <div>
-                    <a href="<%= book.book_link %>" target="_blank" rel="nofollow">
-                        <%= image_tag(book.image_address, :alt => book.image_alt, class: "media-object") %>
-                    </a>
-                </div>
-            </div>
-            <% end %>
-            <% end %>
+        <% @books.each do |book| %>
+        <div class="<%= book.category %> cover m-3">
+            <a href="<%= book.book_link %>" target="_blank" rel="nofollow">
+                <%= image_tag(book.image_address, :alt => book.image_alt, class: "w-48 m-4 shadow") %>
+            </a>
         </div>
+        <% end %>
+        <% end %>
     </div>
+</div>
 </div>
 <% content_for :javascripts do %>
 <script>
-$(function() {
+    $(document).ready(function () {
+        //Menu button on click event
+        $('.category-btn').on('click', function () {
+            // Toggles a class on the menu button to transform the burger menu into a cross
 
-    $('.menu-dropdown button').click(function(){
-      var get_id = this.id;
-      var get_current = $('.covers .' + get_id);
-  
-        $('.cover').not( get_current ).hide(500);
-        get_current.show(500);
+            // Toggles a class that slides the menu into view on the screen
+            $('.category-menu').toggleClass('category-menu--open');
+            return false;
+        });
     });
-    
-    
-    $('#showall').click(function() {
-        $('.cover').show(500);
+</script>
+<script>
+    $(function () {
+
+        $('.category-menu button').click(function () {
+            var get_id = this.id;
+            var get_current = $('.covers .' + get_id);
+
+            $('.cover').not(get_current).hide(500);
+            get_current.show(500);
+        });
+
+
+        $('#showall').click(function () {
+            $('.cover').show(500);
+        });
     });
-});
 </script>
 <% end %>
