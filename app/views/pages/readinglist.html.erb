@@ -1,10 +1,10 @@
-<h1 class="my-16 fancy-font text-center">My Favorite Books & Audio</h1>
+<h1 class="fancy-font mb-8 mt-20 text-center">My Favorite Books & Audio</h1>
 <div class="container mx-auto">
 
     <div class="category-btn block relative no-underline">
-        <h2 class="fancy-font block mx-auto bg-red-darkest rounded text-center w-1/6 p-2 text-white">Category</h2>
+        <h2 class="lg:w-1/4 md:w-1/4 sm:w-1/2 fancy-font block mx-auto bg-red-darkest rounded text-center p-2 text-white">Category</h2>
     </div>
-    <div class="category-menu z-40 block max-w-md w-1/4 h-screen pin-t absolute bg-red-darkest">
+    <div class="category-menu w-1/3 z-50 block max-w-md h-screen pin-t absolute bg-red-darkest">
         <ul class="relative p-0">
             <li><button id="showall" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Show All</button></li>
             <li><button id="better-living" class="w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Better Living</button></li>
@@ -32,7 +32,7 @@
         <% @books.each do |book| %>
         <div class="<%= book.category %> cover m-3">
             <a href="<%= book.book_link %>" target="_blank" rel="nofollow">
-                <%= image_tag(book.image_address, :alt => book.image_alt, class: "w-48 m-4 shadow") %>
+                <%= image_tag(book.image_address, :alt => book.image_alt, class: "lg:w-48 md:w-48 sm:w-32 m-4 shadow") %>
             </a>
         </div>
         <% end %>
