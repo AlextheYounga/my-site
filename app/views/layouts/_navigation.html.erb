@@ -15,3 +15,22 @@
         </div>
     </div>
 </nav>
+
+<nav class="mobile">
+    <div class="mobile-nav-button absolute m-8 pin-r pin-t z-50 w-8 h-8">
+        <div class="mobile-nav-button__line w-full relative bg-black <% if current_page?(root_path) %> bg-blue-lightest <% end %>"></div>
+        <div class="mobile-nav-button__line w-full relative bg-black <% if current_page?(root_path) %> bg-blue-lightest <% end %>"></div>
+        <div class="mobile-nav-button__line w-full relative bg-black <% if current_page?(root_path) %> bg-blue-lightest <% end %>"></div>
+    </div>
+
+    <div class="mobile-menu z-40 block max-w-md w-full h-screen pin-t absolute bg-red-dark <% if current_page?(root_path) %> bg-blue <% end %>">
+        <ul class="relative p-0">
+            <li><a href="<%= root_path %>" class="w-full max-w-2xl mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Home</a></li>
+            <li><a href="<%= articles_path %>" class="w-full max-w-2xl mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Blog</a></li>
+            <li><a href="<%= about_path %>" class="w-full max-w-2xl mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">About</a></li>
+            <li><a href="<%= readinglist_path %>" class="w-full max-w-2xl mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Reading List</a></li>
+            <li><a href="<%= projects_path %>" class="w-full max-w-2xl mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Projects</a></li>
+            <li><a href="<%= playground_path %>" class="w-full max-w-2xl mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Playground</a></li>
+        </ul>
+    </div>
+</nav>

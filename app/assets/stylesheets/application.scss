@@ -13,3 +13,65 @@
  *= require_tree .
  *= require font-awesome
  */
+
+
+
+
+// Mobile nav styles
+.mobile-nav-button {
+    width:35px;
+    cursor:pointer;
+
+    .mobile-nav-button__line {
+        height:4px;
+        transition:1s ease;
+        &:nth-of-type(2) {
+            margin:0.5rem 0;
+        }
+    }
+    .mobile-nav-button__line--1 {
+        transform: rotate(45deg);
+        top: 13px;
+        position: absolute;
+    }
+    .mobile-nav-button__line--2 {
+        display: none;
+    }
+    .mobile-nav-button__line--3 {
+        transform: rotate(135deg);
+        top: 13px;
+        position: absolute;        
+    }
+}
+
+.mobile-menu {
+    right:-100%;
+    transition: 0.6s ease;
+    opacity:0;
+    ul {
+        top: 50%;
+        transform: translateY(-50%);
+        li {
+            list-style: none;
+            a {
+                text-decoration:none;
+                overflow:hidden;
+                &:after {
+                    content:'';
+                    background: black;
+                    width:100%;
+                    height:100%;
+                    position:absolute;
+                    right:-100%;
+                    top:0;
+                    z-index:-1;
+                    transition:0.4s ease;
+                }
+            }
+        }
+    }
+}
+.mobile-menu--open {
+    right:0;
+    opacity:1;
+}
