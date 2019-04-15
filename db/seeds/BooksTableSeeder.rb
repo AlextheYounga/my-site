@@ -88,6 +88,15 @@ Book.create([
         book_link: "https://www.amazon.com/Notes-Democracy-Large-Print-Mencken/dp/1494288648/ref=sr_1_1?s=books&ie=UTF8&qid=1515919184&sr=1-1&keywords=notes+on+democracy",
     },
     {
+        title: "What is Real",
+        subtitle: "The Unfinished Quest for the Meaning of Quantum Physics",
+        author: "Adam Becker",
+        image_address: "what_is_real.jpg",
+        image_alt: "Alex Younger ReadingList What is Real by Adam Becker",
+        category: "science",
+        book_link: "https://www.amazon.com/What-Real-Unfinished-Meaning-Quantum/dp/0465096050",
+    },
+    {
         title: "Waking Up",
         subtitle: "A Guide to Spirituality Without Religion",
         author: "Sam Harris",
@@ -326,6 +335,15 @@ Book.create([
         author: "Robert Cialdini",
     },
     {
+        title: "Ordinary Men",
+        subtitle: "Reserve Police Battalion 101 and the Final Solution in Poland",
+        category: "history",
+        image_address: "ordinary_men.jpg",
+        book_link: "https://www.amazon.com/Ordinary-Men-Reserve-Battalion-Solution/dp/0062303023/ref=pd_lpo_sbs_14_img_0?_encoding=UTF8&psc=1&refRID=905FVFHBW6S35NKN4CWB",
+        image_alt: "Alex Younger ReadingList Ordinary Men by Christopher R. Browning",
+        author: "Christopher R. Browning",
+    },
+    {
         title: "Socialism",
         subtitle: "An Economic and Sociological Analysis",
         category: "econ",
@@ -378,6 +396,15 @@ Book.create([
         book_link: "https://www.amazon.com/Moonwalking-Einstein-Science-Remembering-Everything/dp/0143120530/ref=sr_1_1?s=books&ie=UTF8&qid=1551049996&sr=1-1&keywords=moonwalking+with+einstein+by+joshua+foer",
         image_alt: "Alex Younger ReadingList Moonwalking With Einstein by Joshua Foer",
         author: "Joshua Foer",
+    },
+    {
+        title: "Basic Economics",
+        subtitle: "A Common Sense Guide to the Economy",
+        category: "econ",
+        image_address: "basic_econ.jpg",
+        book_link: "https://www.amazon.com/Basic-Economics-Thomas-Sowell/dp/0465060730/ref=sr_1_1?hvadid=241666587059&hvdev=c&hvlocphy=9028905&hvnetw=g&hvpos=1t1&hvqmt=e&hvrand=17298452046633619559&hvtargid=kwd-437964245&keywords=basic+economics+thomas+sowell&qid=1555298558&s=gateway&sr=8-1",
+        image_alt: "Alex Younger ReadingList Basic Economics by Thomas Sowell",
+        author: "Thomas Sowell",
     },
     {
         title: "The Book on Rental Property Investing",
@@ -552,6 +579,14 @@ Book.create([
         book_link: "https://www.amazon.com/Born-This-Find-Work-Meant/dp/1101903988/ref=sr_1_1?s=books&ie=UTF8&qid=1515985831&sr=1-1&keywords=born+for+this+chris+guillebeau",
         image_alt: "Alex Younger ReadingList Born for This by Chris Guillebeau",
         author: "Chris Guillebeau",
+    },
+    {
+        title: "Anatomy of the State",
+        category: "pol",
+        image_address: "anatomy_of_state.jpg",
+        book_link: "https://mises.org/library/anatomy-state",
+        image_alt: "Alex Younger ReadingList Anatomy of the State by Murray Rothbard",
+        author: "Murrary Rothbard",
     },
     {
         title: "The $100 Startup",
