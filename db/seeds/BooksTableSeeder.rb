@@ -5,7 +5,7 @@ Book.create([
         subtitle: "The Only Book You Ned to Lead You to Success",
         author: "Dale Carnegie",
         image_address: "win_friends_influence.jpg",
-        image_alt: "How to Win Friends and Influence People by Dale Carnegie",
+        image_alt: "Alex Younger ReadingList How to Win Friends and Influence People by Dale Carnegie",
         category: "peopleskill",
         book_link: "http://www.alextheyounger.me/articles/24",
     },
@@ -14,7 +14,7 @@ Book.create([
         subtitle: "366 Meditations on Wisdom, Perseverance, and the Art of Living",
         author: "Ryan Holiday",
         image_address: "daily_stoic.jpg",
-        image_alt: "The Daily Stoic by Ryan Holiday",
+        image_alt: "Alex Younger ReadingList The Daily Stoic by Ryan Holiday",
         category: "philosophy",
         book_link: "http://www.alextheyounger.me/articles/25",
     },
@@ -22,7 +22,7 @@ Book.create([
         title: "Foundations of Morality",
         author: "Henry Hazlitt",
         image_address: "foundations_morality.jpg",
-        image_alt: "Foundations of Morality by Henry Hazlitt",
+        image_alt: "Alex Younger ReadingList Foundations of Morality by Henry Hazlitt",
         category: "philosophy",
         book_link: "https://mises.org/library/foundations-morality"
     },
@@ -31,7 +31,7 @@ Book.create([
         subtitle: "Happiness For People Who Can't Stand Positive Thinking",
         author: "Oliver Burkeman",
         image_address: "the_antidote.jpg",
-        image_alt: "The Antidote: Happiness For People Who Can't Stand Positive Thinking by Oliver Burkeman",
+        image_alt: "Alex Younger ReadingList The Antidote: Happiness For People Who Can't Stand Positive Thinking by Oliver Burkeman",
         category: "better-living",
         book_link: "https://www.amazon.com/Antidote-Happiness-People-Positive-Thinking/dp/0865478015/ref=sr_1_1?s=books&ie=UTF8&qid=1515919681&sr=1-1&keywords=the+antidote+happiness+for+people+who+can%27t+stand+positive+thinking"
     },
@@ -40,7 +40,7 @@ Book.create([
         subtitle: "The Foundations of Knowledge",
         author: "Steve Patterson",
         image_address: "square_one.jpg",
-        image_alt: "Square One: The Foundations of Knowledge by Steve Patterson",
+        image_alt: "Alex Younger ReadingList Square One: The Foundations of Knowledge by Steve Patterson",
         category: "philosophy",
         book_link: "https://www.amazon.com/Square-One-Foundations-Steve-Patterson-ebook/dp/B01M9JL27L/ref=sr_1_1?ie=UTF8&qid=1515980663&sr=8-1&keywords=square+one+steve+patterson",
     },
@@ -48,7 +48,7 @@ Book.create([
         title: "Making Economic Sense",
         author: "Murray Rothbard",
         image_address: "making_economic_sense.jpg",
-        image_alt: "Making Economic Sense by Murray Rothbard",
+        image_alt: "Alex Younger ReadingList Making Economic Sense by Murray Rothbard",
         category: "econ",
         book_link: "https://mises.org/library/making-economic-sense",
     },
@@ -57,7 +57,7 @@ Book.create([
         subtitle: "How Creating Value for Others Built One of the World's Most Successful Companies",
         author: "Charles Koch",
         image_address: "good_profit.jpg",
-        image_alt: "Good Profit by Charles Koch",
+        image_alt: "Alex Younger ReadingList Good Profit by Charles Koch",
         category: "biz",
         book_link: "https://www.amazon.com/Good-Profit-Creating-Successful-Companies/dp/1101904135/ref=sr_1_1?s=books&ie=UTF8&qid=1515919796&sr=1-1&keywords=good+profit+charles+koch",
     },
@@ -66,7 +66,7 @@ Book.create([
         subtitle: "The Ancient Art of Stoic Joy",
         author: "William B. Irvine",
         image_address: "good_life.jpg",
-        image_alt: "A Guide to the Good Life by William B. Irvine",
+        image_alt: "Alex Younger ReadingList A Guide to the Good Life by William B. Irvine",
         category: "better-living",
         book_link: "https://www.amazon.com/Guide-Good-Life-Ancient-Stoic/dp/0195374614/ref=sr_1_1?s=books&ie=UTF8&qid=1515918746&sr=1-1&keywords=a+guide+to+the+good+life",
     },
@@ -75,7 +75,7 @@ Book.create([
         subtitle: "Break Free from the Shyness That Holds You Back",
         author: "Dr. Aziz Gazipura",
         image_address: "social_anxiety.jpg",
-        image_alt: "The Solution to Social Anxiety by Dr. Aziz Gazipura",
+        image_alt: "Alex Younger ReadingList The Solution to Social Anxiety by Dr. Aziz Gazipura",
         category: "better-living",
         book_link: "https://www.amazon.com/Solution-Social-Anxiety-Break-Shyness-ebook/dp/B00F5IU5CU/ref=sr_1_2_sspa?s=books&ie=UTF8&qid=1515919521&sr=1-2-spons&keywords=solution+to+social+anxiety&psc=1",
     },
@@ -83,7 +83,7 @@ Book.create([
         title: "Notes on Democracy",
         author: "H.L. Mencken",
         image_address: "notes_on_democracy.jpg",
-        image_alt: "Notes on Democracy by H.L. Mencken",
+        image_alt: "Alex Younger ReadingList Notes on Democracy by H.L. Mencken",
         category: "pol",
         book_link: "https://www.amazon.com/Notes-Democracy-Large-Print-Mencken/dp/1494288648/ref=sr_1_1?s=books&ie=UTF8&qid=1515919184&sr=1-1&keywords=notes+on+democracy",
     },
@@ -92,7 +92,7 @@ Book.create([
         subtitle: "A Guide to Spirituality Without Religion",
         author: "Sam Harris",
         image_address: "waking_up.jpg",
-        image_alt: "Waking Up by Sam Harris",
+        image_alt: "Alex Younger ReadingList Waking Up by Sam Harris",
         category: "philosophy",
         book_link: "https://www.amazon.com/Waking-Up-Spirituality-Without-Religion/dp/1451636024/ref=sr_1_1?s=books&ie=UTF8&qid=1515920029&sr=1-1&keywords=waking+up+sam+harris",
     },
@@ -101,7 +101,7 @@ Book.create([
         subtitle: "Essential Listening from the Alan Watts Archives",
         author: "Alan Watts",
         image_address: "out_of_your_mind.jpg",
-        image_alt: "Out of Your Mind",
+        image_alt: "Alex Younger ReadingList Out of Your Mind",
         category: "philosophy",
         book_link: "https://www.amazon.com/Out-of-Your-Mind/dp/B0162WIRKY/ref=sr_1_2?ie=UTF8&qid=1517010662&sr=8-2&keywords=out+of+your+mind+by+alan+watts",
     },
@@ -111,7 +111,7 @@ Book.create([
         category: "philosophy",
         image_address: "youre_it.jpg",
         book_link: "https://www.amazon.com/Youre-Hiding-Seeking-Being-Found/dp/1591797349",
-        image_alt: "You're It by Alan Watts",
+        image_alt: "Alex Younger ReadingList You're It by Alan Watts",
         author: "Alan Watts",
     },
     {
@@ -119,7 +119,7 @@ Book.create([
         category: "finance",
         image_address: "street_smarts.jpg",
         book_link: "https://www.amazon.com/Street-Smarts-Adventures-Road-Markets/dp/0307986071/ref=sr_1_1?s=books&ie=UTF8&qid=1515923486&sr=1-1&keywords=street+smarts+jim+rogers",
-        image_alt: "Street Smarts by Jim Rogers",
+        image_alt: "Alex Younger ReadingList Street Smarts by Jim Rogers",
         author: "Jim Rogers",
     },
     {
@@ -128,7 +128,7 @@ Book.create([
         category: "peopleskill",
         image_address: "charisma_myth.jpg",
         book_link: "https://www.amazon.com/Charisma-Myth-Science-Personal-Magnetism/dp/1591845947/ref=sr_1_1?s=books&ie=UTF8&qid=1515919947&sr=1-1&keywords=The+Charisma+Myth+by+Olivia+Fox+Cabane",
-        image_alt: "The Charisma Myth by Olivia Fox Cabane",
+        image_alt: "Alex Younger ReadingList The Charisma Myth by Olivia Fox Cabane",
         author: "Olivia Fox Cabane",
     },
     {
@@ -136,7 +136,7 @@ Book.create([
         category: "history",
         image_address: "madness_of_crowds.jpg",
         book_link: "https://www.amazon.com/Extraordinary-Popular-Delusions-Madness-Crowds/dp/1463740514/ref=sr_1_1?s=books&ie=UTF8&qid=1515920340&sr=1-1&keywords=extraordinary+popular+delusions+and+the+madness+of+crowds",
-        image_alt: "Extraordinary Popular Delusions and the Madness of Crowds by Charles Mackay",
+        image_alt: "Alex Younger ReadingList Extraordinary Popular Delusions and the Madness of Crowds by Charles Mackay",
         author: "Charles Mackay",
     },
     {
@@ -145,7 +145,7 @@ Book.create([
         category: "science",
         image_address: "troublesome_inheritance.jpg",
         book_link: "https://www.amazon.com/Troublesome-Inheritance-Genes-Human-History/dp/0143127160/ref=sr_1_1?s=books&ie=UTF8&qid=1515921233&sr=1-1&keywords=a+troublesome+inheritance+by+nicholas+wade",
-        image_alt: "A Troublesome Inheritance by Nicholas Wade",
+        image_alt: "Alex Younger ReadingList A Troublesome Inheritance by Nicholas Wade",
         author: "Nicholas Wade",
     },
     {
@@ -154,7 +154,7 @@ Book.create([
         category: "science",
         image_address: "why_we_sleep.jpg",
         book_link: "https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316",
-        image_alt: "Unlocking the Power of Sleep and Dreams by Matthew Walker, PhD",
+        image_alt: "Alex Younger ReadingList Unlocking the Power of Sleep and Dreams by Matthew Walker, PhD",
         author: "Matthew Walker, PhD",
     },
     {
@@ -163,7 +163,7 @@ Book.create([
         category: "history",
         image_address: "fools_errand.jpg",
         book_link: "https://www.amazon.com/Fools-Errand-Time-End-Afghanistan/dp/1548650218",
-        image_alt: "https://images-na.ssl-images-amazon.com/images/I/51zrL6zS1ZL._SX331_BO1,204,203,200_.jpg",
+        image_alt: "Alex Younger ReadingList https://images-na.ssl-images-amazon.com/images/I/51zrL6zS1ZL._SX331_BO1,204,203,200_.jpg",
         author: "Scott Horton",
     },
     {
@@ -172,7 +172,7 @@ Book.create([
         category: "econ",
         image_address: "failure_new_economics.jpg",
         book_link: "https://mises.org/library/failure-new-economics-0",
-        image_alt: "The Failure of the New Economics by Henry Hazlitt",
+        image_alt: "Alex Younger ReadingList The Failure of the New Economics by Henry Hazlitt",
         author: "Henry Hazlitt",
     },
     {
@@ -181,7 +181,7 @@ Book.create([
         category: "psych",
         image_address: "righteous_mind.jpg",
         book_link: "https://www.amazon.com/Righteous-Mind-Divided-Politics-Religion/dp/0307455777/ref=sr_1_1?s=books&ie=UTF8&qid=1515921478&sr=1-1&keywords=jonathan+haidt+the+righteous+mind",
-        image_alt: "The Righteous Mind by Jonathan Haidt",
+        image_alt: "Alex Younger ReadingList The Righteous Mind by Jonathan Haidt",
         author: "Jonathan Haidt",
     },
     {
@@ -190,7 +190,7 @@ Book.create([
         category: "psych",
         image_address: "do_what_you_are.jpg",
         book_link: "https://www.amazon.com/Do-What-You-Are-Personality/dp/031623673X/ref=sr_1_2?s=books&ie=UTF8&qid=1515924039&sr=1-2&keywords=do+what+you+are+paul+tieger",
-        image_alt: "Do What You Are by Paul D. Tieger, Barbara Barron, and Kelly Tieger",
+        image_alt: "Alex Younger ReadingList Do What You Are by Paul D. Tieger, Barbara Barron, and Kelly Tieger",
         author: "Paul D. Tieger, Barbara Barron, and Kelly Tieger",
     },
     {
@@ -198,7 +198,7 @@ Book.create([
         category: "productivity",
         image_address: "mindfulness_plain_english.jpg",
         book_link: "https://www.amazon.com/Mindfulness-Plain-English-Revised-Expanded/dp/0861713214/ref=sr_1_3?s=books&ie=UTF8&qid=1517263300&sr=1-3&keywords=mindfulness+in+plain+english",
-        image_alt: "Mindfulness in Plain English by Bhante Gunaratana",
+        image_alt: "Alex Younger ReadingList Mindfulness in Plain English by Bhante Gunaratana",
         author: "Bhante Gunaratana",
     },
     {
@@ -207,7 +207,7 @@ Book.create([
         category: "productivity",
         image_address: "deep_work.jpg",
         book_link: "https://www.amazon.com/Deep-Work-Focused-Success-Distracted/dp/1455586692/ref=sr_1_1?s=books&ie=UTF8&qid=1515921725&sr=1-1&keywords=cal+newport+deep+work",
-        image_alt: "Deep Work by Cal Newport",
+        image_alt: "Alex Younger ReadingList Deep Work by Cal Newport",
         author: "Cal Newport",
     },
     {
@@ -216,7 +216,7 @@ Book.create([
         category: "misc",
         image_address: "deep_thoughts.jpg",
         book_link: "https://www.amazon.com/Deep-Thoughts-Inspiration-Jack-Handey/dp/0425133656",
-        image_alt: "Deep Thoughts by Jack Handey",
+        image_alt: "Alex Younger ReadingList Deep Thoughts by Jack Handey",
         author: "Jack Handey",
     },
     {
@@ -225,7 +225,7 @@ Book.create([
         category: "autobio",
         image_address: "total_recall.jpg",
         book_link: "https://www.amazon.com/Total-Recall-Unbelievably-True-Story/dp/1451662440/ref=sr_1_1?s=books&ie=UTF8&qid=1521363393&sr=1-1&keywords=total+recall+arnold+schwarzenegger",
-        image_alt: "Total Recall by Arnold Schwarzenegger",
+        image_alt: "Alex Younger ReadingList Total Recall by Arnold Schwarzenegger",
         author: "Arnold Schwarzenegger",
     },   
     {
@@ -234,7 +234,7 @@ Book.create([
         category: "finance",
         image_address: "hot_commodities.jpg",
         book_link: "https://www.amazon.com/Hot-Commodities-Anyone-Invest-Profitably-ebook/dp/B000FC2OO8/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1515983311&sr=1-1&keywords=hot+commodities+jim+rogers",
-        image_alt: "Hot Commodities by Jim Rogers",
+        image_alt: "Alex Younger ReadingList Hot Commodities by Jim Rogers",
         author: "Jim Rogers",
     },
     {
@@ -243,7 +243,7 @@ Book.create([
         category: "finance",
         image_address: "millionaire_next_door.jpg",
         book_link: "https://www.amazon.com/Millionaire-Next-Door-Surprising-Americas/dp/1589795474/ref=sr_1_1?s=books&ie=UTF8&qid=1551049716&sr=1-1&keywords=millionaire+next+door",
-        image_alt: "The Millionaire Next Door by Thomas J. Stanley & William D. Danko",
+        image_alt: "Alex Younger ReadingList The Millionaire Next Door by Thomas J. Stanley & William D. Danko",
         author: "Thomas J. Stanley & William D. Danko",
     },
     {
@@ -252,7 +252,7 @@ Book.create([
         category: "pol",
         image_address: "road_to_ruin.jpg",
         book_link: "https://www.amazon.com/Road-Ruin-Global-Elites-Financial/dp/1591848083/ref=sr_1_1?s=books&ie=UTF8&qid=1515984429&sr=1-1&keywords=The+Road+to+Ruin+by+James+Rickards",
-        image_alt: "The Road to Ruin by Jim Rickards",
+        image_alt: "Alex Younger ReadingList The Road to Ruin by Jim Rickards",
         author: "Jim Rickards",
     },
     {
@@ -261,7 +261,7 @@ Book.create([
         category: "science",
         image_address: "enlightenment_now.jpg",
         book_link: "https://www.amazon.com/Enlightenment-Now-Science-Humanism-Progress/dp/0525427570/ref=sr_1_2?s=books&ie=UTF8&qid=1526181530&sr=1-2&keywords=enlightenment+now+by+steven+pinker",
-        image_alt: "Enlightenment Now by Steven Pinker",
+        image_alt: "Alex Younger ReadingList Enlightenment Now by Steven Pinker",
         author: "Steven Pinker",
     },
     {
@@ -270,7 +270,7 @@ Book.create([
         category: "productivity",
         image_address: "willpower_instinct.jpg",
         book_link: "https://www.amazon.com/Willpower-Instinct-Self-Control-Works-Matters/dp/1583335080/ref=sr_1_2?s=books&ie=UTF8&qid=1515923129&sr=1-2&keywords=willpower+instinct+by+kelly+mcgonigal",
-        image_alt: "https://images.gr-assets.com/books/1436737104l/10865206.jpg",
+        image_alt: "Alex Younger ReadingList https://images.gr-assets.com/books/1436737104l/10865206.jpg",
         author: "Kelly McGonigal, Phd",
     },
     {
@@ -279,15 +279,15 @@ Book.create([
         category: "econ",
         image_address: "economics_one_lesson.jpg",
         book_link: "https://www.amazon.com/Henry-Hazlitt-Economics-One-Lesson/dp/B004LNZ5H0/ref=sr_1_5?s=books&ie=UTF8&qid=1515985408&sr=1-5&keywords=economics+in+one+lesson+henry+hazlitt",
-        image_alt: "Economics in One Lesson by Henry Hazlitt",
+        image_alt: "Alex Younger ReadingList Economics in One Lesson by Henry Hazlitt",
         author: "Henry Hazlitt",
     },   
     {
         title: "The Richest Man in Babylon",
         category: "finance",
         image_address: "richest_man_babylon.jpg",
-        book_link: "https://www.amazon.com/Richest-Man-Babylon-George-Clason/dp/1939438330/ref=pd_lpo_sbs_14_img_0?_encoding=UTF8&psc=1&refRID=08XFMFWKZHFKNRJZYYDF",
-        image_alt: "The Richest Man in Babylon by George Clason",
+        book_link: "https://www.amazon.com/Richest-Man-Babylon-George-Clason/dp/1640950494/ref=sr_1_1_sspa?keywords=richest+man+in+babylon&qid=1555294196&s=gateway&sr=8-1-spons&psc=1",
+        image_alt: "Alex Younger ReadingList The Richest Man in Babylon by George Clason",
         author: "George Clason",
     },
     {
@@ -296,7 +296,7 @@ Book.create([
         category: "history",
         image_address: "gulag.jpg",
         book_link: "https://www.amazon.com/Gulag-Archipelago-Aleksandr-Solzhenitsyn/dp/1843430851",
-        image_alt: "The Gulag Archipeligo by Alexander Solzhenitsyn",
+        image_alt: "Alex Younger ReadingList The Gulag Archipeligo by Alexander Solzhenitsyn",
         author: "Alexander Solzhenitsyn",
     },
     {
@@ -305,7 +305,7 @@ Book.create([
         category: "finance",
         image_address: "infinite_banking.jpg",
         book_link: "https://www.amazon.com/Becoming-Your-Banker-Nelson-Nash-ebook/dp/B0080K8EL4",
-        image_alt: "Becoming Your Own Banker by R. Nelson Nash",
+        image_alt: "Alex Younger ReadingList Becoming Your Own Banker by R. Nelson Nash",
         author: "R. Nelson Nash",
     },
     {
@@ -313,7 +313,7 @@ Book.create([
         category: "philosophy",
         image_address: "free_will.jpg",
         book_link: "https://www.amazon.com/Free-Will-Harris-Sam-Paperback/dp/B011SJZJ8O/ref=sr_1_3?s=books&ie=UTF8&qid=1517011043&sr=1-3&keywords=free+will+sam+harris",
-        image_alt: "Free Will by Sam Harris",
+        image_alt: "Alex Younger ReadingList Free Will by Sam Harris",
         author: "Sam Harris",
     },
     {
@@ -322,7 +322,7 @@ Book.create([
         category: "psych",
         image_address: "influence.jpg",
         book_link: "https://www.amazon.com/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X/ref=sr_1_1?s=books&ie=UTF8&qid=1515922756&sr=1-1&keywords=influence+robert+cialdini",
-        image_alt: "Influence by Robert Cialdini",
+        image_alt: "Alex Younger ReadingList Influence by Robert Cialdini",
         author: "Robert Cialdini",
     },
     {
@@ -331,7 +331,7 @@ Book.create([
         category: "econ",
         image_address: "socialism.jpg",
         book_link: "https://mises.org/library/socialism-economic-and-sociological-analysis",
-        image_alt: "Socialism by Ludwig Von Mises",
+        image_alt: "Alex Younger ReadingList Socialism by Ludwig Von Mises",
         author: "Ludwig Von Mises",
     },
     {
@@ -340,7 +340,7 @@ Book.create([
         category: "psych",
         image_address: "body_language.jpg",
         book_link: "https://www.amazon.com/Power-Body-Language-Ex-FBI-Speed-Reading/dp/B00OH795TO/ref=sr_1_2?ie=UTF8&qid=1515983461&sr=8-2&keywords=the+power+of+body+language+joe+navarro",
-        image_alt: "The Power of Body Language by Joe Navarro",
+        image_alt: "Alex Younger ReadingList The Power of Body Language by Joe Navarro",
         author: "Joe Navarro",
     },
     {
@@ -349,7 +349,7 @@ Book.create([
         category: "econ",
         image_address: "government_money.jpg",
         book_link: "https://mises.org/library/what-has-government-done-our-money",
-        image_alt: "What Has Government Done to Our Money by Murray Rothbard",
+        image_alt: "Alex Younger ReadingList What Has Government Done to Our Money by Murray Rothbard",
         author: "Murray Rothbard",
     },
     {
@@ -358,7 +358,7 @@ Book.create([
         category: "tech",
         image_address: "computer_science_distilled.jpg",
         book_link: "https://www.amazon.com/Computer-Science-Distilled-Computational-Problems/dp/0997316020",
-        image_alt: "Computer Science Distilled by Wladston Ferreira Filho",
+        image_alt: "Alex Younger ReadingList Computer Science Distilled by Wladston Ferreira Filho",
         author: "Wladston Ferreira Filho",
     },
     {
@@ -367,7 +367,7 @@ Book.create([
         category: "productivity",
         image_address: "show_your_work.jpg",
         book_link: "https://www.amazon.com/Show-Your-Work-Austin-Kleon/dp/076117897X/ref=sr_1_1?s=books&ie=UTF8&qid=1520050953&sr=1-1&keywords=show+your+work",
-        image_alt: "Show Your Work by Austin Kleon",
+        image_alt: "Alex Younger ReadingList Show Your Work by Austin Kleon",
         author: "Austin Kleon",
     },
     {
@@ -376,7 +376,7 @@ Book.create([
         category: "science",
         image_address: "moonwalking.jpg",
         book_link: "https://www.amazon.com/Moonwalking-Einstein-Science-Remembering-Everything/dp/0143120530/ref=sr_1_1?s=books&ie=UTF8&qid=1551049996&sr=1-1&keywords=moonwalking+with+einstein+by+joshua+foer",
-        image_alt: "Moonwalking With Einstein by Joshua Foer",
+        image_alt: "Alex Younger ReadingList Moonwalking With Einstein by Joshua Foer",
         author: "Joshua Foer",
     },
     {
@@ -385,7 +385,7 @@ Book.create([
         category: "finance",
         image_address: "rental_property.jpg",
         book_link: "https://www.amazon.com/Book-Rental-Property-Investing-Intelligent/dp/099071179X/ref=sr_1_3?s=books&ie=UTF8&qid=1533872549&sr=1-3&keywords=rental+property+investing",
-        image_alt: "The Book on Rental Property Investing by Brandon Turner",
+        image_alt: "Alex Younger ReadingList The Book on Rental Property Investing by Brandon Turner",
         author: "Brandon Turner",
     },
     {
@@ -394,7 +394,7 @@ Book.create([
         category: "productivity",
         image_address: "steal_the_show.jpg",
         book_link: "https://www.amazon.com/Steal-Show-Interviews-Deal-Closing-Performances/dp/0544800842/ref=sr_1_1?s=books&ie=UTF8&qid=1515984539&sr=1-1&keywords=Steal+the+Show+by+Michael+Port",
-        image_alt: "Steal the Show by Michael Port",
+        image_alt: "Alex Younger ReadingList Steal the Show by Michael Port",
         author: "Michael Port",
     },
     {
@@ -403,7 +403,7 @@ Book.create([
         category: "peopleskill",
         image_address: "crucial_conversations.jpg",
         book_link: "https://www.amazon.com/Crucial-Conversations-Talking-Stakes-Second/dp/0071771328/ref=sr_1_1?s=books&ie=UTF8&qid=1515984205&sr=1-1&keywords=crucial+conversations",
-        image_alt: "Crucial Conversations by Kelly Patterson",
+        image_alt: "Alex Younger ReadingList Crucial Conversations by Kelly Patterson",
         author: "Kelly Patterson",
     },
     {
@@ -411,7 +411,7 @@ Book.create([
         category: "econ",
         image_address: "inflation.jpg",
         book_link: "https://mises.org/library/what-you-should-know-about-inflation-0",
-        image_alt: "What You Should Know About Inflation by Henry Hazlitt",
+        image_alt: "Alex Younger ReadingList What You Should Know About Inflation by Henry Hazlitt",
         author: "Henry Hazlitt",
     },
     {
@@ -420,7 +420,7 @@ Book.create([
         category: "science",
         image_address: "behave.jpg",
         book_link: "https://www.amazon.com/Behave-Biology-Humans-Best-Worst-ebook/dp/B01IAUGC5S/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1515981537&sr=1-1&keywords=behave+robert+sapolsky",
-        image_alt: "Behave by Robert M. Sapolsky",
+        image_alt: "Alex Younger ReadingList Behave by Robert M. Sapolsky",
         author: "Robert M. Sapolsky",
     },
     {
@@ -429,7 +429,7 @@ Book.create([
         category: "econ",
         image_address: "conflict_visions.jpg",
         book_link: "https://www.amazon.com/Conflict-Visions-Ideological-Political-Struggles/dp/0465002056/ref=sr_1_1?s=books&ie=UTF8&qid=1551050535&sr=1-1&keywords=conflict+of+visions",
-        image_alt: "A Conflict of Visions by Thomas Sowell",
+        image_alt: "Alex Younger ReadingList A Conflict of Visions by Thomas Sowell",
         author: "Thomas Sowell",
     },
     {
@@ -437,7 +437,7 @@ Book.create([
         category: "history",
         image_address: "great_depression.jpg",
         book_link: "https://mises.org/library/americas-great-depression",
-        image_alt: "America's Great Depression by Murray Rothbard",
+        image_alt: "Alex Younger ReadingList America's Great Depression by Murray Rothbard",
         author: "Murray Rothbard",
     },
     {
@@ -446,7 +446,7 @@ Book.create([
         category: "econ",
         image_address: "fatal_conceit.jpg",
         book_link: "https://www.amazon.com/Fatal-Conceit-Errors-Socialism-Collected/dp/0226320669/ref=sr_1_1?s=books&ie=UTF8&qid=1551050285&sr=1-1&keywords=fatal+conceit+hayek",
-        image_alt: "The Fatal Conceit by F.A. Hayek",
+        image_alt: "Alex Younger ReadingList The Fatal Conceit by F.A. Hayek",
         author: "F.A. Hayek",
     },
     {
@@ -455,7 +455,7 @@ Book.create([
         category: "history",
         image_address: "history_of_man.jpg",
         book_link: "https://www.amazon.com/Short-History-Man-Progress-Decline/dp/1610165918/ref=sr_1_1?s=books&ie=UTF8&qid=1515984984&sr=1-1&keywords=a+short+history+of+man+hoppe",
-        image_alt: "A Short History of Man by Hans-Hermann Hoppe",
+        image_alt: "Alex Younger ReadingList A Short History of Man by Hans-Hermann Hoppe",
         author: "Hans-Hermann Hoppe",
     },
     {
@@ -464,7 +464,7 @@ Book.create([
         category: "biz",
         image_address: "ceo_tightrope.jpg",
         book_link: "https://www.amazon.com/CEO-Tightrope-Master-Balancing-Successful/dp/1626341060/ref=sr_1_1?s=books&ie=UTF8&qid=1515986582&sr=1-1&keywords=the+ceo+tightrope+by+joel+trammell",
-        image_alt: "The CEO Tightrope by Joel Trammell",
+        image_alt: "Alex Younger ReadingList The CEO Tightrope by Joel Trammell",
         author: "Joel Trammell",
     },
     {
@@ -473,7 +473,7 @@ Book.create([
         category: "finance",
         image_address: "bull_moves.jpg",
         book_link: "https://www.amazon.com/Little-Book-Moves-Updated-Expanded/dp/0470643994/ref=sr_1_2?s=books&ie=UTF8&qid=1515983796&sr=1-2&keywords=the+little+book+of+bull+moves+peter+schiff",
-        image_alt: "The Little Book of Bull Moves by Peter Schiff",
+        image_alt: "Alex Younger ReadingList The Little Book of Bull Moves by Peter Schiff",
         author: "Peter Schiff",
     },
     {
@@ -482,15 +482,15 @@ Book.create([
         category: "biz",
         image_address: "4_hour.jpg",
         book_link: "https://www.amazon.com/4-Hour-Workweek-Escape-Live-Anywhere/dp/0307465357/ref=sr_1_1?s=books&ie=UTF8&qid=1515985483&sr=1-1&keywords=the+four+hour+work+week",
-        image_alt: "The 4 Hour Workweek by Tim Ferriss",
+        image_alt: "Alex Younger ReadingList The 4 Hour Workweek by Tim Ferriss",
         author: "Tim Ferriss",
     },
     {
         title: "The 48 Laws of Power",
         category: "productivity",
         image_address: "48_laws.jpg",
-        book_link: "https://www.amazon.com/Summary-Power-Robert-Greene-Ideas-ebook/dp/B0776CLL6V/ref=sr_1_1_sspa?s=books&ie=UTF8&qid=1515986892&sr=1-1-spons&keywords=the+48+laws+of+power&psc=1",
-        image_alt: "The 48 Laws of Power by Robert Greene",
+        book_link: "https://www.amazon.com/48-Laws-Power-Robert-Greene/dp/0140280197/ref=sr_1_1?keywords=48+laws+of+power&qid=1555294105&s=gateway&sr=8-1",
+        image_alt: "Alex Younger ReadingList The 48 Laws of Power by Robert Greene",
         author: "Robert Greene",
     },
     {
@@ -499,7 +499,7 @@ Book.create([
         category: "autobio",
         image_address: "hawk.jpg",
         book_link: "https://www.amazon.com/Hawk-Occupation-Skateboarder-Tony/dp/0060958316/ref=sr_1_2?ie=UTF8&qid=1521363258&sr=8-2&keywords=hawk+by+tony+hawk&dpID=51TnMCb8ToL&preST=_SY291_BO1,204,203,200_QL40_&dpSrc=srch",
-        image_alt: "Hawk by Tony Hawk",
+        image_alt: "Alex Younger ReadingList Hawk by Tony Hawk",
         author: "Tony Hawk",
     },
     {
@@ -508,7 +508,7 @@ Book.create([
         category: "finance",
         image_address: "intelligent_investor.jpg",
         book_link: "https://www.amazon.com/Intelligent-Investor-Definitive-Investing-Essentials/dp/0060555661/ref=sr_1_1?s=books&ie=UTF8&qid=1515987281&sr=1-1&keywords=the+intelligent+investor+by+benjamin+graham",
-        image_alt: "The Intelligent Investor by Benjamin Graham",
+        image_alt: "Alex Younger ReadingList The Intelligent Investor by Benjamin Graham",
         author: "Benjamin Graham",
     },
     {
@@ -517,7 +517,7 @@ Book.create([
         category: "biz",
         image_address: "lean_startup.jpg",
         book_link: "https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898/ref=sr_1_3?s=books&ie=UTF8&qid=1515983642&sr=1-3&keywords=the+lean+startup+eric+ries",
-        image_alt: "The Lean Startup by Eric Ries",
+        image_alt: "Alex Younger ReadingList The Lean Startup by Eric Ries",
         author: "Eric Ries",
     },
     {
@@ -525,7 +525,7 @@ Book.create([
         category: "history",
         image_address: "politically_incorrect.jpg",
         book_link: "https://www.amazon.com/Politically-Incorrect-Guide-American-History/dp/B000CCE4JE/ref=sr_1_1?ie=UTF8&qid=1517017239&sr=8-1&keywords=politically+incorrect+guide+to+american+history",
-        image_alt: "The Politically Correct Guide to American History by Thomas e. Woods",
+        image_alt: "Alex Younger ReadingList The Politically Correct Guide to American History by Thomas e. Woods",
         author: "Thomas E. Woods",
     },
     {
@@ -533,7 +533,7 @@ Book.create([
         category: "history",
         image_address: "progressive_era.jpg",
         book_link: "https://www.amazon.com/Progressive-Era-Murray-Rothbard-ebook/dp/B076B4SW5T/ref=sr_1_1?s=books&ie=UTF8&qid=1551050667&sr=1-1&keywords=progressive+era+murray",
-        image_alt: "The Progressive Era by Murray N. Rothbard",
+        image_alt: "Alex Younger ReadingList The Progressive Era by Murray N. Rothbard",
         author: "Murray N. Rothbard",
     },
     {
@@ -542,7 +542,7 @@ Book.create([
         category: "biz",
         image_address: "sell_is_human.jpg",
         book_link: "https://www.amazon.com/Sell-Human-Surprising-Moving-Others/dp/1594631905/ref=sr_1_3?s=books&ie=UTF8&qid=1515985359&sr=1-3&keywords=to+sell+is+human",
-        image_alt: "To Sell is Human by Daniel H. Pink",
+        image_alt: "Alex Younger ReadingList To Sell is Human by Daniel H. Pink",
         author: "Daniel H. Pink",
     },
     {
@@ -550,7 +550,7 @@ Book.create([
         category: "biz",
         image_address: "born_for_this.jpg",
         book_link: "https://www.amazon.com/Born-This-Find-Work-Meant/dp/1101903988/ref=sr_1_1?s=books&ie=UTF8&qid=1515985831&sr=1-1&keywords=born+for+this+chris+guillebeau",
-        image_alt: "Born for This by Chris Guillebeau",
+        image_alt: "Alex Younger ReadingList Born for This by Chris Guillebeau",
         author: "Chris Guillebeau",
     },
     {
@@ -559,15 +559,15 @@ Book.create([
         category: "biz",
         image_address: "100_startup.jpg",
         book_link: "https://www.amazon.com/100-Startup-Reinvent-Living-Create/dp/0307951529/ref=sr_1_1?s=books&ie=UTF8&qid=1515986114&sr=1-1&keywords=the+%24100+startup+by+chris+guillebeau",
-        image_alt: "The $100 Startup by Chris Guillebeau",
+        image_alt: "Alex Younger ReadingList The $100 Startup by Chris Guillebeau",
         author: "Chris Guillebeau",
     },
     {
         title: "The Law",
         category: "econ",
         image_address: "the_law.jpg",
-        book_link: "https://www.amazon.com/s/ref=nb_sb_ss_i_1_11?url=search-alias%3Dstripbooks&field-keywords=the+law+by+frederic+bastiat&sprefix=the+law+by+%2Cstripbooks%2C186&crid=7ZMH94ILX0L6",
-        image_alt: "The Law by Frederic Bastiat",
+        book_link: "https://www.amazon.com/Law-Frederic-Bastiat/dp/1440496064/ref=sr_1_1_sspa?crid=7ZMH94ILX0L6&keywords=the+law+by+frederic+bastiat&qid=1555294381&s=books&sprefix=the+law+by+%2Cstripbooks%2C186&sr=1-1-spons&psc=1",
+        image_alt: "Alex Younger ReadingList The Law by Frederic Bastiat",
         author: "Frederic Bastiat",
     },
     {
@@ -576,7 +576,7 @@ Book.create([
         category: "science",
         image_address: "zebras_dont_get_ulcers.jpg",
         book_link: "https://www.amazon.com/Why-Zebras-Dont-Ulcers-Third/dp/0805073698/ref=sr_1_1?s=books&ie=UTF8&qid=1515986523&sr=1-1&keywords=Why+Zebras+Don%27t+Get+Ulcers+by+Robert+M.+Sapolsky",
-        image_alt: "Why Zebras Don't Get Ulcers by Robert M. Sapolsky",
+        image_alt: "Alex Younger ReadingList Why Zebras Don't Get Ulcers by Robert M. Sapolsky",
         author: "Robert M. Sapolsky",
     },
     {
@@ -585,7 +585,7 @@ Book.create([
         category: "pol",
         image_address: "three_languages_politics.jpg",
         book_link: "https://www.amazon.com/Three-Languages-Politics-Talking-Political/dp/1944424466/ref=sr_1_1?s=books&ie=UTF8&qid=1515986807&sr=1-1&keywords=The+Three+Languages+of+Politics+by+Arnold+Kling",
-        image_alt: "The Three Languages of Politics by Arnold Kling",
+        image_alt: "Alex Younger ReadingList The Three Languages of Politics by Arnold Kling",
         author: "Arnold Kling",
     },
     {
@@ -594,7 +594,7 @@ Book.create([
         category: "peopleskill",
         image_address: "never_eat_alone.jpg",
         book_link: "https://www.amazon.com/Never-Eat-Alone-Expanded-Updated/dp/0385346654/ref=sr_1_1?s=books&ie=UTF8&qid=1515987002&sr=1-1&keywords=never+eat+alone+by+keith+ferrazzi",
-        image_alt: "Never Eat Alone by Keith Ferrazzi",
+        image_alt: "Alex Younger ReadingList Never Eat Alone by Keith Ferrazzi",
         author: "Keith Ferrazzi",
     },
     {
@@ -603,7 +603,7 @@ Book.create([
         category: "misc",
         image_address: "darkness_visible.jpg",
         book_link: "https://www.amazon.com/Darkness-Visible-Madness-William-Styron/dp/0679736395/ref=sr_1_1?s=books&ie=UTF8&qid=1515987132&sr=1-1&keywords=darkness+visible+william+styron",
-        image_alt: "Darkness Visible by William Styron",
+        image_alt: "Alex Younger ReadingList Darkness Visible by William Styron",
         author: "William Styron",
     },
     {
@@ -612,7 +612,7 @@ Book.create([
         category: "misc",
         image_address: "ignore_everybody.jpg",
         book_link: "https://www.amazon.com/Ignore-Everybody-Other-Keys-Creativity/dp/159184259X/ref=sr_1_1?s=books&ie=UTF8&qid=1515985570&sr=1-1&keywords=Ignore+Everybody+by+Hugh+Macleod",
-        image_alt: "Ignore Everybody by Hugh Macleod",
+        image_alt: "Alex Younger ReadingList Ignore Everybody by Hugh Macleod",
         author: "Hugh MacLeod",
     },
     {
@@ -620,17 +620,8 @@ Book.create([
         category: "econ",
         image_address: "economic_controversies",
         book_link: "https://mises.org/library/economic-controversies",
-        image_alt: "Economic Controversies by Murry Rothbard",
+        image_alt: "Alex Younger ReadingList Economic Controversies by Murry Rothbard",
         author: "Murray Rothbard",
-    },
-    {
-        title: "The Ruby on Rails Tutorial",
-        subtitle: "Learn Web Development with Rails",
-        category: "tech",
-        image_address: "ruby_tutorial.jpg",
-        book_link: "https://www.railstutorial.org/",
-        image_alt: "The Ruby on Rails Tutorial by Michael Hartl",
-        author: "Michael Hartl",
     },
     {
         title: "Spacetime Physics",
@@ -638,6 +629,6 @@ Book.create([
         category: "science",
         image_address: "spacetime_physics.jpg",
         book_link: "https://www.amazon.com/Spacetime-Physics-Edwin-F-Taylor/dp/0716723271/ref=sr_1_1?s=books&ie=UTF8&qid=1517016672&sr=1-1&keywords=spacetime+physics+taylor+and+wheeler",
-        image_alt: "Spacetime Physics by Edwin F. Taylor & John Archibald Wheeler",
+        image_alt: "Alex Younger ReadingList Spacetime Physics by Edwin F. Taylor & John Archibald Wheeler",
         author: "Edwin F. Taylor & John Archibald Wheeler",
     }])

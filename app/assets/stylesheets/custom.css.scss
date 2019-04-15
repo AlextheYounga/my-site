@@ -104,4 +104,19 @@ section.articles {
         border: 3px inset lightgrey;
         border-radius: 4px;
     }
+
+    @media screen and (max-width: 576px) {
+        .cover {
+            width: 8rem;
+        }
+
+        img {
+            width: 8rem;
+            margin: .25rem;
+        }
+
+        .book-description {
+            display: none;
+        }
+    }
 }
