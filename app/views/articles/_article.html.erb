@@ -13,7 +13,7 @@
 <section class="text-center">
 <% obj.each do |article| %>
 <a href="<%= article_path(article) %>" class="no-underline">
-  <div class="teaser bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg w-3/4">
+  <div class="bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg w-3/4">
     <h1 class="fancy-font burgandy"><%= article.title %></h1>
     <p class="leading-normal normal-font p-8 text-black text-lg"><%= truncate(strip_tags(article.description), length: 600) %></p>
     <small class="burgandy">Created by <%= article.user.username if article.user %>

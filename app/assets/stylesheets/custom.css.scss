@@ -106,8 +106,12 @@ section.articles {
     }
 
     @media screen and (max-width: 576px) {
+        .category-menu {
+            width: 40%;
+        }
+
         .cover {
-            width: 8rem;
+            width: 50%;
         }
 
         img {
@@ -119,4 +123,9 @@ section.articles {
             display: none;
         }
     }
+}
+
+/*---- Projects ----*/
+section.projects {
+    background-image: url("projects/projects-bg.svg");
 }
