@@ -1,15 +1,19 @@
 <section class="projects">
-    <h1 class="fancy-font pt-16 text-center burgandy">My Projects</h1>
+  <h1 class="fancy-font pt-16 text-center burgandy">My Projects</h1>
 
-    <div class="container text-center mx-auto py-16">
-      <div class="bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg lg:w-3/4 md:w-3/4 sm:mx-4">
-        <h1 class="fancy-font burgandy">Blue Hawaiian</h1>
-        <%= image_tag("bluehawaiian.jpg", :alt => "Blue Hawaiian Helicopters", class:"w-4/5 py-8") %>    
-        <p class="leading-normal normal-font text-black text-lg">This is a project I worked on</p>
-    </div>
+  <div class="container text-center mx-auto py-16 px-4">
+    <% if @projects.any?
+      then %>
+    <% @projects.each do |project| %>
+    <a href="<%= project.project_link%>" target="blank" rel="nofollow" class="no-underline">
+      <div class="<%= project.bg_color %> block border border-grey-light mx-auto my-16 py-8 rounded shadow hover:shadow-lg w-full">
+        <h1 class="fancy-font <%= project.color %>"><%= project.title%></h1>
+        <%= image_tag(project.image_address, :alt => project.image_alt, class:"w-4/5 py-8") %>
+        <p class="leading-normal mx-auto normal-font text-black text-lg w-3/4"><%= project.description %></p>
+        <h3 class="py-6 normal-font mx-auto text-3xl <%= project.color %>">Built with <%= project.framework%></h3>
+      </div>
+    </a>
+    <% end %>
+    <% end %>
+  </div>
 </section>
-
-
-
-
-

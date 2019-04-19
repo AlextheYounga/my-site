@@ -23,6 +23,7 @@ class PagesController < ApplicationController
   end
 
   def projects
+    @projects = Project.all
   end
 
   def playground
