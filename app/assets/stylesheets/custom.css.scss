@@ -1,11 +1,9 @@
 /*---- Colors ----*/
 $burgandy: #800020;
 $burgandy-hover: #3d0303;
-
 .burgandy {
     color: #800020;
 }
-
 .burgandy-hover {
     color: #3d0303;
 }
@@ -27,8 +25,7 @@ $burgandy-hover: #3d0303;
         display: none !important;
     }
 }
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
     nav.mobile {
         display: none !important;
     }
@@ -128,4 +125,9 @@ section.articles {
 /*---- Projects ----*/
 section.projects {
     background-image: url("projects/projects-bg.svg");
+}
+
+/*---- Playground ----*/
+section.playground {
+    background-image: url("playground-bg.svg");
 }

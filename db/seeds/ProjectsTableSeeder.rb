@@ -39,7 +39,7 @@ Project.create([
         image_alt: "alex younger blue hawaiian helicopters website management",
         project_link: "https://parallelpath.com/",
         framework: "PHP Laravel with Wordpress",
-        color: "text-grey",
+        color: "text-grey-dark",
         bg_color: "bg-grey-lightest"
     },
     {

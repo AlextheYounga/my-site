@@ -1,47 +1,43 @@
-<h1 align="center">Playground</h1>
-<p align="center">A space for random, fun, interactive projects</p>
-<!-- stock lookup -->
-<div>
-  <h3 align="center">Search for Stocks</h3>
-  <div>
-    <%= form_tag search_stocks_path, remote: true, method: :get do %>
-    <div id="stock-lookup" class="form-group row no-padding text-center col-md-10">
-      <div class="col-md-8">
-        <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: false,
-                                        class: "form-control search-box input lg" %>
-      </div>
-      <div class="col-md-2">
-        <%= button_tag(type: :submit, class: "btn btn-sm btn-success") do %>
-        <i class="fa fa-search"></i> Search Stock Prices
+<section class="playground">
+  <h1 class="fancy-font pt-16 text-center burgandy">Playground</h1>
+  <p class="text-center text-lg py-4 normal-font text-black">A space for random, fun, interactive projects</p>
+
+  <div class="container mx-auto text-center">
+    <h3 class="fancy-font pb-4 pt-8">Search for Stocks</h3>
+    <div>
+      <%= form_tag search_stocks_path, remote: true, method: :get do %>
+      <div id="stock-lookup">
+        <div class="w-96 sm:w-full mr-1 sm:mr-0 sm:mb-1 z-20">
+          <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: false,
+              class: "bg-grey-lighter appearance-none border-2 border-yellow-offset hover:border-grey-dark rounded-sm py-4 px-6 sm:w-1/2 md:1/4 lg:w-1/4 text-black text-center" %>
+        </div>
+        <div>
+          <%= button_tag(type: :submit, class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48") do %>
+          <i class="fa fa-search"></i> Search Stock Prices
+          <% end %>
+        </div>
         <% end %>
       </div>
-      <% end %>
+      <div id="results">
+        <%= render 'layouts/result' %>
+      </div>
     </div>
-    <div id="results">
-      <%= render 'layouts/result' %>
-    </div>
+    <!-- end stock-lookup -->
+
+    <!-- watchlist -->
+    <h3 class="fancy-font pb-12 pt-16 text-center">My Stock WatchList</h3>
+    <%= render 'user_stocks/watchlist'%>
+    <!-- end watchlist -->
   </div>
-  <!-- end stock-lookup -->
 
-  <!-- watchlist -->
-  <h3 align="center">My Stock WatchList</h3>
-  <%= render 'user_stocks/watchlist'%>
-  <!-- end watchlist -->
-</div>
-
-<!--map-->
-<div>
-  <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1xjnP9IvzZ5YARi0kVmI3FsPeLi7Yb0y9" width="700"
-    height="480"></iframe>
-</div>
-<!-- end map -->
-
+</section>
 <!-- Stock Result -->
+<% content_for :javascripts do %>
 <script>
-  $(document).ready(function(){
-      $('#stock-lookup-form').on('ajax:complete', function(event, data, status){
-        $('#results').html(data.responseText);
-      });
-    }); 
-  </script>
-
+  $(document).ready(function () {
+    $('#stock-lookup-form').on('ajax:complete', function (event, data, status) {
+      $('#results').html(data.responseText);      
+    });
+  }); 
+</script>
+<% end %>
