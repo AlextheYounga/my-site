@@ -7,6 +7,7 @@ class PagesController < ApplicationController
 
   def home
     @articles = Article.order("created_at desc").limit(3)
+    @books = Book.all
 
   end
 
