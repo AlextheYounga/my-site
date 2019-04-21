@@ -15,11 +15,6 @@ class PagesController < ApplicationController
 
   def readinglist
     @books = Book.all
-    # @category = Book.category
-    # @image_address = Book.image_address
-    # @image_alt = Book.image_alt
-    # @book_id = Book.book_id
-    # @link = Book.book_link
   end
 
   def projects
@@ -28,7 +23,7 @@ class PagesController < ApplicationController
 
   def playground
     @user_stocks = User.last.stocks
-    # @favorite_quotes = FavoriteQuote.all
+    @favorite_quotes = FavoriteQuote.all
     # @quotes = FavoriteQuote.quote
     # @name = FavoriteQuote.name
   end

@@ -1,11 +1,12 @@
 <% if @stock %>
-    <div class="w-1/2 bg-grey-lightest shadow mx-auto">
-      <strong>Symbol: </strong><%= @stock.company_name%>
-      <strong>Name: </strong><%= @stock.symbol%>
-      <strong>Price: </strong><%= @stock.latest_price%>&nbsp;
+    <div class="bg-grey-lightest mx-auto py-6 shadow shadow-lg w-1/2">
+      <p class="flex justify-between px-16 py-3 normal-font"><strong>Symbol:</strong> <%= @stock.company_name%></p>
+      <p class="flex justify-between px-16 py-3 normal-font"><strong>Name:</strong> <%= @stock.symbol%></p>
+      <p class="flex justify-between px-16 py-3 normal-font"><strong>Price:</strong> <%= @stock.latest_price%>&nbsp;</p>
       <% if logged_in? %>
         <%= link_to "Add to WatchList", user_stocks_path(user: current_user, stock_symbol: @stock.symbol),
-                                                          class: "btn btn-xs btn-success", method: :post %>
+                    class: "bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48",
+                    method: :post %>
       <% else %>
         <%= nil %>
     </div>
