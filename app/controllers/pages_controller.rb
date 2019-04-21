@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   def home
     @articles = Article.order("created_at desc").limit(3)
     @books = Book.all
-
+    @carousel = ['hideLeft', 'prevLeftSecond', 'prev', 'selected', 'next', 'nextRightSecond', 'hideRight']
   end
 
   def about
