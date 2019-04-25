@@ -29,11 +29,11 @@
         <%= link_to "Destroy", article_path(article), method: :delete,
                               data: {confirm: "Are you sure you want to delete the article?"},
                               class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:btext-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48" %>
+        <% end %>                              
       </div>
     </div>
   </a>
   <% else %>
     <%= nil %>
-  <% end %>
   <% end %>
 </div>
