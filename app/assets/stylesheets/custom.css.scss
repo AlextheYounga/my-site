@@ -200,6 +200,12 @@ section.about {
     }
 }
 
+/*---- Forms ----*/
+.form-title, .form-description {
+    &:focus {
+        outline-color: #800020;
+    }
+}
 /*---- Articles ----*/
 section.articles {
     background-image: url("main/topography-red.svg");

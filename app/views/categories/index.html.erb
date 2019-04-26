@@ -1,32 +1,30 @@
-<!-- CATEGORIES INDEX -->
+<section class="category-index pb-16">
+  <h1 class="py-16 fancy-font text-center burgandy">Blog Categories</h1>
+  <%= link_to "Create New Category", new_category_path, 
+    class: "bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48 text-center" %>
 
-<h1 class="fancy-font margin-top-2cm" align="center">Dev Blog Categories</h1>
-<p align="center"><%= link_to "Create New Category", new_category_path, class: "btn btn-lg btn-primary" %></p>
 
-
-<% @categories.each do |category| %> <!-- Mind the %= -->
-      <div class="row">
-        <div id="category-div" class="col-xs-4">
-          <div class= "well well-lg">
-            <div class= "article-title">
-              <%= link_to "#{category.name}", category_path(category) %>
-            </div>
-            <div align="center">
-              <small><%= pluralize(category.articles.count, "article") %></small>
-            </div>
-            <div align="center" class="article-actions">
-              <% if logged_in? %>
-              <%= link_to "Edit Category Name", edit_category_path(category), class: "btn btn-xs btn-primary" %>
-              <% else %>
-            <%= nil %>
-          <% end %>
-          </div>
-        </div>
-      </div>
+  <% @categories.each do |category| %>
+  <!-- Mind the %= -->
+  <div class="container mx-auto py-16 text-center">
+    <div class="fancy-font">
+      <%= link_to "#{category.name}", category_path(category) %>
     </div>
-  </br>
-<% end %>
+    <div>
+      <small class="normal-font"><%= pluralize(category.articles.count, "article") %></small>
+    </div>
+    <div class="py-2">
+      <% if logged_in? %>
+      <%= link_to "Edit Category Name", edit_category_path(category), 
+      class: "bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48 text-center" %>
+      <% else %>
+      <%= nil %>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
 
-<div class="col-cs-4" align="center">
-    <%= link_to "Cancel Request and Return to Articles Listing", articles_path %>
-</div>
+  <div class="py-16 text-center">
+    <%= link_to "Cancel Request and Return to Articles Listing", articles_path, class: "burgandy fancy-font hover:underline no-underline" %>
+  </div>
+</section>

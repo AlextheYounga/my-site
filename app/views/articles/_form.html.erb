@@ -1,32 +1,26 @@
 <%= render 'shared/errors', obj: @article %>
 
-<div class="bg-white container mx-auto rounded shadow">
-  <%= form_for(@article, :html => {class: "", role: "form"}) do |f| %>
-    <div class="">
-      <!-- <%= f.label :title, class: "w-3/4"%> -->
-      <%= f.text_field :title, placeholder: "Title of Article", autofocus: true,
-            class:"block border border-red-darkest focus:border-red-darkest focus:shadow-lg mx-auto p-4 rounded shadow text-center w-3/4" %>
-    </div>
-
-  <div class="">
-    <!-- <%= f.label :description %> -->
-    <%= f.text_area :description, rows: 27, class: "form-control", placeholder: "Body" %>
+<div class="bg-white container mx-auto rounded shadow-lg p-6">
+  <%= form_for(@article, :html => {role: "form"}) do |f| %>
+  <div class="w-3/4 mx-auto">
+    <%= f.text_field :title, placeholder: "Title of Article", autofocus: true,
+            class:"form-title fancy-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-4 rounded shadow text-center w-full" %>
   </div>
 
-  <div class="">
+  <div class="w-3/4 mx-auto">
+    <%= f.text_area :description, rows: 27, class: "form-description normal-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg mx-auto my-12 p-6 rounded shadow w-full", placeholder: "Body" %>
+  </div>
+
+  <div class="category-boxes">
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
-    <%= cb.label(type: "checkbox", class: "m-4") {cb.check_box(type: "checkbox", class: "m-4") + cb.text} %>
+    <%= cb.label(class: "inline-flex") {cb.check_box(class: "checkbox") + cb.text} %>
     <% end %>
   </div>
 
-  <div class="">
-    <%= f.submit class: "bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48" %>
-  </div>
- <% end %>
+  <%= f.submit class: "py-3 bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font rounded shadow-lg text-green-darkest w-48" %>
+  <% end %>
 
- <div class="col-cs-4" align="center">
-    <%= link_to "Cancel Request and Return to Articles Listing", articles_path %>
+  <div class="py-16 text-center">
+    <%= link_to "Cancel Request and Return to Articles Listing", articles_path, class: "burgandy fancy-font hover:underline no-underline" %>
   </div>
 </div>
-
-
