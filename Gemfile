@@ -30,7 +30,7 @@ gem 'font-awesome-rails'
 gem 'stock_quote'
 gem 'meta-tags'
 gem 'hirb'
-gem 'webp-ffi'
+# gem 'webp-ffi'
 gem 'webpacker'
 
 # Use ActiveStorage variant
