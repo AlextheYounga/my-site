@@ -1,6 +1,6 @@
-<!-- CATEGORY SHOW PAGE -->
-<h1 align="center" id="page-header"> <%="Articles In: " + @category.name %> </h1>
+<section class="category-show pb-16">
+    <h1 class="py-16 fancy-font text-center burgandy"><%="Articles In: " + @category.name %></h1>
+    <%= render 'articles/article', obj: @category_articles %>
 
-<%= render 'articles/article', obj: @category_articles %>
-
-</br><div align="center"><%= link_to "View All", articles_path, class: "btn btn-lg btn-success" %></div>
+    <%= link_to "View All", articles_path, class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48" %>
+</section>
