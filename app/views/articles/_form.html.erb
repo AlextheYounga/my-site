@@ -11,9 +11,10 @@
     <%= f.text_area :description, rows: 27, class: "form-description normal-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg mx-auto my-12 p-6 rounded shadow w-full", placeholder: "Body" %>
   </div>
 
-  <div class="category-boxes">
+  <div class="category-boxes py-6 text-center">
+    <h3 class="fancy-font pb-6 burgandy text-2xl underline">Category</h3>
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
-    <%= cb.label(class: "inline-flex") {cb.check_box(class: "checkbox") + cb.text} %>
+    <%= cb.label(class: "inline-flex mx-6 normal-font text-lg burgandy") {cb.check_box(class: "checkbox mr-2") + cb.text} %>
     <% end %>
   </div>
 

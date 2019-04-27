@@ -1,15 +1,14 @@
 <section class="category-index pb-16">
-  <h1 class="py-16 fancy-font text-center burgandy">Blog Categories</h1>
+  <div class="pb-8 pt-16">
+  <h1 class="fancy-font text-center burgandy">Blog Categories</h1>
   <%= link_to "Create New Category", new_category_path, 
     class: "bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48 text-center" %>
+  </div>
 
 
   <% @categories.each do |category| %>
-  <!-- Mind the %= -->
-  <div class="container mx-auto py-16 text-center">
-    <div class="fancy-font">
-      <%= link_to "#{category.name}", category_path(category) %>
-    </div>
+  <div class="bg-white container mx-auto p-8 rounded-lg shadow-lg text-center w-1/2 my-8">
+      <%= link_to "#{category.name}", category_path(category), class: "fancy-font burgandy no-underline text-2xl" %>
     <div>
       <small class="normal-font"><%= pluralize(category.articles.count, "article") %></small>
     </div>
