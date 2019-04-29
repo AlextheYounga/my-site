@@ -1,9 +1,12 @@
 <%= render 'shared/errors', obj: @article %>
 
 <div class="bg-white container mx-auto rounded shadow-lg p-6">
-    <%= form_for @article do |f| %>
-    <%= f.input :content, as: :ckeditor, input_html: { ckeditor: { toolbar: 'Full' } } %>
-  <!-- <%= form_for(@article, :html => {role: "form"}) do |f| %> -->
+  <%= form_for @article do |f| %>
+  <%= form_for(@article, :html => {role: "form"}) do |f| %>
+  <div class="">
+    <textarea name="editor1" id="editor1" rows="27"></textarea>
+    <script>CKEDITOR.replace('editor1');</script>
+  </div>
   <div class="w-3/4 mx-auto">
     <%= f.text_field :title, placeholder: "Title of Article", autofocus: true,
             class:"form-title fancy-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-4 rounded shadow text-center w-full" %>
@@ -29,11 +32,13 @@
   </div>
 </div>
 
+<%= javascript_include_tag('ckeditor/ckeditor.js')%>
 <% content_for :javascripts do %>
+
 <script type='text/javascript' charset='UTF-8'>
-  $(document).ready(function(){
-    $('form[data-remote]').bind('ajax:before', function(){
-      for (instance in CKEDITOR.instances){
+  $(document).ready(function () {
+    $('form[data-remote]').bind('ajax:before', function () {
+      for (instance in CKEDITOR.instances) {
         CKEDITOR.instances[instance].updateElement();
       }
     });
