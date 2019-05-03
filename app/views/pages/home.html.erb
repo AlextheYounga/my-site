@@ -16,7 +16,13 @@
         <a href="<%= article_path(article) %>" class="no-underline text-blue">
             <div class="teaser bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg w-4/5">
                 <h1 class="fancy-font text-blue"><%= article.title %></h1>
-                <p class="leading-normal normal-font p-8 text-black text-lg"><%= truncate(strip_tags(article.description), length: 600) %></p>
+                <p class="leading-normal normal-font p-8 text-black text-lg">
+                    <% if article.description && article.description.empty? then %>
+                        <%= truncate(strip_tags(article.editor1), length: 600) %>
+                    <% else %>
+                        <%= truncate(strip_tags(article.description), length: 600) %>
+                    <% end %>
+                </p>
                 <small class="text-blue">Created by <%= article.user.username if article.user %>
                     <%= time_ago_in_words(article.created_at) %> ago,
                     Last updated: <%= time_ago_in_words(article.updated_at) %> ago
