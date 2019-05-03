@@ -30,7 +30,9 @@ gem 'font-awesome-rails'
 gem 'stock_quote'
 gem 'meta-tags'
 gem 'hirb'
-# gem 'webp-ffi' need to install other prerequisites
+# gem 'webp-ffi'
+gem 'ckeditor'
+gem 'paperclip'
 gem 'webpacker'
 
 # Use ActiveStorage variant

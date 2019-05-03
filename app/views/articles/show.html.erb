@@ -2,8 +2,13 @@
   <div class="container mx-auto p-6">
     <div class="bg-white shadow-lg rounded-lg mx-auto p-6">
       <h1 class="burgandy text-center py-8 fancy-font"><%= @article.title %></h1>
-      <p class="normal-font leading-loose w-3/4 mx-auto pb-6 text-lg text-black"><%= @article.description %></p>
-      <!-- <%= simple_format(@article.description) %> -->
+      <p class="normal-font leading-loose w-3/4 mx-auto pb-6 text-lg text-black">
+        <% if @article.description && @article.description.empty? then %>
+          <%= @article.editor1 %>
+        <% else %>
+          <%= @article.description %>
+        <% end %>
+      </p>
       <% if @article.categories.any? %>
       <p class="normal-font text-black text-center py-4">Categories: <%= render @article.categories%></p>
       <% end %>
