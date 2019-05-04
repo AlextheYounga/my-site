@@ -49,7 +49,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    flash[:notice] = "Article was successfully deleted"
+    flash[:notice] = "Article was successfully obliterated"
     redirect_to articles_path
   end
 
@@ -65,9 +65,9 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
-
+  
   def article_params
-    params.require(:article).permit(:title, (:description || :editor1), category_ids: [])
+    params.require(:article).permit(:title, :editor1, :description, category_ids: [])
   end
 
 end
