@@ -2,13 +2,13 @@
   <div class="container mx-auto p-6">
     <div class="bg-white shadow-lg rounded-lg mx-auto p-6">
       <h1 class="burgandy text-center py-8 fancy-font"><%= @article.title %></h1>
-      <p class="normal-font leading-loose w-3/4 mx-auto pb-6 text-lg text-black">
-        <% if @article.description && @article.description.empty? then %>
+      <div class="w-3/4 mx-auto pb-6">
+        <% if @article.description.blank? then %>
           <%= @article.editor1 %>
         <% else %>
           <%= @article.description %>
         <% end %>
-      </p>
+      </div>
       <% if @article.categories.any? %>
       <p class="normal-font text-black text-center py-4">Categories: <%= render @article.categories%></p>
       <% end %>
@@ -17,8 +17,8 @@
         <% if logged_in? %>
         <%= link_to "Edit this Article", edit_article_path(@article), 
           class: "py-3 bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font rounded shadow-lg text-green-darkest w-48" %>
-        <%= link_to "Delete this Article", article_path(@article), method: :delete,
-            data: {confirm: "Are you sure you want to delete the article?"},
+        <%= link_to "Destroy this Article", article_path(@article), method: :delete,
+            data: {confirm: "Are you sure you want to destroy the article?"},
             class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48" %>
 
         <%= link_to "View all Articles", articles_path, 
