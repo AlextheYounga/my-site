@@ -1,8 +1,8 @@
 <section class="article-show py-16">
   <div class="container mx-auto p-6">
     <div class="bg-white shadow-lg rounded-lg mx-auto p-6">
-      <h1 class="burgandy text-center py-8 fancy-font"><%= @article.title %></h1>
-      <div class="w-3/4 mx-auto pb-6">
+      <h1 class="burgandy fancy-font pb-16 pt-8 text-center"><%= @article.title %></h1>
+      <div class="w-3/4 mx-auto pb-6 normal-font">
         <% if @article.description.blank? then %>
           <%= simple_format(@article.editor1) %>
         <% else %>
