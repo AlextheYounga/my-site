@@ -16,11 +16,11 @@
 <body>
   <%= yield %>
 </body>
+<%=render 'layouts/footer' %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-<%= yield :javascripts %>
 <%= javascript_pack_tag 'application' %>
-<%=render 'layouts/footer' %>'
+<%= yield :javascripts %>
+
 <!-- Mobile Nav -->
 <script>
 $(document).ready(function () {

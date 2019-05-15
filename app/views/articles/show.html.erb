@@ -4,7 +4,7 @@
       <h1 class="burgandy text-center py-8 fancy-font"><%= @article.title %></h1>
       <div class="w-3/4 mx-auto pb-6">
         <% if @article.description.blank? then %>
-          <%= @article.editor1 %>
+          <%= simple_format(@article.editor1) %>
         <% else %>
           <%= @article.description %>
         <% end %>
