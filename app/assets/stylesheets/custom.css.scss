@@ -34,7 +34,7 @@ $burgandy-hover: #3d0303;
 /*---- Home ----*/
 
 .hero {
-    background-image: url("main/twin-lakes.jpg");
+    background-image: url("twin-lakes.jpg");
     background-size: cover;
     margin-top: -6rem;
 
@@ -48,11 +48,11 @@ $burgandy-hover: #3d0303;
 }
 
 section.articles-home {
-    background-image: url("main/topography-blue.svg");
+    background-image: url("topography-blue.svg");
 }
 /*---- About ----*/
 section.about {
-    background-image: url("main/topography-red.svg");
+    background-image: url("topography-red.svg");
 
     .timeline {
         &::before {
@@ -208,19 +208,19 @@ section.about {
 }
 /*---- Articles ----*/
 section.articles {
-    background-image: url("main/topography-red.svg");
+    background-image: url("topography-red.svg");
 }
 
 section.new-article {
-    background-image: url("main/line-in-motion.svg");
+    background-image: url("line-in-motion.svg");
 }
 
 section.category-index {
-    background-image: url("main/line-in-motion.svg");
+    background-image: url("line-in-motion.svg");
 }
 
 section.article-show {
-    background-image: url("main/aztec.svg");
+    background-image: url("aztec.svg");
 }
 
 /*---- Reading List ----*/
@@ -290,7 +290,7 @@ section.article-show {
 
 /*---- Projects ----*/
 section.projects {
-    background-image: url("projects/circuit.svg");
+    background-image: url("circuit.svg");
 }
 
 /*---- Playground ----*/

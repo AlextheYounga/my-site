@@ -279,7 +279,7 @@ Book.create([
         category: "productivity",
         image_address: "willpower_instinct.jpg",
         book_link: "https://www.amazon.com/Willpower-Instinct-Self-Control-Works-Matters/dp/1583335080/ref=sr_1_2?s=books&ie=UTF8&qid=1515923129&sr=1-2&keywords=willpower+instinct+by+kelly+mcgonigal",
-        image_alt: "Alex Younger ReadingList https://images.gr-assets.com/books/1436737104l/10865206.jpg",
+        image_alt: "Alex Younger ReadingList The Willpower Instinct by Kelly McGonigal, Phd",
         author: "Kelly McGonigal, Phd",
     },
     {
