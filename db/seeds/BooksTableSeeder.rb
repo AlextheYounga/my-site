@@ -653,7 +653,7 @@ Book.create([
     {
         title: "Economic Controversies",
         category: "econ",
-        image_address: "economic_controversies",
+        image_address: "economic_controversies.jpg",
         book_link: "https://mises.org/library/economic-controversies",
         image_alt: "Alex Younger ReadingList Economic Controversies by Murry Rothbard",
         author: "Murray Rothbard",
