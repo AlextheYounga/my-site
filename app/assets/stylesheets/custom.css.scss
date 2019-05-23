@@ -290,12 +290,12 @@ section.article-show {
 
 /*---- Projects ----*/
 section.projects {
-    background-image: image-url("project/circuit.svg");
+    background-image: image-url("circuit.svg");
 }
 
 /*---- Playground ----*/
 section.playground {
-    background-image: image-url("project/gears.svg");
+    background-image: image-url("gears.svg");
 
     table {
         tr:nth-child(even) {
