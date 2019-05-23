@@ -8,7 +8,6 @@ class PagesController < ApplicationController
   def home
     @articles = Article.order("created_at desc").limit(3)
     @books = Book.all
-    @carousel = ['hideLeft', 'prevLeftSecond', 'prev', 'selected', 'next', 'nextRightSecond', 'hideRight']
   end
 
   def about
@@ -23,7 +22,7 @@ class PagesController < ApplicationController
   end
 
   def playground
-    @user_stocks = User.last.stocks if User.last.stocks.any?
+    @user_stocks = User.last.stocks if User.any? || User.last.stocks.any?
     @favorite_quotes = FavoriteQuote.all
     # @quotes = FavoriteQuote.quote
     # @name = FavoriteQuote.name
