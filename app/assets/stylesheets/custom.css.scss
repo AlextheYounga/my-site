@@ -48,11 +48,11 @@ $burgandy-hover: #3d0303;
 }
 
 section.articles-home {
-    background-image: image-url("main/topography-blue.svg");
+    background-image: image-url("topography-blue.svg");
 }
 /*---- About ----*/
 section.about {
-    background-image: image-url("main/topography-red.svg");
+    background-image: image-url("topography-red.svg");
 
     .timeline {
         &::before {
@@ -208,19 +208,19 @@ section.about {
 }
 /*---- Articles ----*/
 section.articles {
-    background-image: image-url("main/topography-red.svg");
+    background-image: image-url("topography-red.svg");
 }
 
 section.new-article {
-    background-image: image-url("main/line-in-motion.svg");
+    background-image: image-url("line-in-motion.svg");
 }
 
 section.category-index {
-    background-image: image-url("main/line-in-motion.svg");
+    background-image: image-url("line-in-motion.svg");
 }
 
 section.article-show {
-    background-image: image-url("main/aztec.svg");
+    background-image: image-url("aztec.svg");
 }
 
 /*---- Reading List ----*/

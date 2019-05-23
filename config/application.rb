@@ -15,6 +15,11 @@ module MySite
     config.assets.paths << Rails.root.join("app", "assets", "images", "about")
     config.assets.paths << Rails.root.join("app", "assets", "images", "projects")
 
+    config.assets.precompile << "app/assets/images/books"
+    config.assets.precompile << "app/assets/images/main"
+    config.assets.precompile << "app/assets/images/about"
+    config.assets.precompile << "app/assets/images/projects"
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

@@ -41,7 +41,7 @@ Ckeditor.setup do |config|
 
   # Customize ckeditor assets path
   # By default: nil
-  # config.asset_path = 'http://www.example.com/assets/ckeditor/'
+  # config.image_tag = 'http://www.example.com/assets/ckeditor/'
 
   # CKEditor CDN
   # More info here http://cdn.ckeditor.com/
