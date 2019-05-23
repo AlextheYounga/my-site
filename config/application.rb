@@ -10,15 +10,15 @@ module MySite
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
-    config.assets.paths << Rails.root.join("app", "assets", "images", "books")
-    config.assets.paths << Rails.root.join("app", "assets", "images", "main")
-    config.assets.paths << Rails.root.join("app", "assets", "images", "about")
-    config.assets.paths << Rails.root.join("app", "assets", "images", "projects")
+    # config.assets.paths << Rails.root.join("app", "assets", "images", "books")
+    # config.assets.paths << Rails.root.join("app", "assets", "images", "main")
+    # config.assets.paths << Rails.root.join("app", "assets", "images", "about")
+    # config.assets.paths << Rails.root.join("app", "assets", "images", "projects")
 
-    config.assets.precompile << "app/assets/images/books"
-    config.assets.precompile << "app/assets/images/main"
-    config.assets.precompile << "app/assets/images/about"
-    config.assets.precompile << "app/assets/images/projects"
+    # config.assets.precompile << "app/assets/images/books"
+    # config.assets.precompile << "app/assets/images/main"
+    # config.assets.precompile << "app/assets/images/about"
+    # config.assets.precompile << "app/assets/images/projects"
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
