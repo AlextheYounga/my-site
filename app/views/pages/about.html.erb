@@ -59,7 +59,11 @@
     <div class="timeline-item w-full my-16">
       <div class="timeline-img w-8 h-8 bg-red-darkest absolute mt-6"></div>
       <div class="timeline-content js--fadeInLeft relative w-2/5 p-10 bg-grey-light shadow-lg">
-        <%= image_tag("black-praxis.png", :alt => "praxis") %> 
+        <picture>
+          <source srcset="<%= image_path("black-praxis.png.webp") %>" type="image/webp">
+          <source srcset="<%= image_path("black-praxis.png") %>" type="image/png">
+          <img src="<%= image_path("black-praxis.png") %>" class="" alt="Grand Canyon Heli Adventure" />
+        </picture>
         <h2>Praxis</h2>
         <div class="pin-r pin-t absolute p-3 text-red-lightest bg-red-darkest inline-block">May 2017</div>
         <p><a class="no-underline burgandy hover:underline" target="_blank" rel="nofollow" href="discoverpraxis.com">Praxis</a> is an organization that
