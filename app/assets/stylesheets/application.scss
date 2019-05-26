@@ -45,7 +45,9 @@
 }
 
 .mobile-menu {
+    // right: -100%;
     transition: 0.6s ease;
+    display: none;
     opacity:0;
     ul {
         top: 50%;
@@ -73,4 +75,5 @@
 .mobile-menu--open {
     right:0;
     opacity:1;
+    display: block;
 }

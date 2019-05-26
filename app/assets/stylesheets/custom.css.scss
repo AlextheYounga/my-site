@@ -11,7 +11,6 @@ $burgandy-hover: #3d0303;
 /*---- Shared ----*/
 .fancy-font, .title, .created-at {
     font-family: 'Alegreya SC', serif !important;
-    font-display: swap;
 }
 
 .normal-font {
@@ -53,15 +52,15 @@ $burgandy-hover: #3d0303;
 
     div.absolute {
         top: 30%;
+
+        @media screen and (max-width: 568px) {
+                top: 23%;
+        }
     }
 }
 
 section.articles-home {
     background-image: image-url("topography-blue.svg");
-    @media screen and (max-width: 767px) {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
 }
 /*---- About ----*/
 section.about {
