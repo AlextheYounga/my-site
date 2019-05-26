@@ -2,15 +2,15 @@
   <h1 class="fancy-font text-center burgandy">Playground</h1>
   <p class="text-center text-lg py-4 normal-font text-black">A space for random, fun, interactive projects</p>
 
-  <section class="stocks">
+  <div>
     <div class="bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
       <h2 class="fancy-font pb-4">Search for Stocks</h2>
-      <div id="stock-lookup">
-        <%= form_tag search_stocks_path, remote: true, method: :get do %>
+      <%= form_tag search_stocks_path, remote: true, method: :get do %>
+      <div id="stock-lookup-form">
         <div>
           <div class="w-96 sm:w-full mr-1 sm:mr-0 sm:mb-1 z-20">
             <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: false,
-                class: "bg-grey-lighter appearance-none border-2 border-yellow-offset hover:border-grey-dark rounded-sm py-4 px-6 sm:w-1/2 md:1/4 lg:w-1/4 text-black text-center" %>
+                  class: "bg-grey-lighter appearance-none border-2 border-yellow-offset hover:border-grey-dark rounded-sm py-4 px-6 sm:w-1/2 md:1/4 lg:w-1/4 text-black text-center" %>
           </div>
           <div>
             <%= button_tag(type: :submit, class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48") do %>
@@ -18,26 +18,26 @@
             <% end %>
           </div>
           <% end %>
-        </div>
-        <div id="results">
-          <%= render 'stocks/result' %>
+          <div id="results">
+            <%= render 'layouts/result' %>
+          </div>
         </div>
       </div>
       <!-- end stock-lookup -->
 
       <!-- watchlist -->
       <h2 class="fancy-font pb-4 pt-16 text-center">My Stock WatchList</h2>
-      <%= render 'stocks/watchlist'%>
+      <%= render 'user_stocks/watchlist'%>
       <!-- end watchlist -->
     </div>
-  </section>
+  </div>
 
-  <section class="quotes pt-16">
+  <div class="quotes pt-16">
     <div class="bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
       <div id="quote-generator">
         <h2 class="fancy-font pb-6">My Favorite Quotes</h2>
-        <div id="quoteContainer" class="leading-normal md:w-1/2 mx-auto normal-font w-full">          
-        <p id="quoteGenius"></p>
+        <div id="quoteContainer" class="leading-normal md:w-1/2 mx-auto normal-font w-full">
+          <p id="quoteGenius"></p>
         </div>
       </div>
 
@@ -46,63 +46,59 @@
         Quote Me
       </a>
     </div>
-  </section>
-
+  </div>
 </section>
 <!-- Stock Result -->
 <% content_for :javascripts do %>
 <script>
+$(document).ready(function(){
+  $('#stock-lookup-form').on('ajax:complete', function(event, data, status){
+    $('#results').html(data.responseText);
+  });
+}); 
+
   $(document).ready(function () {
-    $('#stock-lookup').on('ajax:complete', function (event, data, status) {
-      $('#results').html(data.responseText);
-    });
-  }); 
-</script>
-<script>
-  $(document).ready(function(){
-		var quoteSource=[
+    var quoteSource = [
       <% if @favorite_quotes.any?
-        then %>
-      <% @favorite_quotes.each do |favorite_quote| %>
-		  {
+    then %>
+      <% @favorite_quotes.each do | favorite_quote | %>
+      {
         quote: "<%= favorite_quote.quote%>",
         name: "<%= favorite_quote.name %>"
-	    }, 
+      }, 
       <% end %>
       <% end %>
 	];
 
-		$('#quoteButton').click(function(evt){
-			//define the containers of the info we target
-			var quote = $('#quoteContainer p').text();
-			var quoteGenius = $('#quoteGenius').text();
-			//prevent browser's default action
-			evt.preventDefault();
-			//getting a new random number to attach to a quote and setting a limit
-			var sourceLength = quoteSource.length;
-			var randomNumber= Math.floor(Math.random()*sourceLength);
-			//set a new quote
-			for(i=0;i<=sourceLength;i+=1){
-			var newQuoteText = quoteSource[randomNumber].quote;
-			var newQuoteGenius = quoteSource[randomNumber].name;
-			//console.log(newQuoteText,newQuoteGenius);
-      var timeAnimation = 500;
-      var quoteContainer = $('#quoteContainer');
-      //fade out animation with callback
-      quoteContainer.fadeOut(timeAnimation, function(){
-        quoteContainer.html('');
-				quoteContainer.append('<p>'+newQuoteText+'</p>'+'<p id="quoteGenius">'+'-'+newQuoteGenius+'</p>');
-        
-        //fadein animation.
-        quoteContainer.fadeIn(timeAnimation);
-      });  
-			
-			break;
-		};//end for loop
-	
-	});//end quoteButton function
-		
-		
-});//end document ready
+    $('#quoteButton').click(function (evt) {
+      //define the containers of the info we target
+      var quote = $('#quoteContainer p').text();
+      var quoteGenius = $('#quoteGenius').text();
+      //prevent browser's default action
+      evt.preventDefault();
+      //getting a new random number to attach to a quote and setting a limit
+      var sourceLength = quoteSource.length;
+      var randomNumber = Math.floor(Math.random() * sourceLength);
+      //set a new quote
+      for (i = 0; i <= sourceLength; i += 1) {
+        var newQuoteText = quoteSource[randomNumber].quote;
+        var newQuoteGenius = quoteSource[randomNumber].name;
+        //console.log(newQuoteText,newQuoteGenius);
+        var timeAnimation = 500;
+        var quoteContainer = $('#quoteContainer');
+        //fade out animation with callback
+        quoteContainer.fadeOut(timeAnimation, function () {
+          quoteContainer.html('');
+          quoteContainer.append('<p>' + newQuoteText + '</p>' + '<p id="quoteGenius">' + '-' + newQuoteGenius + '</p>');
+
+          //fadein animation.
+          quoteContainer.fadeIn(timeAnimation);
+        });
+
+        break;
+      };//end for loop
+
+    });//end quoteButton function
+  });//end document ready
 </script>
 <% end %>

@@ -2,7 +2,7 @@ Book.destroy_all
 Book.create([
     {
         title: "How to Win Friends and Influence People",
-        subtitle: "The Only Book You Ned to Lead You to Success",
+        subtitle: "The Only Book You Need to Lead You to Success",
         author: "Dale Carnegie",
         image_address: "win_friends_influence.jpg",
         image_alt: "Alex Younger ReadingList How to Win Friends and Influence People by Dale Carnegie",

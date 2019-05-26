@@ -4,19 +4,17 @@
       <p class="flex justify-between px-16 py-3 normal-font"><strong>Name:</strong> <%= @stock.symbol%></p>
       <p class="flex justify-between px-16 py-3 normal-font"><strong>Price:</strong> <%= @stock.latest_price%>&nbsp;</p>
       <% if logged_in? %>
-        <%= link_to "Add to WatchList", user_stocks_path(user: current_user, stock_symbol: @stock.symbol),
-                    class: "bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48",
-                    method: :post %>
+        <%= link_to "Add to WatchList", user_stocks_path(user: current_user, stock_symbol: @stock.symbol), class: "bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48", method: :post %>
       <% else %>
         <%= nil %>
     </div>
-    <% end  %>
+    <% end %>
 <% end %>
   
-<% flash.each do |name, msg| %>
+<!-- <% flash.each do |name, msg| %>
   <% if flash[:danger]%>
     <ul id="stock-danger" class="alert alert-danger">                              
       <li><%= msg %></li>
     </ul>
   <% end %>
-<% end %>
+<% end %> -->
