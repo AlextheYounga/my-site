@@ -34,8 +34,10 @@ $(document).ready(function () {
     
     // Toggles a class that slides the menu into view on the screen
     $('.mobile-menu').toggleClass('mobile-menu--open');
-    setTimeout(function() { $('.mobile-menu').toggleClass('block'); }, 500);
+    $('.mobile-menu').toggleClass('z-negative');
+    $('.mobile-menu').toggleClass('z-40');
     $('.mobile-menu ul').toggleClass('hidden');
+        // setTimeout(function() { $('.mobile-menu').toggleClass('z-40'); }, 200);
     return false;
   }); 
 });
