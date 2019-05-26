@@ -22,9 +22,7 @@ class PagesController < ApplicationController
   end
 
   def playground
-    if User.any? || User.last.stocks.exists?
-      @user_stocks = User.last.stocks 
-    end
+    @user_stocks = User.last.stocks 
     @favorite_quotes = FavoriteQuote.all
     # @quotes = FavoriteQuote.quote
     # @name = FavoriteQuote.name
