@@ -11,6 +11,7 @@ $burgandy-hover: #3d0303;
 /*---- Shared ----*/
 .fancy-font, .title, .created-at {
     font-family: 'Alegreya SC', serif !important;
+    font-display: swap;
 }
 
 .normal-font {
@@ -33,11 +34,19 @@ $burgandy-hover: #3d0303;
 
 /*---- Home ----*/
 
-.hero {
+.no-webp .hero {
     background-image: image-url("twin-lakes.jpg");
     background-size: cover;
     margin-top: -6rem;
+}
 
+.webp .hero {
+    background-image: image-url("twin-lakes.jpg.webp");
+    background-size: cover;
+    margin-top: -6rem;
+}
+
+    .hero {
     @media screen and (max-width: 768px) {
         background-position: 50%;
     }

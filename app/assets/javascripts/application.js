@@ -13,4 +13,5 @@
 //= require jquery
 //= require rails-ujs
 //= require activestorage
+//= require modernizr-custom.js
 //= require_tree .
