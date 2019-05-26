@@ -34,6 +34,7 @@ gem 'solargraph'
 gem 'ckeditor'
 gem 'paperclip'
 gem 'webpacker'
+gem 'webp-ffi'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
