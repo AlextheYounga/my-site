@@ -1,9 +1,11 @@
 /*---- Colors ----*/
 $burgandy: #800020;
 $burgandy-hover: #3d0303;
+
 .burgandy {
     color: #800020;
 }
+
 .burgandy-hover {
     color: #3d0303;
 }
@@ -24,12 +26,12 @@ $burgandy-hover: #3d0303;
         display: none !important;
     }
 }
+
 @media screen and (min-width: 767px) {
     nav.mobile {
         display: none !important;
     }
 }
-
 
 /*---- Home ----*/
 
@@ -45,7 +47,7 @@ $burgandy-hover: #3d0303;
     margin-top: -5.7rem;
 }
 
-    .hero {
+.hero {
     @media screen and (max-width: 768px) {
         background-position: 50%;
     }
@@ -54,7 +56,7 @@ $burgandy-hover: #3d0303;
         top: 30%;
 
         @media screen and (max-width: 568px) {
-                top: 23%;
+            top: 23%;
         }
     }
 }
@@ -62,6 +64,7 @@ $burgandy-hover: #3d0303;
 section.articles-home {
     background-image: image-url("topography-blue.svg");
 }
+
 /*---- About ----*/
 section.about {
     background-image: image-url("topography-red.svg");
@@ -94,7 +97,7 @@ section.about {
                     top: 30px;
                     left: -15px;
                     border-width: 10px 15px 10px 0;
-                    border-color: transparent #f5f5f5 transparent transparent;
+                    border-color: transparent #dae1e7 transparent transparent;
                 }
             }
         }
@@ -106,18 +109,18 @@ section.about {
         }
     }
 
-    .timeline-content {
-        &::after {
-            content: '';
-            position: absolute;
-            border-style: solid;
-            width: 0;
-            height: 0;
-            top: 30px;
-            right: -15px;
-            border-width: 10px 0 10px 15px;
-            border-color: transparent transparent transparent #f5f5f5;
-        }
+        .timeline-content {
+            &::after {
+                content: '';
+                position: absolute;
+                border-style: solid;
+                width: 0;
+                height: 0;
+                top: 30px;
+                right: -15px;
+                border-width: 10px 0 10px 15px;
+                border-color: transparent transparent transparent #f5f5f5;
+            }
     }
 
     .timeline-img {
@@ -125,6 +128,7 @@ section.about {
         left: 50%;
         margin-left: -15px;
     }
+
     .timeline-item {
         &:nth-child(2) {
             .timeline-img-header {
@@ -172,17 +176,17 @@ section.about {
     @media screen and (max-width: 768px) {
         .timeline {
             &::before {
-                left: 50px;
+                left: 25px;
             }
 
             .timeline-img {
-                left: 50px;
+                left: 25px;
             }
 
             .timeline-content {
                 max-width: 100%;
                 width: auto;
-                margin-left: 70px;
+                margin-left: 60px;
             }
 
             .timeline-item {
@@ -203,7 +207,7 @@ section.about {
                             top: 30px;
                             left: -15px;
                             border-width: 10px 15px 10px 0;
-                            border-color: transparent #f5f5f5 transparent transparent;
+                            border-color: transparent #dae1e7 transparent transparent;
                         }
                     }
                 }
@@ -218,6 +222,7 @@ section.about {
         outline-color: #800020;
     }
 }
+
 /*---- Articles ----*/
 section.articles {
     background-image: image-url("topography-red.svg");
@@ -238,40 +243,45 @@ section.article-show {
 /*---- Reading List ----*/
 //Menu
 .category-btn {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .category-menu {
-    left:-100%;
+    left: -100%;
     transition: 0.6s ease;
-    opacity:0;
+    opacity: 0;
+
     ul {
         top: 50%;
         transform: translateY(-50%);
+
         li {
             list-style: none;
+
             button {
                 text-decoration: none;
-                overflow:hidden;
+                overflow: hidden;
+
                 &:after {
-                    content:'';
+                    content: '';
                     background: black;
-                    width:100%;
-                    height:100%;
-                    position:absolute;
-                    right:-100%;
-                    top:0;
-                    z-index:-1;
-                    transition:0.4s ease;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    right: -100%;
+                    top: 0;
+                    z-index: -1;
+                    transition: 0.4s ease;
                 }
             }
         }
     }
 }
+
 .category-menu--open {
-    left:0;
-    opacity:1;
-} 
+    left: 0;
+    opacity: 1;
+}
 
 //Books
 .covers {
@@ -323,4 +333,3 @@ table {
 }
 
 /*---- Libraries ----*/
-

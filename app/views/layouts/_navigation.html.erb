@@ -23,7 +23,7 @@
         <div class="mobile-nav-button__line w-full relative bg-black <% if current_page?(root_path) %> bg-blue-lightest <% end %>"></div>
     </div>
 
-    <div class="mobile-menu block max-w-md w-full h-screen pin-t absolute z-40 bg-red-dark <% if current_page?(root_path) %> bg-blue <% end %>">
+    <div class="mobile-menu max-w-md w-full h-screen pin-t z-40 absolute bg-red-dark <% if current_page?(root_path) %> bg-blue <% end %>">
         <ul class="relative p-0 hidden">
             <li><a href="<%= root_path %>" class="w-full max-w-2xl mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Home</a></li>
             <li><a href="<%= articles_path %>" class="w-full max-w-2xl mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Blog</a></li>
