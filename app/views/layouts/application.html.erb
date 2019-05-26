@@ -14,10 +14,12 @@
 <body>
   <%= yield %>
 </body>
-<%=render 'layouts/footer' %>
+<%= render 'layouts/footer' %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <%= javascript_pack_tag 'application' %>
 <%= yield :javascripts %>
+
+
 <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Alegreya+SC&display=swap" rel="stylesheet">
 

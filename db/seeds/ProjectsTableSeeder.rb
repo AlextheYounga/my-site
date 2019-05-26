@@ -69,7 +69,7 @@ Project.create([
         image_alt: "alex younger contemplative outreach website management",
         project_link: "https://www.contemplativeoutreach.org/",
         framework: "Drupal",
-        color: "text-yellow-dark",
+        color: "text-yellow-darker",
         bg_color: "bg-yellow-lightest"
     }
      
