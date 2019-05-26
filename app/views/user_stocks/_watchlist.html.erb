@@ -1,4 +1,4 @@
-<table class="bg-red-lightest border border-red-darker mx-auto shadow-lg lg:w-3/4">
+<table class="<% if current_page?(root_path) %> bg-blue-lighter border-blue-darker <% end %> bg-red-lightest border border-red-darker mx-auto shadow-lg lg:w-3/4">
   <thead class="bg-grey-lightest">
     <tr class="justify-between">
       <th class="p-1 sm:p-4 md:p-6 normal-font text-black text-lg">Name</th>
@@ -15,8 +15,8 @@
     <% @user_stocks.each do |user_stock | %>
     <tr class="justify-between">
       <td class="p-1 sm:p-4 md:p-6 normal-font text-black text-left"><%= user_stock.company_name%></td>
-      <td class="p-1 sm:p-4 md:p-6 normal-font text-black"><%= user_stock.symbol %></td>
-      <td class="p-1 sm:p-4 md:p-6 normal-font text-black"><%= user_stock.latest_price %></td>
+      <td class="p-1 sm:p-4 md:p-6 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= user_stock.symbol %></td>
+      <td class="p-1 sm:p-4 md:p-6 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= user_stock.latest_price %></td>
       <% if logged_in? %>
       <td class="actions">
         <%= link_to "Delete from WatchList", user_stocks_path(user_stock), method: :delete, 

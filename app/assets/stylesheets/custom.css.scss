@@ -43,7 +43,7 @@ $burgandy-hover: #3d0303;
 .webp .hero {
     background-image: image-url("twin-lakes.jpg.webp");
     background-size: cover;
-    margin-top: -6rem;
+    margin-top: -5.7rem;
 }
 
     .hero {
@@ -58,6 +58,10 @@ $burgandy-hover: #3d0303;
 
 section.articles-home {
     background-image: image-url("topography-blue.svg");
+    @media screen and (max-width: 767px) {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 /*---- About ----*/
 section.about {
@@ -305,16 +309,16 @@ section.projects {
 /*---- Playground ----*/
 section.playground {
     background-image: image-url("gears.svg");
+}
 
-    table {
-        tr:nth-child(even) {
-            background-color: #f1f5f8;
-        }
+table {
+    tr:nth-child(even) {
+        background-color: #f1f5f8;
+    }
 
-        @media screen and (max-width: 576px) {
-            .actions {
-                display: none;
-            }
+    @media screen and (max-width: 576px) {
+        .actions {
+            display: none;
         }
     }
 }

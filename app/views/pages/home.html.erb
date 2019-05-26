@@ -1,12 +1,42 @@
 <section class="bg-center bg-cover hero min-h-screen sm:bg-bottom">
-    <div class="absolute align-baseline mx-auto pin-l pin-r px-8 py-12 w-2/3">
+    <div class="home-content js--fadeInRight absolute align-baseline mx-auto pin-l pin-r md:px-8 md:py-12 w-2/3">
         <h1 class="fancy-font text-5xl text-blue-lightest text-center">Alex Younger</h1>
-        <p class="fancy-font py-2 text-blue-lighter text-center">Web Developer, Marketing Analyst, Economic Analyst</p>
+        <p class="fancy-font py-2 text-blue-lighter text-center text-lg">Web Developer, Economic Analyst, Marketing Consultant</p>
+    </div>
+</section>
+<section class="about-home bg-white py-16">
+    <div class="flex flex-wrap">
+        <div class="headshot home-content js--fadeInLeft lg:w-1/2 text-center mx-auto">
+            <picture>
+                <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp">
+                <source srcset="<%= image_path("headshot3_700.png") %>" type="image/png">
+                <img src="<%= image_path("headshot3_700.png") %>" class="md:w-3/4" alt="alex younger developer marketing about me" />
+            </picture>
+        </div>
+        <div class="home-content js--fadeInRight lg:w-1/2 text-center mx-auto py-12">
+            <p class="leading-normal mx-auto normal-font text-center w-3/4 text-lg">
+                I'm Alex. I build and maintain websites for an extensive list of large companies, as well as consult them on the latest marketing techniques and SEO
+                recommendations. Check out my <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
+            <p class="leading-normal mx-auto normal-font text-center w-3/4 text-lg">
+                I'm an expert in economics and analyze financial markets, specifically commodity
+                markets. You'll often find me writing about this on my <a href="" class="text-blue hover:text-blue-darkest">Medium
+                    page</a></p>
+            <p class="leading-normal mx-auto normal-font text-center w-3/4 text-lg">
+                But you'll also find me writing on many other topics, usually something spacey, philosophic or downright controversial, enough to make Mencken proud.
+            </p>
+            <p class="leading-normal mx-auto normal-font pt-6 text-center w-3/4 text-lg">
+                I have a pretty interesting story. I didn't always work in tech. I used to manage zipline courses all over the United States, and my office was generally
+                80 feet in the air. </p>
+            <a href="<%= about_path %>"
+                class="bg-white block border border-blue-darker hover:bg-blue-darkest text-blue button hover:text-blue-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
+                My Story
+            </a>
+        </div>
     </div>
 </section>
 <section class="articles-home py-16 bg-grey-lighter">
     <div class="container mx-auto text-center">
-        <h1 class="fancy-font text-blue">Development Blog</h1>
+        <h1 class="fancy-font text-blue">Latest Blog Posts</h1>
         <a href="<%= articles_path %>"
             class="bg-white block border border-blue-darker text-blue button hover:text-blue-lightest hover:bg-blue-darkest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
             View All</a>
@@ -14,7 +44,7 @@
            then %>
         <% @articles.each do |article| %>
         <a href="<%= article_path(article) %>" class="no-underline text-blue">
-            <div class="teaser bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg w-4/5">
+            <div class="home-content js--fadeInLeft teaser bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg md:w-4/5">
                 <h1 class="fancy-font text-blue"><%= article.title %></h1>
                 <div class="leading-normal normal-font p-8 text-black text-lg">
                     <% if article.description.blank? then %>
@@ -36,26 +66,35 @@
         <% end %>
     </div>
 </section>
-<section class="about-home bg-white py-16">
-    <div class="flex flex-wrap">
-        <div class="lg:w-1/2 text-center mx-auto">
-            <picture>
-                <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp">
-                <source srcset="<%= image_path("headshot3_700.png") %>" type="image/png">
-                <img src="<%= image_path("headshot3_700.png") %>" class="md:w-3/4" alt="alex younger developer marketing about me" />
-            </picture>
-            <!-- <%= image_tag("", alt: "alex younger developer marketing about me", class: "md:w-1/2 sm:3/4") %> -->
-        </div>
-        <div class="lg:w-1/2 text-center mx-auto py-12">
-            <p class="leading-normal mx-auto normal-font text-center w-3/4 text-lg">I'm Alex. I create/design websites and applications. My greatest strength is my
-                love of learning, and my endless curiosity
-                that motivates me to learn everything I can. </p>
-            <p class="leading-normal mx-auto normal-font pt-6 text-center w-3/4 text-lg">I have a love for adventure, thrill and adrenaline. Programming is my day job. I
-                ride ziplines by day.</p>
-            <a href="<%= about_path %>"
-                class="bg-white block border border-blue-darker hover:bg-blue-darkest text-blue button hover:text-blue-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
-                My Story
-            </a>
-        </div>
-    </div>
+<section class="watchlist-home home-content js--fadeInRight py-16">
+    <h1 class="fancy-font text-blue text-center py-6">My Stock Watchlist</h1>
+    <%= render 'user_stocks/watchlist' %>
 </section>
+<!-- Scroll Reveal -->
+<% content_for :javascripts do %>
+<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
+<script>
+    $(document).ready(function () {
+        window.sr = ScrollReveal();
+        if ($(window).width() < 768) {
+            $('.home-content').removeClass('js--fadeInRight');
+            $('.home-content').removeClass('js--fadeInLeft');
+        }
+        else {
+            sr.reveal('.js--fadeInLeft', {
+                origin: 'left',
+                distance: '300px',
+                easing: 'ease-in-out',
+                duration: 800,
+            });
+            sr.reveal('.js--fadeInRight', {
+                origin: 'right',
+                distance: '300px',
+                easing: 'ease-in-out',
+                duration: 800,
+            });
+            sr.reveal('.headshot', { delay: 1500 });
+        }
+    });
+</script>
+<% end %>
