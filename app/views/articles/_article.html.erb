@@ -9,10 +9,10 @@
     Categories
   </a>
 </div>
-<div class="text-center">
+<div class="text-center p-1">
   <% obj.each do |article| %>
   <a href="<%= article_path(article) %>" class="no-underline burgandy">
-    <div class="bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg w-3/4">
+    <div class="bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg sm:w-3/4">
       <h1 class="fancy-font burgandy"><%= article.title %></h1>
       <div class="leading-normal normal-font p-8 text-black text-lg">
         <% if article.description.blank? then %>
@@ -21,7 +21,7 @@
           <%= truncate(strip_tags(article.description), length: 600) %>
         <% end %>
       </div>
-      <small class="burgandy">Created by <%= article.user.username if article.user %>
+      <small class="block burgandy mx-auto px-6">Created by <%= article.user.username if article.user %>
         <%= time_ago_in_words(article.created_at) %> ago,
         Last updated: <%= time_ago_in_words(article.updated_at) %> ago
       </small>

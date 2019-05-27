@@ -38,13 +38,27 @@ $burgandy-hover: #3d0303;
 .no-webp .hero {
     background-image: image-url("twin-lakes.jpg");
     background-size: cover;
-    margin-top: -6rem;
+    margin-top: -5.7rem;
 }
 
 .webp .hero {
     background-image: image-url("twin-lakes.jpg.webp");
     background-size: cover;
     margin-top: -5.7rem;
+}
+
+@media screen and (max-width: 568px) {
+    .no-webp .hero {
+        background-image: image-url("independence-pass.jpg");
+        background-size: cover;
+        margin-top: 0;
+    }
+    
+    .webp .hero {
+        background-image: image-url("independence-pass.jpg.webp");
+        background-size: cover;
+        margin-top: 0;
+    }
 }
 
 .hero {
@@ -54,10 +68,6 @@ $burgandy-hover: #3d0303;
 
     div.absolute {
         top: 30%;
-
-        @media screen and (max-width: 568px) {
-            top: 23%;
-        }
     }
 }
 

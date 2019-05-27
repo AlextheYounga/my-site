@@ -1,7 +1,7 @@
 <section class="bg-center bg-cover hero min-h-screen sm:bg-bottom">
     <div class="home-content js--fadeInRight absolute align-baseline mx-auto pin-l pin-r md:px-8 md:py-12 w-2/3">
         <h1 class="fancy-font text-5xl text-blue-lightest text-center">Alex Younger</h1>
-        <p class="fancy-font py-2 text-blue-lighter text-center text-lg">Web Developer, Economic Analyst, Marketing Consultant</p>
+        <p class="fancy-font py-2 sm:text-blue-lighter text-center text-lg text-yellow-lightest">Web Developer, Economic Analyst, Marketing Consultant</p>
     </div>
 </section>
 <section class="about-home bg-white py-16">
@@ -19,8 +19,8 @@
                 recommendations. Check out my <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
             <p class="leading-normal mx-auto normal-font text-center w-3/4 text-lg">
                 I'm an expert in economics and analyze financial markets, specifically commodity
-                markets. You'll often find me writing about this on my <a href="" class="text-blue hover:text-blue-darkest">Medium
-                    page</a></p>
+                markets. You'll often find me writing about this on my <a href="https://medium.com/@AlextheYounger" class="text-blue hover:text-blue-darkest">Medium
+                    blog</a></p>
             <p class="leading-normal mx-auto normal-font text-center w-3/4 text-lg">
                 But you'll also find me writing on many other topics, usually something spacey, philosophic or downright controversial.
             </p>
@@ -35,7 +35,7 @@
     </div>
 </section>
 <section class="articles-home py-16 bg-grey-lighter">
-    <div class="container mx-auto text-center">
+    <div class="container mx-auto p-1 text-center">
         <h1 class="fancy-font text-blue">Latest Blog Posts</h1>
         <a href="<%= articles_path %>"
             class="bg-white block border border-blue-darker text-blue button hover:text-blue-lightest hover:bg-blue-darkest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
@@ -53,7 +53,7 @@
                     <%= truncate(strip_tags(article.description), length: 600) %>
                     <% end %>
                 </div>
-                <small class="text-blue">Created by <%= article.user.username if article.user %>
+                <small class="block text-blue mx-auto px-6">Created by <%= article.user.username if article.user %>
                     <%= time_ago_in_words(article.created_at) %> ago,
                     Last updated: <%= time_ago_in_words(article.updated_at) %> ago
                 </small>
