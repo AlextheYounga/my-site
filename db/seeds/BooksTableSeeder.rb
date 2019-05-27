@@ -7,7 +7,7 @@ Book.create([
         image_address: "win_friends_influence.jpg",
         image_alt: "Alex Younger ReadingList How to Win Friends and Influence People by Dale Carnegie",
         category: "peopleskill",
-        book_link: "http://www.alextheyounger.me/articles/24",
+        book_link: "https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034/ref=sr_1_3?crid=N7XYG8ST82NU&keywords=how+to+win+friends+and+influence+people+by+dale+carnegie&qid=1558935441&s=gateway&sprefix=how+to+win+friends%2Caps%2C187&sr=8-3",
     },
     {
         title: "The Daily Stoic",
@@ -16,7 +16,7 @@ Book.create([
         image_address: "daily_stoic.jpg",
         image_alt: "Alex Younger ReadingList The Daily Stoic by Ryan Holiday",
         category: "philosophy",
-        book_link: "http://www.alextheyounger.me/articles/25",
+        book_link: "https://www.amazon.com/Daily-Stoic-Meditations-Wisdom-Perseverance/dp/0735211736/ref=sr_1_2?keywords=the+daily+stoic&qid=1558935533&s=gateway&sr=8-2",
     },
     {
         title: "Foundations of Morality",
@@ -60,6 +60,15 @@ Book.create([
         image_alt: "Alex Younger ReadingList Good Profit by Charles Koch",
         category: "biz",
         book_link: "https://www.amazon.com/Good-Profit-Creating-Successful-Companies/dp/1101904135/ref=sr_1_1?s=books&ie=UTF8&qid=1515919796&sr=1-1&keywords=good+profit+charles+koch",
+    },
+    {
+        title: "Meditations",
+        subtitle: "",
+        author: "Marcus Aurelius",
+        image_address: "meditations.jpg",
+        image_alt: "Alex Younger ReadingList Meditations by Marcus Aurelius",
+        category: "better-living",
+        book_link: "https://www.amazon.com/Meditations-Marcus-Aurelius/dp/1545565678/ref=sr_1_4?crid=2W17I979DHML0&keywords=meditations+marcus+aurelius&qid=1558935312&s=gateway&sprefix=meditations+marcus+aur%2Caps%2C281&sr=8-4",
     },
     {
         title: "A Guide to the Good Life",
