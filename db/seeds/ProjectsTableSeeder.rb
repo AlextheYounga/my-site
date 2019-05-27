@@ -4,7 +4,7 @@ Project.create([
 
     {
         title: "Blue Hawaiian",
-        description: "Myself, along with my collegue Matt Scalf, were able to take this site from bare designs to launch in about 4 months. The designs were provided by SpireDigital design. It is one of my greatest acheivements.",
+        description: "Myself, along with my boss Matt Scalf, were able to take this site from bare designs to launch in about 4 months. The designs were provided by SpireDigital design. It is one of my greatest acheivements.",
         image_address: "bluehawaiian.jpg",
         image_alt: "alex younger blue hawaiian helicopters website project",
         project_link: "https://www.bluehawaiian.com/",
