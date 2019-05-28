@@ -6,7 +6,6 @@
     <h2 class="fancy-font pb-4">Search for Stocks</h2>
     <%= form_tag search_stocks_path, remote: true, method: :get do %>
     <div id="stock-lookup-form">
-      <div>
         <div class="w-96 sm:w-full mr-1 sm:mr-0 sm:mb-1 z-20">
           <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: false,
                   class: "bg-grey-lighter appearance-none border-2 border-yellow-offset hover:border-grey-dark rounded-sm py-4 px-6 sm:w-1/2 md:1/4 lg:w-1/4 text-black text-center" %>
@@ -20,8 +19,8 @@
         <div id="results">
           <%= render 'layouts/result' %>
         </div>
-      </div>
     </div>
+
     <!-- end stock-lookup -->
 
     <!-- watchlist -->
@@ -49,12 +48,6 @@
 <!-- Stock Result -->
 <% content_for :javascripts do %>
 <script>
-  $(document).ready(function () {
-    $('#stock-lookup-form').on('ajax:complete', function (event, data, status) {
-      $('#results').html(data.responseText);
-    });
-  });
-
   $(document).ready(function () {
     var quoteSource = [
       <% if @favorite_quotes.any?
@@ -89,7 +82,7 @@
           quoteContainer.html('');
           quoteContainer.append('<p>' + newQuoteText + '</p>' + '<p id="quoteGenius">' + '-' + newQuoteGenius + '</p>');
 
-          //fadein animation.
+          //fades animation.
           quoteContainer.fadeIn(timeAnimation);
         });
 
@@ -98,5 +91,14 @@
 
     });//end quoteButton function
   });//end document ready
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('#stock-lookup-form').on('ajax:complete', function (event, data, status) {
+      $('#results').html(data.responseText);
+    });
+  });
+
 </script>
 <% end %>

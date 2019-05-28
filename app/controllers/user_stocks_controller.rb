@@ -16,7 +16,7 @@ class UserStocksController < ApplicationController
     @user_stocks = UserStock.where(user_id: current_user.id, stock_id: stock.id).first
     @user_stocks.destroy
     flash[:notice] = "Stock was successfully destroyed"
-    # redirect_to playground_path
+    redirect_to playground_path
   end
   
 end

@@ -1,20 +1,20 @@
 <% if @stock %>
-    <div class="bg-grey-lightest mx-auto py-6 shadow shadow-lg w-1/2">
-      <p class="flex justify-between px-16 py-3 normal-font"><strong>Symbol:</strong> <%= @stock.company_name%></p>
-      <p class="flex justify-between px-16 py-3 normal-font"><strong>Name:</strong> <%= @stock.symbol%></p>
-      <p class="flex justify-between px-16 py-3 normal-font"><strong>Price:</strong> <%= @stock.latest_price%>&nbsp;</p>
-      <% if logged_in? %>
-        <%= link_to "Add to WatchList", user_stocks_path(user: current_user, stock_symbol: @stock.symbol), class: "bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48", method: :post %>
-      <% else %>
-        <%= nil %>
-    </div>
-    <% end %>
-<% end %>
-  
-<% flash.each do |name, msg| %>
-  <% if flash[:danger]%>
-    <ul id="stock-danger" class="alert alert-danger">                              
-      <li><%= msg %></li>
-    </ul>
+<div class="bg-grey-lightest mx-auto py-6 shadow shadow-lg w-1/2">
+  <p class="flex justify-between px-16 py-3 normal-font"><strong>Symbol:</strong> <%= @stock.company_name%></p>
+  <p class="flex justify-between px-16 py-3 normal-font"><strong>Name:</strong> <%= @stock.symbol%></p>
+  <p class="flex justify-between px-16 py-3 normal-font"><strong>Price:</strong> <%= @stock.latest_price%>&nbsp;</p>
+  <% if logged_in? %>
+  <%= link_to "Add to WatchList", user_stocks_path(user: current_user, stock_symbol: @stock.symbol), method: :post, class: "bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48" %>
+  <% else %>
+  <%= nil %>
   <% end %>
+</div>
+<% end %>
+
+<% flash.each do |name, msg| %>
+<% if flash[:danger]%>
+<ul id="stock-danger" class="alert alert-danger">
+  <li><%= msg %></li>
+</ul>
+<% end %>
 <% end %>
