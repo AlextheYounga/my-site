@@ -4,7 +4,6 @@ require 'stock_quote'
 
 class PagesController < ApplicationController
 
-
   def home
     @articles = Article.order("created_at desc").limit(3)
     @books = Book.all
@@ -23,6 +22,7 @@ class PagesController < ApplicationController
   end
 
   def playground
+    respond_to :html, :js
     @user_stocks = User.last.stocks
     @favorite_quotes = FavoriteQuote.all
     # @quotes = FavoriteQuote.quote

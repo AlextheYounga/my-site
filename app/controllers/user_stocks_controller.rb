@@ -8,7 +8,7 @@ class UserStocksController < ApplicationController
       end
       @user_stocks = UserStock.create(user: current_user, stock: stock)
       flash[:success] = "Stock #{@user_stocks.stock.company_name} was successfully added to watchlist"
-      # redirect_to playground_path
+      redirect_to playground_path
   end
   
   def destroy

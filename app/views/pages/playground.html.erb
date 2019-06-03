@@ -6,27 +6,23 @@
     <h2 class="fancy-font pb-4">Search for Stocks</h2>
     <%= form_tag search_stocks_path, remote: true, method: :get do %>
     <div id="stock-lookup-form">
-        <div class="w-96 sm:w-full mr-1 sm:mr-0 sm:mb-1 z-20">
-          <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: false,
-                  class: "bg-grey-lighter appearance-none border-2 border-yellow-offset hover:border-grey-dark rounded-sm py-4 px-6 sm:w-1/2 md:1/4 lg:w-1/4 text-black text-center" %>
-        </div>
-        <div>
-          <%= button_tag(type: :submit, class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48") do %>
-          <i class="fa fa-search"></i> Search Stock Prices
-          <% end %>
-        </div>
-        <% end %>
-        <div id="results">
-          <%= render 'layouts/result' %>
-        </div>
+      <div class="w-96 sm:w-full mr-1 sm:mr-0 sm:mb-1 z-20">
+        <%= text_field_tag :stock, params[:stock], placeholder: "Stock Ticker Symbol", autofocus: false,
+            class: "bg-grey-lighter appearance-none border-2 border-yellow-offset hover:border-grey-dark rounded-sm py-4 px-6 sm:w-1/2 md:1/4 lg:w-1/4 text-black text-center" %>
+      </div>
+      <%= button_tag(type: :submit, class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48") do %>
+        <i class="fa fa-search"></i> Search Stock Prices
+      <% end %>
+      
+      <div id="results">
+        <%= render 'layouts/result' %>
+      </div>
+      <% end %>
     </div>
-
     <!-- end stock-lookup -->
-
-    <!-- watchlist -->
+    
     <h2 class="fancy-font pb-4 pt-16 text-center">My Stock WatchList</h2>
     <%= render 'stocks/watchlist'%>
-    <!-- end watchlist -->
   </div>
 
   <div class="quotes pt-16">
@@ -50,15 +46,15 @@
 <script>
   $(document).ready(function () {
     var quoteSource = [
-      <% if @favorite_quotes.any?
-    then %>
+      <% if @favorite_quotes.any? 
+        then %>
       <% @favorite_quotes.each do | favorite_quote | %>
       {
         quote: "<%= favorite_quote.quote%>",
         name: "<%= favorite_quote.name %>"
       }, 
       <% end %>
-      <% end %>
+    <% end %>
 	];
 
     $('#quoteButton').click(function (evt) {
@@ -92,12 +88,10 @@
     });//end quoteButton function
   });//end document ready
 </script>
-
 <script>
-  $(document).ready(function () {
-    $('#stock-lookup-form').on('ajax:complete', function (event, data, status) {
-      $('#results').html(data.responseText);
-    });
+
+  $('#stock-lookup-form').on('ajax:complete', function (event, data, status) {
+    $('#results').html(data.responseText).show();
   });
 
 </script>
