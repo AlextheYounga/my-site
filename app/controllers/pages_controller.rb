@@ -22,7 +22,6 @@ class PagesController < ApplicationController
   end
 
   def playground
-    respond_to :html, :js
     @user_stocks = User.last.stocks
     @favorite_quotes = FavoriteQuote.all
     # @quotes = FavoriteQuote.quote
