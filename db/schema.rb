@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_03_015111) do
+ActiveRecord::Schema.define(version: 2019_06_11_015024) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
@@ -77,6 +77,18 @@ ActiveRecord::Schema.define(version: 2019_05_03_015111) do
     t.string "symbol"
     t.datetime "latest_time"
     t.datetime "latest_update"
+    t.string "industry"
+    t.string "description"
+    t.string "primary_exchange"
+    t.decimal "gross_profit"
+    t.decimal "net_income"
+    t.decimal "total_assets"
+    t.decimal "total_liabilities"
+    t.decimal "total_debt"
+    t.decimal "pe_ratio"
+    t.decimal "moving_average"
+    t.decimal "debt_to_assets"
+    t.decimal "net_worth"
   end
 
   create_table "user_stocks", force: :cascade do |t|

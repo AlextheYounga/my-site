@@ -1,28 +1,10 @@
 <section class="playground py-16">
-  <h1 class="fancy-font text-center burgandy">Playground</h1>
-  <p class="text-center text-lg py-4 normal-font text-black">A space for random, fun, interactive projects</p>
+  <h1 class="fancy-font text-center burgandy">Resources</h1>
+  <p class="text-center text-lg py-4 normal-font text-black">A collection of useful materials, research, and ideas</p>
 
   <div class="bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
-    <h2 class="fancy-font pb-4">Search for Stocks</h2>
-    <%= form_tag search_stocks_path, remote: true, method: :get do %>
-    <div id="stock-lookup-form">
-      <div class="w-96 sm:w-full mr-1 sm:mr-0 sm:mb-1 z-20">
-        <%= text_field_tag :stock, params[:stock], placeholder: "Stock Ticker Symbol", autofocus: false,
-            class: "bg-grey-lighter appearance-none border-2 border-yellow-offset hover:border-grey-dark rounded-sm py-4 px-6 sm:w-1/2 md:1/4 lg:w-1/4 text-black text-center" %>
-      </div>
-      <%= button_tag(type: :submit, class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48") do %>
-        <i class="fa fa-search"></i> Search Stock Prices
-      <% end %>
-      
-      <div id="results">
-        <%= render 'layouts/result' %>
-      </div>
-      <% end %>
-    </div>
-    <!-- end stock-lookup -->
-    
-    <h2 class="fancy-font pb-4 pt-16 text-center">My Stock WatchList</h2>
-    <%= render 'stocks/watchlist'%>
+
+
   </div>
 
   <div class="quotes pt-16">

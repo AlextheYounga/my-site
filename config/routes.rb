@@ -20,6 +20,5 @@ Rails.application.routes.draw do
 
   resources :categories, except: [:destroy]
   resources :posts, only: [:index]
-  resources :user_stocks, only: [:create, :destroy]
 
 end

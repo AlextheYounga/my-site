@@ -7,7 +7,6 @@ class PagesController < ApplicationController
   def home
     @articles = Article.order("created_at desc").limit(3)
     @books = Book.all
-    @user_stocks = User.last.stocks
   end
 
   def about
@@ -22,7 +21,6 @@ class PagesController < ApplicationController
   end
 
   def playground
-    @user_stocks = User.last.stocks
     @favorite_quotes = FavoriteQuote.all
     # @quotes = FavoriteQuote.quote
     # @name = FavoriteQuote.name
