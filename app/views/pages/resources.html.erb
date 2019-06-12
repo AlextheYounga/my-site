@@ -1,10 +1,16 @@
-<section class="playground py-16">
+<section class="resources py-16">
   <h1 class="fancy-font text-center burgandy">Resources</h1>
   <p class="text-center text-lg py-4 normal-font text-black">A collection of useful materials, research, and ideas</p>
 
   <div class="bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
+    <h1 class="fancy-font text-blue text-center py-6">Economic Research</h1>
+    <a class="" target="_blank" download="<%= image_path ("EconomicDatabyCountry.xlsx") %>">Economic Data by Country</a>
+    <a class="" target="_blank" download="<%= image_path ("Russell3000financials.xlsx") %>">Financial information of all stocks on the Russell 3000</a>
+  </div>
 
-
+  <div class="bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
+    <h1 class="fancy-font text-blue text-center py-6">My Stock Watchlist</h1>
+    <%= render 'stocks/watchlist' %>
   </div>
 
   <div class="quotes pt-16">
@@ -28,8 +34,8 @@
 <script>
   $(document).ready(function () {
     var quoteSource = [
-      <% if @favorite_quotes.any? 
-        then %>
+      <% if @favorite_quotes.any?
+    then %>
       <% @favorite_quotes.each do | favorite_quote | %>
       {
         quote: "<%= favorite_quote.quote%>",

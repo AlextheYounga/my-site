@@ -6,7 +6,7 @@
             <a href="<%= about_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-blue-lightest <% end %> <% if current_page?(readinglist_path) %> text-purple-darker <% end %>">About</a>
             <a href="<%= readinglist_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-blue-lightest <% end %> <% if current_page?(readinglist_path) %> text-purple-darker <% end %>">Reading List</a>
             <a href="<%= projects_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-blue-lightest <% end %> <% if current_page?(readinglist_path) %> text-purple-darker <% end %>">Projects</a>
-            <a href="<%= playground_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-blue-lightest <% end %> <% if current_page?(readinglist_path) %> text-purple-darker <% end %>">Playground</a>
+            <a href="<%= resources_path %>" class="no-underline text-2xl burgandy <% if current_page?(root_path) %> text-blue-lightest <% end %> <% if current_page?(readinglist_path) %> text-purple-darker <% end %>">Resources</a>
             <% if logged_in? %>
             <%= link_to "Log Out", logout_path, method: :delete, class: "bg-white border border-red-darker button hover:bg-red-darkest hover:text-red-lightest no-underline normal-font px-2 py-1 rounded shadow text-red-darkest"%>
             <% else %>
@@ -30,7 +30,7 @@
             <li><a href="<%= about_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">About</a></li>
             <li><a href="<%= readinglist_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Reading List</a></li>
             <li><a href="<%= projects_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Projects</a></li>
-            <li><a href="<%= playground_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Playground</a></li>
+            <li><a href="<%= resources_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Resources</a></li>
         </ul>
     </div>
 </nav>

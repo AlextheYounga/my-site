@@ -8,12 +8,12 @@
   </thead>
 
   <tbody>
-    <% if @user_stocks %>
-    <% @user_stocks.each do |user_stock | %>
+    <% if @stocks %>
+    <% @stocks.each do |stock | %>
     <tr class="justify-between">
-      <td class="p-1 sm:p-4 md:p-6 normal-font text-black text-left"><%= user_stock.company_name%></td>
-      <td class="p-1 sm:p-4 md:p-6 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= user_stock.symbol %></td>
-      <td class="p-1 sm:p-4 md:p-6 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= user_stock.latest_price %></td>
+      <td class="p-1 sm:p-4 md:p-6 normal-font text-black text-left"><%= stock.company_name%></td>
+      <td class="p-1 sm:p-4 md:p-6 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= stock.symbol %></td>
+      <td class="p-1 sm:p-4 md:p-6 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= stock.latest_price %></td>
     </tr>
     <% end %>
     <% end %>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'readinglist', to: 'pages#readinglist'
   get 'projects', to: 'pages#projects'
-  get 'playground', to: 'pages#playground'
+  get 'resources', to: 'pages#resources'
   get 'search_stocks', to: 'stocks#search'
 
   resources :articles, except: [:signup]
