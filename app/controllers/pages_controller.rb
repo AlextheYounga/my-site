@@ -70,7 +70,8 @@ class PagesController < ApplicationController
 
   def resources
     @favorite_quotes = FavoriteQuote.all
-
+    @stocks = Stock.all
+    
     set_meta_tags title: 'Resources',
     site: 'alextheyounger.me',
     description: 'Alex Younger - Resources. A collection of my own research, interesting information and ideas.',

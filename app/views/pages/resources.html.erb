@@ -3,17 +3,36 @@
   <p class="text-center text-lg py-4 normal-font text-black">A collection of useful materials, research, and ideas</p>
 
   <div class="bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
-    <h1 class="fancy-font text-blue text-center py-6">Economic Research</h1>
-    <a class="" target="_blank" download="<%= image_path ("EconomicDatabyCountry.xlsx") %>">Economic Data by Country</a>
-    <a class="" target="_blank" download="<%= image_path ("Russell3000financials.xlsx") %>">Financial information of all stocks on the Russell 3000</a>
+    <h1 class="fancy-font burgandy text-center py-6">Economic Research</h1>
+    <a class="no-underline" target="_blank" href="<%= image_path("EconomicDatabyCountry.xlsx")%>">
+      <div class="bg-orange-lightest container mx-auto sm:w-3/4 py-4 mb-16 rounded-lg shadow-lg text-center">
+        <h2 class="text-orange-darkest fancy-font py-8">Important Economic Data Scraped from 200 Countries</h2>
+        <picture>
+          <source srcset="<%= image_path("world-map.jpg.webp") %>" type="image/webp">
+          <source srcset="<%= image_path("world-map.jpg") %>" type="image/jpg">
+          <img src="<%= image_path("world-map.jpg") %>" alt="alex younger developer economic research world economics" />
+        </picture>
+      </div>
+
+    </a>
+    <a class="no-underline" target="_blank" href="<%= image_path("Russell3000financials.xlsx")%>">
+      <div class="bg-purple-lightest container mx-auto py-4 rounded-lg shadow-lg sm:w-3/4 text-center">
+        <h2 class="text-purple-darkest fancy-font py-8">Easy to Compare Financials for Every Stock on the Russell 3000</h2>
+      <picture>
+        <source srcset="<%= image_path("russell.jpg.webp") %>" type="image/webp">
+        <source srcset="<%= image_path("russell.jpg") %>" type="image/jpg">
+        <img src="<%= image_path("russell.jpg") %>" alt="alex younger developer economic research russell 3000 download" />
+      </picture>
+    </div>
+    </a>
   </div>
 
-  <div class="bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
-    <h1 class="fancy-font text-blue text-center py-6">My Stock Watchlist</h1>
+  <div class="my-16 bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
+    <h1 class="fancy-font burgandy text-center py-6">My Stock Watchlist</h1>
     <%= render 'stocks/watchlist' %>
   </div>
 
-  <div class="quotes pt-16">
+  <div class="quotes">
     <div class="bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
       <div id="quote-generator">
         <h2 class="fancy-font pb-6">My Favorite Quotes</h2>
