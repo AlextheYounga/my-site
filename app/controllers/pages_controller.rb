@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'rss'
-require 'stock_quote'
+require 'iex-ruby-client'
 
 class PagesController < ApplicationController
 
