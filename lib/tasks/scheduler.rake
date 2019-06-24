@@ -4,7 +4,7 @@ task :update_watchlist => :environment do
 puts "Updating watchlist..."
 client = IEX::Api::Client.new(publishable_token: 'pk_6c06446591c34f6c8fd673dd8b88c779')
 
-    Stock.all.each at Time do |stock|
+    Stock.all.each do |stock|
     quote = client.price("#{stock.symbol}")
     company = client.company("#{stock.symbol}")
     stat = client.key_stats("#{stock.symbol}")
