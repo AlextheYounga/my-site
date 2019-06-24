@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_11_015024) do
+ActiveRecord::Schema.define(version: 2019_06_24_012625) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 2019_06_11_015024) do
     t.decimal "moving_average"
     t.decimal "debt_to_assets"
     t.decimal "net_worth"
+    t.float "ytd_change_percent"
   end
 
   create_table "user_stocks", force: :cascade do |t|

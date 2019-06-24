@@ -1,9 +1,10 @@
-<table class="<% if current_page?(root_path) %> bg-blue-lighter border-blue-darker <% end %> bg-red-lightest border border-red-darker mx-auto shadow-lg lg:w-3/4">
+<table class="<% if current_page?(root_path) %> bg-blue-lighter border-blue-light <% end %> bg-red-lightest border border-red-darker mx-auto shadow-lg lg:w-3/4">
   <thead class="bg-grey-lightest">
     <tr class="justify-between">
-      <th class="p-1 sm:p-4 md:p-6 normal-font text-black text-lg">Name</th>
-      <th class="p-1 sm:p-4 md:p-6 normal-font text-black text-lg">Symbol</th>
-      <th class="p-1 sm:p-4 md:p-6 normal-font text-black text-lg">Current Price</th>
+      <th class="p-2 md:p-4 normal-font text-black text-lg">Name</th>
+      <th class="p-2 md:p-4 normal-font text-black text-lg">Symbol</th>
+      <th class="p-2 md:p-4 normal-font text-black text-lg">Current Price</th>
+      <th class="p-2 md:p-4 normal-font text-black text-lg">Percent Change YTD</th>
     </tr>
   </thead>
 
@@ -11,9 +12,10 @@
     <% if @stocks %>
     <% @stocks.each do |stock | %>
     <tr class="justify-between">
-      <td class="p-1 sm:p-4 md:p-6 normal-font text-black text-left"><%= stock.company_name%></td>
-      <td class="p-1 sm:p-4 md:p-6 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= stock.symbol %></td>
-      <td class="p-1 sm:p-4 md:p-6 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= stock.latest_price %></td>
+      <td class="p-2 md:p-4 normal-font text-black text-left"><%= stock.company_name%></td>
+      <td class="p-2 md:p-4 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= stock.symbol %></td>
+      <td class="p-2 md:p-4 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= stock.latest_price %></td>
+      <td class="p-2 md:p-4 normal-font text-black <% if current_page?(root_path) %> text-center <% end %>"><%= stock.ytd_change_percent ? number_to_percentage(stock.ytd_change_percent) : nil %></td>
     </tr>
     <% end %>
     <% end %>
