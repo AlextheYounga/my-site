@@ -353,6 +353,15 @@ Book.create([
         author: "Christopher R. Browning",
     },
     {
+        title: "The Fatal Conceit",
+        subtitle: "The Errors of Socialism",
+        category: "econ",
+        image_address: "fatal_conceit.jpg",
+        book_link: "https://www.amazon.com/Fatal-Conceit-Errors-Socialism-Collected/dp/0226320669/ref=sr_1_1?s=books&ie=UTF8&qid=1551050285&sr=1-1&keywords=fatal+conceit+hayek",
+        image_alt: "Alex Younger ReadingList The Fatal Conceit by F.A. Hayek",
+        author: "F.A. Hayek",
+    },
+    {
         title: "Socialism",
         subtitle: "An Economic and Sociological Analysis",
         category: "econ",
@@ -475,15 +484,6 @@ Book.create([
         book_link: "https://mises.org/library/americas-great-depression",
         image_alt: "Alex Younger ReadingList America's Great Depression by Murray Rothbard",
         author: "Murray Rothbard",
-    },
-    {
-        title: "The Fatal Conceit",
-        subtitle: "The Errors of Socialism",
-        category: "econ",
-        image_address: "fatal_conceit.jpg",
-        book_link: "https://www.amazon.com/Fatal-Conceit-Errors-Socialism-Collected/dp/0226320669/ref=sr_1_1?s=books&ie=UTF8&qid=1551050285&sr=1-1&keywords=fatal+conceit+hayek",
-        image_alt: "Alex Younger ReadingList The Fatal Conceit by F.A. Hayek",
-        author: "F.A. Hayek",
     },
     {
         title: "A Short History of Man",

@@ -9,5 +9,6 @@ Stock.create([
 { symbol: "JO" },
 { symbol: "CCJ" },
 { symbol: "SQM" },
+{ symbol: "COG" },
 
 ]);

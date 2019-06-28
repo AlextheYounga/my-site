@@ -3,32 +3,38 @@
   <p class="text-center text-lg py-4 normal-font text-black">A collection of useful materials, research, and ideas</p>
 
   <div class="bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
-    <h1 class="fancy-font burgandy text-center py-6">Economic Research</h1>
-    <a class="no-underline" target="_blank" href="<%= image_path("EconomicDatabyCountry.xlsx")%>">
-      <div class="bg-orange-lightest container mx-auto sm:w-3/4 py-4 mb-16 rounded-lg shadow-lg text-center">
-        <h2 class="text-orange-darkest fancy-font py-8">Important Economic Data Scraped from 200 Countries</h2>
-        <picture>
-          <source srcset="<%= image_path("world-map.jpg.webp") %>" type="image/webp">
-          <source srcset="<%= image_path("world-map.jpg") %>" type="image/jpg">
-          <img src="<%= image_path("world-map.jpg") %>" alt="alex younger developer economic research world economics" />
-        </picture>
+    <h2 class="fancy-font burgandy text-center py-8">Economic & Investment Research</h2>
+    <div class="flex flex-wrap">
+      <div class="sm:w-1/2">
+        <a class="no-underline" target="_blank" href="<%= image_path("EconomicDatabyCountry.xlsx")%>">
+          <div class="bg-orange-lightest container mx-auto sm:w-3/4 py-4 mb-16 rounded-lg shadow-lg text-center">
+            <h3 class="text-orange-darkest text-xl fancy-font py-8">Leading Economic Indicators Scraped from 200 Countries</h2>
+            <picture>
+              <source srcset="<%= image_path("world-map.jpg.webp") %>" type="image/webp">
+              <source srcset="<%= image_path("world-map.jpg") %>" type="image/jpg">
+              <img src="<%= image_path("world-map.jpg") %>" alt="alex younger developer economic research world economics" />
+            </picture>
+          </div>
+        </a>
       </div>
-
-    </a>
-    <a class="no-underline" target="_blank" href="<%= image_path("Russell3000financials.xlsx")%>">
-      <div class="bg-purple-lightest container mx-auto py-4 rounded-lg shadow-lg sm:w-3/4 text-center">
-        <h2 class="text-purple-darkest fancy-font py-8">Easy to Compare Financials for Every Stock on the Russell 3000</h2>
-      <picture>
-        <source srcset="<%= image_path("russell.jpg.webp") %>" type="image/webp">
-        <source srcset="<%= image_path("russell.jpg") %>" type="image/jpg">
-        <img src="<%= image_path("russell.jpg") %>" alt="alex younger developer economic research russell 3000 download" />
-      </picture>
+      <div class="sm:w-1/2">
+        <a class="no-underline" target="_blank" href="<%= image_path("Russell3000financials.xlsx")%>">
+          <div class="bg-purple-lightest container mx-auto py-4 rounded-lg shadow-lg sm:w-3/4 text-center">
+            <h3 class="text-purple-darkest text-xl fancy-font py-8">Financial Statistics for Every Stock on the Russell 3000</h2>
+            <picture>
+              <source srcset="<%= image_path("russell.png.webp") %>" type="image/webp">
+              <source srcset="<%= image_path("russell.png") %>" type="image/png">
+              <img src="<%= image_path("russell.png") %>" alt="alex younger developer economic research russell 3000 download" />
+            </picture>
+          </div>
+        </a>
+      </div>
     </div>
-    </a>
   </div>
 
+
   <div class="my-16 bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
-    <h1 class="fancy-font burgandy text-center py-6">My Stock Watchlist</h1>
+    <h2 class="fancy-font burgandy text-center py-6">My Stock Watchlist</h2>
     <%= render 'stocks/watchlist' %>
   </div>
 
