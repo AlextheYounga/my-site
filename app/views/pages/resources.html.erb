@@ -8,11 +8,11 @@
       <div class="sm:w-1/2">
         <a class="no-underline" target="_blank" href="<%= image_path("EconomicDatabyCountry.xlsx")%>">
           <div class="bg-orange-lightest container mx-auto sm:w-3/4 py-4 mb-16 rounded-lg shadow-lg text-center">
-            <h3 class="text-orange-darkest text-xl fancy-font py-8">Leading Economic Indicators Scraped from 200 Countries</h3>
+            <h3 class="text-orange-darkest text-xl fancy-font p-8">Leading Economic Indicators Scraped from 200 Countries</h3>
               <picture>
                 <source srcset="<%= image_path("world-map.jpg.webp") %>" type="image/webp">
                 <source srcset="<%= image_path("world-map.jpg") %>" type="image/jpg">
-                <img src="<%= image_path("world-map.jpg") %>" alt="alex younger developer economic research world economics" />
+                <img class="rounded w-3/4" src="<%= image_path("world-map.jpg") %>" alt="alex younger developer economic research world economics" />
               </picture>
               <h3 class="text-orange-darkest text-xl fancy-font py-2">Download</h3>
           </div>
@@ -21,11 +21,11 @@
       <div class="sm:w-1/2">
         <a class="no-underline" target="_blank" href="<%= image_path("Russell3000financials.xlsx")%>">
           <div class="bg-purple-lightest container mx-auto py-4 rounded-lg shadow-lg sm:w-3/4 text-center">
-            <h3 class="text-purple-darkest text-xl fancy-font py-8">Financial Statistics for Every Stock on the Russell 3000</h3>
+            <h3 class="text-purple-darkest text-xl fancy-font p-8">Financial Statistics for Every Stock on the Russell 3000</h3>
               <picture>
                 <source srcset="<%= image_path("russell.png.webp") %>" type="image/webp">
                 <source srcset="<%= image_path("russell.png") %>" type="image/png">
-                <img src="<%= image_path("russell.png") %>" alt="alex younger developer economic research russell 3000 download" />
+                <img class="rounded w-3/4" src="<%= image_path("russell.png") %>" alt="alex younger developer economic research russell 3000 download" />
               </picture>
               <h3 class="text-purple-darkest text-xl fancy-font py-2">Download</h3>
           </div>
@@ -55,7 +55,7 @@
 
   <div class="my-16 bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
     <h2 class="fancy-font burgandy text-center pb-8">My Stock Watchlist</h2>
-    <%= render 'stocks/watchlist' %>
+    <%= render 'partials/watchlist' %>
   </div>
 </section>
 <!-- Stock Result -->

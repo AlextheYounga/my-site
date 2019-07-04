@@ -27,6 +27,9 @@ task :scrape_countries => :environment do
         gdp_page = Nokogiri::HTML(HTTParty.get("https://tradingeconomics.com/#{country.name}/gdp-per-capita"))
         puts "got #{country.name} gdp data"
         sleep(num_sec)
+        gov_debt_to_gdp_page = Nokogiri::HTML(HTTParty.get("https://tradingeconomics.com/#{country.name}/government-debt-to-gdp"))
+        puts "got #{country.name} gov debt to gdp data"
+        sleep(num_sec)
         central_bank_page = Nokogiri::HTML(HTTParty.get("https://tradingeconomics.com/#{country.name}/central-bank-balance-sheet"))
         puts "got #{country.name} central bank data"
 
@@ -38,6 +41,7 @@ task :scrape_countries => :environment do
         unemployment: (unemployment_page.css("#ctl00_ContentPlaceHolder1_ctl03_PanelDefinition td:nth-child(2)").text.strip).to_d,
         income_tax: (income_tax_page.css("#ctl00_ContentPlaceHolder1_ctl03_PanelDefinition td:nth-child(2)").text.strip).to_d,
         gdp: (gdp_page.css("#ctl00_ContentPlaceHolder1_ctl03_PanelDefinition td:nth-child(2)").text.strip).to_d,
+        gov_debt_to_gdp: (gov_debt_to_gdp_page.css("#ctl00_ContentPlaceHolder1_ctl03_PanelDefinition td:nth-child(2)").text.strip).to_d,
         central_bank: (central_bank_page.css("#ctl00_ContentPlaceHolder1_ctl03_PanelDefinition td:nth-child(2)").text.strip).to_d.to_d 
         )
         puts "Pages Scraped, Indicators Saved"

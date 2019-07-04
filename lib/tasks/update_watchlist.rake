@@ -12,7 +12,8 @@ client = IEX::Api::Client.new(publishable_token: 'pk_6c06446591c34f6c8fd673dd8b8
         Stock.where(symbol: "#{stock.symbol}").update(
         company_name: company.company_name,
         latest_price: quote,
-        ytd_change_percent: (stat.ytd_change_percent * 100)
+        ytd_change_percent: (stat.ytd_change_percent * 100),
+        industry: company.industry
         )
         puts "#{stock.symbol} info collected" 
     end
