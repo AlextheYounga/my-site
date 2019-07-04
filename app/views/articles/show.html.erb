@@ -2,7 +2,7 @@
   <div class="container mx-auto p-6">
     <div class="bg-white shadow-lg rounded-lg mx-auto p-6">
       <h1 class="burgandy fancy-font pb-16 pt-8 text-center"><%= @article.title %></h1>
-      <div class="w-3/4 mx-auto pb-6 normal-font">
+      <div class="w-3/4 mx-auto pb-6 normal-font leading-normal tracking-normal">
         <% if @article.description.blank? then %>
           <%= simple_format(@article.editor1) %>
         <% else %>
