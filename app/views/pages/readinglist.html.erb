@@ -1,36 +1,30 @@
 <h1 class="fancy-font mb-8 pt-20 text-center text-purple-darker">My Favorite Books & Audio</h1>
 <div class="container mx-auto">
-
-    <div class="category-btn block relative no-underline">
-        <h2 class="bg-purple-darker block fancy-font hover:bg-purple-darkest w-48 mx-auto p-2 rounded text-center text-white">Category</h2>
+    <div class="flex flex-wrap justify-center mx-auto w-1/2">
+        <a href="#"
+            class="category-btn bg-white block border border-purple-darkest hover:bg-purple-darkest text-purple-darkest hover:text-purple-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48 text-center">
+            Categories</a>
+        <a href="<%= quotes_path %>"
+            class="bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48 text-center">
+            Quotes Library</a>
     </div>
-    <div class="category-menu w-2/5 md:w-1/3 z-50 block max-w-md h-screen rounded-lg pin-t absolute bg-purple-darkest">
+    <div class="category-menu w-2/5 md:w-1/3 z-50 block max-w-md h-screen rounded-r-lg pin-t absolute bg-purple-darkest">
         <ul class="relative p-0">
-            <li><button id="showall" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Show All</button>
-            </li>
-            <li><button id="better-living" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Better Living</button></li>
-            <li><button id="philosophy"
-                    class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Philosophy</button></li>
-            <li><button id="peopleskill" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">People Skills</button></li>
-            <li><button id="econ" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Economics</button>
-            </li>
-            <li><button id="history" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">History</button>
-            </li>
-            <li><button id="finance" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Finance</button>
-            </li>
-            <li><button id="tech" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Technology</button>
-            </li>
-            <li><button id="science" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Science</button>
-            </li>
-            <li><button id="psych" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Psychology</button>
-            </li>
-            <li><button id="productivity"
-                    class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Productivity</button></li>
-            <li><button id="autobio"
-                    class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Autobiography</button></li>
-            <li><button id="pol" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Politics</button></li>
-            <li><button id="biz" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Business</button></li>
-            <li><button id="misc" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg my-4 font-bold text-blue-lightest">Miscellaneous</button>
+            <li><button id="showall" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Show All</button></li>
+            <li><button id="better-living" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Better Living</button></li>
+            <li><button id="philosophy" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Philosophy</button></li>
+            <li><button id="peopleskill" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">People Skills</button></li>
+            <li><button id="econ" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Economics</button></li>
+            <li><button id="history" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">History</button></li>
+            <li><button id="finance" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Finance</button></li>
+            <li><button id="tech" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Technology</button></li>
+            <li><button id="science" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Science</button></li>
+            <li><button id="psych" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Psychology</button></li>
+            <li><button id="productivity" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Productivity</button></li>
+            <li><button id="autobio" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Autobiography</button></li>
+            <li><button id="pol" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Politics</button></li>
+            <li><button id="biz" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Business</button></li>
+            <li><button id="misc" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg lg:text-2xl my-4 font-bold text-blue-lightest">Miscellaneous</button>
             </li>
         </ul>
     </div>
@@ -48,7 +42,6 @@
                     <source srcset="<%= image_path("#{book.image_address}") %>" type="image/jpg">
                     <img src="<%= image_path("#{book.image_address}") %>" class="mb-3 shadow" alt="<%= book.image_alt %>" />
                 </picture>
-                <!-- <%= image_tag(book.image_address, :alt => book.image_alt, class: "m-3 shadow") %>                -->
             </a>
             <div class="book-description bg-purple-lightest w-4/5 p-4 rounded-lg mx-auto">
                 <p class="fancy-font text-md text-purple-darkest"><%= book.title %></p>
@@ -59,7 +52,6 @@
         <% end %>
         <% end %>
     </div>
-</div>
 </div>
 <% content_for :javascripts do %>
 <script>

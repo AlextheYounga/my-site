@@ -523,11 +523,20 @@ Book.create([
     },
     {
         title: "The 48 Laws of Power",
-        category: "productivity",
+        category: "psych",
         image_address: "48_laws.jpg",
         book_link: "https://www.amazon.com/48-Laws-Power-Robert-Greene/dp/0140280197/ref=sr_1_1?keywords=48+laws+of+power&qid=1555294105&s=gateway&sr=8-1",
         image_alt: "Alex Younger ReadingList The 48 Laws of Power by Robert Greene",
         author: "Robert Greene",
+    },
+    {
+        title: "Iron John",
+        subtitle: "A Book About Men",
+        category: "misc",
+        image_address: "iron_john.jpg",
+        book_link: "https://www.amazon.com/Iron-John-Book-about-Men/dp/0306824264/ref=dp_ob_title_bk",
+        image_alt: "Alex Younger ReadingList Iron John by Robert Bly",
+        author: "Robert Bly",
     },
     {
         title: "Hawk",
@@ -571,6 +580,14 @@ Book.create([
         book_link: "https://www.amazon.com/Progressive-Era-Murray-Rothbard-ebook/dp/B076B4SW5T/ref=sr_1_1?s=books&ie=UTF8&qid=1551050667&sr=1-1&keywords=progressive+era+murray",
         image_alt: "Alex Younger ReadingList The Progressive Era by Murray N. Rothbard",
         author: "Murray N. Rothbard",
+    },
+    {
+        title: "The Buccaneers of America",
+        category: "history",
+        image_address: "bucaneer.jpg",
+        book_link: "https://www.amazon.com/Buccaneers-America-Alexander-Exquemelin/dp/1537698621/ref=sr_1_1_sspa?crid=3ATUWUL7J53GB&keywords=buccaneers+of+america&qid=1562205455&s=books&sprefix=bucanneers+of%2Cstripbooks%2C164&sr=1-1-spons&psc=1",
+        image_alt: "Alex Younger ReadingList The Buccaneers of America by Alexander O. Exquemelin",
+        author: "Alexander O. Exquemelin",
     },
     {
         title: "To Sell is Human",

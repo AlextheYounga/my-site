@@ -52,6 +52,22 @@ class PagesController < ApplicationController
     }
   end
 
+  def quotes
+    @favorite_quotes = FavoriteQuote.all
+
+    set_meta_tags title: 'Quotes Libary',
+    site: 'alextheyounger.me',
+    description: 'Alex Younger - My Quotes Collection. A collection of quotes that I find useful to remember.',
+    reverse: true,
+    og: {
+      title: 'Quotes Libary',
+      description: 'Alex Younger - My Quotes Collection. A collection of quotes that I find useful to remember.', 
+      type: 'website',
+      image: '<%= image_path("hammock-art.png") %>',
+      reverse: true
+    }
+  end
+
   def projects
     @projects = Project.all
 
@@ -69,7 +85,6 @@ class PagesController < ApplicationController
   end
 
   def resources
-    @favorite_quotes = FavoriteQuote.all
     @stocks = Stock.all
     
     set_meta_tags title: 'Resources',

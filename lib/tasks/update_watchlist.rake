@@ -14,6 +14,7 @@ client = IEX::Api::Client.new(publishable_token: 'pk_6c06446591c34f6c8fd673dd8b8
         latest_price: quote,
         ytd_change_percent: (stat.ytd_change_percent * 100)
         )
+        puts "#{stock.symbol} info collected" 
     end
     puts "done."
 end

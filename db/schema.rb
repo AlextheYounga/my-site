@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_24_012625) do
+ActiveRecord::Schema.define(version: 2019_07_04_024652) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2019_06_24_012625) do
   create_table "favorite_quotes", force: :cascade do |t|
     t.text "quote"
     t.string "name"
+    t.string "category"
   end
 
   create_table "projects", force: :cascade do |t|

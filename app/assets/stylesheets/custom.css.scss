@@ -249,11 +249,13 @@ section.article-show {
     background-image: image-url("aztec.svg");
 }
 
+/*---- Quotes ----*/
+section.quotes {
+    background-image: image-url("line-in-motion.svg");
+}
+
 /*---- Reading List ----*/
 //Menu
-.category-btn {
-    cursor: pointer;
-}
 
 .category-menu {
     left: -100%;

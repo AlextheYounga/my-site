@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
   get 'readinglist', to: 'pages#readinglist'
+  get 'quotes', to: 'pages#quotes'
   get 'projects', to: 'pages#projects'
   get 'resources', to: 'pages#resources'
   get 'search_stocks', to: 'stocks#search'

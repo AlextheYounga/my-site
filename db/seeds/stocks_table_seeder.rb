@@ -7,6 +7,7 @@ Stock.create([
 { symbol: "KGC" },
 { symbol: "SBGL" },
 { symbol: "JO" },
+{ symbol: "VTI" },
 { symbol: "CCJ" },
 { symbol: "SQM" },
 { symbol: "COG" },

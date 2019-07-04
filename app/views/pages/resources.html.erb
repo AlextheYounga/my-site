@@ -37,70 +37,9 @@
     <h2 class="fancy-font burgandy text-center py-6">My Stock Watchlist</h2>
     <%= render 'stocks/watchlist' %>
   </div>
-
-  <div class="quotes">
-    <div class="bg-white container mx-auto px-4 py-16 rounded-lg shadow-lg text-center">
-      <div id="quote-generator">
-        <h2 class="fancy-font pb-6">My Favorite Quotes</h2>
-        <div id="quoteContainer" class="leading-normal md:w-1/2 mx-auto normal-font w-full">
-          <p id="quoteGenius"></p>
-        </div>
-      </div>
-
-      <a href="#" id="quoteButton"
-        class="bg-white block border border-red-darker burgandy hover:bg-red-darkest hover:text-red-lightest mt-16 mx-auto no-underline normal-font py-3 rounded shadow w-48">
-        Quote Me
-      </a>
-    </div>
-  </div>
 </section>
 <!-- Stock Result -->
 <% content_for :javascripts do %>
-<script>
-  $(document).ready(function () {
-    var quoteSource = [
-      <% if @favorite_quotes.any?
-    then %>
-      <% @favorite_quotes.each do | favorite_quote | %>
-      {
-        quote: "<%= favorite_quote.quote%>",
-        name: "<%= favorite_quote.name %>"
-      }, 
-      <% end %>
-    <% end %>
-	];
-
-    $('#quoteButton').click(function (evt) {
-      //define the containers of the info we target
-      var quote = $('#quoteContainer p').text();
-      var quoteGenius = $('#quoteGenius').text();
-      //prevent browser's default action
-      evt.preventDefault();
-      //getting a new random number to attach to a quote and setting a limit
-      var sourceLength = quoteSource.length;
-      var randomNumber = Math.floor(Math.random() * sourceLength);
-      //set a new quote
-      for (i = 0; i <= sourceLength; i += 1) {
-        var newQuoteText = quoteSource[randomNumber].quote;
-        var newQuoteGenius = quoteSource[randomNumber].name;
-        //console.log(newQuoteText,newQuoteGenius);
-        var timeAnimation = 500;
-        var quoteContainer = $('#quoteContainer');
-        //fade out animation with callback
-        quoteContainer.fadeOut(timeAnimation, function () {
-          quoteContainer.html('');
-          quoteContainer.append('<p>' + newQuoteText + '</p>' + '<p id="quoteGenius">' + '-' + newQuoteGenius + '</p>');
-
-          //fades animation.
-          quoteContainer.fadeIn(timeAnimation);
-        });
-
-        break;
-      };//end for loop
-
-    });//end quoteButton function
-  });//end document ready
-</script>
 <script>
 
   $('#stock-lookup-form').on('ajax:complete', function (event, data, status) {
