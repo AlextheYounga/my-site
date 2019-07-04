@@ -23,8 +23,8 @@
         <td class="p-1 md:p-2 normal-font text-black "><%= country.unemployment %>%</td>
         <td class="p-1 md:p-2 normal-font text-black "><%= country.income_tax %>%</td>
         <td class="p-1 md:p-2 normal-font text-black "><%= country.gdp %></td>
-        <td class="p-1 md:p-2 normal-font text-black "><%= country.central_bank %></td>
-      </tr>
+        <td class="p-1 md:p-2 normal-font text-black "><%= country.central_bank unless country.central_bank == 0 %></td>
+      </tr> 
       <% end %>
       <% end %>
     </tbody>
