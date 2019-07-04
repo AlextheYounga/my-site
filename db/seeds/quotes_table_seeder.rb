@@ -13,12 +13,12 @@ FavoriteQuote.destroy_all
     {
         quote: "People don’t care how much you know until they know how much you care.",
         name: "John C. Maxwell, Leadership 101",
-        category: "opinion",
+        category: "humanity",
     },
     {
         quote: "The man who grasps principles can successfully handle his own methods. The man who tries methods, ignoring principles is sure to have trouble",
         name: "Ralph Waldo Emerson",
-        category: "opinion",
+        category: "principles",
     },
     {
         quote: "People go, 'Do you think the vast majority of the world is wrong?' …Well, yes. I don’t know how to say that nicely, but yes.",
@@ -48,17 +48,17 @@ FavoriteQuote.destroy_all
     {
         quote: "The older I grow the more I distrust the familiar doctrine that age brings wisdom.",
         name: "H.L. Mencken",
-        category: "opinion",
+        category: "humanity",
     },
     {
         quote: "Man is a beautiful machine that works very badly.",
         name: "H.L. Mencken",
-        category: "opinion",
+        category: "humanity",
     },
     {
         quote: "A city workman, oppressed by Prohibition, mourns the loss of his beer, not the loss of his liberty.",
         name: "H.L. Mencken, Notes on Democracy",
-        category: "opinion",
+        category: "pol",
     },
     {
         quote: "But let me offer you my definition of social justice: I keep what I earn and you keep what you earn. Do you disagree? Well then tell me how much of what I earn belongs to you - and why?",
@@ -203,7 +203,7 @@ FavoriteQuote.destroy_all
     {
         quote: "In the time it will take to motivate yourself to begin the work, it could have already been done.",
         name: "Unknown",
-        category: "advice",
+        category: "productivity",
     },
     {
         quote: "Relax, nothing is under control.",
@@ -213,7 +213,7 @@ FavoriteQuote.destroy_all
     {
         quote: "As democracy is perfected, the office of president represents, more and more closely, the inner soul of the people. On some great and glorious day the plain folks of the land will reach their heart’s desire at last and the White House will be adorned by a downright moron",
         name: "H.L. Mencken, circa 1920",
-        category: "opinion",
+        category: "pol",
     },
     {
         quote: "It is amazing that people who think we cannot afford to pay for doctors, hospitals, and medication somehow think that we can afford to pay for doctors, hospitals, medication, and a government bureaucracy to administer it.",
@@ -228,7 +228,7 @@ FavoriteQuote.destroy_all
     {
         quote: "In brief, the aim of each of us to satisfy his own desires, to achieve as far as possible his own highest happiness and well-being, is best forwarded by a common means, Social Cooperation, and cannot be achieved without that means. Here, then, is the foundation on which we may build a rational system of ethics",
         name: "Henry Hazlitt, Foundations of Morality",
-        category: "philosophy",
+        category: "philo",
     },
     {
         quote: "My lessons weren’t specific to business, but they were fundamental values—integrity, humility, responsibility, work ethic, entrepreneurship, a thirst for knowledge, the desire to make a contribution, and concern for others—that profoundly influenced the way I do business and live my life to this day.",
@@ -238,15 +238,246 @@ FavoriteQuote.destroy_all
     {
         quote: "Resentment is like drinking poison and waiting for the other person to die.",
         name: "Olivia Fox Cabane",
-        category: "advice",
+        category: "happy",
     },
     {
         quote: "One of the main reasons we’re so affected by our negative thoughts is that we think our mind has an accurate grasp on reality, and that its conclusions are generally valid. This, however, is a fallacy. Our mind’s view of reality can be, and often is, completely distorted.",
         name: "Olivia Fox Cabane",
-        category: "advice",
+        category: "happy",
     },
     {
         quote: "Many who are self-taught far excel the doctors, masters, and bachelors of the most renowned universities.",
         name: "Ludwig Von Mises",
         category: "opinion",
-    }])
+    },
+    {
+        quote: "People who enjoy meetings should not be in charge of anything.",
+        name: "Thomas Sowell",
+        category: "opinion",
+    },
+    {
+        quote: "The human being is meant to bear the burden of 24 hours; no more, no less. 24 hours is all that you have to live in",
+        name: "Unknown",
+        category: "happy",
+    },
+    {
+        quote: "It is not personal, it is not permanent, it is not important",
+        name: "Unknown",
+        category: "stoic",
+    },
+    {
+        quote: "It is necessary to guard ourselves from thinking that the practice of the scientific method enlarges the powers of the human mind. Nothing is more flatly contradicted by experience than the belief that a man distinguished in one or even more departments of science, is more likely to think sensibly about ordinary affairs than anyone else.",
+        name: "Wilfred Trot",
+        category: "humanity",
+    },
+    {
+        quote: "I believe that they who wish to do easy things without trouble and toil must previously have been trained in more difficult things. ",
+        name: "Rhetorica ar Herinnium",
+        category: "opinion",
+    },
+    {
+        quote: "So to get as close to a metaphysical definition as I can, logic is the self-identity of every thing. It's not a feature of existence, it's the feature of every feature of existence. Every part of existence is exactly the way that it is. Meaning that logic is an inseparable part of it. You cannot separate the identity of something from itself. Logic is not something that exists in addition to everything else. Logic is part of the fabric of everything in existence. Without logic, without self-identity, you could not have anything at all.",
+        name: "Steve Patterson, Square One",
+        category: "philo",
+    },
+    {
+        quote: "Consciousness for a bat is what it's like to be a bat",
+        name: "Thomas Nagel",
+        category: "philo",
+    },
+    {
+        quote: "Do what you love and try not to look at what other people occupy themselves with.",
+        name: "Rodney Mullen",
+        category: "courage",
+    },
+    {
+        quote: "Every election is a sort of advance auction sale of stolen goods.",
+        name: "H.L. Mencken",
+        category: "pol",
+    },
+    {
+        quote: "The Paris proletariat, having been misled into killing its King in 1793, devoted the next two years to killing those who had misled it",
+        name: "H.L. Mencken",
+        category: "history",
+    },
+    {
+        quote: "On the cleared ground remained a massive discovery: that the earliest and most profound of human emotions is fear. Man comes into the world weak and naked, and almost as devoid of intelligence as an oyster, but he brings with him a highly complex and sensitive susceptibility to fear. He can tremble and cry out in the first hours of his life—nay, in the first minute. Make a loud noise behind an infant just born, and it will shake like a Sunday-school superintendent taken in adultery",
+        name: "H.L. Mencken",
+        category: "humanity",
+    },
+    {
+        quote: "The process of education is largely a process of getting rid of such fears. It rehearses, after a fashion, the upward struggle of man. The ideal educated man is simply one who has put away as foolish the immemorial fears of the race—of strange men and strange ideas, of the powers and principalities of the air. He is sure of himself in the world; no dread of the dark rides him; he is serene",
+        name: "H.L. Mencken",
+        category: "humanity",
+    },
+    {
+        quote: "The city proletarian may be flustered and run amok by ideas—ideas without any sense, true enough, but still ideas. The yokel has room in his head for only one. That is the idea that God regards him fondly and has a high respect for him—that all other men are out of favour in heaven and abandoned to the devil",
+        name: "H.L. Mencken",
+        category: "pol",
+    },
+    {
+        quote: "When the city mob fights it is not for liberty, but for ham and cabbage. When it wins, its first act is to destroy every form of freedom that is not directed wholly to that end. And its second is to butcher all professional libertarians",
+        name: "H.L. Mencken",
+        category: "pol",
+    },
+    {
+        quote: "If Thomas Jefferson had been living in Paris in 1793 he would have made an even narrower escape from the guillotine than Thomas Paine made. The fact is that liberty, in any true sense, is a concept that lies quite beyond the reach of the inferior man's mind. He can imagine and even esteem, in his way, certain false forms of liberty—for example, the right to choose between two political mountebanks, and to yell for the more obviously dishonest—but the reality is incomprehensible to him.",
+        name: "H.L. Mencken",
+        category: "history",
+    },
+    {
+        quote: "One has a moral responsibilty to disobey unjust laws",
+        name: "Martin Luther King Jr.",
+        category: "pol",
+    },
+    {
+        quote: "It would be an instructive exercise for the skeptical reader to try to frame a definition of taxation which does not also include theft. Like the robber, the State demands money at the equivalent of gunpoint; if the taxpayer refuses to pay, his assets are seized by force, and if he should resist such depredation, he will be arrested or shot if he should continue to resist.",
+        name: "Murray Rothbard",
+        category: "econ",
+    },
+    {
+        quote: "Socialism, like the ancient ideas from which it springs, confuses the distinction between government and society. As a result of this, every time we object to a thing being done by government, the socialists conclude that we object to its being done at all. We disapprove of state education. Then the socialists say that we are opposed to any education. We object to a state religion. Then the socialists say that we want no religion at all. We object to a state-enforced equality. Then they say that we are against equality. And so on, and so on. It is as if the socialists were to accuse us of not wanting persons to eat because we do not want the state to raise grain.",
+        name: "Frederic Bastiat",
+        category: "econ",
+    },
+    {
+        quote: "If one rejects laissez faire on account of mans fallibility and moral weakness, one must for the same reason also reject every kind of government action.",
+        name: " Ludwig von Mises",
+        category: "econ",
+    },
+    {
+        quote: "Economics is haunted by more fallacies than any other study known to man. This is no accident. The inherent difficulties of the subject would be great enough in any case, but they are multiplied a thousandfold by a factor that is insignificant in, say, physics, mathematics or medicine - the special pleading of selfish interests. ",
+        name: "Henry Hazlitt, Economics in One Lesson",
+        category: "econ",
+    },
+    {
+        quote: "I wonder how many such men in America would know that Communism, the New Deal, Fascism, Nazism, are merely so-many trade-names for collectivist Statism, like the trade-names for tooth-pastes which are all exactly alike except for the flavouring.",
+        name: "Albert Jay Nock",
+        category: "econ",
+    },
+    {
+        quote: "If we act under the influence of impulse or fear or anger or passion, we do the thing that gives us most momentary satisfaction, regardless of longer consequences. If we act calmly after reflection, we do the thing we think likely to give us the most satisfaction (or least dissatisfaction) in the long run. But when we judge our actions morally (and especially when we judge the actions of others morally), the question we ask or should ask is this: What actions or rules of action would do most to promote the health, happiness, and well-being in the long run of the individual agent, or (if there is conflict) what rules of action would do most to promote the health, happiness and well-being in the long run of the whole community, or of all mankind?",
+        name: "Henry Hazlitt, Foundations of Morality",
+        category: "philo",
+    },
+    {
+        quote: "The longer the run we consider, the more likely are the interests of the individual and of society to become identical.",
+        name: "Henry Hazlitt, Foundations of Morality",
+        category: "philo",
+    },
+    {
+        quote: "Actions or rules of action are not right” or “wrong” in the sense in which a proposition in physics or mathematics is right or wrong, but expedient or inexpedient, advisable or inadvisable, helpful or harmful.",
+        name: "Henry Hazlitt, Foundations of Morality",
+        category: "philo",
+    },
+    {
+        quote: "The forthright declaration of a Thomas Huxley that it is not only illegal but immoral for a man to steal a loaf of bread even if he is starving, seems like a cruel and shocking Victorian pronouncement to all our “modern” ethical relativists, to all the ad hoc theoreticians who pride themselves on their peculiar “compassion.” But they have never suggested what rules should be put in place of the general rules they deplore, or how the exceptions should be determined. The only general rule they do in fact seem to have in mind is one they seldom dare to utter—that each man should be a law unto himself, that each man should decide for himself, for example, whether his “need” is great enough or the “need” of his intended victim small enough to justify a particular contemplated theft.",
+        name: "Henry Hazlitt, Foundations of Morality",
+        category: "philo",
+    },
+    {
+        quote: "In the interest of the offender, reformation is the great object to be aimed at; if this cannot be accomplished, seek to disable him from inflicting the like evil on himself or others. But always bear in mind the maxim, which cannot be repeated too often:—Inflict as much and no more pain than is necessary to accomplish the purpose of benevolence. Create not evil greater than the evil you exclude [II, 266-267].",
+        name: "Jeremy Bentham",
+        category: "philo",
+    },
+    {
+        quote: "Egoism comes before altruism. The acts required for continued self-preservation . . . are the first requisites to universal welfare. Unless each duly cares for himself, his care for all others is ended by death. . . .",
+        name: "Herbert Spencer, Data of Ethics, 1879",
+        category: "philo",
+    },
+    {
+        quote: "In various ways the well-being of each rises and falls with the well-being of all. . . . Each has a private interest in public morals, and profits by improving them. . . . Personal well-being depends in large measure on the well-being of society.",
+        name: "Herbert Spencer",
+        category: "philo",
+    },
+    {
+        quote: "Self-sacrifice is only required or justified where it is necessary in order to secure for another or others a greater good than that sacrificed.",
+        name: "Henry Hazlitt, Foundations of Morality",
+        category: "philo",
+    },
+    {
+        quote: "Nobody is more frightened of everybody else than a tyrant. He sits with his back to the wall, and his guards on either side of him, and he has you face down on the ground because you can't use weapons that way. You come into his presense; you don't stand up and face him because you might attack, and he has reason to fear that you might because he's ruling you all. And the man who rules you all is the biggest crook in the bunch, because he's the one who's succeeded in crime. The other people are pushed aside, the criminals, the people we lock up in jail - are simply the people who didn't make it.  ",
+        name: "Alan Watts",
+        category: "pol",
+    },
+    {
+        quote: "Zen has been described as when hungry eat, when tired sleep. When the Zen student got that description, he asked, \"well doesn't everyone do that?\" And the master said they don't. When hungry they don't just eat, but think of 10,000 things, when tired they don't just sleep, but dream inumerable dreams.",
+        name: "Alan Watts",
+        category: "zen",
+    },
+    {
+        quote: "Of course you are desiring not to desire, and that's of course, excessive. All I want you to do is give up desiring as much as you can. Don't want to go beyond the point of which you're capable. And for this reason Buddhism is called the Middleway.",
+        name: "Alan Watts",
+        category: "zen",
+    },
+    {
+        quote: "You know that if you get in the water and have nothing to hold on to, but try to behave as you would on dry land, you will drown. But if, on the other hand, you trust yourself to the water and let go, you will float.",
+        name: "Alan Watts",
+        category: "zen",
+    },
+    {
+        quote: "If the universe is meaningless, so is the statement that it is so. If this world is a vicious trap, so is its accuser, and the pot is calling the kettle black.",
+        name: "Alan Watts",
+        category: "zen",
+    },
+    {
+        quote: "Problems that remain persistently insoluble should always be suspected as questions asked in the wrong way.",
+        name: "Alan Watts",
+        category: "philo",
+    },
+    {
+        quote: "As long as you remember that everything is always exactly how it's supposed to be, you will always be sane.",
+        name: "Alan Watts",
+        category: "zen",
+    },
+    {
+        quote: "Ask yourself whether you are happy', observed the philosopher John Stuart Mill, 'and you cease to be so.' At best, it would appear, happiness can only be glimpsed out of the corner of an eye, not stared at directly.",
+        name: "Oliver Burkman",
+        category: "happy",
+    },
+    {
+        quote: "Who says you need to wait until you 'feel like' doing something in order to start doing it? The problem, from this perspective, isn't that you don't feel motivated; it's that you imagine you need to feel motivated. If you can regard your thoughts and emotions about whatever you're procrastinating on as passing weather, you'll realise that your reluctance about working isn't something that needs to be eradicated or transformed into positivity. You can coexist with it. You can note the procrastinatory feelings and act anyway.",
+        name: "Oliver Burkman",
+        category: "productivity",
+    },
+    {
+        quote: "Just because of the simple fact that you are human, you find yourself heir to an inherent unsatisfactoriness in life that simply will not go away.",
+        name: "Henepola Gunaratana, Mindfulness in Plain English",
+        category: "humanity",
+    },
+    {
+        quote: "Almost all our suffering is the product of our thoughts. We spend nearly every moment of our lives lost in thought, and hostage to the character of those thoughts. You can break this spell, but it takes training just like it takes training to defend yourself against a physical assault.",
+        name: "Sam Harris",
+        category: "happy",
+    },
+    {
+        quote: "Being charismatic does not depend on how much time you have but on how fully present you are in each interaction.",
+        name: "Olivia Fox Cabane",
+        category: "productivity",
+    },
+    {
+        quote: "It isn't what you have or who you are or where you are or what you are doing that makes you happy or unhappy. It is what you think about it.",
+        name: "Dale Carnegie",
+        category: "happy",
+    },
+    {
+        quote: "Names are the sweetest and most important sound in any language.",
+        name: "Dale Carnegie",
+        category: "advice",
+    },
+    {
+        quote: "The expression one wears on one's face is far more important than the clothes one wears on one's back.",
+        name: "Dale Carnegie",
+        category: "advice",
+    },
+    {
+        quote: "You can't win an argument. You can't because if you lose it, you lose it; and if you win it, you lose it.",
+        name: "Dale Carnegie",
+        category: "humanity",
+    },
+    {
+        quote: "There are consequences, sir, still more extensive which as they follow clearly from the doctrine combated, must either be admitted, or the doctrine must be given up. If Congress can apply money indefinitely to the general welfare, and are the sole and supreme judges of the general welfare, they may take the care of religion into their own hands; they may establish teachers in every state, county, and parish, and pay them out of the public treasury; they may take into their own hands the education of children, establishing in like manner schools throughout the union; they may assume the provision for the poor; they may undertake the regulation of all roads other than post roads; in short, every thing, from the highest object of state legislation, down to the most minute object of police, would be thrown under the power of Congress; for every object I have mentioned would admit the application of money, and might be called, if Congress pleased, provisions for the general welfare.",
+        name: "James Madison on the Cod Fishery Bill",
+        category: "history",
+    }
+])

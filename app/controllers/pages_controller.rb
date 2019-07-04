@@ -86,6 +86,7 @@ class PagesController < ApplicationController
 
   def resources
     @stocks = Stock.all
+    @countries = Country.all
     
     set_meta_tags title: 'Resources',
     site: 'alextheyounger.me',

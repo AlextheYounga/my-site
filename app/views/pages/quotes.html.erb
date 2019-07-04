@@ -1,18 +1,24 @@
 <section class="quotes">
-<h1 class="fancy-font mb-8 pt-20 text-center text-purple-darker">Quotes Collection</h1>
+<h1 class="fancy-font mb-8 pt-20 text-center burgandy">Quotes Collection</h1>
     <div class="container mx-auto px-2">
         <div class="flex">
             <div class="w-1/3 sm:w-1/6">
             <ul class="category-list list-reset">
                 <li><button id="showall" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Show All</button></li>
                 <li><button id="funny" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Funny</button></li>
-                <li><button id="advice" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Advice</button></li>
                 <li><button id="opinion" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Truest Opinions</button></li>
+                <li><button id="advice" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Advice</button></li>
+                <li><button id="happy" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Happiness</button></li>
+                <li><button id="humanity" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">People & Humanity</button></li>
                 <li><button id="biz" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Business</button></li>
+                <li><button id="principles" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Principles</button></li>
+                <li><button id="productivity" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Productivity</button></li>
+                <li><button id="philo" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Philosophy</button></li>
                 <li><button id="stoic" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Stoic</button></li>
                 <li><button id="zen" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Reaching Zen</button></li>
-                <li><button id="philosophy" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Philosophy</button></li>
+                <li><button id="pol" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Politics</button></li>
                 <li><button id="econ" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Economics</button></li>
+                <li><button id="history" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">History</button></li>
                 <li><button id="courage" class="bg-white border border-red-darkest burgandy hover:bg-red-darkest hover:text-red-lightest p-2 rounded-l-lg w-full text-sm sm:text-md">Courageous</button></li>
                 </li>
             </ul>
@@ -22,7 +28,7 @@
                 then %>
             <% @favorite_quotes.each do |quote| %>
             <div class="quote <%= quote.category%> p-4 sm:pl-8 sm:py-4">
-                <p class="font-normal tracking-normal leading-normal pb-1 text-grey-darkest"><%= quote.quote %></p>
+                <p class="text-sm sm:text-md tracking-normal leading-normal pb-1 text-grey-darkest"><%= quote.quote %></p>
                 <p class="fancy-font burgandy">- <%= quote.name %></p>
             </div>
             <% end %>

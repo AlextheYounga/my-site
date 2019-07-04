@@ -1,0 +1,31 @@
+<table class="<% if current_page?(root_path) %> bg-blue-lighter border-blue-light <% end %> bg-red-lightest border border-red-darker mx-auto shadow-lg lg:w-3/4">
+    <thead class="bg-grey-lightest">
+      <tr class="justify-between">
+        <th class="p-1 md:p-2 normal-font text-black text-lg">Country Name</th>
+        <th class="p-1 md:p-2 normal-font text-black text-lg">Inflation Rate</th>
+        <th class="p-1 md:p-2 normal-font text-black text-lg">Corporate Tax Rate</th>
+        <th class="p-1 md:p-2 normal-font text-black text-lg">Interest Rate</th>
+        <th class="p-1 md:p-2 normal-font text-black text-lg">Unemployment Rate</th>
+        <th class="p-1 md:p-2 normal-font text-black text-lg">Personal Income Tax</th>
+        <th class="p-1 md:p-2 normal-font text-black text-lg">GDP per Capita</th>
+        <th class="p-1 md:p-2 normal-font text-black text-lg">Central Bank Balance Sheet</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% if @countries  %>
+      <% @countries.each do |country| %>
+      <tr class="justify-between">
+        <td class="p-1 md:p-2 normal-font text-black text-left"><%= country.print_name%></td>        
+        <td class="p-1 md:p-2 normal-font text-black "><%= country.inflation %>%</td>
+        <td class="p-1 md:p-2 normal-font text-black "><%= country.corporate_tax %>%</td>
+        <td class="p-1 md:p-2 normal-font text-black "><%= country.interest_rate %>%</td>
+        <td class="p-1 md:p-2 normal-font text-black "><%= country.unemployment %>%</td>
+        <td class="p-1 md:p-2 normal-font text-black "><%= country.income_tax %>%</td>
+        <td class="p-1 md:p-2 normal-font text-black "><%= country.gdp %></td>
+        <td class="p-1 md:p-2 normal-font text-black "><%= country.central_bank %></td>
+      </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+  </table>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_04_024652) do
+ActiveRecord::Schema.define(version: 2019_07_04_074729) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
@@ -53,6 +53,21 @@ ActiveRecord::Schema.define(version: 2019_07_04_024652) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.string "print_name"
+    t.decimal "inflation"
+    t.decimal "corporate_tax"
+    t.decimal "interest_rate"
+    t.decimal "unemployment"
+    t.decimal "income_tax"
+    t.decimal "gdp"
+    t.decimal "gov_debt_to_gdp"
+    t.decimal "bank_balance_sheet"
+    t.decimal "central_bank"
+    t.decimal "budget"
   end
 
   create_table "favorite_quotes", force: :cascade do |t|
