@@ -247,7 +247,6 @@ section.about {
 
     a {
         color: #800020;
-        text-decoration: none;
 
         &:hover {
             color: #3d0303;
@@ -255,7 +254,7 @@ section.about {
     }
 }
 
-section.articles {
+section.articles, section.article-show {
     background-image: image-url("topography-red.svg");
 }
 
@@ -267,9 +266,9 @@ section.category-index {
     background-image: image-url("line-in-motion.svg");
 }
 
-section.article-show {
-    background-image: image-url("aztec.svg");
-}
+// section.article-show {
+//     background-image: image-url("aztec.svg");
+// }
 
 /*---- Quotes ----*/
 section.quotes {
