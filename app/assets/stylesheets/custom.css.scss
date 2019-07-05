@@ -234,7 +234,7 @@ section.about {
 }
 
 /*---- Articles ----*/
-.article {
+#article {
     code {
         font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
         border-radius: .25rem;
@@ -243,6 +243,15 @@ section.about {
         color: #3d4852;
         padding: .25rem;
         border-width: 1px;
+    }
+
+    a {
+        color: #800020;
+        text-decoration: none;
+
+        &:hover {
+            color: #3d0303;
+        }
     }
 }
 
