@@ -234,6 +234,18 @@ section.about {
 }
 
 /*---- Articles ----*/
+.article {
+    code {
+        font-family: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+        border-radius: .25rem;
+        background-color: #f1f5f8;
+        font-size: .875rem;
+        color: #3d4852;
+        padding: .25rem;
+        border-width: 1px;
+    }
+}
+
 section.articles {
     background-image: image-url("topography-red.svg");
 }
