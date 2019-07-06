@@ -7,7 +7,7 @@
     <% @projects.each do |project| %>
     <a href="<%= project.project_link%>" target="blank" rel="nofollow" class="no-underline">
       <div class="<%= project.bg_color %> block border border-grey-light mx-auto my-16 py-8 rounded shadow hover:shadow-lg w-full">
-        <h1 class="fancy-font <%= project.color %>"><%= project.title%></h1>
+        <h2 class="fancy-font <%= project.color %>"><%= project.title%></h2>
         <%= image_tag(project.image_address, :alt => project.image_alt, class:"w-4/5 py-8") %>
         <p class="leading-normal mx-auto normal-font text-black text-lg w-3/4"><%= project.description %></p>
         <h3 class="py-6 normal-font mx-auto text-3xl <%= project.color %>">Built with <%= project.framework%></h3>

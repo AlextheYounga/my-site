@@ -1,12 +1,16 @@
 require 'rss'
+require 'open-uri'
+require 'nokogiri'
 
 class PostsController < ApplicationController
   Post = Struct.new(:title, :content, :pubDate, :link)
 
   def index
-    rss = RSS::Parser.parse('https://medium.com/feed/@AlextheYounger/')
-    @posts = rss.items.map do |i|
-      Post.new(i.title, i.content_encoded, i.pubDate, i.link)
+    feed = RSS::Parser.parse('https://medium.com/feed/@AlextheYounger/')
+
+
+    @posts = feed.items.map do |post|
+      Post.new(post.title, post.content_encoded, post.pubDate, post.link)
     end
     
   end

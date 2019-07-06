@@ -53,6 +53,7 @@
         <% end %>
     </div>
 </div>
+
 <% content_for :javascripts do %>
 <script>
     $(document).ready(function () {
@@ -68,8 +69,7 @@
                 $('.category-menu').removeClass('category-menu--open');
             });
     });
-</script>
-<script>
+
     $(function () {
 
         $('.category-menu button').click(function () {
@@ -85,5 +85,6 @@
             $('.cover').show(500);
         });
     });
+    $('.desktop .nav-link').removeClass('burgandy').addClass('text-purple-darkest');
 </script>
 <% end %>

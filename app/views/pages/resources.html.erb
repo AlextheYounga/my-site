@@ -58,13 +58,3 @@
     <%= render 'partials/watchlist' %>
   </div>
 </section>
-<!-- Stock Result -->
-<% content_for :javascripts do %>
-<script>
-
-  $('#stock-lookup-form').on('ajax:complete', function (event, data, status) {
-    $('#results').html(data.responseText).show();
-  });
-
-</script>
-<% end %>
