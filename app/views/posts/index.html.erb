@@ -21,7 +21,7 @@
         class="bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg sm:w-3/4">
         <h1 class="fancy-font text-green-darker text-2xl"><%="#{post.title}"%></h1>
         <div class="leading-normal normal-font p-8 text-black text-lg">
-          <%= sanitize(truncate(strip_tags("#{post.content}"), length: 280)) %>
+          <%= truncate(strip_tags("#{post.content}"), length: 280) %>
         </div>
         <small class="block text-green-darker mx-auto px-6">
           Created <%= time_ago_in_words "#{post.pubDate}"%> ago

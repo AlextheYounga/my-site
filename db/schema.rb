@@ -76,6 +76,15 @@ ActiveRecord::Schema.define(version: 2019_07_04_074729) do
     t.string "category"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "link"
+    t.string "image"
+    t.string "date"
+    t.string "subtitle"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.text "description"
