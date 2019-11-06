@@ -5,13 +5,13 @@ puts "Updating watchlist..."
 client = IEX::Api::Client.new(publishable_token: Rails.application.credentials.iex_public_token)
 
     Stock.all.each do |stock|
-    quote = client.price("#{stock.symbol}")
+    quote = client.quote("#{stock.symbol}")
     company = client.company("#{stock.symbol}")
     stat = client.key_stats("#{stock.symbol}")
 
         Stock.where(symbol: "#{stock.symbol}").update(
         company_name: company.company_name,
-        latest_price: quote,
+        latest_price: quote.latest_price,
         ytd_change_percent: (stat.ytd_change_percent * 100),
         industry: company.industry
         )
