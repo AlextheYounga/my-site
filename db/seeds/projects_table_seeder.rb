@@ -14,7 +14,7 @@ Project.create([
     },
     {
         title: "Sundance Helicopters",
-        description: "I have been almost solely responsible for the maintenance and development of this site over the last 6 months. It's my pet project.",
+        description: "I have been almost solely responsible for the maintenance and development of this site over the last year.",
         image_address: "sundance.jpg",
         image_alt: "alex younger sundance helicopters website project",
         project_link: "https://www.sundancehelicopters.com/",
@@ -34,7 +34,7 @@ Project.create([
     },
     {
         title: "Parallel Path",
-        description: "I help maintain the website for Parallel Path, a marketing company based out of Boulder CO",
+        description: "I help maintain the website for Parallel Path and several of their clients, a marketing company based out of Boulder CO",
         image_address: "pp.jpg",
         image_alt: "alex younger blue hawaiian helicopters website management",
         project_link: "https://parallelpath.com/",
