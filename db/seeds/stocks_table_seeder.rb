@@ -5,11 +5,12 @@ Stock.create([
 { symbol: "AUY" },
 { symbol: "GOLD" },
 { symbol: "KGC" },
+{ symbol: "EGO" },
 { symbol: "SBGL" },
 { symbol: "JO" },
-{ symbol: "VTI" },
 { symbol: "CCJ" },
-{ symbol: "SQM" },
-{ symbol: "COG" },
+{ symbol: "SAND" },
+{ symbol: "DB" },
+{ symbol: "EXK" },
 
 ]);
