@@ -1,5 +1,6 @@
 
 Project.destroy_all
+puts "Seeing Projects"
 Project.create([
 
     {
