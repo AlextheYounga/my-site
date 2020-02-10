@@ -1,4 +1,5 @@
 FavoriteQuote.destroy_all
+puts "Seeding Quotes"
     FavoriteQuote.create([
     {
         quote: "It takes a big man to cry, but it takes a bigger man to laugh at that man",
