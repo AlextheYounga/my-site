@@ -1,16 +1,16 @@
 Stock.destroy_all
+puts "Seeding Stocks"
 Stock.create([
 
 { symbol: "AG" },
 { symbol: "AUY" },
 { symbol: "GOLD" },
-{ symbol: "KGC" },
-{ symbol: "EGO" },
 { symbol: "SBGL" },
-{ symbol: "JO" },
 { symbol: "CCJ" },
-{ symbol: "SAND" },
 { symbol: "DB" },
-{ symbol: "EXK" },
+{ symbol: "MSFT" },
+{ symbol: "UBER" },
+{ symbol: "OGI" },
+{ symbol: "JPM" },
 
 ]);

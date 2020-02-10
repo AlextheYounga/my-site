@@ -1,4 +1,5 @@
 Book.destroy_all
+puts "Seeding Books"
 Book.create([
     {
         title: "How to Win Friends and Influence People",
@@ -51,6 +52,14 @@ Book.create([
         image_alt: "Alex Younger ReadingList Making Economic Sense by Murray Rothbard",
         category: "econ",
         book_link: "https://mises.org/library/making-economic-sense",
+    },
+    {
+        title: "Rich Dad Poor Dad",        
+        author: "Robert Kiyosaki",
+        image_address: "rich_dad.jpg",
+        image_alt: "Alex Younger ReadingList Rich Dad Poor Dad by Robert Kiyosaki",
+        category: "biz",
+        book_link: "https://www.amazon.com/Rich-Robert-Lechter-Sharon-Kiyosaki/dp/3898798828/ref=sr_1_2",
     },
     {
         title: "Good Profit",
@@ -327,28 +336,18 @@ Book.create([
         author: "Alexander Solzhenitsyn",
     },
     {
-        title: "The Bank On Yourself Revolution",
-        subtitle: "Fire Your Banker, Bypass Wall Street, and Take Control of Your Own Financial Future",
-        category: "finance",
-        image_address: "bankonyourself.jpg",
-        book_link: "https://www.amazon.com/Bank-Yourself-Revolution-Control-Financial/dp/1942952104",
-        image_alt: "Alex Younger ReadingList The Bank On Yourself Revolution by Pamela Yellen",
-        author: "Pamela Yellen",
-    },
-    {
-        title: "Becoming Your Own Banker",
-        subtitle: "Unlock the Infinite Banking Concept",
-        category: "finance",
-        image_address: "infinite_banking.jpg",
-        book_link: "https://www.amazon.com/Becoming-Your-Banker-Nelson-Nash-ebook/dp/B0080K8EL4",
-        image_alt: "Alex Younger ReadingList Becoming Your Own Banker by R. Nelson Nash",
-        author: "R. Nelson Nash",
+        title: "What is Life?",        
+        category: "science",
+        image_address: "what_is_life.jpg",
+        book_link: "https://www.amazon.com/What-Life-Autobiographical-Sketches-Classics/dp/1107604664/ref=sr_1_1",
+        image_alt: "Alex Younger ReadingList What is Life by Erwin Schrodinger",
+        author: "Erwin Schrodinger",
     },
     {
         title: "Free Will",
         category: "philosophy",
         image_address: "free_will.jpg",
-        book_link: "https://www.amazon.com/Free-Will-Harris-Sam-Paperback/dp/B011SJZJ8O/ref=sr_1_3?s=books&ie=UTF8&qid=1517011043&sr=1-3&keywords=free+will+sam+harris",
+        book_link: "https://www.amazon.com/Free-Will-Harris-Sam-Paperback/dp/B011SJZJ8O/ref=sr_1_3",
         image_alt: "Alex Younger ReadingList Free Will by Sam Harris",
         author: "Sam Harris",
     },
@@ -357,9 +356,17 @@ Book.create([
         subtitle: "The Psychology of Persuasion",
         category: "psych",
         image_address: "influence.jpg",
-        book_link: "https://www.amazon.com/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X/ref=sr_1_1?s=books&ie=UTF8&qid=1515922756&sr=1-1&keywords=influence+robert+cialdini",
+        book_link: "https://www.amazon.com/Influence-Psychology-Persuasion-Robert-Cialdini/dp/006124189X/ref=sr_1_1",
         image_alt: "Alex Younger ReadingList Influence by Robert Cialdini",
         author: "Robert Cialdini",
+    },
+    {
+        title: "Man's Search for Meaning",        
+        category: "psych",
+        image_address: "mans_search_meaning.jpg",
+        book_link: "https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/0807014273/ref=sr_1_1",
+        image_alt: "Alex Younger ReadingList Man's Search for Meaning by Viktor Frankl",
+        author: "Viktor Frankl",
     },
     {
         title: "Ordinary Men",
@@ -649,6 +656,15 @@ Book.create([
         book_link: "https://www.amazon.com/100-Startup-Reinvent-Living-Create/dp/0307951529/ref=sr_1_1?s=books&ie=UTF8&qid=1515986114&sr=1-1&keywords=the+%24100+startup+by+chris+guillebeau",
         image_alt: "Alex Younger ReadingList The $100 Startup by Chris Guillebeau",
         author: "Chris Guillebeau",
+    },
+    {
+        title: "Becoming Your Own Banker",
+        subtitle: "Unlock the Infinite Banking Concept",
+        category: "finance",
+        image_address: "infinite_banking.jpg",
+        book_link: "https://www.amazon.com/Becoming-Your-Banker-Nelson-Nash-ebook/dp/B0080K8EL4",
+        image_alt: "Alex Younger ReadingList Becoming Your Own Banker by R. Nelson Nash",
+        author: "R. Nelson Nash",
     },
     {
         title: "The Law",
