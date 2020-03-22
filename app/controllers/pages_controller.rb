@@ -83,24 +83,6 @@ class PagesController < ApplicationController
       reverse: true
     }
   end
-
-  def resources
-    @stocks = Stock.all
-    @countries = Country.all
-    
-    set_meta_tags title: 'Resources',
-    site: 'alextheyounger.me',
-    description: 'Alex Younger - Resources. A collection of my own research, interesting information and ideas.',
-    reverse: true,
-    og: {
-      title: 'Resources',
-      description: 'Alex Younger - Resources. A collection of my own research, interesting information and ideas.', 
-      type: 'website',
-      image: '<%= image_path("hammock-art.png") %>',
-      reverse: true
-    }
-  end
-
 end
 
 
