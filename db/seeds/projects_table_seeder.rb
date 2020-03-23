@@ -10,8 +10,8 @@ Project.create([
         image_alt: "alex younger hazlitt data website project",
         project_link: "#",
         framework: "PHP Laravel",
-        color: "text-yellow",
-        bg_color: "bg-grey-darkest"
+        color: "text-black",
+        bg_color: "bg-grey-lighter"
     },
     {
         title: "Blue Hawaiian",
