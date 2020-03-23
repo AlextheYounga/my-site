@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'resolv-replace'
 
 desc "Scrape TradingEconomics for country indicators"
-task :scrape_countries => :environment do
+task :countries => :environment do
 
     num_sec = 1
     start = Time.now

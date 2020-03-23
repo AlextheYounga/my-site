@@ -79,7 +79,7 @@ Project.create([
         image_address: "world-map.jpg",
         image_alt: "alex younger leading economic indicators from 200 countries project",
         project_link: "https://keepingstock.net/i-built-a-web-scraper-to-analyze-the-economic-soundness-of-200-countries-heres-what-i-found-d3ec4fa8116b",
-        framework: "PHP Laravel",
+        framework: "Ruby on Rails",
         color: "text-orange-darker",
         bg_color: "bg-orange-lightest"
     },
