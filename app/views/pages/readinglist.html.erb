@@ -1,31 +1,22 @@
 <h1 class="fancy-font mb-8 pt-20 text-center text-purple-darker">My Favorite Books & Audio</h1>
-<div class="container mx-auto">
-    <div class="flex flex-wrap justify-center mx-auto w-1/2">
-        <a href="#"
-            class="category-btn bg-white block border border-purple-darkest hover:bg-purple-darkest text-purple-darkest hover:text-purple-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48 text-center">
-            Categories</a>
-        <a href="<%= quotes_path %>"
-            class="bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48 text-center">
-            Quotes Library</a>
-    </div>
-    <div class="category-menu w-2/5 md:w-1/4 z-50 block max-w-md h-screen rounded-r-lg pin-t absolute bg-purple-darkest">
-        <ul class="relative p-0">
-            <li><button id="showall" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Show All</button></li>
-            <li><button id="better-living" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Better Living</button></li>
-            <li><button id="philosophy" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Philosophy</button></li>
-            <li><button id="peopleskill" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">People Skills</button></li>
-            <li><button id="econ" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Economics</button></li>
-            <li><button id="history" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">History</button></li>
-            <li><button id="finance" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Finance</button></li>
-            <li><button id="tech" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Technology</button></li>
-            <li><button id="science" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Science</button></li>
-            <li><button id="psych" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Psychology</button></li>
-            <li><button id="productivity" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Productivity</button></li>
-            <li><button id="autobio" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Autobiography</button></li>
-            <li><button id="pol" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Politics</button></li>
-            <li><button id="biz" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Business</button></li>
-            <li><button id="misc" class="normal-font w-full max-w-2xl mx-auto block text-center relative text-lg xl:text-2xl my-4 font-bold text-blue-lightest">Miscellaneous</button>
-            </li>
+<div class="container mx-auto">    
+    <div class="category-menu">
+        <ul class="flex flex-wrap w-full justify-center p-0">
+            <li class="text-center p-2 border-r border-grey-light"><button id="showall" class="normal-font text-sm text-purple-darker hover:text-purple-light">Show All</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="better-living" class="normal-font text-sm text-purple-darker hover:text-purple-light">Better Living</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="philosophy" class="normal-font text-sm text-purple-darker hover:text-purple-light">Philosophy</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="peopleskill" class="normal-font text-sm text-purple-darker hover:text-purple-light">People Skills</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="econ" class="normal-font text-sm text-purple-darker hover:text-purple-light">Economics</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="history" class="normal-font text-sm text-purple-darker hover:text-purple-light">History</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="finance" class="normal-font text-sm text-purple-darker hover:text-purple-light">Finance</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="tech" class="normal-font text-sm text-purple-darker hover:text-purple-light">Technology</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="science" class="normal-font text-sm text-purple-darker hover:text-purple-light">Science</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="psych" class="normal-font text-sm text-purple-darker hover:text-purple-light">Psychology</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="productivity" class="normal-font text-sm text-purple-darker hover:text-purple-light">Productivity</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="autobio" class="normal-font text-sm text-purple-darker hover:text-purple-light">Autobiography</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="pol" class="normal-font text-sm text-purple-darker hover:text-purple-light">Politics</button></li>
+            <li class="text-center p-2 border-r border-grey-light"><button id="biz" class="normal-font text-sm text-purple-darker hover:text-purple-light">Business</button></li>
+            <li class="text-center p-2"><button id="misc" class="normal-font text-sm text-purple-darker hover:text-purple-light">Miscellaneous</button></li>
         </ul>
     </div>
 </div>
@@ -55,23 +46,9 @@
 </div>
 
 <% content_for :javascripts do %>
-<script>
-    $(document).ready(function () {
-        //Menu button on click event
-        $('.category-btn').on('click', function () {
-            // Toggles a class on the menu button to transform the burger menu into a cross
-
-            // Toggles a class that slides the menu into view on the screen
-            $('.category-menu').toggleClass('category-menu--open');
-            return false;
-        });
-        $('button').on('click', function () {
-                $('.category-menu').removeClass('category-menu--open');
-            });
-    });
+<script>    
 
     $(function () {
-
         $('.category-menu button').click(function () {
             var get_id = this.id;
             var get_current = $('.covers .' + get_id);
