@@ -1,6 +1,6 @@
 
 desc "This task is called by the Heroku scheduler add-on and updates the watchlist"
-task :update_watchlist => :environment do
+task :watchlist => :environment do
 puts "Updating watchlist..."
 client = IEX::Api::Client.new(publishable_token: Rails.application.credentials.iex_public_token)
 
