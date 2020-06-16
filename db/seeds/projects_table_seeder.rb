@@ -69,12 +69,22 @@ Project.create([
         image_address: "deep-work-planner.jpg",
         image_alt: "alex younger deep work planner website project and management",
         project_link: "https://github.com/AlextheYounga/deep-work-planner",
-        framework: "PHP Laravel",
+        framework: "Ruby on Rails",
         color: "text-black",
         bg_color: "bg-grey-lighter"
     },
     {
-        title: "Leading Economic Indicators Scraped from 200 Countries",
+        title: "Plunge Alert Telegram Bot (Personal Project)",
+        description: "",
+        image_address: "world-map.jpg",
+        image_alt: "alex younger plunge alert telegram bot",
+        project_link: "https://github.com/AlextheYounga/plungeAlertBot",
+        framework: "Python",
+        color: "text-black",
+        bg_color: "bg-grey-lighter"
+    },
+    {
+        title: "Economic Indicators Scraped from 200 Countries (Minor Personal Project)",
         description: "",
         image_address: "world-map.jpg",
         image_alt: "alex younger leading economic indicators from 200 countries project",
