@@ -11,7 +11,7 @@
           <a href="<%= project.project_link%>" target="blank" rel="nofollow" class="no-underline">
             <div class="project-details <%= project.bg_color %> h-full py-8">
               <h2 class="font-normal text-center <%= project.color %>"><%= project.title%></h2>
-              <div class="image py-8 mx-auto">
+              <div class="image py-4 mx-auto">
                 <picture>
                   <source srcset="<%= image_path("#{project.image_address}.webp") %>" type="image/webp" class="w-full" alt="<%= project.image_alt %>"> 
                   <source srcset="<%= image_path("#{project.image_address}") %>" type="image/jpg">
