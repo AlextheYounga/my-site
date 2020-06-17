@@ -1,21 +1,10 @@
 
 Project.destroy_all
 puts "Seeing Projects"
-Project.create([
-
-    {
-        title: "Hazlitt Data",
-        description: "Coming Soon",
-        image_address: "hazlitt-data.jpg",
-        image_alt: "alex younger hazlitt data website project",
-        project_link: "#",
-        framework: "PHP Laravel",
-        color: "text-black",
-        bg_color: "bg-grey-lighter"
-    },
+Project.create([    
     {
         title: "Blue Hawaiian",
-        description: "",
+        description: "Professional: Site build and ongoing maintenance.",
         image_address: "bluehawaiian.jpg",
         image_alt: "alex younger blue hawaiian helicopters website project",
         project_link: "https://www.bluehawaiian.com/",
@@ -25,7 +14,7 @@ Project.create([
     },
     {
         title: "Sundance Helicopters",
-        description: "",
+        description: "Professional: Site redesign and ongoing maintenance.",
         image_address: "sundance.jpg",
         image_alt: "alex younger sundance helicopters website project",
         project_link: "https://www.sundancehelicopters.com/",
@@ -35,7 +24,7 @@ Project.create([
     },
     {
         title: "Izoox",
-        description: "",
+        description: "Professional: Site build and ongoing maintenance.",
         image_address: "izoox.jpg",
         image_alt: "alex younger blue hawaiian helicopters website project",
         project_link: "https://www.izoox.com/",
@@ -45,7 +34,7 @@ Project.create([
     },
     {
         title: "The Arkenstone",
-        description: "",
+        description: "Professional: Ongoing Maintenance",
         image_address: "irocks.jpg",
         image_alt: "alex younger blue hawaiian helicopters website project and management",
         project_link: "https://www.irocks.com/",
@@ -55,7 +44,7 @@ Project.create([
     },    
     {
         title: "Contemplative Outreach",
-        description: "",
+        description: "Professional: Site build and ongoing maintenance.",
         image_address: "co.jpg",
         image_alt: "alex younger contemplative outreach website management",
         project_link: "https://www.contemplativeoutreach.org/",
@@ -64,8 +53,18 @@ Project.create([
         bg_color: "bg-yellow-lightest"
     },
     {
+        title: "Hazlitt Data",
+        description: "A stock/investment terminal called Hazlitt, inspired by Koyfin",
+        image_address: "hazlitt-data.jpg",
+        image_alt: "alex younger hazlitt data website project",
+        project_link: "https://github.com/AlextheYounga/hazlitt-data",
+        framework: "PHP Laravel",
+        color: "text-black",
+        bg_color: "bg-grey-lighter"
+    },
+    {
         title: "Fractal Geometry Calculator",
-        description: "Personal Project",
+        description: "Personal: A Python program for determining Hurst exponents and rescale ranges",
         image_address: "mandelbrot.jpg",
         image_alt: "alex younger fractal geometry calculator",
         project_link: "https://github.com/AlextheYounga/fractalGeometryCalculator",
@@ -75,7 +74,7 @@ Project.create([
     },
     {
         title: "Plunge Alert Telegram Bot",
-        description: "Personal Project",
+        description: "Personal: A telegram bot that alerts you via telegram if the market has crashed",
         image_address: "plungealertbot.jpg",
         image_alt: "alex younger plunge alert telegram bot",
         project_link: "https://github.com/AlextheYounga/plungeAlertBot",
@@ -85,7 +84,7 @@ Project.create([
     },
     {
         title: "Deep Work Planner",
-        description: "Coming Soon",
+        description: "Personal: A Daily Planner inspired by the book Deep Work",
         image_address: "deep-work-planner.jpg",
         image_alt: "alex younger deep work planner website project and management",
         project_link: "https://github.com/AlextheYounga/deep-work-planner",
@@ -93,16 +92,16 @@ Project.create([
         color: "text-black",
         bg_color: "bg-grey-lighter"
     },    
-    {
-        title: "Economic Indicators Scraped from 200 Countries",
-        description: "Minor Personal Project",
-        image_address: "world-map.jpg",
-        image_alt: "alex younger leading economic indicators from 200 countries project",
-        project_link: "https://keepingstock.net/i-built-a-web-scraper-to-analyze-the-economic-soundness-of-200-countries-heres-what-i-found-d3ec4fa8116b",
-        framework: "Ruby on Rails",
-        color: "text-orange-darker",
-        bg_color: "bg-orange-lightest"
-    },
+    # {
+    #     title: "Economic Indicators Scraped from 200 Countries",
+    #     description: "Perso",
+    #     image_address: "world-map.jpg",
+    #     image_alt: "alex younger leading economic indicators from 200 countries project",
+    #     project_link: "https://keepingstock.net/i-built-a-web-scraper-to-analyze-the-economic-soundness-of-200-countries-heres-what-i-found-d3ec4fa8116b",
+    #     framework: "Ruby on Rails",
+    #     color: "text-orange-darker",
+    #     bg_color: "bg-orange-lightest"
+    # },
     # {
     #     title: "Healing Natural Oils",
     #     description: "",

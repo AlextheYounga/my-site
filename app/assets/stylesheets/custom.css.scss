@@ -287,8 +287,10 @@ section.quotes {
 }
 
 /*---- Projects ----*/
-section.projects {
-    // background-image: image-url("gears.svg");
+.project-container {
+    @media (min-width: 768px) {
+        height: 400px;        
+    }    
 }
 
 /*---- Resources ----*/
