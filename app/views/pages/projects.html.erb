@@ -9,8 +9,8 @@
       <div class="lg:w-1/4 md:w-1/2 w-full">
         <div class="project-container border border-grey-light mx-8 block my-8 sm:my-16 rounded shadow hover:shadow-lg normal-font">
           <a href="<%= project.project_link%>" target="blank" rel="nofollow" class="no-underline">
-            <div class="project-details <%= project.bg_color %> h-full py-8">
-              <h2 class="font-normal text-center <%= project.color %>"><%= project.title%></h2>
+            <div class="project-details bg-grey-lighter h-full py-8">
+              <h2 class="font-normal text-center text-black"><%= project.title%></h2>
               <div class="image py-4 mx-auto">
                 <picture>
                   <source srcset="<%= image_path("#{project.image_address}.webp") %>" type="image/webp" class="w-full" alt="<%= project.image_alt %>"> 
@@ -19,7 +19,7 @@
                 </picture>
               </div>
               <p class="leading-normal text-center text-sm normal-font pb-4 text-black"><%= project.description %></p>
-              <h3 class="normal-font text-center <%= project.color %>">Built with <%= project.framework%></h3>
+              <h3 class="normal-font text-center text-black">Built with <%= project.framework%></h3>
             </div>
           </a>
         </div>
