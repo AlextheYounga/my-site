@@ -15,10 +15,19 @@ $burgandy-hover: #3d0303;
     font-family: 'Alegreya SC', serif !important;
 }
 
-.normal-font {
-    font-family: 'Alegreya Sans';
-    font-style: normal;
+// h1,h2,h3,h4,p {
+//     font-family: Apple SD Gothic Neo;
+// }
+
+.normal-font, p {
+    font-family: Apple SD Gothic Neo;
+    font-weight: 400;
 }
+
+// .normal-font {
+//     font-family: 'Alegreya Sans';
+//     font-style: normal;
+// }
 
 
 /*---- Nav ----*/

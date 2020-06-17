@@ -59,9 +59,29 @@ Project.create([
         image_address: "co.jpg",
         image_alt: "alex younger contemplative outreach website management",
         project_link: "https://www.contemplativeoutreach.org/",
-        framework: "Drupal",
+        framework: "Wordpress",
         color: "text-yellow-darker",
         bg_color: "bg-yellow-lightest"
+    },
+    {
+        title: "Fractal Geometry Calculator",
+        description: "Personal Project",
+        image_address: "mandelbrot.jpg",
+        image_alt: "alex younger fractal geometry calculator",
+        project_link: "https://github.com/AlextheYounga/fractalGeometryCalculator",
+        framework: "Python",
+        color: "text-black",
+        bg_color: "bg-grey-lighter"
+    },
+    {
+        title: "Plunge Alert Telegram Bot",
+        description: "Personal Project",
+        image_address: "plungealertbot.jpg",
+        image_alt: "alex younger plunge alert telegram bot",
+        project_link: "https://github.com/AlextheYounga/plungeAlertBot",
+        framework: "Python",
+        color: "text-blue",
+        bg_color: "bg-blue-lightest"
     },
     {
         title: "Deep Work Planner",
@@ -69,13 +89,13 @@ Project.create([
         image_address: "deep-work-planner.jpg",
         image_alt: "alex younger deep work planner website project and management",
         project_link: "https://github.com/AlextheYounga/deep-work-planner",
-        framework: "PHP Laravel",
+        framework: "Ruby on Rails",
         color: "text-black",
         bg_color: "bg-grey-lighter"
-    },
+    },    
     {
-        title: "Leading Economic Indicators Scraped from 200 Countries",
-        description: "",
+        title: "Economic Indicators Scraped from 200 Countries",
+        description: "Minor Personal Project",
         image_address: "world-map.jpg",
         image_alt: "alex younger leading economic indicators from 200 countries project",
         project_link: "https://keepingstock.net/i-built-a-web-scraper-to-analyze-the-economic-soundness-of-200-countries-heres-what-i-found-d3ec4fa8116b",

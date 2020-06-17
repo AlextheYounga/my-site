@@ -1,14 +1,15 @@
 <section class="projects">
-  <h1 class="fancy-font pt-16 text-center burgandy">My Projects</h1>
+  <h1 class="font-normal fancy-font pt-16 text-center burgandy">My Projects</h1>
+  <h4 class="text-center normal-font pt-4"><a href="https://github.com/AlextheYounga" class="no-underline hover:underline text-black" target="blank" rel="nofollow">github.com/AlextheYounga</a></h4>
 
-  <div class="flex flex-wrap justify-around mx-auto px-4 pb-16 sm:px-4 text-center">
+  <div class="flex flex-wrap">
     <% if @projects.any?
       then %>
       <% @projects.each do |project| %>
-      <div class="project-container w-1/5 border border-grey-light mx-3 my-16 rounded shadow hover:shadow-lg">
+      <div class="project-container w-1/5 border border-grey-light mx-8 block my-16 rounded shadow hover:shadow-lg normal-font">
         <a href="<%= project.project_link%>" target="blank" rel="nofollow" class="no-underline">
           <div class="project-details <%= project.bg_color %> h-full py-8">
-            <h2 class="fancy-font <%= project.color %>"><%= project.title%></h2>
+            <h2 class="font-normal text-center <%= project.color %>"><%= project.title%></h2>
             <div class="image py-8 mx-auto">
               <picture>
                 <source srcset="<%= image_path("#{project.image_address}.webp") %>" type="image/webp" class="w-full" alt="<%= project.image_alt %>"> 
@@ -16,11 +17,11 @@
                 <img src="<%= image_path("#{project.image_address}") %>" class="w-full" alt="<%= project.image_alt %>" />
               </picture>
             </div>
-            <p class="leading-normal mx-auto normal-font <%= project.color %> text-lg w-3/4"><%= project.description %></p>
-            <h3 class="normal-font mx-auto text-lg px-2 <%= project.color %>">Built with <%= project.framework%></h3>
+            <p class="leading-normal text-center normal-font pb-2 <%= project.color %> text-lg"><%= project.description %></p>
+            <h3 class="normal-font text-center <%= project.color %>">Built with <%= project.framework%></h3>
           </div>
         </a>
-        </div>
+      </div>
       <% end %>
     <% end %>
   </div>
