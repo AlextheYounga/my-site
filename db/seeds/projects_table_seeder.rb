@@ -4,7 +4,7 @@ puts "Seeing Projects"
 Project.create([    
     {
         title: "Blue Hawaiian",
-        description: "Professional: Site build and ongoing maintenance.",
+        description: "Professional: Site co-creator and ongoing maintenance.",
         image_address: "bluehawaiian.jpg",
         image_alt: "alex younger blue hawaiian helicopters website project",
         project_link: "https://www.bluehawaiian.com/",
@@ -24,7 +24,7 @@ Project.create([
     },
     {
         title: "Izoox",
-        description: "Professional: Site build and ongoing maintenance.",
+        description: "Professional: Site co-creator and ongoing maintenance.",
         image_address: "izoox.jpg",
         image_alt: "alex younger blue hawaiian helicopters website project",
         project_link: "https://www.izoox.com/",
@@ -44,7 +44,7 @@ Project.create([
     },    
     {
         title: "Contemplative Outreach",
-        description: "Professional: Site build and ongoing maintenance.",
+        description: "Professional: Site co-creator and ongoing maintenance.",
         image_address: "co.jpg",
         image_alt: "alex younger contemplative outreach website management",
         project_link: "https://www.contemplativeoutreach.org/",
@@ -54,7 +54,7 @@ Project.create([
     },
     {
         title: "Hazlitt Data",
-        description: "A stock/investment terminal called Hazlitt, inspired by Koyfin",
+        description: "Product of my company, Hazlitt Tech LLC, a data terminal for financial markets. In production.",
         image_address: "hazlitt-data.jpg",
         image_alt: "alex younger hazlitt data website project",
         project_link: "https://github.com/AlextheYounga/hazlitt-data",
@@ -91,7 +91,7 @@ Project.create([
         framework: "Ruby on Rails",
         color: "text-black",
         bg_color: "bg-grey-lighter"
-    },    
+    }  
     # {
     #     title: "Economic Indicators Scraped from 200 Countries",
     #     description: "Perso",
