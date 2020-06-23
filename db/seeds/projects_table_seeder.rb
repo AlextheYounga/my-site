@@ -4,7 +4,7 @@ puts "Seeing Projects"
 Project.create([    
     {
         title: "Blue Hawaiian",
-        description: "Professional: Site co-creator and ongoing maintenance.",
+        description: "Professional: I, along with one other person, put together this masterpiece in about 5 months.",
         image_address: "bluehawaiian.jpg",
         image_alt: "alex younger blue hawaiian helicopters website project",
         project_link: "https://www.bluehawaiian.com/",
@@ -14,7 +14,7 @@ Project.create([
     },
     {
         title: "Sundance Helicopters",
-        description: "Professional: Site redesign and ongoing maintenance.",
+        description: "Professional: I have been responsible for the ongoing maintenance and occasional redesigns of this site for nearly two years.",
         image_address: "sundance.jpg",
         image_alt: "alex younger sundance helicopters website project",
         project_link: "https://www.sundancehelicopters.com/",
