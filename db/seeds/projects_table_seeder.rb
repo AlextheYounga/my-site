@@ -73,6 +73,16 @@ Project.create([
         bg_color: "bg-grey-lighter"
     },
     {
+        title: "Word Frequency Calculator",
+        description: "Personal: A Python program for calculating word frequency in a book, the average syllable count, and graphing word occurrence over time.",
+        image_address: "wordfrequency.jpg",
+        image_alt: "alex younger fractal geometry calculator",
+        project_link: "https://github.com/AlextheYounga/word-frequency-calculator",
+        framework: "Python",
+        color: "text-black",
+        bg_color: "bg-grey-lighter"
+    },
+    {
         title: "Plunge Alert Telegram Bot",
         description: "Personal: A telegram bot that alerts you via telegram if the market has crashed",
         image_address: "plungealertbot.jpg",
