@@ -59,12 +59,12 @@ p {
     margin-top: -5.7rem;
 }
 
-.headshot {
-    img {
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
+// .headshot {
+//     img {
+//         top: 50%;
+//         transform: translateY(-50%);
+//     }
+// }
 
 @media screen and (max-width: 568px) {
     .no-webp .hero {
@@ -90,7 +90,7 @@ p {
     }
 }
 
-section.articles-home {
+section.articles-home, section.about-home {
     background-image: image-url("topography-blue.svg");
 }
 
@@ -301,6 +301,10 @@ section.quotes {
     @media (min-width: 768px) {
         height: 400px;
     }
+}
+
+section.projects-skills {
+    background-image: image-url("topography-red.svg");
 }
 
 /*---- Resources ----*/

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_04_074729) do
+ActiveRecord::Schema.define(version: 2020_07_12_033840) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
@@ -76,6 +76,15 @@ ActiveRecord::Schema.define(version: 2019_07_04_074729) do
     t.string "category"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "link"
+    t.string "image"
+    t.string "date"
+    t.string "subtitle"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -106,6 +115,7 @@ ActiveRecord::Schema.define(version: 2019_07_04_074729) do
     t.decimal "debt_to_assets"
     t.decimal "net_worth"
     t.float "ytd_change_percent"
+    t.string "position"
   end
 
   create_table "user_stocks", force: :cascade do |t|

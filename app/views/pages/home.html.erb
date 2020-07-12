@@ -4,34 +4,37 @@
     <p class="fancy-font py-2 sm:text-blue-lighter text-center text-lg text-yellow-lightest">Web Developer, Investor, Marketing, Entrepreneur</p>
   </div>
 </section>
-<section class="about-home bg-white py-16 w-full px-4">
-  <div class="flex justify-between mx-auto normal-font md:text-2xl md:w-1/2 text-black text-blue-dark text-md w-full">
-    <p class="mx-auto">Ruby Rails</p>
-    <p class="mx-auto">PHP</p>
-    <p class="mx-auto">Python</p>
-    <p class="mx-auto">Vue</p>
-  </div>
-  <div class="flex flex-wrap py-12">
-    <div class="headshot home-content js--fadeInLeft lg:w-1/2 lg:text-right text-center mx-auto">
+<section class="about-home bg-grey-lighter py-16 w-full px-4">
+<h2 class="fancy-font text-center text-blue pb-8">About Me</h2>
+  <div class="flex flex-wrap justify-center rounded-lg shadow text-lg mx-auto lg:w-3/4 bg-white home-content js--fadeInLeft">
+    <div class="headshot w-full sm:w-1/2">
       <picture>
         <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp">
         <source srcset="<%= image_path("headshot3_700.png") %>" type="image/png">
-        <img src="<%= image_path("headshot3_700.png") %>" class="w-3/5 relative mr-4" alt="alex younger developer marketing about me"/>
+        <img src="<%= image_path("headshot3_700.png") %>" class="flex sm:mt-10 mx-auto relative text-center" width="315" alt="alex younger developer marketing about me"/>
       </picture>
     </div>
-    <div class="aboutme-description home-content js--fadeInLeft lg:w-1/2 mx-auto relative lg:mt-16 mt-8">
-      <div class="leading-normal normal-font max-w-sm text-lg ml-4">
-        <p class="py-2">I build and maintain websites for an extensive list of small and large companies.</p>
-        <p class="py-2">I am currently building a side business called Hazlitt Tech LLC, a data brokerage for financial markets.</p>
-        <p class="py-2">I consult businesses on best practices for Google Ad Campaigns, Analytics, and content marketing techniques.</p>
-        <p class="py-2">Check out my latest
-          <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
-        <a href="<%= about_path %>" class="bg-white block border border-blue-darker hover:bg-blue-darkest text-blue button hover:text-blue-lightest text-center mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
-          My Story
-        </a>
-      </div>
-    </div>
+    <div class="aboutme-description leading-normal normal-font p-8 w-full sm:w-1/2">
+      <p class="py-2">I build and maintain websites for an extensive list of small and large companies.</p>
+      <p class="py-2">I am currently building a side business called Hazlitt Tech LLC, a data brokerage for financial markets.</p>
+      <p class="py-2">I consult businesses on best practices for Google Ad Campaigns, Analytics, and content marketing techniques.</p>
+      <p class="py-2">Check out my latest
+        <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
+      <a href="<%= about_path %>" class="bg-white block border border-blue-darker hover:bg-blue-darkest text-blue button hover:text-blue-lightest text-center mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
+        My Story
+      </a>
+    </div>   
   </div>
+</section>
+<section class="skills bg-white py-16 w-full px-4">
+<h2 class="fancy-font text-center text-blue">Skills</h2>
+<div class="flex mx-auto mt-8">
+      <picture class="mx-auto">
+        <source srcset="<%= image_path("blueskillscloud.png.webp") %>" type="image/webp" class="w-full" alt="skills cloud"> 
+        <source srcset="<%= image_path("blueskillscloud.png") %>" type="image/jpg">
+        <img src="<%= image_path("blueskillscloud.png") %>" class="block mx-auto" alt="skills cloud" />
+      </picture>
+    </div>
 </section>
 <section class="articles-home py-16 bg-grey-lighter">
   <div class="container mx-auto p-1 text-center">
@@ -70,7 +73,7 @@
 </section>
 <section class="watchlist-home home-content js--fadeInLeft py-16 px-4">
   <h2 class="fancy-font text-blue text-center py-6">My Stock Watchlist</h2>
-  <p class="pt-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
+  <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
   <%= render 'partials/watchlist' %>
 </section>
 <!-- Scroll Reveal -->
