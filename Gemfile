@@ -36,6 +36,7 @@ gem 'ckeditor'
 gem 'paperclip'
 gem 'webpacker'
 gem 'httparty'
+gem 'async-http'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

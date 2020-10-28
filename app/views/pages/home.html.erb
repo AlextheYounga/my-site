@@ -26,51 +26,6 @@
     </div>   
   </div>
 </section>
-<section class="skills bg-white py-16 w-full px-4">
-<h2 class="fancy-font text-center text-blue">Skills</h2>
-<div class="flex mx-auto mt-8">
-      <picture class="mx-auto">
-        <source srcset="<%= image_path("blueskillscloud.png.webp") %>" type="image/webp" class="w-full" alt="skills cloud"> 
-        <source srcset="<%= image_path("blueskillscloud.png") %>" type="image/jpg">
-        <img src="<%= image_path("blueskillscloud.png") %>" class="block mx-auto" alt="skills cloud" />
-      </picture>
-    </div>
-</section>
-<section class="articles-home py-16 bg-grey-lighter">
-  <div class="container mx-auto p-1 text-center">
-    <h2 class="fancy-font text-blue">Latest Blog Posts</h2>
-    <a href="<%= articles_path %>" class="bg-white block border border-blue-darker text-blue button hover:text-blue-lightest hover:bg-blue-darkest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
-      View All</a>
-    <% if @articles.any?
-           then %>
-      <% @articles.each do |article| %>
-        <a href="<%= article_path(article) %>" class="no-underline text-blue">
-          <div class="home-content js--fadeInLeft teaser bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg md:w-4/5">
-            <h2 class="fancy-font text-blue"><%= article.title %></h2>
-            <div class="leading-normal normal-font p-8 text-black text-lg">
-              <% if article.description.blank? then %>
-                <%= truncate(strip_tags(article.editor1), length: 600) %>
-              <% else %>
-                <%= truncate(strip_tags(article.description), length: 600) %>
-              <% end %>
-            </div>
-            <small class="block text-blue mx-auto px-6">Created by
-              <%= article.user.username if article.user %>
-              <%= time_ago_in_words(article.created_at) %>
-              ago, Last updated:
-              <%= time_ago_in_words(article.updated_at) %>
-              ago
-            </small>
-            <% if article.categories.any? %>
-              <p class="text-blue py-6 normal-font">Categories:
-                <%= render article.categories %></p>
-            <% end %>
-          </div>
-        </a>
-      <% end %>
-    <% end %>
-  </div>
-</section>
 <section class="watchlist-home home-content js--fadeInLeft py-16 px-4">
   <h2 class="fancy-font text-blue text-center py-6">My Stock Watchlist</h2>
   <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>

@@ -1,10 +1,8 @@
 <nav class="desktop fancy-font py-8 relative z-10">
     <div class="container flex justify-between mx-auto">    
         <a href="<%= root_path %>" class="w-3/5 nav-link no-underline text-2xl burgandy">Home</a>
-        <div class="w-2/5 flex justify-between md:w-2/3">
-            <a href="<%= articles_path %>" class="nav-link no-underline text-2xl burgandy">Blog</a>
-            <a href="<%= about_path %>" class="nav-link no-underline text-2xl burgandy">About</a>
-            <a href="<%= readinglist_path %>" class="nav-link no-underline text-2xl burgandy">Reading List</a>
+        <div class="w-2/5 flex justify-end md:w-2/3">        
+            <a href="<%= readinglist_path %>" class="nav-link no-underline mr-8 text-2xl burgandy">Reading List</a>
             <a href="<%= projects_path %>" class="nav-link no-underline text-2xl burgandy">Projects</a>            
             <% if logged_in? %>
                 <%= link_to "Log Out", logout_path, method: :delete, class: "bg-white border border-red-darker button hover:bg-red-darkest hover:text-red-lightest no-underline normal-font px-2 py-1 rounded shadow text-red-darkest"%>
@@ -24,9 +22,7 @@
 
     <div class="mobile-menu block max-w-md w-full h-screen pin-t z-negative absolute bg-red-dark <% if current_page?(root_path) %> bg-blue <% end %>">
         <ul class="relative p-0 hidden">
-            <li><a href="<%= root_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Home</a></li>
-            <li><a href="<%= articles_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Blog</a></li>
-            <li><a href="<%= about_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">About</a></li>
+            <li><a href="<%= root_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Home</a></li>            
             <li><a href="<%= readinglist_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Reading List</a></li>
             <li><a href="<%= projects_path %>" class="w-full max-w-2xl fancy-font mx-auto block text-center relative text-4xl my-3 font-bold text-blue-lightest">Projects</a></li>            
         </ul>

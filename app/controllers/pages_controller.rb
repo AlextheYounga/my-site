@@ -1,13 +1,12 @@
-require 'rubygems'
-require 'rss'
-require 'iex-ruby-client'
-
 class PagesController < ApplicationController
 
   def home
     @articles = Article.order("created_at desc").limit(3)
     @books = Book.all
     @stocks = Stock.all
+    cache = ActiveSupport::Cache::MemoryStore.new
+    langs = cache.read('repo_languages')
+    puts langs
 
     set_meta_tags title: 'Home',
     site: 'alextheyounger.me',
@@ -16,20 +15,6 @@ class PagesController < ApplicationController
     og: {
       title: 'Home',
       description: 'Alex Younger - My Space on the Internet', 
-      type: 'website',
-      image: '<%= image_path("hammock-art.png") %>',
-      reverse: true
-    }
-  end
-
-  def about
-    set_meta_tags title: 'About Me',
-    site: 'alextheyounger.me',
-    description: 'Alex Younger - My Story',
-    reverse: true,
-    og: {
-      title: 'About Me',
-      description: 'Alex Younger - My Story', 
       type: 'website',
       image: '<%= image_path("hammock-art.png") %>',
       reverse: true
@@ -46,22 +31,6 @@ class PagesController < ApplicationController
     og: {
       title: 'About Me',
       description: 'Alex Younger - My Reading List. A list of books that have impacted my life in some way.', 
-      type: 'website',
-      image: '<%= image_path("hammock-art.png") %>',
-      reverse: true
-    }
-  end
-
-  def quotes
-    @favorite_quotes = FavoriteQuote.all
-
-    set_meta_tags title: 'Quotes Libary',
-    site: 'alextheyounger.me',
-    description: 'Alex Younger - My Quotes Collection. A collection of quotes that I find useful to remember.',
-    reverse: true,
-    og: {
-      title: 'Quotes Libary',
-      description: 'Alex Younger - My Quotes Collection. A collection of quotes that I find useful to remember.', 
       type: 'website',
       image: '<%= image_path("hammock-art.png") %>',
       reverse: true
