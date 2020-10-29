@@ -5,7 +5,9 @@
   </div>
 </section>
 <section class="about-home bg-grey-lighter py-16 w-full px-4">
-<h2 class="fancy-font text-center text-blue pb-8">About Me</h2>
+<div class="language-stats">
+<%= render 'partials/language_stats' %>
+</div>
   <div class="flex flex-wrap justify-center rounded-lg shadow text-lg mx-auto lg:w-3/4 bg-white home-content js--fadeInLeft">
     <div class="headshot w-full sm:w-1/2">
       <picture>
@@ -23,7 +25,7 @@
       <a href="<%= about_path %>" class="bg-white block border border-blue-darker hover:bg-blue-darkest text-blue button hover:text-blue-lightest text-center mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
         My Story
       </a>
-    </div>   
+    </div>
   </div>
 </section>
 <section class="watchlist-home home-content js--fadeInLeft py-16 px-4">
@@ -31,6 +33,7 @@
   <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
   <%= render 'partials/watchlist' %>
 </section>
+
 <!-- Scroll Reveal -->
 <% content_for :javascripts do %>
   <script>
@@ -57,5 +60,10 @@
     $('.desktop .nav-link')
       .removeClass('burgandy')
       .addClass('text-blue-lightest');
+
+	
+    buildLanguageGrid(<%= @langs.html_safe || 'null' %>);
+    
+    
   </script>
 <% end %>

@@ -11,9 +11,9 @@ $burgandy-hover: #3d0303;
 }
 
 /*---- Shared ----*/
+.created-at,
 .fancy-font,
-.title,
-.created-at {
+.title {
     font-family: "Alegreya SC", serif !important;
 }
 
@@ -59,13 +59,6 @@ p {
     margin-top: -5.7rem;
 }
 
-// .headshot {
-//     img {
-//         top: 50%;
-//         transform: translateY(-50%);
-//     }
-// }
-
 @media screen and (max-width: 568px) {
     .no-webp .hero {
         background-image: image-url("independence-pass.jpg");
@@ -90,9 +83,50 @@ p {
     }
 }
 
-section.articles-home, section.about-home {
+section.about-home,
+section.articles-home {
     background-image: image-url("topography-blue.svg");
 }
+
+.language-stats {
+    .Progress {
+        display: flex;
+        height: 8px;
+        overflow: hidden;
+        background-color: #e1e4e8;
+        border-radius: 6px;
+        outline: 1px solid transparent;
+        margin-right: 80%;
+    }
+
+}
+
+.octicon {
+    display: inline-block;
+    vertical-align: text-top;
+    fill: currentColor;
+}
+.text-small {
+    font-size: 12px!important;
+}
+.link-gray {
+    color: #586069!important;
+}
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+.list-style-none {
+    list-style: none!important;
+}
+ul {
+    list-style-type: disc;
+}
+
 
 /*---- About ----*/
 section.about {
@@ -191,8 +225,7 @@ section.about {
                             top: 30px;
                             left: -15px;
                             border-width: 10px 15px 10px 0;
-                            border-color: transparent #dae1e7 transparent
-                                transparent;
+                            border-color: transparent #dae1e7 transparent transparent;
                         }
                     }
                 }
@@ -202,8 +235,8 @@ section.about {
 }
 
 /*---- Forms ----*/
-.form-title,
-.form-description {
+.form-description,
+.form-title {
     &:focus {
         outline-color: #800020;
     }
@@ -212,8 +245,7 @@ section.about {
 /*---- Articles ----*/
 #article {
     code {
-        font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New,
-            monospace;
+        font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
         border-radius: 0.25rem;
         background-color: #f1f5f8;
         font-size: 0.875rem;
@@ -231,8 +263,8 @@ section.about {
     }
 }
 
-section.articles,
-section.article-show {
+section.article-show,
+section.articles {
     background-image: image-url("topography-red.svg");
 }
 

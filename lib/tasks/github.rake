@@ -1,20 +1,18 @@
-require "httparty"
-require "nokogiri"
 require "resolv-replace"
 require "async"
 require "async/barrier"
 require "async/http/internet"
 require "json"
 require "logger"
+require "colorize"
 
-desc "This task is called by the Heroku scheduler add-on and updates github statistics"
+desc "This task will make async requests to Github and retrieve the langauge statistics from each repo in Github"
 task :github => :environment do
-  cache = ActiveSupport::Cache::MemoryStore.new
   api_address = "https://api.github.com/users/AlextheYounga/repos"
   languages = []
 
   begin
-    puts api_address
+    puts "#{api_address}".yellow
     user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.854.0 Safari/535.2"
     repoResponse = Nokogiri::HTML(open(api_address, "proxy" => "http://(ip_address):(port)", "User-Agent" => user_agent), nil, "UTF-8")
 
@@ -24,25 +22,29 @@ task :github => :environment do
       Async do
         internet = Async::HTTP::Internet.new
         barrier = Async::Barrier.new
+
         headers = [
           ["User-Agent", user_agent],
           ["proxy", "http://(ip_address):(port)"],
           ["accept", "application/json"],
         ]
+
         jsonResponse.each do |repo|
           langUrl = repo["languages_url"] if repo.key?("languages_url")
           if (langUrl.nil? == false)
             # Spawn an asynchronous task for each topic:
             barrier.async do
-              puts langUrl
+              puts "#{langUrl}".green
               langResponse = internet.get(langUrl, headers)
               langs = JSON.parse(langResponse.read)
+
               if (langs.empty? == false)
                 languages << langs
               end
             end
           end
         end
+
         # Ensure we wait for all requests to complete before continuing:
         barrier.wait
 
@@ -67,6 +69,6 @@ task :github => :environment do
     end
   end
 
-  saved = cache.write("repo_languages", langSum, expires_in: 30.days)
-  puts saved
+  saved = Rails.cache.write("repo_langs", langSum)
+  puts "Cached #{saved}".green
 end

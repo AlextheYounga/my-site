@@ -1,12 +1,9 @@
 class PagesController < ApplicationController
-
   def home
-    @articles = Article.order("created_at desc").limit(3)
     @books = Book.all
     @stocks = Stock.all
-    cache = ActiveSupport::Cache::MemoryStore.new
-    langs = cache.read('repo_languages')
-    puts langs
+    @langs = Rails.cache.fetch('repo_langs').to_json
+
 
     set_meta_tags title: 'Home',
     site: 'alextheyounger.me',

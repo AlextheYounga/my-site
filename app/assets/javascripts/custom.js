@@ -13,26 +13,27 @@
 //     }
 // });
 
+function calculateTotal(values) {
+  result = 0
+  for (val of values) {
+    result += val;
+  }
+  return result;
+}
 
-window.getLangStats = function getLangStats(repos) {
-    var mapper = function(ent){return ent.language},
-    reducer = function(stats, lang) {stats[lang] = (stats[lang] || 0) + 1; return stats},
-    langStats = repos.map(mapper).reduce(reducer, {});
-    delete langStats['null'];
-    return Object.keys(langStats).sort(function(a,b){return langStats[b] - langStats[a]});
-  };
+function round(value, decimals) {
+  return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
+}
+
+function buildLanguageGrid(langs) {
+  var langValues = Object.values(langs);
+  var total = calculateTotal(langValues);
+  var widths = {};
   
-  window.ghApiCallHandler = function(result) {
-    if (Math.floor(result.meta.status/100) == 2)
-      alert(getLangStats(result.data).join(' >= '));
-    else
-      alert('Request failed with code ' + result.meta.status);
-  };
-  
-  window.ghApiCall = function(user) {
-    var scrElm = document.createElement('script');
-    scrElm.src = 'https://api.github.com/users/' + encodeURI(user) + '/repos?callback=ghApiCallHandler&per_page=100';
-    (document.head || document.getElementsByTagName('head')[0]).appendChild(scrElm);
-  };
-  
-  ghApiCall(prompt('Enter username'));
+  for (const [lang, val] of Object.entries(langs)) {
+    if ((val !== 0) || (total !== 0)) {
+      widths[lang] = round(((val / total) * 100), 2);
+    }
+  }
+  return widths;
+}
