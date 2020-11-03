@@ -22,7 +22,7 @@ $burgandy-hover: #3d0303;
 // }
 
 .normal-font,
-p {
+p, span {
     font-family: Apple SD Gothic Neo;
     font-weight: 400;
 }
@@ -88,8 +88,8 @@ section.articles-home {
     background-image: image-url("topography-blue.svg");
 }
 
-.language-stats {
-    .Progress {
+#language-stats {
+    .language-chart {
         display: flex;
         height: 8px;
         overflow: hidden;
@@ -99,34 +99,21 @@ section.articles-home {
         margin-right: 80%;
     }
 
+    .octicon {
+        display: inline-block;
+        vertical-align: text-top;
+        fill: currentColor;
+    }
+    li {
+        text-align: -webkit-match-parent;
+    }
+    .list-style-none {
+        list-style: none;
+    }
+    ul {
+        list-style-type: disc;
+    }
 }
-
-.octicon {
-    display: inline-block;
-    vertical-align: text-top;
-    fill: currentColor;
-}
-.text-small {
-    font-size: 12px!important;
-}
-.link-gray {
-    color: #586069!important;
-}
-a {
-    color: #0366d6;
-    text-decoration: none;
-}
-
-li {
-    text-align: -webkit-match-parent;
-}
-.list-style-none {
-    list-style: none!important;
-}
-ul {
-    list-style-type: disc;
-}
-
 
 /*---- About ----*/
 section.about {

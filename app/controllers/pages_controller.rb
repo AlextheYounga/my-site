@@ -1,8 +1,11 @@
+load "app/modules/language_stats.rb"
+
+include LanguageStats
 class PagesController < ApplicationController
   def home
     @books = Book.all
     @stocks = Stock.all
-    @langs = Rails.cache.fetch('repo_langs').to_json
+    @langWidths = LanguageStats::calculateWidths()
 
 
     set_meta_tags title: 'Home',

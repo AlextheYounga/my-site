@@ -1,27 +1,23 @@
-<h2 class="h4 mb-3">Languages</h2>
-<div class="mb-2">
-  <span class="Progress ">
-    <span itemprop="keywords" aria-label="HTML 53.3" style="background-color: #e34c26;width: 53.3%;" class="Progress-item "></span>
-    <span itemprop="keywords" aria-label="CSS 46.7" style="background-color: #563d7c;width: 46.7%;" class="Progress-item "></span>
-  </span>
+<div class="rounded-lg shadow text-lg mx-auto lg:w-3/4 bg-white home-content js--fadeInLeft p-8">
+  <h2 class="mb-3 fancy-font">Languages</h2>
+  <div class="mb-2">
+    <span class="language-chart w-full mb-3">
+      <% langWidths.each do |lang, val| %>
+        <span aria-label="<%= lang %> <%= val %>%" style="width: <%= val %>%" class="lang-bar <%= lang.parameterize %>"></span>
+      <% end %>
+    </span>
+  </div>
+  <ul class="list-style-none flex flex-wrap">
+    <% langWidths.each do |lang, val| %>
+      <li class="w-48">
+        <div class="inline-flex flex-items-center flex-nowrap link-gray no-underline text-sm mr-3">
+          <svg class="octicon <%= lang.parameterize %> octicon-dot-fill mr-2" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
+          </svg>
+          <span class="text-gray-dark text-bold mr-1"><%= lang %></span>
+          <span><%= val %>%</span>
+        </div>
+      </li>
+    <% end %>
+  </ul>
 </div>
-<ul class="list-style-none">
-  <li class="d-inline">
-    <div class="d-inline-flex flex-items-center flex-nowrap link-gray no-underline text-small mr-3">
-      <svg class="octicon octicon-dot-fill mr-2" style="color:#e34c26;" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
-      </svg>
-      <span class="text-gray-dark text-bold mr-1">HTML</span>
-      <span>53.3%</span>
-    </div>
-  </li>
-  <li class="d-inline">
-    <div class="d-inline-flex flex-items-center flex-nowrap link-gray no-underline text-small mr-3">
-      <svg class="octicon octicon-dot-fill mr-2" style="color:#563d7c;" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
-      </svg>
-      <span class="text-gray-dark text-bold mr-1">CSS</span>
-      <span>46.7%</span>
-    </div>
-  </li>
-</ul>
