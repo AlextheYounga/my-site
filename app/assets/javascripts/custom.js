@@ -1,14 +1,17 @@
 string_parameterize = function (str1) {
+  if (str1.includes("+")) {
+    return str1.trim().toLowerCase().replace(/[^a-zA-Z0-9 -]/, "").replace(/\s/g, "-").replace("+", "plus");
+  }
   return str1.trim().toLowerCase().replace(/[^a-zA-Z0-9 -]/, "").replace(/\s/g, "-");
 };
 
 $(document).ready(function () {
-  var langStats = document.getElementById("language-stats");
-  if(typeof(langStats) != 'undefined' && langStats != null){
+  var langStats = document.getElementById("language-bar");
+  if (typeof (langStats) != 'undefined' && langStats != null) {
     var colors = {
       'HTML': '#e34c26',
       'CSS': '#563d7c',
-      'SCSS': '#c6538c',      
+      'SCSS': '#c6538c',
       'Ruby': "#701516",
       'Python': "#3572A5",
       'JavaScript': "#f1e05a",
@@ -16,7 +19,8 @@ $(document).ready(function () {
       'Blade': '#f7523f',
       'Vue': '#2c3e50',
       'Java': "#b07219",
-      'C++': "#f34b7d",
+      'C++': "#f34b7d", 
+      'CPlusPlus': "#f34b7d", 
       'C': "#555555",
       'C#': "#178600",
       'Scala': "#c22d40",
@@ -35,6 +39,7 @@ $(document).ready(function () {
       'TypeScript': "#2b7489",
       'OCaml': "#3be133",
       'Objective-C++': "#6866fb",
+      'Objective-CPlusPlus': "#6866fb",
       'Common Lisp': "#3fb68b",
       'DM': "#447265",
       'Julia': "#a270ba",
@@ -64,16 +69,23 @@ $(document).ready(function () {
     }
 
     for (const [lang, color] of Object.entries(colors)) {
-      var langBar = $(".lang-bar." + string_parameterize(lang));
-      var octicons = $(".octicon." + string_parameterize(lang));
-      console.log(langBar);
-      if(typeof(langBar) != 'undefined' && langBar != null){
-        // langBar.style.backgroundColor = color;
-        $(langBar).css("background-color", color);
+      var barItems = document.querySelectorAll(".bar-item." + string_parameterize(lang));
+      var octicons = document.querySelectorAll(".octicon." + string_parameterize(lang));
+      // var barItems = $(".bar-item." + string_parameterize(lang));
+      // var octicons = $(".octicon." + string_parameterize(lang));
+      if (typeof (barItems) != 'undefined' && barItems != null) {        
+        console.log(barItems.length);
+        for(var i = 0, length = barItems.length; i < length; i++) {
+          console.log('here' + i);
+          barItems[i].style.backgroundColor = color;
+        }
+        // $(barItems).css("background-color", color);
       }
-      if(typeof(octicons) != 'undefined' && octicons != null){
-        // octicons.style.color = color;
-        $(octicons).css("color", color);
+      if (typeof (octicons) != 'undefined' && octicons != null) {
+        for (var i = 0; i < octicons.length; i++) {
+          octicons[i].style.color = color;
+        }
+        // $(octicons).css("color", color);
       }
     }
   }

@@ -22,7 +22,8 @@ $burgandy-hover: #3d0303;
 // }
 
 .normal-font,
-p, span {
+p,
+span {
     font-family: Apple SD Gothic Neo;
     font-weight: 400;
 }
@@ -88,30 +89,23 @@ section.articles-home {
     background-image: image-url("topography-blue.svg");
 }
 
-#language-stats {
-    .language-chart {
-        display: flex;
-        height: 8px;
-        overflow: hidden;
-        background-color: #e1e4e8;
-        border-radius: 6px;
-        outline: 1px solid transparent;
-        margin-right: 80%;
-    }
+.language-stats {
+    #language-bar {
+        .bar {
+            display: flex;
+            height: 8px;
+            overflow: hidden;
+            background-color: #e1e4e8;
+            border-radius: 6px;
+        }
 
-    .octicon {
-        display: inline-block;
-        vertical-align: text-top;
-        fill: currentColor;
-    }
-    li {
-        text-align: -webkit-match-parent;
-    }
-    .list-style-none {
-        list-style: none;
-    }
-    ul {
-        list-style-type: disc;
+        ul {
+            list-style-type: none;
+
+            .octicon {
+                fill: currentColor;
+            }
+        }
     }
 }
 
