@@ -2,14 +2,15 @@
   <h2 class="mb-3 fancy-font">Languages</h2>
   <span class="bar w-full mb-4">
     <% langWidths.each do |lang, val| %>
-      <span aria-label="<%= lang %> <%= val %>%" style="width: <%= val %>%" class="bar-item <%= lang.parameterize %>"></span>
+      <span style="width: <%= val %>%" class="bar-item <%= slugifyLanguage(lang) %>">
+      </span>
     <% end %>
   </span>
   <ul class="flex flex-wrap">
     <% langWidths.each do |lang, val| %>
       <li class="lang-item w-48">
         <div class="item-wrapper inline-flex flex-nowrap no-underline text-sm mr-3">
-          <svg class="octicon <%= lang.parameterize %> octicon-dot-fill mr-2" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+          <svg class="octicon <%= slugifyLanguage(lang) %> octicon-dot-fill mr-2" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
             <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"></path>
           </svg>
           <span class="lang-name mr-1"><%= lang %></span>

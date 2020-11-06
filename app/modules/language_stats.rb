@@ -15,5 +15,12 @@ module LanguageStats
         return widths
     end
 
+    def slugifyLanguage(string)
+        if (string.include? "+")
+            string.gsub("+", "plus")
+        end
+        return string.parameterize
+    end
+
     
 end
