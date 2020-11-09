@@ -1,13 +1,13 @@
 <div id="language-bar" class="rounded-lg shadow text-lg mx-auto lg:w-3/4 bg-white home-content js--fadeInLeft p-8">
   <h2 class="mb-3 fancy-font">Languages</h2>
   <span class="bar w-full mb-4">
-    <% langWidths.each do |lang, val| %>
+    <% languageStats.each do |lang, val| %>
       <span style="width: <%= val %>%" class="bar-item <%= slugifyLanguage(lang) %>">
       </span>
     <% end %>
   </span>
   <ul class="flex flex-wrap">
-    <% langWidths.each do |lang, val| %>
+    <% languageStats.each do |lang, val| %>
       <li class="lang-item w-48">
         <div class="item-wrapper inline-flex flex-nowrap no-underline text-sm mr-3">
           <svg class="octicon <%= slugifyLanguage(lang) %> octicon-dot-fill mr-2" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">

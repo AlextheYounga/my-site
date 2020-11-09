@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def home
     @books = Book.all
     @stocks = Stock.all
-    @langWidths = LanguageStats::calculateWidths()
+    @languageStats = LanguageStats::calculateWidths()
 
 
     set_meta_tags title: 'Home',
