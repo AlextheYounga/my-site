@@ -49,13 +49,13 @@ span {
 /*---- Home ----*/
 
 .no-webp .hero {
-    background-image: image-url("twin-lakes.jpg");
+    background-image: image-url("twin-lakes-rnd-shadow.png");
     background-size: cover;
     margin-top: -5.7rem;
 }
 
 .webp .hero {
-    background-image: image-url("twin-lakes.jpg.webp");
+    background-image: image-url("twin-lakes-rnd-shadow.png.webp");
     background-size: cover;
     margin-top: -5.7rem;
 }
@@ -84,7 +84,7 @@ span {
     }
 }
 
-section.about-home,
+section.watchlist-home,
 section.articles-home {
     background-image: image-url("topography-blue.svg");
 }

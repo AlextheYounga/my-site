@@ -8,13 +8,19 @@ require "colorize"
 
 desc "This task will make async requests to Github and retrieve the langauge statistics from each repo in Github"
 task :sync_github => :environment do
-  api_address = "https://api.github.com/users/AlextheYounga/repos"
   languages = []
+  username = "AlextheYounga"
+  api_url = "https://api.github.com/search/repositories?q=user:#{username}"
 
   begin
-    puts "#{api_address}".yellow
-    user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.854.0 Safari/535.2"
-    repoResponse = Nokogiri::HTML(open(api_address, "proxy" => "http://(ip_address):(port)", "User-Agent" => user_agent), nil, "UTF-8")
+    puts "#{api_url}".yellow
+    oauth = "token #{Rails.application.credentials.github_personal_token}"
+    repoResponse = Nokogiri::HTML(open(
+      api_url,
+      "User-Agent" => username,
+      "Authorization" => oauth,
+      "proxy" => "http://(ip_address):(port)",
+    ), nil, "UTF-8")
 
     if (repoResponse.nil? == false || repoResponse.empty? == false)
       jsonResponse = JSON.parse repoResponse
@@ -24,12 +30,13 @@ task :sync_github => :environment do
         barrier = Async::Barrier.new
 
         headers = [
-          ["User-Agent", user_agent],
+          ["User-Agent", username],
           ["proxy", "http://(ip_address):(port)"],
-          ["accept", "application/json"],
+          ["accept", "application/vnd.github.v3+json"],
+          ["Authorization", "token #{Rails.application.credentials.github_personal_token}"],
         ]
 
-        jsonResponse.each do |repo|
+        jsonResponse["items"].each do |repo|
           langUrl = repo["languages_url"] if repo.key?("languages_url")
           if (langUrl.nil? == false)
             # Spawn an asynchronous task for each topic:
@@ -69,6 +76,12 @@ task :sync_github => :environment do
     end
   end
 
-  saved = Rails.cache.write("repo_langs", langSum)
+  if (langSum.blank?)
+    return "Failed to get language stats".red
+  end
+
+  sorted = langSum.sort_by { |k, v| -v }
+
+  saved = Rails.cache.write("repo_langs", sorted.to_h)
   puts "Cached #{saved}".green
 end
