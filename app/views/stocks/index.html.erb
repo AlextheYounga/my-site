@@ -1,4 +1,4 @@
-<table class="bg-blue-lighter border-blue-light mx-auto shadow-lg lg:w-3/4">
+<table class="bg-blue-lighter border-blue-light mx-auto shadow-lg mt-12 lg:w-3/4">
   <thead class="bg-grey-lightest">
     <tr class="justify-between">
       <th class="p-2 md:p-4 normal-font text-black text-lg">Name</th>
@@ -7,12 +7,15 @@
       <th class="p-2 md:p-4 normal-font text-black text-lg">Current Price</th>
       <th class="p-2 md:p-4 normal-font text-black text-lg hidden sm:table-cell">Percent Change YTD</th>
       <th class="p-2 md:p-4 normal-font text-black text-lg hidden sm:table-cell">Industry</th>
+      <% if (master_logged_in?)%>
+        <th class="p-2 md:p-4 normal-font text-black text-lg hidden sm:table-cell">Actions</th>
+      <% end %>
     </tr>
   </thead>
 
   <tbody>
     <% if @stocks %>
-      <% @stocks.each do |stock | %>
+      <% @stocks.each do |stock| %>
         <tr class="justify-between">
           <td class="p-2 md:p-4 normal-font text-black text-left"><%= stock.company_name%></td>
           <td class="p-2 md:p-4 normal-font text-black text-center"><%= stock.symbol %></td>
@@ -20,8 +23,16 @@
           <td class="p-2 md:p-4 normal-font text-black text-center"><%= stock.latest_price %></td>
           <td class="p-2 md:p-4 normal-font text-black text-center hidden sm:table-cell"><%= stock.ytd_change_percent ? number_to_percentage(stock.ytd_change_percent) : nil %></td>
           <td class="p-2 md:p-4 normal-font text-black text-center hidden sm:table-cell"><%= stock.industry %></td>
+          <% if (master_logged_in?) %>
+            <td class="text-center">
+              <%= link_to "Delete", stock_path(stock), method: :delete, data: {confirm: "Are you sure?"}, class: "text-sm text-red-dark hover:text-red-darker hover:underline"%>
+            </td>
+          <% end %>
         </tr>
       <% end %>
+    <% end %>
+    <% if (master_logged_in?) %>
+      <%= render partial: "stocks/new_stock" %>
     <% end %>
   </tbody>
 </table>

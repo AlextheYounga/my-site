@@ -2,7 +2,7 @@
   <ul class="list-style-none relative w-5/6 mx-auto flex justify-end">
     <li class="admin-link text-white w-24 text-center hover:bg-black p-1 rounded relative">
       <a href="#" class="text-white no-underline">Article</a>
-      <ul class="admin-dropdown px-0 list-style-none bg-grey-darkest w-24">
+      <ul class="admin-dropdown px-0 list-style-none bg-grey-darkest w-24 z-20">
         <li class="hover:bg-black p-1 w-full"><%= link_to "Index", articles_path, class: "text-white no-underline"%></li>
         <li class="hover:bg-black p-1 w-full"><%= link_to "New", new_article_path, class: "text-white no-underline"%></li>
         <li class="hover:bg-black p-1 w-full"><%= link_to "Categories", categories_path, class: "text-white no-underline"%></li>
@@ -10,8 +10,14 @@
       </ul>
     </li>
     <li class="admin-link text-white w-24 text-center hover:bg-black p-1 rounded relative">
+      <a href="#" class="text-white no-underline">Post</a>
+      <ul class="admin-dropdown px-0 list-style-none bg-grey-darkest w-24 z-20">
+        <li class="hover:bg-black p-1 w-full"><%= link_to "Index", posts_path, class: "text-white no-underline"%></li>
+      </ul>
+    </li>
+    <li class="admin-link text-white w-24 text-center hover:bg-black p-1 rounded relative">
       <a href="#" class="text-white no-underline">Book</a>
-      <ul class="admin-dropdown px-0 list-style-none bg-grey-darkest w-24">
+      <ul class="admin-dropdown px-0 list-style-none bg-grey-darkest w-24 z-20">
         <li class="hover:bg-black p-1 w-full"><%= link_to "New", new_book_path, class: "text-white no-underline"%></li>
         <li class="hover:bg-black p-1 w-full"><%= link_to "New Category", new_book_category_path, class: "text-white no-underline"%></li>
         <li class="hover:bg-black p-1 w-full"><%= link_to "Book Categories", book_categories_path, class: "text-white no-underline"%></li>
@@ -19,8 +25,8 @@
     </li>
     <li class="admin-link text-white w-24 text-center hover:bg-black p-1 rounded relative">
       <a href="#" class="text-white no-underline">Stock</a>
-      <ul class="admin-dropdown px-0 list-style-none bg-grey-darkest w-24">
-        <li class="hover:bg-black p-1 w-full"></li>
+      <ul class="admin-dropdown px-0 list-style-none bg-grey-darkest w-24 z-20">
+        <li class="hover:bg-black p-1 w-full"><%= link_to "Index", stocks_path, class: "text-white no-underline"%></li>
       </ul>
     </li>
     <li class="admin-link w-24 text-center hover:bg-black p-1 rounded relative">

@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   root "pages#home"
   get "projects", to: "pages#projects"
   get "resources", to: "pages#resources"
-  get "search_stocks", to: "stocks#search"
 
   resources :users, except: [:signup]
   resources :articles, except: [:signup]
@@ -13,6 +12,7 @@ Rails.application.routes.draw do
   resources :books, except: [:signup]
   resources :book_categories
   resources :posts, only: [:index]
+  resources :stocks
 
   get "login", to: "sessions#login"
   post "login", to: "sessions#create"
@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   # get 'readinglist', to: 'pages#readinglist'
   # get "quotes", to: "pages#quotes"
   # get "about", to: "pages#about"
+  # get "search_stocks", to: "stocks#search"
 end

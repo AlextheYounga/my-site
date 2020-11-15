@@ -1,4 +1,5 @@
 class BookCategoriesController < ApplicationController
+  before_action :restrict
   def index
     @categories = BookCategory.all
   end
@@ -28,6 +29,13 @@ class BookCategoriesController < ApplicationController
       redirect_to book_categories(@category)
     else
       render "edit"
+    end
+  end
+  
+  private
+  def restrict
+    if not master_logged_in?
+      redirect_to root_path
     end
   end
 end

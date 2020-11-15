@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_15_200659) do
+ActiveRecord::Schema.define(version: 2020_11_15_231837) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -145,15 +145,8 @@ ActiveRecord::Schema.define(version: 2020_11_15_200659) do
     t.decimal "net_worth"
     t.float "ytd_change_percent"
     t.string "position"
-  end
-
-  create_table "user_stocks", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "stock_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["stock_id"], name: "index_user_stocks_on_stock_id"
-    t.index ["user_id"], name: "index_user_stocks_on_user_id"
+    t.index ["user_id"], name: "index_stocks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

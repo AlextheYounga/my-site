@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:edit, :update, :destroy]
+  before_action :restrict, except: :index
 
   def index
     @books = Book.order(:position)
@@ -51,6 +52,12 @@ class BooksController < ApplicationController
   end
 
   private
+
+  def restrict
+    if not master_logged_in?
+      redirect_to root_path
+    end
+  end
 
   def set_book
     @book = Book.find(params[:id])
