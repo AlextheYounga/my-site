@@ -1,4 +1,7 @@
 class BookCategoriesController < ApplicationController
+  def index
+    @categories = BookCategory.all
+  end
 
   def create
     @category = BookCategory.new(category_params)
@@ -27,6 +30,4 @@ class BookCategoriesController < ApplicationController
       render "edit"
     end
   end
-
-
 end

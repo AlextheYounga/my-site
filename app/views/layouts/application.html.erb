@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>alextheyounger.me</title>
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= stylesheet_pack_tag 'application' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_pack_tag 'application' %>
-  <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
-  <% if logged_in? %>
-    <%= render 'layouts/admin_nav' %>
-  <% end %>
-  <%= render 'layouts/navigation' %>
-</head>
+  <head>
+    <title>alextheyounger.me</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
+    <% if master_logged_in? %>
+      <%= render 'layouts/admin_nav' %>
+    <% end %>
+    <%= render 'layouts/navigation' %>
+  </head>
 
-<body>
-  <%= yield %>
-</body>
-<%= render 'layouts/footer' %>
-<%= yield :javascripts %>
+  <body>
+    <% flash.each do |type, msg| %>
+      <div class="flash-msg fixed <%= type %> rounded p-3 mx-auto w-3/4 pin-r pin-l z-50 text-lg my-2">
+        <%= msg %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+  <%= render 'layouts/footer' %>
+  <%= yield :javascripts %>
 
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+SC&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Alegreya+SC&display=swap" rel="stylesheet">
+  <!-- Mobile Nav -->
+  <script>
+    $(document).ready(function () {
+      $('.mobile-menu').hide
+      //Menu button on click event
+      $('.mobile-nav-button').on('click', function () {
+        // Toggles a class on the menu button to transform the burger menu into a cross
+        $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(1)").toggleClass("mobile-nav-button__line--1");
+        $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(2)").toggleClass("mobile-nav-button__line--2");
+        $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(3)").toggleClass("mobile-nav-button__line--3");
 
-<!-- Mobile Nav -->
-<script>
-$(document).ready(function () {
-  $('.mobile-menu').hide
-  //Menu button on click event
-  $('.mobile-nav-button').on('click', function() {
-    // Toggles a class on the menu button to transform the burger menu into a cross
-    $( ".mobile-nav-button .mobile-nav-button__line:nth-of-type(1)" ).toggleClass( "mobile-nav-button__line--1");
-    $( ".mobile-nav-button .mobile-nav-button__line:nth-of-type(2)" ).toggleClass( "mobile-nav-button__line--2");  
-    $( ".mobile-nav-button .mobile-nav-button__line:nth-of-type(3)" ).toggleClass( "mobile-nav-button__line--3");  
-    
-    // Toggles a class that slides the menu into view on the screen
-    $('.mobile-menu').toggleClass('mobile-menu--open');
-    $('.mobile-menu').toggleClass('z-negative');
-    $('.mobile-menu').toggleClass('z-40');
-    $('.mobile-menu ul').toggleClass('hidden');
+        // Toggles a class that slides the menu into view on the screen
+        $('.mobile-menu').toggleClass('mobile-menu--open');
+        $('.mobile-menu').toggleClass('z-negative');
+        $('.mobile-menu').toggleClass('z-40');
+        $('.mobile-menu ul').toggleClass('hidden');
         // setTimeout(function() { $('.mobile-menu').toggleClass('z-40'); }, 200);
-    return false;
-  }); 
-});
-</script>
+        return false;
+      });
+    });
+  </script>
 </html>

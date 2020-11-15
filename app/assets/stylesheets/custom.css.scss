@@ -47,6 +47,23 @@ span {
     transform: translateY(-50%);
 }
 
+.flash-msg {
+    top: 15%;
+    &.alert {
+        background-color: #f2d024;
+        color: black;
+    }
+    &.danger {
+        background-color: #cc1f1a;
+        color: white;
+
+    }
+    &.success {
+        background-color: #1f9d55;
+        color: white;
+    }
+}
+
 /*---- Nav ----*/
 @media screen and (max-width: 768px) {
     nav.desktop {
@@ -66,7 +83,8 @@ span {
     .admin-dropdown {
         display: none;
         position: absolute;
-        top: 25px; /* the height of the main nav */
+        top: 25px;
+        /* the height of the main nav */
         left: 0;
 
         &:hover {
@@ -286,10 +304,12 @@ section.articles {
     background-image: image-url("topography-red.svg");
 }
 
-section.new-article, section.new-book, section.category-index, section.quotes {
+section.category-index,
+section.new-article,
+section.new-book,
+section.quotes {
     background-image: image-url("line-in-motion.svg");
 }
-
 
 /*---- Reading List ----*/
 //Menu
@@ -313,6 +333,11 @@ section.new-article, section.new-book, section.category-index, section.quotes {
 
 //Books
 .covers {
+    .edit-book-link {
+        top: 0;
+        right: 55px;
+    }
+
     img {
         border: 3px inset lightgrey;
         border-radius: 4px;
