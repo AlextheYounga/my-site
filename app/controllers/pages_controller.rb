@@ -21,21 +21,7 @@ class PagesController < ApplicationController
     }
   end
 
-  def readinglist
-    @books = Book.all
-
-    set_meta_tags title: 'Reading List',
-    site: 'alextheyounger.me',
-    description: 'Alex Younger - My Reading List. A list of books that have impacted my life in some way.',
-    reverse: true,
-    og: {
-      title: 'About Me',
-      description: 'Alex Younger - My Reading List. A list of books that have impacted my life in some way.', 
-      type: 'website',
-      image: '<%= image_path("hammock-art.png") %>',
-      reverse: true
-    }
-  end
+  
 
   def projects
     @projects = Project.all

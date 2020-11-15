@@ -33,6 +33,12 @@ span {
 //     font-style: normal;
 // }
 
+.force-vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 /*---- Nav ----*/
 @media screen and (max-width: 768px) {
     nav.desktop {
@@ -84,8 +90,8 @@ span {
     }
 }
 
-section.watchlist-home,
-section.articles-home {
+section.articles-home,
+section.watchlist-home {
     background-image: image-url("topography-blue.svg");
 }
 
@@ -107,6 +113,10 @@ section.articles-home {
             }
         }
     }
+}
+
+.aboutme-description {
+    align-self: center;
 }
 
 /*---- About ----*/

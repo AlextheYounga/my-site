@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_12_033840) do
+ActiveRecord::Schema.define(version: 2020_11_15_044144) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
@@ -26,16 +26,23 @@ ActiveRecord::Schema.define(version: 2020_07_12_033840) do
     t.text "editor1"
   end
 
+  create_table "book_categories", force: :cascade do |t|
+    t.string "name"
+    t.string "html_selector"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "books", force: :cascade do |t|
-    t.integer "book_id"
     t.string "title"
     t.string "author"
     t.text "description"
     t.string "image_address"
     t.string "image_alt"
-    t.string "category"
     t.text "book_link"
     t.string "subtitle"
+    t.integer "book_category_id"
+    t.index ["book_category_id"], name: "index_books_on_book_category_id"
   end
 
   create_table "categories", force: :cascade do |t|

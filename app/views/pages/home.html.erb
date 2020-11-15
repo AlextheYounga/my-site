@@ -9,29 +9,38 @@
     <%= render partial: "partials/language_bar", locals: {languageStats: @languageStats} %>
   </div>
   <div class="flex flex-wrap justify-center text-lg mx-auto lg:w-3/4 home-content js--fadeInLeft">
-    <div class="headshot w-full sm:w-1/2">
+    <div class="headshot w-full sm:w-1/3">
       <picture>
         <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp">
         <source srcset="<%= image_path("headshot3_700.png") %>" type="image/png">
         <img src="<%= image_path("headshot3_700.png") %>" class="flex sm:mt-10 mx-auto relative text-center" width="315" alt="alex younger developer marketing about me"/>
       </picture>
     </div>
-    <div class="aboutme-description leading-normal normal-font p-8 w-full sm:w-1/2">
+    <div class="aboutme-description leading-normal normal-font p-8 w-full sm:w-2/3">
       <p class="py-2">I build and maintain websites for an extensive list of small and large companies.</p>
-      <p class="py-2">I am currently building a side business called Hazlitt Tech LLC, a data brokerage for financial markets.</p>
+      <p class="py-2">I am currently building a side business called Hazlitt Tech LLC, dealing in data brokering for financial markets and accounting software.</p>
       <p class="py-2">I consult businesses on best practices for Google Ad Campaigns, Analytics, and content marketing techniques.</p>
       <p class="py-2">Check out my latest
         <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
-      <a href="<%= about_path %>" class="bg-white block border border-blue-darker hover:bg-blue-darkest text-blue button hover:text-blue-lightest text-center mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
-        My Story
-      </a>
     </div>
   </div>
 </section>
-<section class="watchlist-home home-content js--fadeInLeft py-16 px-4">
-  <h2 class="fancy-font text-blue text-center py-6">My Stock Watchlist</h2>
-  <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
-  <%= render 'partials/watchlist' %>
+<section class="reading-carousel">
+<div class="owl-carousel">
+  <% @books.each do |book| %>
+    <div> 
+      <%= thing.name %>
+      <%= thing.description %>
+    </div>
+  <% end %>
+</div>
+</section>
+<section class="watchlist-home  py-16 px-4">
+  <div class="home-content js--fadeInLeft">
+    <h2 class="fancy-font text-blue text-center py-6">My Stock Watchlist</h2>
+    <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
+    <%= render 'partials/watchlist' %>
+  </div>
 </section>
 
 <!-- Scroll Reveal -->

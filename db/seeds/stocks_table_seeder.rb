@@ -1,4 +1,6 @@
-Stock.destroy_all
+table_name = "stocks"
+ActiveRecord::Base.connection.execute("Delete from #{table_name}")
+ActiveRecord::Base.connection.execute("DELETE FROM SQLITE_SEQUENCE WHERE name='#{table_name}'")
 puts "Seeding Stocks"
 Stock.create([
 { symbol: "TLT", position: "Long" },
