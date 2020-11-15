@@ -286,22 +286,13 @@ section.articles {
     background-image: image-url("topography-red.svg");
 }
 
-section.new-article {
+section.new-article, section.new-book, section.category-index, section.quotes {
     background-image: image-url("line-in-motion.svg");
 }
 
-section.category-index {
-    background-image: image-url("line-in-motion.svg");
-}
-
-/*---- Quotes ----*/
-section.quotes {
-    background-image: image-url("line-in-motion.svg");
-}
 
 /*---- Reading List ----*/
 //Menu
-
 .category-menu {
     ul {
         li {

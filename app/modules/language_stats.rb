@@ -2,7 +2,7 @@ require "json"
 
 module LanguageStats
 
-    def calculateWidths
+    def self.calculateWidths
         langs = Rails.cache.fetch('repo_langs')
         total = langs.values.sum
         widths = {}
@@ -15,7 +15,7 @@ module LanguageStats
         return widths
     end
 
-    def slugifyLanguage(string)
+    def self.slugifyLanguage(string)
         if (string.include? "+")
             string.gsub("+", "plus")
         end

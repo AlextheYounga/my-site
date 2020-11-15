@@ -38,6 +38,9 @@ gem 'webpacker'
 gem 'httparty'
 gem 'async-http'
 gem 'colorize'
+gem 'carrierwave-imageoptimizer'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

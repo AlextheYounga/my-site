@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   before_action :restrict, only: [:edit, :update, :new]
 
   def index
-    @books = Book.all
+    @books = Book.order(:position)
     @categories = BookCategory.all    
 
     set_meta_tags title: "Reading List",
