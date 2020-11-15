@@ -21,6 +21,11 @@ $burgandy-hover: #3d0303;
 //     font-family: Apple SD Gothic Neo;
 // }
 
+// .normal-font {
+//     font-family: 'Alegreya Sans';
+//     font-style: normal;
+// }
+
 .normal-font,
 p,
 span {
@@ -28,10 +33,13 @@ span {
     font-weight: 400;
 }
 
-// .normal-font {
-//     font-family: 'Alegreya Sans';
-//     font-style: normal;
-// }
+.list-style-none {
+    list-style-type: none !important;
+}
+
+.no-underline {
+    text-decoration: none;
+}
 
 .force-vertical-align {
     position: relative;
@@ -49,6 +57,25 @@ span {
 @media screen and (min-width: 767px) {
     nav.mobile {
         display: none !important;
+    }
+}
+
+#admin-nav {
+    top: 0;
+
+    .admin-dropdown {
+        display: none;
+        position: absolute;
+        top: 25px; /* the height of the main nav */
+        left: 0;
+
+        &:hover {
+            display: inherit;
+        }
+    }
+    /* Display Dropdowns on Hover */
+    .admin-link:hover > ul {
+        display: inherit;
     }
 }
 

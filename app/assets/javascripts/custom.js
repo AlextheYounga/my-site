@@ -1,3 +1,18 @@
+$(document).ready(function() {
+  $(window).on('scroll', function() {
+      if ($(window).scrollTop() > 0) {
+          $('#admin-nav').addClass('fixed');
+      } else {
+          $('#admin-nav').removeClass('fixed');
+      }
+  });
+  if ($(window).scrollTop() > 0) {
+      $('#admin-nav').addClass('fixed');
+  } else {
+      $('#admin-nav').removeClass('fixed');
+  }
+});
+
 colors = {
   'HTML': '#e34c26',
   'CSS': '#563d7c',
@@ -87,17 +102,3 @@ window.onload = function() {
   }
 };
 
-// $(document).ready(function() {
-//     $(window).on('scroll', function() {
-//         if ($(window).scrollTop() > 0) {
-//             $('#desktop-nav').addClass('styled');
-//         } else {
-//             $('#desktop-nav').removeClass('styled');
-//         }
-//     });
-//     if ($(window).scrollTop() > 0) {
-//         $('#desktop-nav').addClass('styled');
-//     } else {
-//         $('#desktop-nav').removeClass('styled');
-//     }
-// });
