@@ -1,21 +1,14 @@
 <!-- the element obj is a placeholder for any instance variable -->
 <% if obj.errors.any? %>
-  <div class="row">
-    <div class = "col-xs-8 col-xs-offset-2">
-      <div class="panel panel-danger">
-        <div class="panel-heading">
-          <h2 class="panel-title">
-            <%= pluralize(obj.errors.count, "error") %> 
-              prohibited this page from being displayed: </h2>
-              
-            <div class="panel-body">
-              <ul> <% obj.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-                  <% end %>
-                </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="flash-msg fixed danger rounded p-3 mx-auto w-3/4 pin-r pin-l z-50 text-lg my-2">
+    <h2><%= pluralize(obj.errors.count, "error") %>
+      prohibited this page from being displayed:</h2>
+    <div class="msg-body">
+      <ul>
+        <% obj.errors.full_messages.each do |msg| %>
+          <li class="list-style-none"><%= msg %></li>
+        <% end %>
+      </ul>
     </div>
+  </div>
 <% end %>

@@ -1,10 +1,13 @@
+load "app/modules/webp.rb"
+require "mini_magick"
+
 class BooksController < ApplicationController
   before_action :set_book, only: [:edit, :update, :destroy]
   before_action :restrict, except: :index
 
   def index
     @books = Book.order(:position)
-    @categories = BookCategory.all    
+    @categories = BookCategory.all
 
     set_meta_tags title: "Reading List",
                   site: "alextheyounger.me",
@@ -28,12 +31,19 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+    @book.image_address = params[:book][:book_cover].original_filename.to_s
+    @book.image_alt = "Alex Younger Readling List #{params[:book][:title]} by #{params[:book][:author]}"
+    resize_cover(params)
+    @book.book_cover.attach(params[:book][:book_cover])
+
     if @book.save
+      generate_webp_on_save(@book)
       flash[:notice] = "Book was successfully created"
       redirect_to books_path
     else
       render "new"
     end
+
   end
 
   def update
@@ -53,6 +63,15 @@ class BooksController < ApplicationController
 
   private
 
+  def resize_cover(params)
+    mini_image = MiniMagick::Image.new(params[:book][:book_cover].tempfile.path)
+    mini_image.resize "200x#{mini_image.height}"
+  end
+
+  def generate_webp_on_save(book)
+    Webp.generate_webps
+  end
+
   def restrict
     if not master_logged_in?
       redirect_to root_path
@@ -64,6 +83,15 @@ class BooksController < ApplicationController
   end
 
   def book_params
-    params.require(:book).permit(:title, :subtitle, :category_ids, :image_address, :image_alt, :author)
+    params.require(:book).permit(
+      :title,
+      :subtitle,
+      :book_category_id,
+      :image_address,
+      :book_link,
+      :image_alt,
+      :author,
+      :position
+    )
   end
 end
