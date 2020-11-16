@@ -1,7 +1,7 @@
 require "webp-ffi"
 
-module Webp
-  def self.generate_webps
+module WebpConverter
+  def self.convert_assets
     image_types = /\.(?:png|jpe?g)$/
 
     public_assets = File.join(
@@ -22,5 +22,22 @@ module Webp
         puts "Webp convertion error of image #{webp_file}. Error info: #{e.message}"
       end
     end
+  end
+
+  def self.generate_attachment_webp(params)
+    filepath = params[:book][:cover].tempfile.path
+    webp_path = "#{filepath}.webp"
+    webp_filename = "#{params[:book][:cover].original_filename.to_s}.webp"
+    mtime = File.mtime(filepath)
+
+    begin
+      WebP.encode(filepath, webp_path, quality: 80)
+      File.utime(mtime, mtime, webp_path)
+      puts "Webp converted image #{webp_filename}"
+    rescue => e
+      puts "Webp convertion error of image #{webp_filename}. Error info: #{e.message}"
+    end
+
+    return webp_path, webp_filename
   end
 end

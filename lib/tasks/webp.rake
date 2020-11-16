@@ -1,8 +1,8 @@
-load "app/modules/webp.rb"
+load "app/modules/webp_converter.rb"
 
 namespace :assets do
   desc "Create .webp versions of assets"
   task :webp => :environment do
-    Webp.generate_webps
+    WebpConverter.convert_assets
   end
 end

@@ -1,4 +1,4 @@
-load "app/modules/webp.rb"
+load "app/modules/webp_converter.rb"
 require "mini_magick"
 
 class BooksController < ApplicationController
@@ -31,19 +31,20 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    @book.image_address = params[:book][:book_cover].original_filename.to_s
+    @book.image_address = params[:book][:cover].original_filename.to_s
     @book.image_alt = "Alex Younger Readling List #{params[:book][:title]} by #{params[:book][:author]}"
     resize_cover(params)
-    @book.book_cover.attach(params[:book][:book_cover])
+    webpObj = WebpConverter.generate_attachment_webp(params)
+
+    @book.covers.attach(params[:book][:cover])
+    @book.covers.attach(io: File.open(webpObj.first), filename: webpObj.last, content_type: "image/webp")
 
     if @book.save
-      generate_webp_on_save(@book)
       flash[:notice] = "Book was successfully created"
       redirect_to books_path
     else
       render "new"
     end
-
   end
 
   def update
@@ -64,12 +65,8 @@ class BooksController < ApplicationController
   private
 
   def resize_cover(params)
-    mini_image = MiniMagick::Image.new(params[:book][:book_cover].tempfile.path)
+    mini_image = MiniMagick::Image.new(params[:book][:cover].tempfile.path)
     mini_image.resize "200x#{mini_image.height}"
-  end
-
-  def generate_webp_on_save(book)
-    Webp.generate_webps
   end
 
   def restrict

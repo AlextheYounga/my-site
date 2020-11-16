@@ -16,7 +16,8 @@ cover_img = "win_friends_influence.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "daily_stoic.jpg"
@@ -32,7 +33,8 @@ cover_img = "daily_stoic.jpg"
 
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "foundations_morality.jpg"
@@ -46,7 +48,8 @@ cover_img = "foundations_morality.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "the_antidote.jpg"
@@ -61,7 +64,8 @@ cover_img = "the_antidote.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "square_one.jpg"
@@ -76,7 +80,8 @@ cover_img = "square_one.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "making_economic_sense.jpg"
@@ -90,7 +95,8 @@ cover_img = "making_economic_sense.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "rich_dad.jpg"
@@ -104,7 +110,8 @@ cover_img = "rich_dad.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "good_profit.jpg"
@@ -119,7 +126,8 @@ cover_img = "good_profit.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "meditations.jpg"
@@ -134,7 +142,8 @@ cover_img = "meditations.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "good_life.jpg"
@@ -149,7 +158,8 @@ cover_img = "good_life.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "social_anxiety.jpg"
@@ -164,7 +174,8 @@ cover_img = "social_anxiety.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "notes_on_democracy.jpg"
@@ -178,7 +189,8 @@ cover_img = "notes_on_democracy.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "what_is_real.jpg"
@@ -193,7 +205,8 @@ cover_img = "what_is_real.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "waking_up.jpg"
@@ -209,7 +222,8 @@ cover_img = "waking_up.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "out_of_your_mind.jpg"
@@ -224,7 +238,8 @@ cover_img = "out_of_your_mind.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "youre_it.jpg"
@@ -239,7 +254,8 @@ cover_img = "youre_it.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "street_smarts.jpg"
@@ -253,7 +269,8 @@ cover_img = "street_smarts.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "charisma_myth.jpg"
@@ -268,7 +285,8 @@ cover_img = "charisma_myth.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "madness_of_crowds.jpg"
@@ -282,7 +300,8 @@ cover_img = "madness_of_crowds.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "troublesome_inheritance.jpg"
@@ -297,7 +316,8 @@ cover_img = "troublesome_inheritance.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "why_we_sleep.jpg"
@@ -312,7 +332,8 @@ cover_img = "why_we_sleep.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "black_rednecks.jpg"
@@ -327,7 +348,8 @@ cover_img = "black_rednecks.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "fools_errand.jpg"
@@ -342,7 +364,8 @@ cover_img = "fools_errand.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "failure_new_economics.jpg"
@@ -357,7 +380,8 @@ cover_img = "failure_new_economics.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "righteous_mind.jpg"
@@ -372,7 +396,8 @@ cover_img = "righteous_mind.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "do_what_you_are.jpg"
@@ -387,7 +412,8 @@ cover_img = "do_what_you_are.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "mindfulness_plain_english.jpg"
@@ -401,7 +427,8 @@ cover_img = "mindfulness_plain_english.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "deep_work.jpg"
@@ -416,7 +443,8 @@ cover_img = "deep_work.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "deep_thoughts.jpg"
@@ -431,7 +459,8 @@ cover_img = "deep_thoughts.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "total_recall.jpg"
@@ -446,7 +475,8 @@ cover_img = "total_recall.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "hot_commodities.jpg"
@@ -461,7 +491,8 @@ cover_img = "hot_commodities.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "millionaire_next_door.jpg"
@@ -476,7 +507,8 @@ cover_img = "millionaire_next_door.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "road_to_ruin.jpg"
@@ -491,7 +523,8 @@ cover_img = "road_to_ruin.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "enlightenment_now.jpg"
@@ -506,7 +539,8 @@ cover_img = "enlightenment_now.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "willpower_instinct.jpg"
@@ -521,7 +555,8 @@ cover_img = "willpower_instinct.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "economics_one_lesson.jpg"
@@ -536,7 +571,8 @@ cover_img = "economics_one_lesson.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "richest_man_babylon.jpg"
@@ -550,7 +586,8 @@ cover_img = "richest_man_babylon.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "gulag.jpg"
@@ -565,7 +602,8 @@ cover_img = "gulag.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "what_is_life.jpg"
@@ -579,7 +617,8 @@ cover_img = "what_is_life.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "free_will.jpg"
@@ -593,7 +632,8 @@ cover_img = "free_will.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "influence.jpg"
@@ -608,7 +648,8 @@ cover_img = "influence.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "mans_search_meaning.jpg"
@@ -622,7 +663,8 @@ cover_img = "mans_search_meaning.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "ordinary_men.jpg"
@@ -637,7 +679,8 @@ cover_img = "ordinary_men.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "fatal_conceit.jpg"
@@ -652,7 +695,8 @@ cover_img = "fatal_conceit.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "socialism.jpg"
@@ -667,7 +711,8 @@ cover_img = "socialism.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "body_language.jpg"
@@ -682,7 +727,8 @@ cover_img = "body_language.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "government_money.jpg"
@@ -697,7 +743,8 @@ cover_img = "government_money.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "computer_science_distilled.jpg"
@@ -712,7 +759,8 @@ cover_img = "computer_science_distilled.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "show_your_work.jpg"
@@ -727,7 +775,8 @@ cover_img = "show_your_work.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "moonwalking.jpg"
@@ -742,7 +791,8 @@ cover_img = "moonwalking.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "basic_econ.jpg"
@@ -757,7 +807,8 @@ cover_img = "basic_econ.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "rental_property.jpg"
@@ -772,7 +823,8 @@ cover_img = "rental_property.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "steal_the_show.jpg"
@@ -787,7 +839,8 @@ cover_img = "steal_the_show.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "crucial_conversations.jpg"
@@ -802,7 +855,8 @@ cover_img = "crucial_conversations.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "inflation.jpg"
@@ -816,7 +870,8 @@ cover_img = "inflation.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "behave.jpg"
@@ -831,7 +886,8 @@ cover_img = "behave.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "conflict_visions.jpg"
@@ -846,7 +902,8 @@ cover_img = "conflict_visions.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "great_depression.jpg"
@@ -860,7 +917,8 @@ cover_img = "great_depression.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "history_of_man.jpg"
@@ -875,7 +933,8 @@ cover_img = "history_of_man.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "ceo_tightrope.jpg"
@@ -890,7 +949,8 @@ cover_img = "ceo_tightrope.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "bull_moves.jpg"
@@ -905,7 +965,8 @@ cover_img = "bull_moves.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "4_hour.jpg"
@@ -920,7 +981,8 @@ cover_img = "4_hour.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "48_laws.jpg"
@@ -934,7 +996,8 @@ cover_img = "48_laws.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "iron_john.jpg"
@@ -949,7 +1012,8 @@ cover_img = "iron_john.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "hawk.jpg"
@@ -964,7 +1028,8 @@ cover_img = "hawk.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "intelligent_investor.jpg"
@@ -979,7 +1044,8 @@ cover_img = "intelligent_investor.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "pyrates.jpg"
@@ -994,7 +1060,8 @@ cover_img = "pyrates.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "lean_startup.jpg"
@@ -1009,7 +1076,8 @@ cover_img = "lean_startup.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "politically_incorrect.jpg"
@@ -1023,7 +1091,8 @@ cover_img = "politically_incorrect.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "progressive_era.jpg"
@@ -1037,7 +1106,8 @@ cover_img = "progressive_era.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "bucaneer.jpg"
@@ -1051,7 +1121,8 @@ cover_img = "bucaneer.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "sell_is_human.jpg"
@@ -1066,7 +1137,8 @@ cover_img = "sell_is_human.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "born_for_this.jpg"
@@ -1080,7 +1152,8 @@ cover_img = "born_for_this.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "anatomy_of_state.jpg"
@@ -1094,7 +1167,8 @@ cover_img = "anatomy_of_state.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "100_startup.jpg"
@@ -1109,7 +1183,8 @@ cover_img = "100_startup.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "infinite_banking.jpg"
@@ -1124,7 +1199,8 @@ cover_img = "infinite_banking.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "the_law.jpg"
@@ -1138,7 +1214,8 @@ cover_img = "the_law.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "zebras_dont_get_ulcers.jpg"
@@ -1153,7 +1230,8 @@ cover_img = "zebras_dont_get_ulcers.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "three_languages_politics.jpg"
@@ -1168,7 +1246,8 @@ cover_img = "three_languages_politics.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "never_eat_alone.jpg"
@@ -1183,7 +1262,8 @@ cover_img = "never_eat_alone.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "darkness_visible.jpg"
@@ -1198,7 +1278,8 @@ cover_img = "darkness_visible.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "ignore_everybody.jpg"
@@ -1213,7 +1294,8 @@ cover_img = "ignore_everybody.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "economic_controversies.jpg"
@@ -1227,7 +1309,8 @@ cover_img = "economic_controversies.jpg"
   position: i,
 })
 i = i + 1
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
 
 cover_img = "spacetime_physics.jpg"
@@ -1241,5 +1324,6 @@ cover_img = "spacetime_physics.jpg"
   author: "Edwin F. Taylor & John Archibald Wheeler",
   position: i,
 })
-@book.book_cover.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
