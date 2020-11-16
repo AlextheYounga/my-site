@@ -23,7 +23,7 @@ class PagesController < ApplicationController
 
   def projects
     @projects = Project.all
-
+    @languageStats = LanguageStats.calculateWidths
     set_meta_tags title: "Projects",
                   site: "alextheyounger.me",
                   description: "Alex Younger - My Projects. A list of projects that have my name somewhere on them.",
