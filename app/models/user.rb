@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :articles    # One to many association
+  has_many :articles
+  has_many :stocks
   before_save { self.email = email.downcase }
   validates :username, presence: true, uniqueness: {case_sensitive: false },
              length: {minimum: 3, maximum: 25}
@@ -11,9 +12,5 @@ class User < ActiveRecord::Base
             format: {with: VALID_EMAIL_REGEX }
   
   has_secure_password
-  
-  # has_many :user_stocks
-  # has_many :stocks, through: :user_stocks
 
-  
 end

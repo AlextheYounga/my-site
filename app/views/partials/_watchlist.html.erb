@@ -12,16 +12,16 @@
 
   <tbody>
     <% if @stocks %>
-    <% @stocks.each do |stock | %>
-    <tr class="justify-between">
-      <td class="p-2 md:p-4 normal-font text-black text-left"><%= stock.company_name%></td>
-      <td class="p-2 md:p-4 normal-font text-black text-center"><%= stock.symbol %></td>
-      <td class="p-2 md:p-4 normal-font text-black text-left"><%= stock.position %></td>
-      <td class="p-2 md:p-4 normal-font text-black text-center"><%= stock.latest_price %></td>
-      <td class="p-2 md:p-4 normal-font text-black text-center hidden sm:table-cell"><%= stock.ytd_change_percent ? number_to_percentage(stock.ytd_change_percent) : nil %></td>
-      <td class="p-2 md:p-4 normal-font text-black text-center hidden sm:table-cell"><%= stock.industry %></td>
-    </tr>
-    <% end %>
+      <% @stocks.each do |stock | %>
+        <tr class="justify-between">
+          <td class="p-2 md:p-4 normal-font text-black text-left"><%= stock.company_name%></td>
+          <td class="p-2 md:p-4 normal-font text-black text-center"><%= stock.symbol %></td>
+          <td class="p-2 md:p-4 normal-font text-black text-left"><%= stock.position %></td>
+          <td class="p-2 md:p-4 normal-font text-black text-center"><%= stock.latest_price %></td>
+          <td class="p-2 md:p-4 normal-font text-black text-center hidden sm:table-cell"><%= stock.ytd_change_percent ? number_to_percentage(stock.ytd_change_percent) : nil %></td>
+          <td class="p-2 md:p-4 normal-font text-black text-center hidden sm:table-cell"><%= stock.industry %></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

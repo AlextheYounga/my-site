@@ -11,9 +11,9 @@ $burgandy-hover: #3d0303;
 }
 
 /*---- Shared ----*/
+.created-at,
 .fancy-font,
-.title,
-.created-at {
+.title {
     font-family: "Alegreya SC", serif !important;
 }
 
@@ -21,16 +21,50 @@ $burgandy-hover: #3d0303;
 //     font-family: Apple SD Gothic Neo;
 // }
 
-.normal-font,
-p {
-    font-family: Apple SD Gothic Neo;
-    font-weight: 400;
-}
-
 // .normal-font {
 //     font-family: 'Alegreya Sans';
 //     font-style: normal;
 // }
+
+.normal-font,
+a,
+p,
+small,
+span {
+    font-family: Apple SD Gothic Neo;
+    font-weight: 400;
+}
+
+.list-style-none {
+    list-style-type: none !important;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.force-vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.flash-msg {
+    top: 15%;
+    &.alert {
+        background-color: #f2d024;
+        color: black;
+    }
+    &.danger {
+        background-color: #cc1f1a;
+        color: white;
+
+    }
+    &.success {
+        background-color: #1f9d55;
+        color: white;
+    }
+}
 
 /*---- Nav ----*/
 @media screen and (max-width: 768px) {
@@ -45,26 +79,39 @@ p {
     }
 }
 
+#admin-nav {
+    top: 0;
+
+    .admin-dropdown {
+        display: none;
+        position: absolute;
+        top: 25px;
+        /* the height of the main nav */
+        left: 0;
+
+        &:hover {
+            display: inherit;
+        }
+    }
+    /* Display Dropdowns on Hover */
+    .admin-link:hover > ul {
+        display: inherit;
+    }
+}
+
 /*---- Home ----*/
 
 .no-webp .hero {
-    background-image: image-url("twin-lakes.jpg");
+    background-image: image-url("twin-lakes-rnd-shadow.png");
     background-size: cover;
     margin-top: -5.7rem;
 }
 
 .webp .hero {
-    background-image: image-url("twin-lakes.jpg.webp");
+    background-image: image-url("twin-lakes-rnd-shadow.png.webp");
     background-size: cover;
     margin-top: -5.7rem;
 }
-
-// .headshot {
-//     img {
-//         top: 50%;
-//         transform: translateY(-50%);
-//     }
-// }
 
 @media screen and (max-width: 568px) {
     .no-webp .hero {
@@ -90,8 +137,33 @@ p {
     }
 }
 
-section.articles-home, section.about-home {
+section.articles-home,
+section.reading-carousel {
     background-image: image-url("topography-blue.svg");
+}
+
+.language-stats {
+    #language-bar {
+        .bar {
+            display: flex;
+            height: 8px;
+            overflow: hidden;
+            background-color: #e1e4e8;
+            border-radius: 6px;
+        }
+
+        ul {
+            list-style-type: none;
+
+            .octicon {
+                fill: currentColor;
+            }
+        }
+    }
+}
+
+.aboutme-description {
+    align-self: center;
 }
 
 /*---- About ----*/
@@ -191,8 +263,7 @@ section.about {
                             top: 30px;
                             left: -15px;
                             border-width: 10px 15px 10px 0;
-                            border-color: transparent #dae1e7 transparent
-                                transparent;
+                            border-color: transparent #dae1e7 transparent transparent;
                         }
                     }
                 }
@@ -202,8 +273,8 @@ section.about {
 }
 
 /*---- Forms ----*/
-.form-title,
-.form-description {
+.form-description,
+.form-title {
     &:focus {
         outline-color: #800020;
     }
@@ -212,8 +283,7 @@ section.about {
 /*---- Articles ----*/
 #article {
     code {
-        font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New,
-            monospace;
+        font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
         border-radius: 0.25rem;
         background-color: #f1f5f8;
         font-size: 0.875rem;
@@ -231,27 +301,20 @@ section.about {
     }
 }
 
-section.articles,
-section.article-show {
+section.article-show,
+section.articles {
     background-image: image-url("topography-red.svg");
 }
 
-section.new-article {
-    background-image: image-url("line-in-motion.svg");
-}
-
-section.category-index {
-    background-image: image-url("line-in-motion.svg");
-}
-
-/*---- Quotes ----*/
+section.category-index,
+section.new-article,
+section.new-book,
 section.quotes {
     background-image: image-url("line-in-motion.svg");
 }
 
 /*---- Reading List ----*/
 //Menu
-
 .category-menu {
     ul {
         li {
@@ -272,6 +335,11 @@ section.quotes {
 
 //Books
 .covers {
+    .edit-book-link {
+        top: 0;
+        right: 55px;
+    }
+
     img {
         border: 3px inset lightgrey;
         border-radius: 4px;

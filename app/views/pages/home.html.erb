@@ -4,78 +4,75 @@
     <p class="fancy-font py-2 sm:text-blue-lighter text-center text-lg text-yellow-lightest">Web Developer, Investor, Marketing, Entrepreneur</p>
   </div>
 </section>
-<section class="about-home bg-grey-lighter py-16 w-full px-4">
-<h2 class="fancy-font text-center text-blue pb-8">About Me</h2>
-  <div class="flex flex-wrap justify-center rounded-lg shadow text-lg mx-auto lg:w-3/4 bg-white home-content js--fadeInLeft">
-    <div class="headshot w-full sm:w-1/2">
+
+<section class="about-home bg-white py-16 w-full px-4">
+  <div class="language-stats mb-8">
+    <%= render partial: "partials/language_bar", locals: {languageStats: @languageStats} %>
+  </div>
+  <div class="flex flex-wrap justify-center text-lg mx-auto lg:w-3/4 home-content js--fadeInLeft">
+    <div class="headshot w-full sm:w-1/3">
       <picture>
         <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp">
         <source srcset="<%= image_path("headshot3_700.png") %>" type="image/png">
         <img src="<%= image_path("headshot3_700.png") %>" class="flex sm:mt-10 mx-auto relative text-center" width="315" alt="alex younger developer marketing about me"/>
       </picture>
     </div>
-    <div class="aboutme-description leading-normal normal-font p-8 w-full sm:w-1/2">
+    <div class="aboutme-description leading-normal normal-font p-8 w-full sm:w-2/3">
       <p class="py-2">I build and maintain websites for an extensive list of small and large companies.</p>
-      <p class="py-2">I am currently building a side business called Hazlitt Tech LLC, a data brokerage for financial markets.</p>
+      <p class="py-2">I am currently building a side business called Hazlitt Tech LLC, dealing in data brokering for financial markets and accounting software.</p>
       <p class="py-2">I consult businesses on best practices for Google Ad Campaigns, Analytics, and content marketing techniques.</p>
       <p class="py-2">Check out my latest
         <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
-      <a href="<%= about_path %>" class="bg-white block border border-blue-darker hover:bg-blue-darkest text-blue button hover:text-blue-lightest text-center mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
-        My Story
-      </a>
-    </div>   
+    </div>
   </div>
 </section>
-<section class="skills bg-white py-16 w-full px-4">
-<h2 class="fancy-font text-center text-blue">Skills</h2>
-<div class="flex mx-auto mt-8">
-      <picture class="mx-auto">
-        <source srcset="<%= image_path("blueskillscloud.png.webp") %>" type="image/webp" class="w-full" alt="skills cloud"> 
-        <source srcset="<%= image_path("blueskillscloud.png") %>" type="image/jpg">
-        <img src="<%= image_path("blueskillscloud.png") %>" class="block mx-auto" alt="skills cloud" />
-      </picture>
-    </div>
-</section>
-<section class="articles-home py-16 bg-grey-lighter">
-  <div class="container mx-auto p-1 text-center">
-    <h2 class="fancy-font text-blue">Latest Blog Posts</h2>
-    <a href="<%= articles_path %>" class="bg-white block border border-blue-darker text-blue button hover:text-blue-lightest hover:bg-blue-darkest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
-      View All</a>
-    <% if @articles.any?
-           then %>
-      <% @articles.each do |article| %>
-        <a href="<%= article_path(article) %>" class="no-underline text-blue">
-          <div class="home-content js--fadeInLeft teaser bg-white block border border-grey-light mx-auto my-8 py-10 rounded shadow hover:shadow-lg md:w-4/5">
-            <h2 class="fancy-font text-blue"><%= article.title %></h2>
-            <div class="leading-normal normal-font p-8 text-black text-lg">
-              <% if article.description.blank? then %>
-                <%= truncate(strip_tags(article.editor1), length: 600) %>
+<section class="reading-carousel bg-white py-16 shadow-inner">
+  <h3 class="text-3xl text-grey-darkest fancy-font w-3/4 px-8 mx-auto">Reading List</h3>
+  <div id="reading-carousel">
+    <% if @books.any?
+               then %>
+      <% @books.each do |book| %>
+        <% if (book.covers.attached? || !book.image_address.nil?) %>
+          <div class="cover lg:w-1/4 md:w-1/3 sm:w-1/2 text-center my-12 relative">
+            <a href="<%= book.book_link %>" target="_blank" rel="nofollow" class="no-underline">
+              <% if (book.covers.attached?) %>
+                <picture>
+                  <source srcset="<%= book.get_webp_attachment %>" type="image/webp" class="mb-3 shadow" alt="<%= book.image_alt %>">
+                  <source srcset="<%= book.get_jpeg_attachment %>" type="image/jpg">
+                  <img src="<%= book.get_jpeg_attachment %>" class="mb-3 shadow" alt="<%= book.image_alt %>"/>
+                </picture>
               <% else %>
-                <%= truncate(strip_tags(article.description), length: 600) %>
+                <picture>
+                  <source srcset="<%= "#{image_path(book.image_address)}.webp" %>" type="image/webp" class="mb-3 shadow" alt="<%= book.image_alt %>">
+                  <source srcset="<%= image_path(book.image_address) %>" type="image/jpg">
+                  <img src="<%= image_path(book.image_address) %>" class="mb-3 shadow" alt="<%= book.image_alt %>"/>
+                </picture>
               <% end %>
+            </a>
+            <div class="book-description bg-purple-lightest w-1/2 p-4 rounded-lg mx-auto">
+              <p class="fancy-font text-md text-purple-darkest"><%= book.title %></p>
+              <p class="normal-font text-sm text-purple-darkest py-2"><%= book.subtitle %></p>
+              <p class="normal-font text-sm text-purple-darkest">by
+                <%= book.author %></p>
             </div>
-            <small class="block text-blue mx-auto px-6">Created by
-              <%= article.user.username if article.user %>
-              <%= time_ago_in_words(article.created_at) %>
-              ago, Last updated:
-              <%= time_ago_in_words(article.updated_at) %>
-              ago
-            </small>
-            <% if article.categories.any? %>
-              <p class="text-blue py-6 normal-font">Categories:
-                <%= render article.categories %></p>
-            <% end %>
           </div>
-        </a>
+        <% end %>
       <% end %>
     <% end %>
   </div>
+  <a href="<%= books_path %>" class="bg-white block border border-blue-darker hover:bg-blue-darkest hover:text-blue-lightest mx-auto text-center no-underline normal-font py-3 rounded shadow-lg text-blue-darkest w-48">
+    See More
+  </a>
+
 </section>
-<section class="watchlist-home home-content js--fadeInLeft py-16 px-4">
-  <h2 class="fancy-font text-blue text-center py-6">My Stock Watchlist</h2>
-  <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
-  <%= render 'partials/watchlist' %>
+<section class="watchlist-home py-16 px-4">
+  <div class="home-content js--fadeInLeft">
+    <h4 class="fancy-font text-grey-darkest text-3xl text-center py-6">Stock Watchlist</h4>
+    <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
+    <%= render 'partials/watchlist' %>
+  </div>
 </section>
+
 <!-- Scroll Reveal -->
 <% content_for :javascripts do %>
   <script>
@@ -98,7 +95,31 @@
           duration: 800
         });
       }
+
+      var slider = tns({
+        container: '#reading-carousel',
+        items: 1,
+        controls: false,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        nav: false,
+        mouseDrag: true,
+        responsive: {
+          640: {
+            edgePadding: 20,
+            gutter: 20,
+            items: 2
+          },
+          700: {
+            gutter: 30
+          },
+          900: {
+            items: 4
+          }
+        }
+      });
     });
+
     $('.desktop .nav-link')
       .removeClass('burgandy')
       .addClass('text-blue-lightest');
