@@ -1,6 +1,11 @@
-table_name = "books"
-ActiveRecord::Base.connection.execute("Delete from #{table_name}")
-ActiveRecord::Base.connection.execute("DELETE FROM SQLITE_SEQUENCE WHERE name='#{table_name}'")
+if (Rails.env.development?)
+  table_name = "books"
+  ActiveRecord::Base.connection.execute("Delete from #{table_name}")
+  ActiveRecord::Base.connection.execute("DELETE FROM SQLITE_SEQUENCE WHERE name='#{table_name}'")
+else
+  Book.destroy_all
+end
+
 puts "Seeding Books"
 i = 1
 

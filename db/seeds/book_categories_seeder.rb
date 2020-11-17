@@ -1,6 +1,10 @@
-table_name = "book_categories"
-ActiveRecord::Base.connection.execute("Delete from #{table_name}")
-ActiveRecord::Base.connection.execute("DELETE FROM SQLITE_SEQUENCE WHERE name='#{table_name}'")
+if (Rails.env.development?)
+  table_name = "book_categories"
+  ActiveRecord::Base.connection.execute("Delete from #{table_name}")
+  ActiveRecord::Base.connection.execute("DELETE FROM SQLITE_SEQUENCE WHERE name='#{table_name}'")
+else
+  BookCategory.destroy_all
+end
 puts "Seeding Book Categories"
 BookCategory.create([
   { html_selector: "better-living", name: "Better Living" },
