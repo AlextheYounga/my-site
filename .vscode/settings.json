@@ -1,0 +1,8 @@
+{
+    "gitflow4code.features": [
+        {
+            "name": "feature/design-update",
+            "base": "develop"
+        }
+    ]
+}

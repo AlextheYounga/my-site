@@ -45,8 +45,8 @@ class CategoriesController < ApplicationController
       params.require(:category).permit(:name)
     end
   
-    def restrict 
-      if not logged_in?
+    def restrict
+      if not master_logged_in?
         redirect_to root_path
       end
     end

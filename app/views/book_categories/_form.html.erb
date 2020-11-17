@@ -1,0 +1,17 @@
+<%= render 'shared/errors', obj: @book_category %>
+<!-- Without initiation in categories_controller, this will not work-->
+<div class="container mx-auto">
+  <%= form_for(@book_category, :html => {role: "form"}) do |f| %>
+  <div class='w-1/2 mx-auto'>
+    <%= f.text_field :name, placeholder: "Category Name", autofocus: true, class: "form-title fancy-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-4 rounded shadow text-center w-full"%>
+  </div>
+  <div class='w-1/2 mx-auto'>
+    <%= f.text_field :name, placeholder: "Category HTML Class", autofocus: true, class: "form-title fancy-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-4 rounded shadow text-center w-full"%>
+  </div>
+
+  <%= f.submit class: 'py-3 bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font rounded shadow-lg text-green-darkest w-48' %>
+<% end %>
+
+<div class="py-16 text-center">
+  <%= link_to "Cancel Request and Return to Reading List", books_path, class: "burgandy fancy-font hover:underline no-underline" %>
+</div>
