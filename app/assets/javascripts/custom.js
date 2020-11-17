@@ -110,7 +110,7 @@ window.onload = function () {
   var langStats = document.getElementById("language-bar");
   if (typeof (langStats) != 'undefined' && langStats != null) {
 
-    for (const [lang, color] of Object.entries(colors)) {
+    for ([lang, color] of Object.entries(colors)) {
       var barItems = document.querySelectorAll(".bar-item." + string_parameterize(lang));
       var octicons = document.querySelectorAll(".octicon." + string_parameterize(lang));
 
