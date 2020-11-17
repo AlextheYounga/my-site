@@ -27,7 +27,7 @@
   </div>
 </section>
 <section class="reading-carousel bg-white py-16 shadow-inner">
-<h3 class="text-3xl text-black fancy-font w-3/4 px-8 mx-auto">Reading List</h3>
+  <h3 class="text-3xl text-grey-darkest fancy-font w-3/4 px-8 mx-auto">Reading List</h3>
   <div id="reading-carousel">
     <% if @books.any?
                then %>
@@ -60,10 +60,14 @@
       <% end %>
     <% end %>
   </div>
+  <a href="<%= books_path %>" class="bg-white block border border-blue-darker hover:bg-blue-darkest hover:text-blue-lightest mx-auto text-center no-underline normal-font py-3 rounded shadow-lg text-blue-darkest w-48">
+    See More
+  </a>
+
 </section>
 <section class="watchlist-home py-16 px-4">
   <div class="home-content js--fadeInLeft">
-    <h4 class="fancy-font text-black text-3xl text-center py-6">My Stock Watchlist</h4>
+    <h4 class="fancy-font text-grey-darkest text-3xl text-center py-6">Stock Watchlist</h4>
     <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
     <%= render 'partials/watchlist' %>
   </div>
@@ -97,7 +101,6 @@
         items: 1,
         controls: false,
         autoplay: true,
-        autoplayHoverPause: true,
         autoplayButtonOutput: false,
         nav: false,
         mouseDrag: true,

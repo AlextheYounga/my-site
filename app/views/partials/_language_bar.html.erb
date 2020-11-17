@@ -1,5 +1,5 @@
 <div id="language-bar" class="text-lg mx-auto lg:w-3/4 home-content js--fadeInLeft p-8">
-  <h2 class="mb-3 text-3xl fancy-font">Skills</h2>
+  <h2 class="mb-3 text-3xl text-grey-darkest fancy-font">Skills</h2>
   <span class="bar w-full mb-4">
     <% languageStats.each do |lang, val| %>
       <span style="width: <%= val %>%" class="bar-item <%= LanguageStats.slugifyLanguage(lang) %>">
@@ -19,4 +19,5 @@
       </li>
     <% end %>
   </ul>
+  <div class="float-right italic"><small>Pulled directly from Github</small></div>
 </div>
