@@ -1,6 +1,5 @@
 libwebp-dev
 libjpeg-dev
 libpng-dev 
-libtiff-dev 
-libwebp-dev
+libtiff-dev
 webp
