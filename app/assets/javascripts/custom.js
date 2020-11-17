@@ -110,16 +110,20 @@ window.onload = function () {
   var langStats = document.getElementById("language-bar");
   if (typeof (langStats) != 'undefined' && langStats != null) {
 
-    for ([lang, color] of Object.entries(colors)) {
+    for (var _i = 0, _Object$entries = Object.entries(colors); _i < _Object$entries.length; _i++) {
+      var _Object$entries$_i = _Object$entries[_i];
+      lang = _Object$entries$_i[0];
+      color = _Object$entries$_i[1];
       var barItems = document.querySelectorAll(".bar-item." + string_parameterize(lang));
       var octicons = document.querySelectorAll(".octicon." + string_parameterize(lang));
 
-      if (typeof (barItems) != 'undefined' && barItems != null) {
+      if (typeof barItems != 'undefined' && barItems != null) {
         for (var i = 0, length = barItems.length; i < length; i++) {
           barItems[i].style.backgroundColor = color;
         }
       }
-      if (typeof (octicons) != 'undefined' && octicons != null) {
+
+      if (typeof octicons != 'undefined' && octicons != null) {
         for (var i = 0; i < octicons.length; i++) {
           octicons[i].style.color = color;
         }
