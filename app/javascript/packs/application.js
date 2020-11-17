@@ -8,5 +8,4 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import "../css/application.css";
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel';
+

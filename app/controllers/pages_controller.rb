@@ -4,7 +4,7 @@ include LanguageStats
 
 class PagesController < ApplicationController
   def home
-    @books = Book.all
+    @books = Book.first(15)
     @stocks = Stock.all
     @languageStats = LanguageStats.calculateWidths
 
