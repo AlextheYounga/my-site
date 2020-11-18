@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
     @books = Book.first(15)
     @stocks = Stock.all
-    @languageStats = GithubLanguages.calculateWidths
+    @languageStats = GithubLanguage.calculateWidths
 
     set_meta_tags title: "Home",
                   site: "alextheyounger.me",
@@ -19,7 +19,7 @@ class PagesController < ApplicationController
 
   def projects
     @projects = Project.all
-    @languageStats = GithubLanguages.calculateWidths
+    @languageStats = GithubLanguage.calculateWidths
     set_meta_tags title: "Projects",
                   site: "alextheyounger.me",
                   description: "Alex Younger - My Projects. A list of projects that have my name somewhere on them.",

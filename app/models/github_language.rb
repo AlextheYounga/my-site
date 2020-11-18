@@ -7,17 +7,19 @@ require "json"
 require "logger"
 require "colorize"
 
-class GithubLanguages < ActiveRecord::Base
+class GithubLanguage < ActiveRecord::Base
+  self.table_name = "github_languages"
 
   def self.calculateWidths
-    langs = Rails.cache.fetch("repo_langs")
-    if (langs.is_a? Hash)
-      total = langs.values.sum
+    langs = GithubLanguage.order(value: :desc)
+    values = GithubLanguage.pluck(:value)
+    if (langs.any?)
+      total = values.sum
       widths = {}
-      langs.each do |lang, val|
-        if ((val.to_f.is_a?(Float) && total.to_f.is_a?(Float)) && (val > 0 && total > 0))
-          width = ((val.to_f / total.to_f) * 100).round(2)
-          widths[lang] = width
+      langs.each do |lang|
+        if ((lang.value.to_f.is_a?(Float) && total.to_f.is_a?(Float)) && (lang.value > 0 && total > 0))
+          width = ((lang.value.to_f / total.to_f) * 100).round(2)
+          widths[lang.language] = width
         end
       end
       return widths
@@ -108,18 +110,11 @@ class GithubLanguages < ActiveRecord::Base
       return "Failed to get language stats".red      
     end
 
-    sorted = langSum.sort_by { |k, v| -v }
-
-    # saved = Rails.cache.fetch("repo_langs", sorted.to_h)
-    saved = Rails.cache.fetch("repo_langs", expires_in: 15.days) do
-      sorted.to_h
+    langSum.each do |l, v|
+      record = GithubLanguage.find_or_initialize_by(language: l)
+      record.value = v
+      record.save!
+      puts "#{l} - #{v} saved"
     end
-
-    check_cache = Rails.cache.fetch("repo_langs")
-    if (check_cache.nil?)
-      logger.info 'Failed cache language stats; cache is nil.'
-      return "Failed cache language stats; cache is nil.".red   
-    end
-    puts "Cached #{saved}".green
   end
 end
