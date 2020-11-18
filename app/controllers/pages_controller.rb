@@ -1,12 +1,8 @@
-load "app/modules/language_stats.rb"
-
-include LanguageStats
-
 class PagesController < ApplicationController
   def home
     @books = Book.first(15)
     @stocks = Stock.all
-    @languageStats = LanguageStats.calculateWidths
+    @languageStats = GithubLanguages.calculateWidths
 
     set_meta_tags title: "Home",
                   site: "alextheyounger.me",
@@ -23,7 +19,7 @@ class PagesController < ApplicationController
 
   def projects
     @projects = Project.all
-    @languageStats = LanguageStats.calculateWidths
+    @languageStats = GithubLanguages.calculateWidths
     set_meta_tags title: "Projects",
                   site: "alextheyounger.me",
                   description: "Alex Younger - My Projects. A list of projects that have my name somewhere on them.",
