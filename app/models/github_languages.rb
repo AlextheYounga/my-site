@@ -7,10 +7,11 @@ require "json"
 require "logger"
 require "colorize"
 
-module LanguageStats
+class GithubLanguages < ActiveRecord::Base
+
   def self.calculateWidths
     langs = Rails.cache.fetch("repo_langs")
-    if (langs.nil? == false)
+    if (langs.is_a? Hash)
       total = langs.values.sum
       widths = {}
       langs.each do |lang, val|
@@ -23,6 +24,7 @@ module LanguageStats
     end
   end
 
+
   def self.slugifyLanguage(string)
     if (string.include? "+")
       string.gsub("+", "plus")
@@ -30,13 +32,15 @@ module LanguageStats
     return string.parameterize
   end
 
-  def fetchGithub()
+
+  def self.fetchGithub
     languages = []
     username = "AlextheYounga"
     api_url = "https://api.github.com/search/repositories?q=user:#{username}"
 
     begin
       puts "#{api_url}".yellow
+      logger = Rails.logger
       oauth = "token #{Rails.application.credentials.github_personal_token}"
       repoResponse = Nokogiri::HTML(open(
         api_url,
@@ -78,12 +82,12 @@ module LanguageStats
           # Ensure we wait for all requests to complete before continuing:
           barrier.wait
 
-          ensure
+        ensure
           internet&.close
         end
       end
     rescue => e
-      puts "#{link} - Error - #{e}"
+      puts "#{link} - Error - #{e}".red      
       logger.error e.message
       logger.error e.backtrace.join("\n")
     end
@@ -100,12 +104,22 @@ module LanguageStats
     end
 
     if (langSum.blank?)
-      return "Failed to get language stats".red
+      logger.info 'Failed to get language stats; stats are nil.'
+      return "Failed to get language stats".red      
     end
 
     sorted = langSum.sort_by { |k, v| -v }
 
-    saved = Rails.cache.write("repo_langs", sorted.to_h)
+    # saved = Rails.cache.fetch("repo_langs", sorted.to_h)
+    saved = Rails.cache.fetch("repo_langs", expires_in: 15.days) do
+      sorted.to_h
+    end
+
+    check_cache = Rails.cache.fetch("repo_langs")
+    if (check_cache.nil?)
+      logger.info 'Failed cache language stats; cache is nil.'
+      return "Failed cache language stats; cache is nil.".red   
+    end
     puts "Cached #{saved}".green
   end
 end

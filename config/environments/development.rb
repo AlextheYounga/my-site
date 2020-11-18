@@ -15,11 +15,8 @@ Rails.application.configure do
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
-    config.action_controller.perform_caching = true
+    config.action_controller.perform_caching = true    
 
-    # config.cache_store = :redis_cache_store
-    # config.cache_store = :memory_store, { size: 64.megabytes }
-  
     # Caching does not work in rake tasks unless set to file_store. Fuckin dumb.
     config.cache_store = :file_store, Rails.root.join('tmp/cache_store') 
     config.public_file_server.headers = {
