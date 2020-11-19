@@ -403,7 +403,7 @@ DEPENDENCIES
   paperclip
   pg
   puma (~> 3.11)
-  rails (~> 6.0.1)
+  rails (~> 6.0.3.4)
   rails_12factor
   redis
   sass-rails (~> 5.0)
