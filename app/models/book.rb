@@ -17,11 +17,7 @@ class Book < ActiveRecord::Base
     self.covers.each do |cover|
       type = cover.blob.content_type
       if (type == "image/webp")
-        if (Rails.env.production?)
-          return url_for(cover)          
-        else
-          return Rails.application.routes.url_helpers.rails_blob_path(cover, only_path: true)          
-        end
+        return Rails.application.routes.url_helpers.rails_blob_path(cover, only_path: true)
       end
     end
     return false
@@ -31,11 +27,7 @@ class Book < ActiveRecord::Base
     self.covers.each do |cover|
       type = cover.blob.content_type
       if (type == "image/jpeg")
-        if (Rails.env.production?)
-          return url_for(cover)
-        else
-          return Rails.application.routes.url_helpers.rails_blob_path(cover, only_path: true)          
-        end
+        return Rails.application.routes.url_helpers.rails_blob_path(cover, only_path: true)
       end
     end
     return false
