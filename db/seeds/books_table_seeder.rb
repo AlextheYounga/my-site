@@ -21,9 +21,11 @@ cover_img = "win_friends_influence.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
 
 cover_img = "daily_stoic.jpg"
 @book = Book.new({
@@ -38,9 +40,12 @@ cover_img = "daily_stoic.jpg"
 
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "foundations_morality.jpg"
 @book = Book.new({
@@ -53,9 +58,12 @@ cover_img = "foundations_morality.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "the_antidote.jpg"
 @book = Book.new({
@@ -69,9 +77,12 @@ cover_img = "the_antidote.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "square_one.jpg"
 @book = Book.new({
@@ -85,9 +96,12 @@ cover_img = "square_one.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "making_economic_sense.jpg"
 @book = Book.new({
@@ -100,9 +114,12 @@ cover_img = "making_economic_sense.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "rich_dad.jpg"
 @book = Book.new({
@@ -115,9 +132,12 @@ cover_img = "rich_dad.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "good_profit.jpg"
 @book = Book.new({
@@ -131,9 +151,12 @@ cover_img = "good_profit.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "meditations.jpg"
 @book = Book.new({
@@ -147,9 +170,12 @@ cover_img = "meditations.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "good_life.jpg"
 @book = Book.new({
@@ -163,9 +189,12 @@ cover_img = "good_life.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "social_anxiety.jpg"
 @book = Book.new({
@@ -179,9 +208,12 @@ cover_img = "social_anxiety.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "notes_on_democracy.jpg"
 @book = Book.new({
@@ -194,9 +226,12 @@ cover_img = "notes_on_democracy.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "what_is_real.jpg"
 @book = Book.new({
@@ -210,9 +245,12 @@ cover_img = "what_is_real.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "waking_up.jpg"
 @book = Book.new({
@@ -227,9 +265,12 @@ cover_img = "waking_up.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "out_of_your_mind.jpg"
 @book = Book.new({
@@ -243,9 +284,12 @@ cover_img = "out_of_your_mind.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "youre_it.jpg"
 @book = Book.new({
@@ -259,9 +303,12 @@ cover_img = "youre_it.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "street_smarts.jpg"
 @book = Book.new({
@@ -274,9 +321,12 @@ cover_img = "street_smarts.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "charisma_myth.jpg"
 @book = Book.new({
@@ -290,9 +340,12 @@ cover_img = "charisma_myth.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "madness_of_crowds.jpg"
 @book = Book.new({
@@ -305,9 +358,12 @@ cover_img = "madness_of_crowds.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "troublesome_inheritance.jpg"
 @book = Book.new({
@@ -321,9 +377,12 @@ cover_img = "troublesome_inheritance.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "why_we_sleep.jpg"
 @book = Book.new({
@@ -337,9 +396,12 @@ cover_img = "why_we_sleep.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "black_rednecks.jpg"
 @book = Book.new({
@@ -353,9 +415,12 @@ cover_img = "black_rednecks.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "fools_errand.jpg"
 @book = Book.new({
@@ -369,9 +434,12 @@ cover_img = "fools_errand.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "failure_new_economics.jpg"
 @book = Book.new({
@@ -385,9 +453,12 @@ cover_img = "failure_new_economics.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "righteous_mind.jpg"
 @book = Book.new({
@@ -401,9 +472,12 @@ cover_img = "righteous_mind.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "do_what_you_are.jpg"
 @book = Book.new({
@@ -417,9 +491,12 @@ cover_img = "do_what_you_are.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "mindfulness_plain_english.jpg"
 @book = Book.new({
@@ -432,9 +509,12 @@ cover_img = "mindfulness_plain_english.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "deep_work.jpg"
 @book = Book.new({
@@ -448,9 +528,12 @@ cover_img = "deep_work.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "deep_thoughts.jpg"
 @book = Book.new({
@@ -464,9 +547,12 @@ cover_img = "deep_thoughts.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "total_recall.jpg"
 @book = Book.new({
@@ -480,9 +566,12 @@ cover_img = "total_recall.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "hot_commodities.jpg"
 @book = Book.new({
@@ -496,9 +585,12 @@ cover_img = "hot_commodities.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "millionaire_next_door.jpg"
 @book = Book.new({
@@ -512,9 +604,12 @@ cover_img = "millionaire_next_door.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "road_to_ruin.jpg"
 @book = Book.new({
@@ -528,9 +623,12 @@ cover_img = "road_to_ruin.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "enlightenment_now.jpg"
 @book = Book.new({
@@ -544,9 +642,12 @@ cover_img = "enlightenment_now.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "willpower_instinct.jpg"
 @book = Book.new({
@@ -560,9 +661,12 @@ cover_img = "willpower_instinct.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "economics_one_lesson.jpg"
 @book = Book.new({
@@ -576,9 +680,12 @@ cover_img = "economics_one_lesson.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "richest_man_babylon.jpg"
 @book = Book.new({
@@ -591,9 +698,12 @@ cover_img = "richest_man_babylon.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "gulag.jpg"
 @book = Book.new({
@@ -607,9 +717,12 @@ cover_img = "gulag.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "what_is_life.jpg"
 @book = Book.new({
@@ -622,9 +735,12 @@ cover_img = "what_is_life.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "free_will.jpg"
 @book = Book.new({
@@ -637,9 +753,12 @@ cover_img = "free_will.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "influence.jpg"
 @book = Book.new({
@@ -653,9 +772,12 @@ cover_img = "influence.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "mans_search_meaning.jpg"
 @book = Book.new({
@@ -668,9 +790,12 @@ cover_img = "mans_search_meaning.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "ordinary_men.jpg"
 @book = Book.new({
@@ -684,9 +809,12 @@ cover_img = "ordinary_men.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "fatal_conceit.jpg"
 @book = Book.new({
@@ -700,9 +828,12 @@ cover_img = "fatal_conceit.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "socialism.jpg"
 @book = Book.new({
@@ -716,9 +847,12 @@ cover_img = "socialism.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "body_language.jpg"
 @book = Book.new({
@@ -732,9 +866,12 @@ cover_img = "body_language.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "government_money.jpg"
 @book = Book.new({
@@ -748,9 +885,12 @@ cover_img = "government_money.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "computer_science_distilled.jpg"
 @book = Book.new({
@@ -764,9 +904,12 @@ cover_img = "computer_science_distilled.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "show_your_work.jpg"
 @book = Book.new({
@@ -780,9 +923,12 @@ cover_img = "show_your_work.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "moonwalking.jpg"
 @book = Book.new({
@@ -796,9 +942,12 @@ cover_img = "moonwalking.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "basic_econ.jpg"
 @book = Book.new({
@@ -812,9 +961,12 @@ cover_img = "basic_econ.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "rental_property.jpg"
 @book = Book.new({
@@ -828,9 +980,12 @@ cover_img = "rental_property.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "steal_the_show.jpg"
 @book = Book.new({
@@ -844,9 +999,12 @@ cover_img = "steal_the_show.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "crucial_conversations.jpg"
 @book = Book.new({
@@ -860,9 +1018,12 @@ cover_img = "crucial_conversations.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "inflation.jpg"
 @book = Book.new({
@@ -875,9 +1036,12 @@ cover_img = "inflation.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "behave.jpg"
 @book = Book.new({
@@ -891,9 +1055,12 @@ cover_img = "behave.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "conflict_visions.jpg"
 @book = Book.new({
@@ -907,9 +1074,12 @@ cover_img = "conflict_visions.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "great_depression.jpg"
 @book = Book.new({
@@ -922,9 +1092,12 @@ cover_img = "great_depression.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "history_of_man.jpg"
 @book = Book.new({
@@ -938,9 +1111,12 @@ cover_img = "history_of_man.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "ceo_tightrope.jpg"
 @book = Book.new({
@@ -954,9 +1130,12 @@ cover_img = "ceo_tightrope.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "bull_moves.jpg"
 @book = Book.new({
@@ -970,9 +1149,12 @@ cover_img = "bull_moves.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "4_hour.jpg"
 @book = Book.new({
@@ -986,9 +1168,12 @@ cover_img = "4_hour.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "48_laws.jpg"
 @book = Book.new({
@@ -1001,9 +1186,12 @@ cover_img = "48_laws.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "iron_john.jpg"
 @book = Book.new({
@@ -1017,9 +1205,12 @@ cover_img = "iron_john.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "hawk.jpg"
 @book = Book.new({
@@ -1033,9 +1224,12 @@ cover_img = "hawk.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "intelligent_investor.jpg"
 @book = Book.new({
@@ -1049,9 +1243,12 @@ cover_img = "intelligent_investor.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "pyrates.jpg"
 @book = Book.new({
@@ -1065,9 +1262,12 @@ cover_img = "pyrates.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "lean_startup.jpg"
 @book = Book.new({
@@ -1081,9 +1281,12 @@ cover_img = "lean_startup.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "politically_incorrect.jpg"
 @book = Book.new({
@@ -1096,9 +1299,12 @@ cover_img = "politically_incorrect.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "progressive_era.jpg"
 @book = Book.new({
@@ -1111,9 +1317,12 @@ cover_img = "progressive_era.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "bucaneer.jpg"
 @book = Book.new({
@@ -1126,9 +1335,12 @@ cover_img = "bucaneer.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "sell_is_human.jpg"
 @book = Book.new({
@@ -1142,9 +1354,12 @@ cover_img = "sell_is_human.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "born_for_this.jpg"
 @book = Book.new({
@@ -1157,9 +1372,12 @@ cover_img = "born_for_this.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "anatomy_of_state.jpg"
 @book = Book.new({
@@ -1172,9 +1390,12 @@ cover_img = "anatomy_of_state.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "100_startup.jpg"
 @book = Book.new({
@@ -1188,9 +1409,12 @@ cover_img = "100_startup.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "infinite_banking.jpg"
 @book = Book.new({
@@ -1204,9 +1428,12 @@ cover_img = "infinite_banking.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "the_law.jpg"
 @book = Book.new({
@@ -1219,9 +1446,12 @@ cover_img = "the_law.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "zebras_dont_get_ulcers.jpg"
 @book = Book.new({
@@ -1235,9 +1465,12 @@ cover_img = "zebras_dont_get_ulcers.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "three_languages_politics.jpg"
 @book = Book.new({
@@ -1251,9 +1484,12 @@ cover_img = "three_languages_politics.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "never_eat_alone.jpg"
 @book = Book.new({
@@ -1267,9 +1503,12 @@ cover_img = "never_eat_alone.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "darkness_visible.jpg"
 @book = Book.new({
@@ -1283,9 +1522,12 @@ cover_img = "darkness_visible.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "ignore_everybody.jpg"
 @book = Book.new({
@@ -1299,9 +1541,12 @@ cover_img = "ignore_everybody.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "economic_controversies.jpg"
 @book = Book.new({
@@ -1314,9 +1559,12 @@ cover_img = "economic_controversies.jpg"
   position: i,
 })
 i = i + 1
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
 @book.save
+@book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
 
 cover_img = "spacetime_physics.jpg"
 @book = Book.new({
@@ -1330,5 +1578,7 @@ cover_img = "spacetime_physics.jpg"
   position: i,
 })
 @book.covers.attach(io: File.open("app/assets/images/#{cover_img}"), filename: cover_img, content_type: "image/jpg")
-@book.covers.attach(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
-@book.save
+webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{cover_img}.webp"), filename: "#{cover_img}.webp", content_type: "image/webp")
+@book.covers.attach(webpBlob)
+
+
