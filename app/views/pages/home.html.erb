@@ -34,7 +34,7 @@
         <% if (book.covers.attached? || !book.image_address.nil?) %>
           <div class="cover lg:w-1/4 md:w-1/3 sm:w-1/2 text-center my-12 relative">
             <a href="<%= book.book_link %>" target="_blank" rel="nofollow" class="no-underline">
-              <% if (Rails.env.development?) %>
+              <% if (book.covers.attached?) %>
                 <picture>
                   <source srcset="<%= book.get_webp_attachment %>" type="image/webp" class="mb-3 shadow" alt="<%= book.image_alt %>">
                   <source srcset="<%= book.get_jpeg_attachment %>" type="image/jpg">

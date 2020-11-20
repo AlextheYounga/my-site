@@ -33,7 +33,7 @@
                 <a href="<%= edit_book_path(book) %>" class="absolute bg-white edit-book-link no-underline px-3 py-2 right-0 rounded-b shadow text-blue top-0 z-10 hover:underline">Edit</a>
               <%end %>
               <a href="<%= book.book_link %>" target="_blank" rel="nofollow" class="no-underline">
-                <% if (Rails.env.development?) %>
+                <% if (book.covers.attached?) %>
                   <picture>
                     <source srcset="<%= book.get_webp_attachment %>" type="image/webp" class="mb-3 shadow" alt="<%= book.image_alt %>">
                     <source srcset="<%= book.get_jpeg_attachment %>" type="image/jpg">
