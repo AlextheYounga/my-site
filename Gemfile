@@ -44,6 +44,7 @@ gem 'webp-ffi'
 
 
 # Use ActiveStorage variant
+gem "aws-sdk-s3", require: false
 gem 'mini_magick'
 
 # Use Capistrano for deployment
@@ -79,7 +80,6 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem "aws-sdk-s3", require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

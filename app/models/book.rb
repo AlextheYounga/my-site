@@ -43,6 +43,7 @@ class Book < ActiveRecord::Base
       self.covers.attach(params[:book][:cover])
       self.covers.attach(io: File.open(webpObj.first), filename: webpObj.last, content_type: "image/webp")
       if (self.covers.attached?)
+        puts "#{self.title} covers attached".green
         return true
       end
 
@@ -54,8 +55,9 @@ class Book < ActiveRecord::Base
     if (img.present?)
       self.covers.attach(io: File.open("app/assets/images/#{img}"), filename: img, content_type: "image/jpg")
       webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{img}.webp"), filename: "#{img}.webp", content_type: "image/webp")
-      self.covers.attach(webpBlob)
+      self.covers.attach(webpBlob)      
       if (self.covers.attached?)
+        puts "#{self.title} covers attached".green
         return true
       end
 
