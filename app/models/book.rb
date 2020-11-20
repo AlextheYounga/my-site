@@ -3,12 +3,8 @@ require "colorize"
 
 class Book < ActiveRecord::Base
   belongs_to :book_category
-  if (Rails.env.development?)
-    has_many_attached :covers
-  end
-  if (Rails.env.production?)
-    has_many_attached :covers, service: :s3
-  end
+  has_many_attached :covers
+
 
   def cover_urls
     return unless self.covers.attachments
