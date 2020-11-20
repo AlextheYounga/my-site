@@ -137,9 +137,92 @@ span {
     }
 }
 
-section.articles-home,
-section.reading-carousel {
+section.projects-home {
     background-image: image-url("topography-blue.svg");
+}
+
+.projects-home {
+    // Right Column
+    #project-details {
+        .text-wrapper {
+            max-width: 540px;
+            max-height: 480px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none; // IE and Edge 
+            scrollbar-width: none; // Firefox 
+
+        }
+        .details {
+            display: none;
+            max-width: 85%;
+
+            img {
+                border: 8px solid #FAE2A7;
+                border-radius: 65px;
+                max-width: 130px;
+            }
+
+        }
+        #more-details {
+            display: none;
+            bottom: 5%;
+            left: 42%;
+        }
+    }
+
+    // Left Column
+    .project-list {
+        height: 50vh;
+        overflow-y: scroll;
+        letter-spacing: normal;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+
+        li {
+            text-decoration: none;
+            list-style: none;
+
+            .project {
+                &:hover {
+                    cursor: pointer;
+                    background-color: #E6E6E6;
+                    box-shadow: 0 0.5rem 1rem rgba(black, .15);
+                }
+            }
+            .arrow-pointer {
+                display: none;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 35%;
+                    left: 0;
+                    border-top: 18px solid transparent;
+                    border-left: 15px solid #ffcb5a;
+                    border-bottom: 18px solid transparent;
+                }
+
+            }
+        }
+    }
+
+    #more-down {
+        bottom: 0;
+        left: 42%;
+    }
+
+    .mobile {
+        .project-carousel {}
+    }
+
 }
 
 .language-stats {

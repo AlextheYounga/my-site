@@ -1,0 +1,78 @@
+<!-- Projects Home Section -->
+<div class="container mx-auto">
+  <div class="desktop flex-wrap hidden lg:flex py-24">
+    <div class="w-full lg:w-1/2 bg-grey-light">
+      <div id="project-details" class="align-items-center flex h-full justify-end pb-12 pt-8 lg:py-12 shadow-lg">
+        <div class="text-wrapper mx-auto" id="default">
+          <h4 class="mb-6 lg:mb-12">Meet the Team</h4>
+          <h5 class="mb-4">What can we help you with today? Our Roswell team is ready.</h5>
+          <p class="mb-6">
+            Scheduling appointments. Answering emails. Sending out invitations to your annual BBQ. Whatever it is that is taking you away from your business, our Intelligent Assistants can help.
+          </p>
+        </div>
+        <div class="details text-wrapper mx-auto w-3/4" id="project-1">
+          <div class="flex">
+            <div class="w-1/4"><img src="<%= image_path('mountains.svg') %>"></div>
+            <div class="flex flex-column w-3/4 justify-center">
+              <strong class="block font-bold mb-2">Adam Anson</strong>
+              <p class="description">Fusce ultricies semper nisl, eget con. Quisque placerat dignissim felis, nec consectetur dolo. Sed ullamcorper nibh a faucibus hendrerit. Fusce ultricies semper nisl, eget con. Quisque placerat dignissim felis, nec consectetur dolo ipsuit.</p>
+            </div>
+          </div>
+        </div>
+        <div id="more-details" class="text-center absolute">
+          <i class="fa fa-chevron-down burgandy"></i>
+        </div>
+      </div>
+    </div>
+    <div class="border-b border-r border-t border-teal-lightest hidden lg:block lg:w-1/2 my-5 pb-6 shadow w-full bg-white">
+      <div class="py-6 relative">
+        <ul class="project-list m-0 p-0">
+          <li class="flex" data-details="project-1" onclick="showprojectDetails(this);">
+            <div class="arrow-pointer sticky"></div>
+            <div class="project w-50 mx-auto flex p-4">
+              <img class="mr-4" src="<%= image_path('mountains.svg') %>">
+              <div class="flex flex-column justify-center">
+                <strong class="block font-bold mb-2">Adam Anson</strong>
+                <p class="m-0 font-weight-light">Intelligent Assistant</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div id="more-down" class="text-center absolute">
+          <p class="m-0 burgandy">More</p>
+          <i class="fa fa-chevron-down burgandy"></i>
+        </div>
+      </div>
+    </section>
+    <!-- End Desktop -->
+
+    <!-- Projects Home Mobile -->
+    <section class="mobile flex-wrap flex lg:hidden my-6">
+      <div class="w-full bg-grey-light">
+        <div class="container">
+          <div class="py-3 px-4 h-full flex justify-end align-items-center">
+            <div class="text-wrapper">
+              <h4 class="py-4">Meet the Team</h4>
+              <h5 class="mb-4">What can we help you with today? Our Roswell team is ready.</h5>
+              <p class="mb-3">
+                Scheduling appointments. Answering emails. Sending out invitations to your annual BBQ. Whatever it is that is taking you away from your business, our Intelligent Assistants can help.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-carousel mb-8">
+        <div class="project-profile relative">
+          <img class="mx-auto" src="<%= image_path('mountains.svg') %>">
+          <div class="container">
+            <div class="flex flex-column justify-center text-center">
+              <strong class="block mt-4 mb-2">Adam Anson</strong>
+              <p class="subhead">Intelligent Assistant</p>
+              <p class="description py-4">Fusce ultricies semper nisl, eget con. Quisque placerat dignissim felis, nec consectetur dolo. Sed ullamcorper nibh a faucibus hendrerit. Fusce ultricies semper nisl, eget con. Quisque placerat dignissim felis, nec consectetur dolo ipsuit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Meet the Team Section -->

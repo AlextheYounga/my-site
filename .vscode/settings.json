@@ -7,6 +7,10 @@
         {
             "name": "feature/rails-upgrade",
             "base": "develop"
+        },
+        {
+            "name": "feature/projects-update",
+            "base": "develop"
         }
     ]
 }

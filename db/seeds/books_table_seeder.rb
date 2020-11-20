@@ -835,9 +835,9 @@ i = i + 1
 cover_img = "moonwalking.jpg"
 @book = Book.new({
   title: "Moonwalking With Einstein",
-  subtitle: "The Art and Science of Remembering Everything",
+  subtitle: "The Art and Science of Reprojecting Everything",
   book_category_id: BookCategory.find(8).id,
-  book_link: "https://www.amazon.com/Moonwalking-Einstein-Science-Remembering-Everything/dp/0143120530/ref=sr_1_1?s=books&ie=UTF8&qid=1551049996&sr=1-1&keywords=moonwalking+with+einstein+by+joshua+foer",
+  book_link: "https://www.amazon.com/Moonwalking-Einstein-Science-Reprojecting-Everything/dp/0143120530/ref=sr_1_1?s=books&ie=UTF8&qid=1551049996&sr=1-1&keywords=moonwalking+with+einstein+by+joshua+foer",
   image_address: cover_img,
   image_alt: "Alex Younger ReadingList Moonwalking With Einstein by Joshua Foer",
   author: "Joshua Foer",
