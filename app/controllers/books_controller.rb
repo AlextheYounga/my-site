@@ -34,7 +34,7 @@ class BooksController < ApplicationController
     @book.image_address = params[:book][:cover].original_filename.to_s
     @book.image_alt = "Alex Younger Readling List #{params[:book][:title]} by #{params[:book][:author]}"
     if (@book.save)
-      @book.attach_cover(params)
+      @book.attach_covers(params)
       flash[:notice] = "Book was successfully created"
       redirect_to books_path
     else
