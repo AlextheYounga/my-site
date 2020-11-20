@@ -33,22 +33,17 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book.image_address = params[:book][:cover].original_filename.to_s
     @book.image_alt = "Alex Younger Readling List #{params[:book][:title]} by #{params[:book][:author]}"
-    resize_cover(params)
-    webpObj = WebpConverter.generate_attachment_webp(params)
-
-    @book.covers.attach(params[:book][:cover])
-    @book.covers.attach(io: File.open(webpObj.first), filename: webpObj.last, content_type: "image/webp")
-
-    if @book.save
+    if (@book.save)
+      @book.attach_cover(params)
       flash[:notice] = "Book was successfully created"
       redirect_to books_path
     else
       render "new"
-    end
+    end    
   end
 
   def update
-    if @book.update(book_params)
+    if (@book.update(book_params))
       flash[:notice] = "Book was successfully updated"
       redirect_to books_path
     else
@@ -63,11 +58,6 @@ class BooksController < ApplicationController
   end
 
   private
-
-  def resize_cover(params)
-    mini_image = MiniMagick::Image.new(params[:book][:cover].tempfile.path)
-    mini_image.resize "200x#{mini_image.height}"
-  end
 
   def restrict
     if not master_logged_in?
