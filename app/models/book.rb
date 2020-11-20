@@ -5,7 +5,6 @@ class Book < ActiveRecord::Base
   belongs_to :book_category
   has_many_attached :covers
 
-
   def cover_urls
     return unless self.covers.attachments
     urls = self.covers.attachments.map do |cover|
@@ -18,8 +17,12 @@ class Book < ActiveRecord::Base
     self.covers.each do |cover|
       type = cover.blob.content_type
       if (type == "image/webp")
-        return cover
-        # return Rails.application.routes.url_helpers.rails_blob_path(cover, only_path: true)
+        if (Rails.env.production?)
+          return cover.service_url
+        end
+        if (Rails.env.development?)
+          return Rails.application.routes.url_helpers.rails_blob_path(cover, only_path: true)
+        end
       end
     end
     return false
@@ -29,8 +32,12 @@ class Book < ActiveRecord::Base
     self.covers.each do |cover|
       type = cover.blob.content_type
       if (type == "image/jpeg")
-        return cover
-        # return Rails.application.routes.url_helpers.rails_blob_path(cover, only_path: true)
+        if (Rails.env.production?)
+          return cover.service_url
+        end
+        if (Rails.env.development?)
+          return Rails.application.routes.url_helpers.rails_blob_path(cover, only_path: true)
+        end
       end
     end
     return false
@@ -55,7 +62,7 @@ class Book < ActiveRecord::Base
     if (img.present?)
       self.covers.attach(io: File.open("app/assets/images/#{img}"), filename: img, content_type: "image/jpg")
       webpBlob = ActiveStorage::Blob.create_after_upload!(io: File.open("app/assets/images/#{img}.webp"), filename: "#{img}.webp", content_type: "image/webp")
-      self.covers.attach(webpBlob)      
+      self.covers.attach(webpBlob)
       if (self.covers.attached?)
         puts "#{self.title} covers attached".green
         return true
