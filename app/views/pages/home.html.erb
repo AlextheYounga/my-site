@@ -4,7 +4,12 @@
     <p class="fancy-font py-2 sm:text-blue-lighter text-center text-lg text-yellow-lightest">Web Developer, Investor, Marketing, Entrepreneur</p>
   </div>
 </section>
-<section class="container mx-auto about-home bg-white py-16 w-full">
+<!-- <div class="terrain-wrapper">
+  <?xml version="1.0"?>
+  <svg id="terrain" xmlns="http://www.w3.org/2000/svg" version="1.2"></svg>
+</div> -->
+
+<section class="container mx-auto about-home bg-transparent py-16 w-full">
   <div class="language-stats mb-8">
     <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
   </div>
@@ -13,7 +18,7 @@
       <picture>
         <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp">
         <source srcset="<%= image_path("headshot3_700.png") %>" type="image/png">
-        <img src="<%= image_path("headshot3_700.png") %>" class="flex sm:mt-10 mx-auto relative text-center" width="315" alt="alex younger developer marketing about me"/>
+        <img src="<%= image_path("headshot3_700.png") %>" class="flex sm:mt-10 mx-auto relative text-center" width="315" alt="alex younger developer marketing about me" />
       </picture>
     </div>
     <div class="aboutme-description leading-normal normal-font p-8 w-full sm:w-2/3">
@@ -25,10 +30,10 @@
     </div>
   </div>
 </section>
-<section class="projects-home">
+<section class="projects-home bg-transparent">
   <%= render partial: "partials/projects-home" %>
 </section>
-<section class="watchlist-home py-16 container mx-auto">
+<section class="watchlist-home bg-transparent py-16 container mx-auto">
   <div class="home-content js--fadeInLeft">
     <h4 class="fancy-font text-grey-darkest text-3xl text-center py-6">Stock Watchlist</h4>
     <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
@@ -38,53 +43,53 @@
 
 <!-- Scroll Reveal -->
 <% content_for :javascripts do %>
-  <script>
-    $(document).ready(function () {
-      window.sr = ScrollReveal();
-      if ($(window).width() < 768) {
-        $('.home-content').removeClass('js--fadeInRight');
-        $('.home-content').removeClass('js--fadeInLeft');
-      } else {
-        sr.reveal('.js--fadeInLeft', {
-          origin: 'left',
-          distance: '300px',
-          easing: 'ease-in-out',
-          duration: 800
-        });
-        sr.reveal('.js--fadeInRight', {
-          origin: 'right',
-          distance: '300px',
-          easing: 'ease-in-out',
-          duration: 800
-        });
-      }
-
-      var slider = tns({
-        container: '#reading-carousel',
-        items: 1,
-        controls: false,
-        autoplay: true,
-        autoplayButtonOutput: false,
-        nav: false,
-        mouseDrag: true,
-        responsive: {
-          640: {
-            edgePadding: 20,
-            gutter: 20,
-            items: 2
-          },
-          700: {
-            gutter: 30
-          },
-          900: {
-            items: 4
-          }
-        }
+<script>
+  $(document).ready(function () {
+    window.sr = ScrollReveal();
+    if ($(window).width() < 768) {
+      $('.home-content').removeClass('js--fadeInRight');
+      $('.home-content').removeClass('js--fadeInLeft');
+    } else {
+      sr.reveal('.js--fadeInLeft', {
+        origin: 'left',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800
       });
-    });
+      sr.reveal('.js--fadeInRight', {
+        origin: 'right',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800
+      });
+    }
 
-    $('.desktop .nav-link')
-      .removeClass('burgandy')
-      .addClass('text-blue-lightest');
-  </script>
+    // var slider = tns({
+    //   container: '#reading-carousel',
+    //   items: 1,
+    //   controls: false,
+    //   autoplay: true,
+    //   autoplayButtonOutput: false,
+    //   nav: false,
+    //   mouseDrag: true,
+    //   responsive: {
+    //     640: {
+    //       edgePadding: 20,
+    //       gutter: 20,
+    //       items: 2
+    //     },
+    //     700: {
+    //       gutter: 30
+    //     },
+    //     900: {
+    //       items: 4
+    //     }
+    //   }
+    // });
+  });
+
+  $('.desktop .nav-link')
+    .removeClass('burgandy')
+    .addClass('text-blue-lightest');
+</script>
 <% end %>

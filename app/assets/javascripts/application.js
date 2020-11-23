@@ -14,5 +14,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require modernizr-custom.js
+//= require svg_plotter.js
+//= require terrain.js
 //= require custom.js
 //= require_tree .
