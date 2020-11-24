@@ -19,9 +19,9 @@
     <link href="https://fonts.googleapis.com/css?family=Alegreya+SC&display=swap" rel="stylesheet">
 
     <% if master_logged_in? %>
-      <%= render 'layouts/admin_nav' %>
+      <%= render 'partials/admin_nav' %>
     <% end %>
-    <%= render 'layouts/navigation' %>
+    <%= render 'partials/navigation' %>
   </head>
 
   <body>
@@ -32,6 +32,6 @@
     <% end %>
     <%= yield %>
   </body>
-  <%= render 'layouts/footer' %>
+  <%= render 'partials/footer' %>
   <%= yield :javascripts %>
 </html>
