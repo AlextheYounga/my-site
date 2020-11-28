@@ -1021,7 +1021,6 @@ var SVG = function SVG(opt) {
 		return ctx.getImageData(0, 0, w, h);
 	}; /////////////////////////////////////////////////
 
-
 	return {
 		simplex: function simplex(opt) {
 			return new Simplex(opt || {});

@@ -1,9 +1,7 @@
-if ($('#terrain')[0]) {
-    // if ($(window).width() < 567) {
-    //     viewbox = '55 40 90 90'; //desktop
-    // } else {
-    //     viewbox = '80 60 75 80'; //mobile
-    // };
+
+var terrainElement = document.getElementById("terrain");
+if (typeof (terrainElement) != 'undefined' && terrainElement != null) {
+
     viewbox = '57 40 84 84'; //desktop
 
     var svg = SVG({
@@ -18,7 +16,7 @@ if ($('#terrain')[0]) {
 
 
     var size = 512; // 512 bytes is a common disk sector size, and exactly a half of kibibyte.
-    var water = 1; // 0 for no water
+    var water = 2; // 0 for no water
 
     var seed = Math.random() * 100000 | 0;
     var hmap = [];
@@ -104,7 +102,11 @@ if ($('#terrain')[0]) {
                 line[z] = ye;
             }
         }
-
         return w < size;
     }
 }
+    // if ($(window).width() < 567) {
+    //     viewbox = '55 40 90 90'; //desktop
+    // } else {
+    //     viewbox = '80 60 75 80'; //mobile
+    // };
