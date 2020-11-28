@@ -88,6 +88,8 @@ $(document).ready(function () {
       $('.flash-msg').fadeOut().empty();
     }
   }
+
+  console.log
 });
 
 colors = {

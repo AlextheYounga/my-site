@@ -1,2 +1,56 @@
-<?xml version="1.0"?>
-<svg id="terrain" xmlns="http://www.w3.org/2000/svg" version="1.2" onload="terrain()"></svg>
+<%= render 'layouts/terrain' %>
+<div class="home-content w-1/2 mx-auto" style="display: none;">
+  <section class="container mx-auto about-home bg-white py-16">
+    <div class="language-stats mb-8">
+      <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
+    </div>
+    <div class="flex flex-wrap justify-center text-lg mx-auto">
+      <div class="headshot w-full sm:w-1/3">
+        <picture>
+          <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp">
+          <source srcset="<%= image_path("headshot3_700.png") %>" type="image/png">
+          <img src="<%= image_path("headshot3_700.png") %>" class="flex sm:mt-10 mx-auto relative text-center" width="315" alt="alex younger developer marketing about me"/>
+        </picture>
+      </div>
+      <div class="aboutme-description leading-normal normal-font p-8 w-full sm:w-2/3">
+        <p class="py-2">I build and maintain websites for an extensive list of small and large companies.</p>
+        <p class="py-2">I am currently building a side business called Hazlitt Tech LLC, dealing in data brokering for financial markets and accounting software.</p>
+        <p class="py-2">I consult businesses on best practices for Google Ad Campaigns, Analytics, and content marketing techniques.</p>
+        <p class="py-2">Check out my latest
+          <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<% content_for :javascripts do %>
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(reveal, 1500);
+    }, false);
+
+    function reveal() {
+      content = $('.home-content');
+      content.fadeIn("slow", function () {
+        window.sr = ScrollReveal();
+        if ($(window).width() < 768) {
+          $('.home-content').removeClass('js--fadeInRight');
+          $('.home-content').removeClass('js--fadeInLeft');
+        } else {
+          sr.reveal('.js--fadeInLeft', {
+            origin: 'left',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800
+          });
+          sr.reveal('.js--fadeInRight', {
+            origin: 'right',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800
+          });
+        }
+      });
+    }
+  </script>
+<% end %>
