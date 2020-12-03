@@ -1,3 +1,4 @@
+<p id="generator-notice" class="text-lg absolute pin-l m-3 text-black">Generating random fractal terrain...</p>
 <section class="hero w-full sm:w-1/2 mx-auto mb-4 js--fadeInLeft">
   <picture>
     <source srcset="<%= image_path("hammock-circle.png.webp") %>" type="image/webp">
@@ -15,16 +16,32 @@
     <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
   </div>
 </section>
-<section class="w-full sm:w-1/2 mx-auto bg-white my-8 py-8 js--fadeInLeft">
+<section class="home-description w-full sm:w-1/2 mx-auto bg-white my-8 py-8 js--fadeInLeft">
   <div class="flex flex-wrap w-full px-2">
-    <div class="w-full sm:w-1/2"></div>
+    <div class="w-full sm:w-1/2">
+      <picture>
+        <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp">
+        <source srcset="<%= image_path("headshot3_700.png") %>" type="image/png">
+        <img src="<%= image_path("headshot3_700.png") %>" class="flex mx-auto relative text-center force-vertical-align" width="315" alt="alex younger developer marketing about me"/>
+      </picture>
+    </div>
+    <div class="w-full sm:w-1/2">
+    <div class="description leading-normal normal-font p-8 w-full">
+        <p class="py-2">I build and maintain websites for an extensive list of small and large companies including <a class="text-blue hover:text-blue-darkest" href="https://www.bluehawaiian.com/en">Blue Hawaiian Helicopters</a> and 
+        <a class="text-blue hover:text-blue-darkest" href="https://www.intelligentoffice.com/">Intelligent Office.</a></p>
+        <p class="py-2">I am currently starting a side business called Hazlitt Tech LLC, specializing in financial market data and accounting software.</p>
+        <p class="py-2">I consult businesses on best practices for Google Ad Campaigns, Analytics, and content marketing techniques.</p>
+        <p class="py-2">Check out my latest
+          <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
+      </div>
+    </div>
   </section>
 
   <% content_for :javascripts do %>
     <script>
-      // window.addEventListener("load", function () {
-      //   setTimeout(reveal, 1500);
-      // }, false);
+      window.addEventListener("load", function () {
+        setTimeout(reveal, 2000);
+      }, false);
 
       function reveal() {
         $('.js--fadeInLeft').show()
@@ -39,6 +56,7 @@
             duration: 800
           });
         }
+        $('#generator-notice').fadeOut('slow');
       }
     </script>
   <% end %>

@@ -50,7 +50,6 @@ var SVG = function SVG(opt) {
 		if (typeof draw === "function") render();
 	}; ///////////////////////////////////////////////////////////////////////
 
-
 	var initSVG = function initSVG(opt) {
 		if (opt.centerOrigin !== undefined && opt.centerOrigin === true) offset = 95; //Not sure this does anything.				
 
@@ -227,7 +226,7 @@ var SVG = function SVG(opt) {
 			if (vis === true) {
 				p.draw();
 				this.list.push(p);
-			}
+			}			
 		};
 
 		_proto.create = function create() {
@@ -690,7 +689,7 @@ var SVG = function SVG(opt) {
 						p.addHatching(shape.a, shape.s);
 					}
 
-					this.polygons.draw(p);
+					this.polygons.draw(p);					
 					break;
 			}
 		};
@@ -714,7 +713,7 @@ var SVG = function SVG(opt) {
 			var m5 = m[5] * this.zoom - this.oy;
 			return [m0 * x + m2 * y + m4, m1 * x + m3 * y + m5];
 		};
-
+		
 		return ContextFree;
 	}();
 
@@ -1001,8 +1000,7 @@ var SVG = function SVG(opt) {
 
 		return Simplex;
 	}(); //////////////////////////////////////////////////////
-
-
+	
 	var imageData = function imageData(img, width, height) {
 		if (width === void 0) {
 			width = 0;
@@ -1019,8 +1017,7 @@ var SVG = function SVG(opt) {
 		var ctx = canvas.getContext("2d");
 		ctx.drawImage(img, 0, 0, w, h);
 		return ctx.getImageData(0, 0, w, h);
-	}; /////////////////////////////////////////////////
-
+	}; /////////////////////////////////////////////////	
 	return {
 		simplex: function simplex(opt) {
 			return new Simplex(opt || {});
@@ -1071,7 +1068,7 @@ var SVG = function SVG(opt) {
 		matrix: matrix,
 		imageData: imageData,
 		canvas: canvas,
-		contextFree: function contextFree() {
+		contextFree: function contextFree() {			
 			return new ContextFree();
 		}
 	};
