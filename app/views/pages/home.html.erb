@@ -3,12 +3,12 @@
   <picture>
     <source srcset="<%= image_path("hammock-circle.png.webp") %>" type="image/webp">
     <source srcset="<%= image_path("hammock-circle.png") %>" type="image/png">
-    <img src="<%= image_path("hammock-circle.png") %>" class="flex sm:mt-10 mx-auto relative text-center" width="315" alt="alex younger developer marketing about me"/>
+    <img src="<%= image_path("hammock-circle.png") %>" class="flex sm:mt-10 mx-auto relative text-center" width="315" alt="alex younger developer marketing about me" />
   </picture>
 </section>
 <section class="title w-full sm:w-1/2 mb-8 mx-auto bg-white shadow rounded js--fadeInLeft">
   <h1 class="fancy-font text-5xl text-black text-center">Alex Younger</h1>
-  <p class="fancy-font py-2 text-black text-center text-lg">Web Developer, Investor, Marketing, Entrepreneur</p>
+  <p class="fancy-font py-2 text-black text-center text-lg">Web Developer, Investor, Data Scientist, Entrepreneur</p>
 </section>
 
 <section class="w-full sm:w-1/2 mx-auto bg-white my-8 py-8 shadow rounded js--fadeInLeft">
@@ -16,47 +16,45 @@
     <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
   </div>
 </section>
-<section class="home-description w-full sm:w-1/2 mx-auto bg-white my-8 py-8 js--fadeInLeft">
-  <div class="flex flex-wrap w-full px-2">
-    <div class="w-full sm:w-1/2">
+<section class="home-description w-full sm:w-1/2 relative mx-auto bg-white mt-24 mb-8 p-8 js--fadeInLeft">
+    <div class="absolute pin-t w-1/4">
       <picture>
-        <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp">
+        <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp" class="flex force-vertical-align mx-auto relative text-center">
         <source srcset="<%= image_path("headshot3_700.png") %>" type="image/png">
-        <img src="<%= image_path("headshot3_700.png") %>" class="flex mx-auto relative text-center force-vertical-align" width="315" alt="alex younger developer marketing about me"/>
+        <img src="<%= image_path("headshot3_700.png") %>" class="flex force-vertical-align mx-auto relative text-center" width="315" alt="alex younger developer marketing about me" />
       </picture>
     </div>
-    <div class="w-full sm:w-1/2">
-    <div class="description leading-normal normal-font p-8 w-full">
-        <p class="py-2">I build and maintain websites for an extensive list of small and large companies including <a class="text-blue hover:text-blue-darkest" href="https://www.bluehawaiian.com/en">Blue Hawaiian Helicopters</a> and 
+    <div class="description leading-normal ml-auto normal-font">
+      <p class="home-quote italic ml-auto pb-2 text-right text-sm w-2/3">"The man who grasps principles can successfully handle his own methods. The man who tries methods, ignoring principles is sure to have trouble" -Ralph Waldo Emerson</p>
+      <p class="py-2">I build and maintain websites for an extensive list of small and large companies including <a class="text-blue hover:text-blue-darkest" href="https://www.bluehawaiian.com/en">Blue Hawaiian Helicopters</a> and
         <a class="text-blue hover:text-blue-darkest" href="https://www.intelligentoffice.com/">Intelligent Office.</a></p>
-        <p class="py-2">I am currently starting a side business called Hazlitt Tech LLC, specializing in financial market data and accounting software.</p>
-        <p class="py-2">I consult businesses on best practices for Google Ad Campaigns, Analytics, and content marketing techniques.</p>
-        <p class="py-2">Check out my latest
-          <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
-      </div>
+      <p class="py-2">I am currently starting a side business called Hazlitt Tech LLC, specializing in financial market data and accounting software.</p>
+      <p class="py-2">I consult businesses on best practices for Google Ad Campaigns, Analytics, and content marketing techniques.</p>
+      <p class="py-2">Check out my latest
+        <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
     </div>
-  </section>
+</section>
 
-  <% content_for :javascripts do %>
-    <script>
-      window.addEventListener("load", function () {
-        setTimeout(reveal, 2000);
-      }, false);
+<% content_for :javascripts do %>
+<script>
+  window.addEventListener("load", function () {
+    setTimeout(reveal, 2000);
+  }, false);
 
-      function reveal() {
-        $('.js--fadeInLeft').show()
-        window.sr = ScrollReveal();
-        if ($(window).width() < 768) {
-          $('.home-content').removeClass('js--fadeInLeft');
-        } else {
-          sr.reveal('.js--fadeInLeft', {
-            origin: 'left',
-            distance: '300px',
-            easing: 'ease-in-out',
-            duration: 800
-          });
-        }
-        $('#generator-notice').fadeOut('slow');
-      }
-    </script>
-  <% end %>
+  function reveal() {
+    $('.js--fadeInLeft').show()
+    window.sr = ScrollReveal();
+    if ($(window).width() < 768) {
+      $('.home-content').removeClass('js--fadeInLeft');
+    } else {
+      sr.reveal('.js--fadeInLeft', {
+        origin: 'left',
+        distance: '300px',
+        easing: 'ease-in-out',
+        duration: 800
+      });
+    }
+    $('#generator-notice').fadeOut('slow');
+  }
+</script>
+<% end %>

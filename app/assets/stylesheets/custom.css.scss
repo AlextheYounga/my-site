@@ -122,7 +122,19 @@ span {
     display: none;
 }
 .home-description {
-    background-image: image-url("topography-blue.svg");
+    div.absolute {
+
+        picture, img {
+            border-top: 10px white solid;
+            border-radius: 100px;
+            border-right: 10px white solid;
+            border-left: 10px white solid;
+            max-width: 100%;
+            padding: 0;
+            margin: 0;         
+        }
+    }
+    
 }
 .projects-home {
     // Right Column
