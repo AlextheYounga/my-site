@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :articles, except: [:signup]
   resources :categories, except: [:destroy]
   resources :books, except: [:signup]
+  resources :projects, except: [:signup]
   resources :book_categories
   resources :posts, only: [:index]
   resources :stocks

@@ -1,0 +1,44 @@
+<h3 class="text-3xl text-grey-darkest mb-4 fancy-font mx-auto">Projects</h3>
+<div class="projects-carousel">
+  <% if @projects.any?
+      then %>
+    <% @projects.each do |project| %>
+      <div class="carousel-cell">
+        <a href="<%= project.project_link%>" target="blank" rel="nofollow" class="no-underline normal-font w-full h-full px-4">
+          <div class="bg-grey-lighter h-full relative">
+            <h2 class="font-normal text-center text-black py-2"><%= project.title%></h2>
+            <div class="image py-4 mx-auto">
+              <picture>
+                <source srcset="<%= image_path("#{project.image_address}.webp") %>" type="image/webp" class="w-full" alt="<%= project.image_alt %>">
+                <source srcset="<%= image_path("#{project.image_address}") %>" type="image/jpg">
+                <img src="<%= image_path("#{project.image_address}") %>" class="w-full" alt="<%= project.image_alt %>"/>
+              </picture>
+            </div>
+            <div class="excerpt p-2">
+              <p class="leading-normal text-center text-sm normal-font pb-4 text-black"><%= project.description %></p>
+              <h4 class="normal-font text-center text-black">Built with
+                <span class="<%= project.assign_color %>"><%= project.framework%></span></h4>
+            </div>
+          </div>
+        </a>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<a href="<%= projects_path %>" class="bg-white block
+  border
+  border-blue-darker
+  hover:bg-blue-darkest
+  hover:text-blue-lightest
+  mx-auto text-center
+  no-underline
+  normal-font
+  py-3
+  rounded
+  shadow-lg
+  text-blue-darkest
+  w-48
+  mt-12">
+
+  See More
+</a>

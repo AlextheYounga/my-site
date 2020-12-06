@@ -1,0 +1,16 @@
+<section class="edit-project pb-16">
+    <h1 class="py-16 fancy-font text-center burgandy">Edit Existing Project</h1>
+    <%= render 'form' %>
+</section>
+<% content_for :javascripts do %>
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<script>CKEDITOR.replace('editor1');</script>
+<script type='text/javascript' charset='UTF-8'>
+  $(document).ready(function () {
+    $('form[data-remote]').bind('ajax:before', function () {
+      for (instance in CKEDITOR.instances) {
+        CKEDITOR.instances[instance].updateElement();
+      }
+    });
+  });
+</script>

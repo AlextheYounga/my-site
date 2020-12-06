@@ -1,0 +1,36 @@
+$breakpoint-sm: 768px;
+
+.rwd-table {
+    border-radius: 0.4em;
+    min-width: 300px; // adjust to your needs
+    overflow: hidden;
+    td,
+    th {
+        margin: 0.5em 1em;
+        @media (min-width: $breakpoint-sm) {
+            padding: 1em !important;
+        }
+    }
+    td:before,
+    th {
+        color: #dd5;
+    }
+
+    
+
+    td {
+        &:before {
+            content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+            font-weight: bold;
+
+            // optional stuff to make it look nicer
+            width: 6.5em; // magic number :( adjust according to your own content
+            display: inline-block;
+            // end options
+
+            @media (min-width: $breakpoint-sm) {
+                display: none;
+            }
+        }
+    }
+}

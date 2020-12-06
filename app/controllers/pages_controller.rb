@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @books = Book.first(15)
+    @projects = Project.all
     @stocks = Stock.all
     @languageStats = GithubLanguage.calculateWidths
 
