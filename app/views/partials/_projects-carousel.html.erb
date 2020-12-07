@@ -8,14 +8,24 @@
           <div class="bg-grey-lighter h-full relative">
             <h2 class="font-normal text-center text-black py-2"><%= project.title%></h2>
             <div class="image py-4 mx-auto">
-              <picture>
-                <source srcset="<%= image_path("#{project.image_address}.webp") %>" type="image/webp" class="w-full" alt="<%= project.image_alt %>">
-                <source srcset="<%= image_path("#{project.image_address}") %>" type="image/jpg">
-                <img src="<%= image_path("#{project.image_address}") %>" class="w-full" alt="<%= project.image_alt %>"/>
-              </picture>
+              <% if (project.screens.attached?) %>
+                <picture>
+                  <source srcset="<%= project.get_webp_attachment %>" type="image/webp" class="w-full" alt="<%= project.image_alt %>">
+                  <source srcset="<%= project.get_jpeg_attachment %>" type="image/jpg">
+                  <img src="<%= project.get_jpeg_attachment %>" class="w-full" alt="<%= project.image_alt %>"/>
+                </picture>
+              <% else %>
+                <picture>
+                  <source srcset="<%= image_path("#{project.image_address}.webp") %>" type="image/webp" class="w-full" alt="<%= project.image_alt %>">
+                  <source srcset="<%= image_path("#{project.image_address}") %>" type="image/jpg">
+                  <img src="<%= image_path("#{project.image_address}") %>" class="w-full" alt="<%= project.image_alt %>"/>
+                </picture>
+              <% end %>
             </div>
             <div class="excerpt p-2">
-              <p class="leading-normal text-center text-sm normal-font pb-4 text-black"><%= project.description %></p>
+              <p class="leading-normal text-center text-sm normal-font pb-4 text-black">
+                <%= project.excerpt.present? ? project.excerpt : project.description %>
+              </p>
               <h4 class="normal-font text-center text-black">Built with
                 <span class="<%= project.assign_color %>"><%= project.framework%></span></h4>
             </div>

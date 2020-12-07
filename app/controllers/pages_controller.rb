@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @projects = Project.all
+    @projects = Project.order(:position)
     @stocks = Stock.all
     @languageStats = GithubLanguage.calculateWidths
 

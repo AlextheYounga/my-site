@@ -1,5 +1,5 @@
-<section class="projects-skills bg-grey-lighter py-16 w-full px-4">
-  <div class="language-stats mb-16">
+<section class="projects-skills bg-grey-lighter pt-16 pb-0 sm:py-16 w-full px-4">
+  <div class="language-stats mb-8 sm:mb-16">
     <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
   </div>
 </section>
@@ -35,7 +35,9 @@
                     </picture>
                   <% end %>
                 </div>
-                <p class="leading-normal text-center text-sm normal-font pb-4 text-black"><%= project.description %></p>
+                <p class="leading-normal text-center text-sm normal-font pb-4 text-black">
+                  <%= project.excerpt.present? ? project.excerpt : project.description %>
+                </p>
                 <h3 class="normal-font text-center pb-8 text-black">Built with
                   <span class="<%= project.assign_color %>"><%= project.framework%></span></h3>
               </div>
