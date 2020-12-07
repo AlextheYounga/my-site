@@ -46,7 +46,7 @@ class Book < ActiveRecord::Base
   def attach_covers(params)
     if (params.present?)
       resize_cover(params)
-      webpObj = WebpConverter.generate_attachment_webp(params)
+      webpObj = WebpConverter.generate_attachment_webp(params[:book][:cover])
       self.covers.attach(params[:book][:cover])
       self.covers.attach(io: File.open(webpObj.first), filename: webpObj.last, content_type: "image/webp")
       if (self.covers.attached?)
@@ -72,10 +72,21 @@ class Book < ActiveRecord::Base
     end
   end
 
+  def reorder_positions
+    i = self.position.clone
+    Book.where("position >= ?", i).order(:position).each do |book|
+      next if (self.id == book.id)
+      i += 1
+      book.update(position: i)
+    end
+  end
+
   private
 
   def resize_cover(params)
     mini_image = MiniMagick::Image.new(params[:book][:cover].tempfile.path)
     mini_image.resize "200x#{mini_image.height}"
   end
+
+  
 end

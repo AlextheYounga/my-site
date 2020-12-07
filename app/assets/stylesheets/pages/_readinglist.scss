@@ -1,0 +1,48 @@
+//Menu
+.category-menu {
+    ul {
+        li {
+            list-style: none;
+
+            button {
+                text-decoration: none;
+
+                &:focus {
+                    outline: 1px solid #fff;
+                    outline-offset: 5px;
+                }
+            }
+        }
+    }
+}
+
+//Books
+.covers {
+    .edit-book-link {
+        top: 0;
+        right: 55px;
+    }
+
+    img {
+        border: 3px inset lightgrey;
+        border-radius: 4px;
+    }
+
+    @media screen and (max-width: 576px) {
+        .category-menu {
+            width: 40%;
+        }
+
+        .cover {
+            width: 50%;
+        }
+
+        img {
+            width: 8rem;
+        }
+
+        .book-description {
+            width: 83.333%;
+        }
+    }
+}
