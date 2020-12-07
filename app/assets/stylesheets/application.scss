@@ -1,79 +1,88 @@
 /*/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *= require_self
- *= require_tree .
- *= require font-awesome
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*= require_self
+*= require_tree .
+*= require font-awesome
+*/
 
 
-.z-negative {
-z-index: -1;
+$breakpoint-sm: 576px;
+$burgandy: #800020;
+$burgandy-hover: #3d0303;
+
+.burgandy {
+color: #800020;
 }
 
-// Mobile nav styles
-.mobile-nav-button {
-    width:35px;
-    cursor:pointer;
-
-    .mobile-nav-button__line {
-        height:4px;
-        transition:1s ease;
-        &:nth-of-type(2) {
-            margin:0.5rem 0;
-        }
-    }
-    .mobile-nav-button__line--1 {
-        transform: rotate(45deg);
-        top: 13px;
-        position: absolute;
-    }
-    .mobile-nav-button__line--2 {
-        display: none;
-    }
-    .mobile-nav-button__line--3 {
-        transform: rotate(135deg);
-        top: 13px;
-        position: absolute;        
-    }
+.burgandy-hover {
+color: #3d0303;
 }
 
-.mobile-menu {
-    // right: -100%;
-    transition: 0.6s ease;
-    opacity:0;
-    ul {
-        top: 50%;
-        transform: translateY(-50%);
-        li {
-            list-style: none;
-            a {
-                text-decoration:none;
-                overflow:hidden;
-                &:after {
-                    content:'';
-                    background: black;
-                    width:100%;
-                    height:100%;
-                    position:absolute;
-                    right:-100%;
-                    top:0;
-                    z-index:-1;
-                    transition:0.4s ease;
-                }
-            }
-        }
+.created-at,
+.fancy-font,
+.title {
+    font-family: "Alegreya SC", serif !important;
+}
+
+.normal-font,
+a,
+p,
+small,
+span {
+    font-family: Apple SD Gothic Neo;
+    font-weight: 400;
+}
+
+.list-style-none {
+    list-style-type: none !important;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.force-vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.flash-msg {
+    top: 15%;
+    &.alert {
+        background-color: #f2d024;
+        color: black;
+    }
+    &.danger {
+        background-color: #cc1f1a;
+        color: white;
+
+    }
+    &.success {
+        background-color: #1f9d55;
+        color: white;
     }
 }
-.mobile-menu--open {
-    right:0;
-    opacity:1;
-}
+
+
+
+// Pages
+@import "pages/home";
+@import "pages/articles";
+@import "pages/projects";
+@import "pages/readinglist";
+
+// Partials
+@import "partials/nav";
+@import "partials/table";
+@import "partials/forms";
+@import "partials/terrain";

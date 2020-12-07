@@ -14,7 +14,7 @@ amazon:
   region: 'us-west-2'
   bucket: 'alextheyounger-v2'
 
-# Remember not to checkin your GCS keyfile to a repository
+# Reproject not to checkin your GCS keyfile to a repository
 # google:
 #   service: GCS
 #   project: your_project

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_19_073139) do
+ActiveRecord::Schema.define(version: 2020_12_06_220329) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -128,8 +128,8 @@ ActiveRecord::Schema.define(version: 2020_11_19_073139) do
     t.string "image_alt"
     t.text "project_link"
     t.string "framework"
-    t.string "color"
-    t.string "bg_color"
+    t.text "excerpt"
+    t.integer "position"
   end
 
   create_table "stocks", force: :cascade do |t|

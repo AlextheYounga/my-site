@@ -1,0 +1,6 @@
+.form-description,
+.form-title {
+    &:focus {
+        outline-color: #800020;
+    }
+}

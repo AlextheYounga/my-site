@@ -1,4 +1,4 @@
-<div id="language-bar" class="text-lg mx-auto lg:w-3/4 home-content js--fadeInLeft p-8">
+<div id="language-bar" class="text-lg mx-auto p-8">
   <h2 class="mb-3 text-3xl text-grey-darkest fancy-font">Skills</h2>
   <span class="bar w-full mb-4">
     <% if @languageStats.is_a? Hash then %>
@@ -21,6 +21,9 @@
     <% end %>
   </ul>
   <div class="float-right italic">
-    <small>Pulled directly from Github</small>
+    <small>Pulled directly from Github with my
+      <a class="burgandy" href="https://github.com/AlextheYounga/github_language_statistics" rel="nofollow">gem
+      </a>
+    </small>
   </div>
 </div>

@@ -1,0 +1,38 @@
+<%= render 'shared/errors', obj: @project %>
+
+<div class="bg-white container mx-auto rounded shadow-lg p-6">
+  <%= form_for(@project, :html => {role: "form"}) do |f| %>
+  <div class="w-3/4 mx-auto my-6">
+    <%= f.text_field :title, placeholder: "Project Title", autofocus: true, class:"form-title fancy-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-3 rounded shadow w-full" %>
+  </div>
+  <div class="w-3/4 flex mx-auto mb-6">
+    <%= f.text_area :excerpt, rows: 5, placeholder: "Excerpt", class: "form-excerpt block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-3 rounded shadow w-full" %>
+  </div>
+  <div class="w-3/4 flex mx-auto">
+    <%= f.text_area :description, rows: 15, placeholder: "Description", class: "form-description block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-3 rounded shadow w-full" %>
+  </div>
+  <div class="flex justify-between w-3/4 mx-auto my-6">
+    <div class="w-2/3">
+      <%= f.text_field :framework, placeholder: "Project Framework", autofocus: true, class:"form-framework fancy-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-3 rounded shadow w-full" %>
+    </div>
+    <div class="w-1/6">
+      <%= f.text_field :position, placeholder: "Position", autofocus: true, class:"form-position fancy-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-3 rounded shadow w-full" %>
+    </div>
+  </div>
+  <div class="w-3/4 mx-auto my-6">
+    <%= f.text_field :project_link, placeholder: "Project Link", autofocus: true, class:"form-link block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-3 rounded shadow w-full" %>
+  </div>
+  <div class="w-3/4 flex justify-center mx-auto">
+    <div class="screen-photo w-1/3 shadow py-6 rounded px-2 text-center ">
+      <p class="mb-4">Screen Photo</p>
+      <%= f.file_field :screen %>
+    </div>
+  </div>
+</div>
+
+<%= f.submit class: "py-3 bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font rounded shadow-lg text-green-darkest w-48" %>
+<% end %>
+
+<div class="py-16 text-center">
+<%= link_to "Cancel Request and Return to Reading List", projects_path, class: "burgandy fancy-font hover:underline no-underline" %>
+</div>

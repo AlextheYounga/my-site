@@ -14,7 +14,7 @@ class BooksController < ApplicationController
                   description: "Alex Younger - My Reading List. A list of books that have impacted my life in some way.",
                   reverse: true,
                   og: {
-                    title: "About Me",
+                    title: "Reading List",
                     description: "Alex Younger - My Reading List. A list of books that have impacted my life in some way.",
                     type: "website",
                     image: '<%= image_path("hammock-art.png") %>',
@@ -35,6 +35,7 @@ class BooksController < ApplicationController
     @book.image_alt = "Alex Younger Readling List #{params[:book][:title]} by #{params[:book][:author]}"
     if (@book.save)
       @book.attach_covers(params)
+      @book.reorder_positions
       flash[:notice] = "Book was successfully created"
       redirect_to books_path
     else
@@ -44,6 +45,7 @@ class BooksController < ApplicationController
 
   def update
     if (@book.update(book_params))
+      @book.reorder_positions
       flash[:notice] = "Book was successfully updated"
       redirect_to books_path
     else

@@ -1,126 +1,161 @@
-<section class="bg-center bg-cover hero min-h-screen sm:bg-bottom">
-  <div class="home-content js--fadeInLeft absolute align-baseline mx-auto pin-l pin-r md:px-8 md:py-12 w-2/3">
-    <h1 class="fancy-font text-5xl text-blue-lightest text-center">Alex Younger</h1>
-    <p class="fancy-font py-2 sm:text-blue-lighter text-center text-lg text-yellow-lightest">Web Developer, Investor, Marketing, Entrepreneur</p>
-  </div>
-</section>
+<p id="generator-notice" class="text-lg absolute pin-l m-3 text-black">Generating random fractal terrain...</p>
+<div class="wrapper w-5/6 sm:w-3/5 mx-auto max-w-xl">
+  <section class="hero mt-16 w-1/2 sm:w-1/3 mx-auto sm:mt-0 mb-4 relative home-content js--fadeInLeft">
+    <picture>
+      <source srcset="<%= image_path("hammock-circle.png.webp") %>" type="image/webp">
+      <source srcset="<%= image_path("hammock-circle.png") %>" type="image/png">
+      <img src="<%= image_path("hammock-circle.png") %>" class="flex sm:mt-10 mx-auto relative text-center" alt="alex younger developer marketing about me"/>
+    </picture>
+  </section>
+  <section class="title mb-8 bg-white shadow rounded relative home-content js--fadeInLeft">
+    <h1 class="fancy-font text-5xl text-black text-center">Alex Younger</h1>
+    <p class="fancy-font py-2 text-black text-center text-lg">Web Developer, Investor, Data Scientist, Entrepreneur</p>
+  </section>
 
-<section class="about-home bg-white py-16 w-full px-4">
-  <div class="language-stats mb-8">
-    <%= render partial: "partials/language_bar", locals: {languageStats: @languageStats} %>
-  </div>
-  <div class="flex flex-wrap justify-center text-lg mx-auto lg:w-3/4 home-content js--fadeInLeft">
-    <div class="headshot w-full sm:w-1/3">
+  <section class="bg-white my-8 py-8 shadow relative rounded z-10 home-content js--fadeInLeft">
+    <div class="language-stats">
+      <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
+    </div>
+  </section>
+  <section class="home-description relative bg-white mt-24 mb-8 p-8 home-content js--fadeInLeft shadow">
+    <div class="absolute pin-t">
       <picture>
-        <source srcset="<%= image_path("headshot3_700.png.webp") %>" type="image/webp">
-        <source srcset="<%= image_path("headshot3_700.png") %>" type="image/png">
-        <img src="<%= image_path("headshot3_700.png") %>" class="flex sm:mt-10 mx-auto relative text-center" width="315" alt="alex younger developer marketing about me"/>
+        <source srcset="<%= image_path("headshot.png.webp") %>" type="image/webp" width="185" class="flex force-vertical-align mx-auto relative text-center">
+        <source srcset="<%= image_path("headshot.png") %>" type="image/png">
+        <img src="<%= image_path("headshot.png") %>" class="flex force-vertical-align mx-auto relative text-center" width="185" alt="alex younger developer marketing about me"/>
       </picture>
     </div>
-    <div class="aboutme-description leading-normal normal-font p-8 w-full sm:w-2/3">
-      <p class="py-2">I build and maintain websites for an extensive list of small and large companies.</p>
-      <p class="py-2">I am currently building a side business called Hazlitt Tech LLC, dealing in data brokering for financial markets and accounting software.</p>
+    <p class="home-quote italic ml-auto pb-6 text-right text-sm w-2/3">"The man who grasps principles can successfully handle his own methods. The man who tries methods, ignoring principles is sure to have trouble" -Ralph Waldo Emerson</p>
+    <div class="description leading-normal ml-auto normal-font mt-6">
+      <p class="py-2">I build and maintain websites for an extensive list of small and large companies including
+        <a class="text-blue hover:text-blue-darkest" href="https://www.bluehawaiian.com/en">Blue Hawaiian Helicopters</a>
+        and
+        <a class="text-blue hover:text-blue-darkest" href="https://www.intelligentoffice.com/">Intelligent Office.</a>
+      </p>
+      <p class="py-2">I am currently starting a side business called Hazlitt Tech LLC, specializing in financial market data and accounting software.</p>
       <p class="py-2">I consult businesses on best practices for Google Ad Campaigns, Analytics, and content marketing techniques.</p>
       <p class="py-2">Check out my latest
         <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
     </div>
-  </div>
-</section>
-<section class="reading-carousel bg-white py-16 shadow-inner">
-  <h3 class="text-3xl text-grey-darkest fancy-font w-3/4 px-8 mx-auto">Reading List</h3>
-  <div id="reading-carousel">
-    <% if @books.any? then %>
-      <% @books.each do |book| %>
-        <% if (book.covers.attached? || !book.image_address.nil?) %>
-          <div class="cover lg:w-1/4 md:w-1/3 sm:w-1/2 text-center my-12 relative">
-            <a href="<%= book.book_link %>" target="_blank" rel="nofollow" class="no-underline">
-              <% if (book.covers.attached?) %>
-                <picture>
-                  <source srcset="<%= book.get_webp_attachment %>" type="image/webp" class="mb-3 shadow" alt="<%= book.image_alt %>">
-                  <source srcset="<%= book.get_jpeg_attachment %>" type="image/jpg">
-                  <img src="<%= book.get_jpeg_attachment %>" class="mb-3 shadow" alt="<%= book.image_alt %>"/>
-                </picture>
-              <% else %>
-                <picture>
-                  <source srcset="<%= "#{image_path(book.image_address)}.webp" %>" type="image/webp" class="mb-3 shadow" alt="<%= book.image_alt %>">
-                  <source srcset="<%= image_path(book.image_address) %>" type="image/jpg">
-                  <img src="<%= image_path(book.image_address) %>" class="mb-3 shadow" alt="<%= book.image_alt %>"/>
-                </picture>
-              <% end %>
-            </a>
-            <div class="book-description bg-purple-lightest w-1/2 p-4 rounded-lg mx-auto">
-              <p class="fancy-font text-md text-purple-darkest"><%= book.title %></p>
-              <p class="normal-font text-sm text-purple-darkest py-2"><%= book.subtitle %></p>
-              <p class="normal-font text-sm text-purple-darkest">by
-                <%= book.author %></p>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-    <% end %>
-  </div>
-  <a href="<%= books_path %>" class="bg-white block border border-blue-darker hover:bg-blue-darkest hover:text-blue-lightest mx-auto text-center no-underline normal-font py-3 rounded shadow-lg text-blue-darkest w-48">
-    See More
-  </a>
-
-</section>
-<section class="watchlist-home py-16 px-4">
-  <div class="home-content js--fadeInLeft">
+  </section>
+  <section class="projects-home p-8 relative mb-8 bg-white home-content js--fadeInLeft">
+    <%= render partial: "partials/projects-carousel" %>
+  </section>
+  <section class="watchlist-home relative bg-white mb-8 p-8 home-content js--fadeInLeft shadow">
     <h4 class="fancy-font text-grey-darkest text-3xl text-center py-6">Stock Watchlist</h4>
     <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
-    <%= render 'partials/watchlist' %>
-  </div>
-</section>
+    <%= render 'stocks/watchlist' %>
+  </section>
+</div>
 
-<!-- Scroll Reveal -->
 <% content_for :javascripts do %>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script>
-    $(document).ready(function () {
+    window.addEventListener("load", function () {
+      setTimeout(reveal, 2000);
+    }, false);
+
+    function reveal() {
+
       window.sr = ScrollReveal();
-      if ($(window).width() < 768) {
-        $('.home-content').removeClass('js--fadeInRight');
-        $('.home-content').removeClass('js--fadeInLeft');
+      if ($(window).width() < 768) {        
+        $('.home-content').fadeIn();        
       } else {
-        sr.reveal('.js--fadeInLeft', {
+        $('.home-content.js--fadeInLeft').show();
+        $('.hero').show();
+        sr.reveal('.home-content.js--fadeInLeft', {
           origin: 'left',
           distance: '300px',
           easing: 'ease-in-out',
           duration: 800
         });
-        sr.reveal('.js--fadeInRight', {
-          origin: 'right',
-          distance: '300px',
-          easing: 'ease-in-out',
-          duration: 800
-        });
       }
+      $('#generator-notice').fadeOut('slow');
+      $('footer').removeClass('hidden');
+      var flky = new Flickity('.projects-carousel', {
+        // options, defaults listed
 
-      var slider = tns({
-        container: '#reading-carousel',
-        items: 1,
-        controls: false,
-        autoplay: true,
-        autoplayButtonOutput: false,
-        nav: false,
-        mouseDrag: true,
-        responsive: {
-          640: {
-            edgePadding: 20,
-            gutter: 20,
-            items: 2
-          },
-          700: {
-            gutter: 30
-          },
-          900: {
-            items: 4
-          }
-        }
+        accessibility: true,
+        // enable keyboard navigation, pressing left & right keys
+
+        adaptiveHeight: false,
+        // set carousel height to the selected slide
+
+        autoPlay: false,
+        // advances to the next cell
+        // if true, default is 3 seconds
+        // or set time between advances in milliseconds
+        // i.e. `autoPlay: 1000` will advance every 1 second
+
+        cellAlign: 'center',
+        // alignment of cells, 'center', 'left', or 'right'
+        // or a decimal 0-1, 0 is beginning (left) of container, 1 is end (right)
+
+        cellSelector: undefined,
+        // specify selector for cell elements
+
+        contain: false,
+        // will contain cells to container
+        // so no excess scroll at beginning or end
+        // has no effect if wrapAround is enabled
+
+        draggable: '>1',
+        // enables dragging & flicking
+        // if at least 2 cells
+
+        dragThreshold: 3,
+        // number of pixels a user must scroll horizontally to start dragging
+        // increase to allow more room for vertical scroll for touch devices
+
+        freeScroll: false,
+        // enables content to be freely scrolled and flicked
+        // without aligning cells
+
+        friction: 0.2,
+        // smaller number = easier to flick farther
+
+        groupCells: false,
+        // group cells together in slides
+
+        initialIndex: 0,
+        // zero-based index of the initial selected cell
+
+        lazyLoad: true,
+        // enable lazy-loading images
+        // set img data-flickity-lazyload="src.jpg"
+        // set to number to load images adjacent cells
+
+        percentPosition: true,
+        // sets positioning in percent values, rather than pixels
+        // Enable if items have percent widths
+        // Disable if items have pixel widths, like images
+
+        prevNextButtons: false,
+        // creates and enables buttons to click to previous & next cells
+
+        pageDots: true,
+        // create and enable page dots
+
+        resize: true,
+        // listens to window resize events to adjust size & positions
+
+        rightToLeft: false,
+        // enables right-to-left layout
+
+        setGallerySize: true,
+        // sets the height of gallery
+        // disable if gallery already has height set with CSS
+
+        watchCSS: false,
+        // watches the content of :after of the element
+        // activates if #element:after { content: 'flickity' }
+
+        wrapAround: false
+        // at end of cells, wraps-around to first for infinite scrolling
+
       });
-    });
-
-    $('.desktop .nav-link')
-      .removeClass('burgandy')
-      .addClass('text-blue-lightest');
+      $('.carousel-cell').addClass('h-full');
+    }
   </script>
 <% end %>
