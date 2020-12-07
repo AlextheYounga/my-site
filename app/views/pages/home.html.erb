@@ -1,18 +1,18 @@
 <p id="generator-notice" class="text-lg absolute pin-l m-3 text-black">Generating random fractal terrain...</p>
-<div class="wrapper w-full sm:w-3/5 mx-auto max-w-xl">
-  <section class="hero mb-4 home-content js--fadeInLeft">
+<div class="wrapper w-5/6 sm:w-3/5 mx-auto max-w-xl">
+  <section class="hero mt-16 w-1/2 sm:w-1/3 mx-auto sm:mt-0 mb-4 relative home-content js--fadeInLeft">
     <picture>
       <source srcset="<%= image_path("hammock-circle.png.webp") %>" type="image/webp">
       <source srcset="<%= image_path("hammock-circle.png") %>" type="image/png">
-      <img src="<%= image_path("hammock-circle.png") %>" class="flex sm:mt-10 mx-auto relative text-center" width="315" alt="alex younger developer marketing about me"/>
+      <img src="<%= image_path("hammock-circle.png") %>" class="flex sm:mt-10 mx-auto relative text-center" alt="alex younger developer marketing about me"/>
     </picture>
   </section>
-  <section class="title mb-8 bg-white shadow rounded home-content js--fadeInLeft">
+  <section class="title mb-8 bg-white shadow rounded relative home-content js--fadeInLeft">
     <h1 class="fancy-font text-5xl text-black text-center">Alex Younger</h1>
     <p class="fancy-font py-2 text-black text-center text-lg">Web Developer, Investor, Data Scientist, Entrepreneur</p>
   </section>
 
-  <section class="bg-white my-8 py-8 shadow rounded home-content js--fadeInLeft">
+  <section class="bg-white my-8 py-8 shadow relative rounded z-10 home-content js--fadeInLeft">
     <div class="language-stats">
       <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
     </div>
@@ -57,12 +57,13 @@
     }, false);
 
     function reveal() {
-      $('.home-content.js--fadeInLeft').show()
-      $('.hero').show()
+
       window.sr = ScrollReveal();
-      if ($(window).width() < 768) {
-        $('.home-content').removeClass('home-content.js--fadeInLeft');
+      if ($(window).width() < 768) {        
+        $('.home-content').fadeIn();        
       } else {
+        $('.home-content.js--fadeInLeft').show();
+        $('.hero').show();
         sr.reveal('.home-content.js--fadeInLeft', {
           origin: 'left',
           distance: '300px',
@@ -71,6 +72,7 @@
         });
       }
       $('#generator-notice').fadeOut('slow');
+      $('footer').removeClass('hidden');
       var flky = new Flickity('.projects-carousel', {
         // options, defaults listed
 

@@ -1,26 +1,24 @@
-
 <table class="mx-auto shadow-lg rwd-table bg-grey-darker">
-  <tr class="justify-between">
+  <tr class="justify-between hidden sm:table-row">
     <th class="p-2 normal-font text-yellow-dark text-lg">Name</th>
-      <th class="p-2 normal-font text-yellow-dark text-lg">Symbol</th>
-      <th class="p-2 normal-font text-yellow-dark text-lg">Position</th>
-      <th class="p-2 normal-font text-yellow-dark text-lg">Current Price</th>
-      <th class="p-2 normal-font text-yellow-dark text-lg">Percent Change YTD</th>
-      <th class="p-2 normal-font text-yellow-dark text-lg">Industry</th>
+    <th class="p-2 normal-font text-yellow-dark text-lg">Symbol</th>
+    <th class="p-2 normal-font text-yellow-dark text-lg">Position</th>
+    <th class="p-2 normal-font text-yellow-dark text-lg">Current Price</th>
+    <th class="p-2 normal-font text-yellow-dark text-lg">Percent Change YTD</th>
+    <th class="p-2 normal-font text-yellow-dark text-lg">Industry</th>
   </tr>
   <tr>
     <% if @stocks %>
       <% @stocks.each do |stock | %>
-        <tr class="justify-between">
+        <tr class="sm:justify-between sm:border-0 border-b border-grey-lighter">
           <td data-th="Name" class="sm:table-cell block p-2 normal-font text-white text-left"><%= stock.company_name%></td>
-          <td data-th="Symbol" class="sm:table-cell block p-2 normal-font text-white text-center"><%= stock.symbol %></td>
+          <td data-th="Symbol" class="sm:table-cell block p-2 normal-font text-white text-left sm:text-center"><%= stock.symbol %></td>
           <td data-th="Position" class="sm:table-cell block p-2 normal-font text-white text-left"><%= stock.position %></td>
-          <td data-th="Current Price" class="sm:table-cell block p-2 normal-font text-white text-center"><%= stock.latest_price %></td>
-          <td data-th="Percent Change YTD" class="sm:table-cell block p-2 normal-font text-white text-center"><%= stock.ytd_change_percent ? number_to_percentage(stock.ytd_change_percent) : nil %></td>
-          <td data-th="Industry" class="sm:table-cell block p-2 normal-font text-white text-center"><%= stock.industry %></td>
+          <td data-th="Current Price" class="sm:table-cell block p-2 normal-font text-white text-left sm:text-center"><%= stock.latest_price %></td>
+          <td data-th="Percent Change YTD" class="sm:table-cell block p-2 normal-font text-white text-left sm:text-center"><%= stock.ytd_change_percent ? number_to_percentage(stock.ytd_change_percent) : nil %></td>
+          <td data-th="Industry" class="sm:table-cell block p-2 normal-font text-white text-left sm:text-center"><%= stock.industry %></td>
         </tr>
       <% end %>
     <% end %>
   </tr>
 </table>
-

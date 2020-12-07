@@ -2,6 +2,11 @@
     display: none;
 }
 .home-description {
+    .hero {
+        img, picture {
+            max-width: 315px;
+        }
+    }
     div.absolute {
 
         img,
