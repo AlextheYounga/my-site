@@ -7,7 +7,7 @@
     <% if @projects.any?
       then %>
       <% @projects.each do |project| %>
-        <div class="lg:w-1/4 md:w-1/2 w-full">
+        <div class="md:w-1/2 w-full">
           <div class="project-container border border-grey-light mx-8 block my-8 sm:my-16 rounded shadow hover:shadow-lg normal-font">
             <a href="<%= project.project_link%>" target="blank" rel="nofollow" class="no-underline">
               <div class="project-details bg-grey-lighter h-full py-8">
@@ -32,6 +32,6 @@
 </section>
 <section class="projects-skills bg-grey-lighter py-16 w-full px-4">  
   <div class="language-stats mb-16">
-    <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
+   <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
   </div>
 </section>

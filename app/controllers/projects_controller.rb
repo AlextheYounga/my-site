@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.order(:position)
-
+    @languageStats = GithubLanguage.calculateWidths
     set_meta_tags title: "Reading List",
                   site: "alextheyounger.me",
                   description: "Alex Younger - My Reading List. A list of projects that have impacted my life in some way.",

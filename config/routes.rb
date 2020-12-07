@@ -5,14 +5,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root "pages#home"
-  get "projects", to: "pages#projects"
-  get "resources", to: "pages#resources"
+  
 
   resources :users, except: [:signup]
   resources :articles, except: [:signup]
   resources :categories, except: [:destroy]
   resources :books, except: [:signup]
   resources :projects, except: [:signup]
+  # resources :research, except: [:signup]
   resources :book_categories
   resources :posts, only: [:index]
   resources :stocks
@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   post "login", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
 
+  # get "resources", to: "pages#resources"
+  # get "projects", to: "pages#projects"
   # get 'signup', to: 'users#signup'
   # get 'readinglist', to: 'pages#readinglist'
   # get "quotes", to: "pages#quotes"
