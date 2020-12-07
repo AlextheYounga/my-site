@@ -39,4 +39,5 @@ yarn-debug.log*
 .yarn-integrity
 lib/tasks/webp.rake
 lib/assets/graveyard
+graveyard
 lib/assets/misc_storage

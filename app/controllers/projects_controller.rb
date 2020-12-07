@@ -8,13 +8,13 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.order(:position)
     @languageStats = GithubLanguage.calculateWidths
-    set_meta_tags title: "Reading List",
+    set_meta_tags title: "Projects",
                   site: "alextheyounger.me",
-                  description: "Alex Younger - My Reading List. A list of projects that have impacted my life in some way.",
+                  description: "Alex Younger - My projects. Some of my greatest projects",
                   reverse: true,
                   og: {
-                    title: "About Me",
-                    description: "Alex Younger - My Reading List. A list of projects that have impacted my life in some way.",
+                    title: "Projects",
+                    description: "Alex Younger - My projects. Some of my greatest projects",
                     type: "website",
                     image: '<%= image_path("hammock-art.png") %>',
                     reverse: true,
@@ -34,6 +34,7 @@ class ProjectsController < ApplicationController
     @project.image_alt = "Alex Younger Projects List #{params[:project][:title]} in #{params[:project][:framework]}"
     if (@project.save)
       @project.attach_screens(params)
+      @project.reorder_positions
       flash[:notice] = "Project was successfully created"
       redirect_to projects_path
     else
@@ -43,6 +44,7 @@ class ProjectsController < ApplicationController
 
   def update
     if (@project.update(project_params))
+      @project.reorder_positions
       flash[:notice] = "Project was successfully updated"
       redirect_to projects_path
     else
@@ -73,9 +75,9 @@ class ProjectsController < ApplicationController
       :title,
       :description,
       :excerpt,
-      :image_address,
-      :project_link,
+      :image_address,      
       :image_alt,
+      :project_link,
       :framework,
       :position
     )

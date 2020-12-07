@@ -25,10 +25,10 @@ module WebpConverter
     end
   end
 
-  def self.generate_attachment_webp(params)
-    filepath = params[:book][:cover].tempfile.path
+  def self.generate_attachment_webp(param_attachment)
+    filepath = param_attachment.tempfile.path
     webp_path = "#{filepath}.webp"
-    webp_filename = "#{params[:book][:cover].original_filename.to_s}.webp"
+    webp_filename = "#{param_attachment.original_filename.to_s}.webp"
     mtime = File.mtime(filepath)
 
     begin

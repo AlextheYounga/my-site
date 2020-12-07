@@ -36,7 +36,7 @@ class Project < ActiveRecord::Base
 
   def attach_screens(params)
     if (params.present?)
-      webpObj = WebpConverter.generate_attachment_webp(params)
+      webpObj = WebpConverter.generate_attachment_webp(params[:project][:screen])
       self.screens.attach(params[:project][:screen])
       self.screens.attach(io: File.open(webpObj.first), filename: webpObj.last, content_type: "image/webp")
       if (self.screens.attached?)
@@ -62,6 +62,15 @@ class Project < ActiveRecord::Base
     end
   end
 
+  def reorder_positions
+    i = self.position.clone
+    Project.where("position >= ?", i).order(:position).each do |project|
+      next if (self.id == project.id)
+      i += 1
+      project.update(position: i)
+    end
+  end
+
   def assign_color
     colors = {
       "ruby-on-rails" => "text-red",
@@ -69,6 +78,7 @@ class Project < ActiveRecord::Base
       "php" => "text-blue",
       "wordpress" => "text-blue-dark",
       "python" => "text-yellow-dark",
+      "net" => "text-grey-dark",
     }
 
     lang = self.framework.parameterize
