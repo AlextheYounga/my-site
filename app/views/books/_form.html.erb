@@ -13,8 +13,7 @@
       <%= f.text_field :author, placeholder: "Book Author", autofocus: true, class:"form-author fancy-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-3 rounded shadow w-full" %>
     </div>
     <div class="category-dropdown text-center w-1/3">
-      <%= f.collection_select(:book_category_id, BookCategory.order(:name),:id,:name, {:prompt => 'Category'}, 
-      {:class=>'fancy-font border border-red-darkest focus:border-red-darkest focus:shadow-lg p-2 rounded shadow'}) %>
+      <%= f.collection_select(:book_category_id, BookCategory.order(:name),:id,:name, {:prompt => 'Category'}, {:class=>'fancy-font border border-red-darkest focus:border-red-darkest focus:shadow-lg p-2 rounded shadow'}) %>
     </div>
     <div class="w-1/6">
       <%= f.text_field :position, placeholder: "Position", autofocus: true, class:"form-author fancy-font block border border-red-darkest focus:border-red-darkest focus:shadow-lg p-3 rounded shadow w-full" %>
@@ -37,5 +36,4 @@
 
 <div class="py-16 text-center">
 <%= link_to "Cancel Request and Return to Reading List", books_path, class: "burgandy fancy-font hover:underline no-underline" %>
-</div>
 </div>
