@@ -1067,10 +1067,10 @@ var SVG = function SVG(opt) {
 		start: start,
 		run: start,
 		matrix: matrix,
-		// imageData: imageData,
-		canvas: canvas,
-		// contextFree: function contextFree() {			
-		// 	return new ContextFree();
-		// }
+		imageData: imageData,
+		// canvas: canvas,
+		contextFree: function contextFree() {			
+			return new ContextFree();
+		}
 	};
 };
