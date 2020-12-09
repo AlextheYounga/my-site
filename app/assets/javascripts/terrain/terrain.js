@@ -105,8 +105,3 @@ if (typeof (terrainElement) != 'undefined' && terrainElement != null) {
         return w < size;
     }
 }
-    // if ($(window).width() < 567) {
-    //     viewbox = '55 40 90 90'; //desktop
-    // } else {
-    //     viewbox = '80 60 75 80'; //mobile
-    // };

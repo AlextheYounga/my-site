@@ -63,11 +63,12 @@ var SVG = function SVG(opt) {
 		inside.setAttribute("style", "fill:none;stroke:" + (opt.stroke || "#000") + ";stroke-width:" + (opt.strokeWidth || 0.2) + ";opacity:" + (opt.opacity || 1));
 		svgElem.appendChild(inside);
 		target = inside;
-		var outside = document.createElementNS("http://www.w3.org/2000/svg", "g");
-		outside.setAttribute("style", "fill:none;stroke:" + (opt.stroke || "#000") + ";stroke-width:0.3;");
-		svgElem.appendChild(outside);
+		// var outside = document.createElementNS("http://www.w3.org/2000/svg", "g");
+		// outside.setAttribute("style", "fill:none;stroke:" + (opt.stroke || "#000") + ";stroke-width:0.3;");
+		// svgElem.appendChild(outside);
 		requestAnimationFrame(autorun);
-		return [svgElem, inside, outside];
+		// return [svgElem, inside, outside];
+		return [svgElem, inside];
 	};
 
 	var _initSVG = initSVG(opt),
@@ -83,7 +84,7 @@ var SVG = function SVG(opt) {
 		polyline = [];
 		polylines.length = 0;
 		inside.innerHTML = "";
-		outside.innerHTML = "";
+		// outside.innerHTML = "";
 		init();
 		if (typeof draw === "function") render();
 	};
@@ -508,8 +509,8 @@ var SVG = function SVG(opt) {
 			moveTo(px, py);
 			iter = 0;
 			matrixTransform = false;
-			target = outside;
-			target.innerHTML = "";
+			// target = outside;
+			// target.innerHTML = "";
 			polyline = [];
 		}
 	}; //////////////////////////////////////////////////////
@@ -1066,10 +1067,10 @@ var SVG = function SVG(opt) {
 		start: start,
 		run: start,
 		matrix: matrix,
-		imageData: imageData,
+		// imageData: imageData,
 		canvas: canvas,
-		contextFree: function contextFree() {			
-			return new ContextFree();
-		}
+		// contextFree: function contextFree() {			
+		// 	return new ContextFree();
+		// }
 	};
 };
