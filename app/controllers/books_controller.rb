@@ -17,7 +17,7 @@ class BooksController < ApplicationController
                     title: "Reading List",
                     description: "Alex Younger - My Reading List. A list of books that have impacted my life in some way.",
                     type: "website",
-                    image: '<%= image_path("hammock-art.png") %>',
+                    image: '<%= image_path("books_meta.png") %>',
                     reverse: true,
                   }
   end

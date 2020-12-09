@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
                     title: "Projects",
                     description: "Alex Younger - My projects. Some of my greatest projects",
                     type: "website",
-                    image: '<%= image_path("hammock-art.png") %>',
+                    image: '<%= image_path("bluehawaiian.jpg") %>',
                     reverse: true,
                   }
   end
