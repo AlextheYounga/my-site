@@ -57,12 +57,12 @@
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script>
     window.sr = ScrollReveal();
-
     view = 'desktop';
-    timeout = 2200;
+    timeout = 1500;
     if ($(window).width() < 768) {
+      print('here');
       view = 'mobile';
-      timeout = 3000;
+      timeout = 2200;
     }
 
     window.addEventListener("load", function () {
@@ -74,6 +74,7 @@
         $('.home-content').fadeIn();
 
       } else {
+
         $('.home-content.js--fadeInLeft').show();
         $('.hero').show();
         sr.reveal('.home-content.js--fadeInLeft', {
