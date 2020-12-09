@@ -13,11 +13,12 @@ class BooksController < ApplicationController
                   site: "alextheyounger.me",
                   description: "Alex Younger - My Reading List. A list of books that have impacted my life in some way.",
                   reverse: true,
+                  image_src: "#{Rails.root}/assets/books_meta.png",
                   og: {
                     title: "Reading List",
                     description: "Alex Younger - My Reading List. A list of books that have impacted my life in some way.",
                     type: "website",
-                    image: '<%= image_path("books_meta.png") %>',
+                    image: "#{Rails.root}/assets/books_meta.png",
                     reverse: true,
                   }
   end

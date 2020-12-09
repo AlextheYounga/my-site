@@ -12,11 +12,12 @@ class ProjectsController < ApplicationController
                   site: "alextheyounger.me",
                   description: "Alex Younger - My projects. Some of my greatest projects",
                   reverse: true,
+                  image_src: "#{Rails.root}/assets/bluehawaiian.jpg",
                   og: {
                     title: "Projects",
                     description: "Alex Younger - My projects. Some of my greatest projects",
-                    type: "website",
-                    image: '<%= image_path("bluehawaiian.jpg") %>',
+                    type: "website",                    
+                    image: "#{Rails.root}/assets/bluehawaiian.jpg",                    
                     reverse: true,
                   }
   end
