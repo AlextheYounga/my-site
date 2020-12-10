@@ -15,10 +15,12 @@ class ProjectsController < ApplicationController
                   image_src: "#{Rails.root}/assets/bluehawaiian.jpg",
                   og: {
                     title: "Projects",
-                    description: "Alex Younger - My projects. Some of my greatest projects",
-                    type: "website",                    
-                    image: "#{Rails.root}/assets/bluehawaiian.jpg",                    
-                    reverse: true,
+                    url: "#{Rails.root}/projects",
+                    image: "#{Rails.root}/assets/bluehawaiian.jpg",
+                  },
+                  twitter: {
+                    card: "Alex Younger - Projects. Some of my greatest projects",
+                    site: "@AlextheYounga",
                   }
   end
 
@@ -40,7 +42,7 @@ class ProjectsController < ApplicationController
       redirect_to projects_path
     else
       render "new"
-    end    
+    end
   end
 
   def update
@@ -76,7 +78,7 @@ class ProjectsController < ApplicationController
       :title,
       :description,
       :excerpt,
-      :image_address,      
+      :image_address,
       :image_alt,
       :project_link,
       :framework,

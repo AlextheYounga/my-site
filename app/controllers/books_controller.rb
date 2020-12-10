@@ -16,10 +16,12 @@ class BooksController < ApplicationController
                   image_src: "#{Rails.root}/assets/books_meta.png",
                   og: {
                     title: "Reading List",
-                    description: "Alex Younger - My Reading List. A list of books that have impacted my life in some way.",
-                    type: "website",
+                    url: "#{Rails.root}",
                     image: "#{Rails.root}/assets/books_meta.png",
-                    reverse: true,
+                  },
+                  twitter: {
+                    card: "Alex Younger - ReadlingList - Books that have impacted my life in some way.",
+                    site: "@AlextheYounga",
                   }
   end
 

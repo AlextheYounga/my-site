@@ -11,10 +11,12 @@ class PagesController < ApplicationController
                   image_src: "#{Rails.root}/assets/hammock-art.jpg",
                   og: {
                     title: "Home",
-                    description: "Alex Younger - My Space on the Internet",
-                    type: "website",
+                    url: "#{Rails.root}",
                     image: "#{Rails.root}/assets/hammock-art.jpg",
-                    reverse: true,
+                  },
+                  twitter: {
+                    card: "Alex Younger - My Space on the Internet",
+                    site: "@AlextheYounga",
                   }
   end
 end
