@@ -60,9 +60,8 @@
     view = 'desktop';
     timeout = 1500;
     if ($(window).width() < 768) {
-      print('here');
       view = 'mobile';
-      timeout = 2200;
+      timeout = 2000;
     }
 
     window.addEventListener("load", function () {

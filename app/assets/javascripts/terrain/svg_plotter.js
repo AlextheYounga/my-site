@@ -1068,7 +1068,7 @@ var SVG = function SVG(opt) {
 		run: start,
 		matrix: matrix,
 		imageData: imageData,
-		// canvas: canvas,
+		canvas: canvas,
 		contextFree: function contextFree() {			
 			return new ContextFree();
 		}
