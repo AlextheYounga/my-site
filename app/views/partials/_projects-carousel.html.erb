@@ -1,11 +1,11 @@
-<h3 class="text-3xl text-grey-darkest mb-4 fancy-font mx-auto">Projects</h3>
+<h3 class="text-3xl text-gray-900 mb-4 fancy-font mx-auto">Projects</h3>
 <div class="projects-carousel">
   <% if @projects.any?
       then %>
     <% @projects.each do |project| %>
       <div class="carousel-cell">
         <a href="<%= project.project_link%>" target="blank" rel="nofollow" class="no-underline normal-font w-full h-full px-4">
-          <div class="bg-grey-lighter h-full relative">
+          <div class="bg-gray-200 h-full relative">
             <h2 class="font-normal text-center text-black py-2"><%= project.title%></h2>
             <div class="image py-4 mx-auto">
               <% if (project.screens.attached?) %>
@@ -37,16 +37,16 @@
 </div>
 <a href="<%= projects_path %>" class="bg-white block
   border
-  border-blue-darker
-  hover:bg-blue-darkest
-  hover:text-blue-lightest
+  border-blue-800
+  hover:bg-blue-900
+  hover:text-blue-100
   mx-auto text-center
   no-underline
   normal-font
   py-3
   rounded
   shadow-lg
-  text-blue-darkest
+  text-blue-900
   w-48
   mt-12">
 

@@ -2,5 +2,5 @@
     <h1 class="py-16 fancy-font text-center burgandy"><%="Articles In: " + @category.name %></h1>
     <%= render 'articles/article', obj: @category_articles %>
 
-    <%= link_to "View All", articles_path, class: "bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48" %>
+    <%= link_to "View All", articles_path, class: "bg-white block border border-red-800hover:bg-red-900 burgandy hover:text-red-600-100 mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48" %>
 </section>

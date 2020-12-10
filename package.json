@@ -3,8 +3,10 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^4.0.2",
+    "autoprefixer": "^9.8.6",
     "jquery": "^3.5.1",
-    "tailwindcss": "^0.7.4"
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.2.1"
