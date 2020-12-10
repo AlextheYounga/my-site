@@ -1,9 +1,9 @@
-<section class="projects-skills bg-grey-lighter pt-16 pb-0 sm:py-16 w-full px-4">
+<section class="projects-skills bg-gray-200 pt-16 pb-0 sm:py-16 w-full px-4">
   <div class="language-stats mb-8 sm:mb-16">
     <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
   </div>
 </section>
-<section class="projects">
+<section class="projects container mx-auto">
   <h1 class="font-normal normal-font pt-16 text-center burgandy">My Projects</h1>
   <h4 class="text-center normal-font pt-4">
     <a href="https://github.com/AlextheYounga" class="no-underline hover:underline text-black" target="blank" rel="nofollow">github.com/AlextheYounga</a>
@@ -12,13 +12,13 @@
     <% if @projects.any?
       then %>
       <% @projects.each do |project| %>
-        <div class="md:w-1/2 w-full">
-          <div class="project-container border border-grey-light mx-8 block my-8 sm:my-16 rounded shadow hover:shadow-lg normal-font">
+        <div class="md:w-1/2 w-full px-8">
+          <div class="project-container border border-gray-300mx-8 block my-8 sm:my-16 rounded shadow hover:shadow-lg normal-font">
             <% if master_logged_in? %>
-              <a href="<%= edit_project_path(project) %>" class="absolute bg-white edit-project-link no-underline px-3 py-2 right-0 rounded-b shadow text-blue top-0 z-10 hover:underline">Edit</a>
+              <a href="<%= edit_project_path(project) %>" class="absolute bg-white edit-project-link no-underline px-3 py-2 right-0 rounded-b shadow text-blue-600 top-0 z-10 hover:underline">Edit</a>
             <%end %>
             <a href="<%= project.project_link%>" target="blank" rel="nofollow" class="no-underline">
-              <div class="project-details bg-grey-lighter h-full py-8">
+              <div class="project-details bg-gray-200 h-full py-8">
                 <h2 class="font-normal text-center text-black"><%= project.title%></h2>
                 <div class="image py-4 mx-auto">
                   <% if (project.screens.attached?) %>

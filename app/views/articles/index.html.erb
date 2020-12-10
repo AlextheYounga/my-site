@@ -2,16 +2,16 @@
   <h1 class="fancy-font burgandy text-center">Blog</h1>
   <div class="mx-auto py-4 sm:flex sm:w-1/2 text-center">
     <% if logged_in? %>
-      <%= link_to "Create New Article", new_article_path, class: "bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48" %>
+      <%= link_to "Create New Article", new_article_path, class: "bg-white block border border-green-800hover:bg-green-900 hover:text-green-100 mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-900 w-48" %>
     <% else %>
       <%= nil %>
     <% end %>
     <a href="<%= categories_path %>"
-      class="bg-white block border border-red-darker hover:bg-red-darkest burgandy hover:text-red-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
+      class="bg-white block border border-red-800hover:bg-red-900 burgandy hover:text-red-600-100 mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48">
       Categories
     </a>
     <a href="<%= posts_path %>"
-      class="bg-white block border border-green-darker hover:bg-green-darkest hover:text-green-lightest mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-darkest w-48">
+      class="bg-white block border border-green-800hover:bg-green-900 hover:text-green-100 mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-900 w-48">
       Medium Articles
     </a>
   </div>

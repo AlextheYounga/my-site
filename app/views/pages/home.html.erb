@@ -1,5 +1,5 @@
-<p id="generator-notice" class="text-sm sm:text-lg absolute pin-l m-4 sm:m-3 text-black">Generating random fractal terrain...</p>
-<div class="wrapper w-5/6 sm:w-3/5 mx-auto max-w-xl">
+<p id="generator-notice" class="text-sm sm:text-lg absolute left-0 m-4 sm:m-3 text-black">Generating random fractal terrain...</p>
+<div class="wrapper w-5/6 sm:w-3/5 mx-auto max-w-3xl">
   <section class="hero mt-16 w-1/2 sm:w-1/3 mx-auto sm:mt-0 mb-4 relative home-content js--fadeInLeft">
     <picture>
       <source srcset="<%= image_path("hammock-circle.png.webp") %>" type="image/webp">
@@ -20,7 +20,7 @@
   </section>
 
   <section class="home-description relative bg-white mt-24 mb-8 p-8 home-content js--fadeInLeft shadow">
-    <div class="absolute pin-t pin-l">
+    <div class="absolute top-0 left-0">
       <picture>
         <source srcset="<%= image_path("headshot.png.webp") %>" type="image/webp" class="flex force-vertical-align mx-auto relative text-center w-3/4">
         <source srcset="<%= image_path("headshot.png") %>" type="image/png">
@@ -30,14 +30,14 @@
     <p class="home-quote italic mt-16 text-sm w-full sm:mt-0 sm:text-right sm:pb-6 sm:ml-auto sm:w-2/3">"The man who grasps principles can successfully handle his own methods. The man who tries methods, ignoring principles is sure to have trouble" -Ralph Waldo Emerson</p>
     <div class="description leading-normal ml-auto normal-font mt-6">
       <p class="py-2">I build and maintain websites for an extensive list of small and large companies including
-        <a class="text-blue hover:text-blue-darkest" href="https://www.bluehawaiian.com/en">Blue Hawaiian Helicopters</a>
+        <a class="text-blue-600 hover:text-blue-900" href="https://www.bluehawaiian.com/en">Blue Hawaiian Helicopters</a>
         and
-        <a class="text-blue hover:text-blue-darkest" href="https://www.intelligentoffice.com/">Intelligent Office.</a>
+        <a class="text-blue-600 hover:text-blue-900" href="https://www.intelligentoffice.com/">Intelligent Office.</a>
       </p>
       <p class="py-2">I am currently starting a side business called Hazlitt Tech LLC, specializing in financial market data and accounting software.</p>
       <p class="py-2">I consult businesses on best practices for Google Ad Campaigns, Analytics, and content marketing techniques.</p>
       <p class="py-2">Check out my latest
-        <a href="<%= projects_path %>" class="text-blue hover:text-blue-darkest">projects</a>.</p>
+        <a href="<%= projects_path %>" class="text-blue-600 hover:text-blue-900">projects</a>.</p>
     </div>
   </section>
 
@@ -46,7 +46,7 @@
   </section>
 
   <section class="watchlist-home relative bg-white mb-8 p-2 sm:p-8 home-content js--fadeInLeft shadow">
-    <h4 class="fancy-font text-grey-darkest text-3xl text-center py-6">Stock Watchlist</h4>
+    <h4 class="fancy-font text-gray-900 text-3xl text-center py-6">Stock Watchlist</h4>
     <p class="py-6 text-center normal-font">I keep a close eye on markets; here's what I'm looking at right now:</p>
     <%= render 'stocks/watchlist' %>
   </section>

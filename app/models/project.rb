@@ -73,12 +73,12 @@ class Project < ActiveRecord::Base
 
   def assign_color
     colors = {
-      "ruby-on-rails" => "text-red",
-      "php-laravel" => "text-blue",
-      "php" => "text-blue",
-      "wordpress" => "text-blue-dark",
-      "python" => "text-yellow-dark",
-      "net" => "text-grey-dark",
+      "ruby-on-rails" => "text-red-600",
+      "php-laravel" => "text-blue-600",
+      "php" => "text-blue-600",
+      "wordpress" => "text-blue-700",
+      "python" => "text-yellow-700",
+      "net" => "text-gray-700",
     }
 
     lang = self.framework.parameterize
