@@ -12,11 +12,11 @@ class ProjectsController < ApplicationController
                   site: "alextheyounger.me",
                   description: "Alex Younger - My projects. Some of my greatest projects",
                   reverse: true,
-                  image_src: "#{Rails.root}/assets/images/bluehawaiian.jpg",
+                  image_src: ActionController::Base.helpers.asset_path("bluehawaiian.jpg"),
                   og: {
                     title: "Projects",
                     url: "#{Rails.root}projects",
-                    image: "#{Rails.root}/assets/images/bluehawaiian.jpg",
+                    image: ActionController::Base.helpers.asset_path("bluehawaiian.jpg"),
                   },
                   twitter: {
                     card: "Alex Younger - Projects. Some of my greatest projects",
