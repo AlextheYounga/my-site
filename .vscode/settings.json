@@ -15,6 +15,10 @@
         {
             "name": "feature/tailwind-update",
             "base": "develop"
+        },
+        {
+            "name": "feature/resume",
+            "base": "develop"
         }
     ]
 }
