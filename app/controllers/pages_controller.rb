@@ -20,11 +20,10 @@ class PagesController < ApplicationController
                   }
   end
 
-  def resume
-    render layout: "landingpage"
+  def resume    
     @projects = Project.order(:position)
     @languageStats = GithubLanguage.calculateWidths
-
+    
     set_meta_tags title: "Resume",
                   site: "alextheyounger.me",
                   description: "Alex Younger - Web Developer, Data Scientist, Investor, Entrepreneur",
@@ -32,12 +31,14 @@ class PagesController < ApplicationController
                   image_src: ActionController::Base.helpers.asset_path("headshot_square.jpg"),
                   og: {
                     title: "Home",
-                    url: "#{Rails.root}/pages/resume",
+                    url: "#{Rails.root}/resume",
                     image: ActionController::Base.helpers.asset_path("headshot_square.jpg"),
                   },
                   twitter: {
                     card: "Alex Younger - Web Developer, Data Scientist, Investor, Entrepreneur",
                     site: "@AlextheYounga",
                   }
+                  
+    render layout: "landingpage"
   end
 end

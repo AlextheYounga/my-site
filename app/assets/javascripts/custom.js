@@ -163,7 +163,6 @@ window.onload = function () {
   var langStats = document.getElementById("language-bar");
   if (typeof (langStats) != 'undefined' && langStats != null) {
 
-
     for (var _i = 0, _Object$entries = Object.entries(colors); _i < _Object$entries.length; _i++) {
       var _Object$entries$_i = _Object$entries[_i];
       lang = _Object$entries$_i[0];
