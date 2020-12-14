@@ -23,7 +23,6 @@ class PagesController < ApplicationController
   def resume    
     @projects = Project.order(:position)
     @languageStats = GithubLanguage.calculateWidths
-    
     set_meta_tags title: "Resume",
                   site: "alextheyounger.me",
                   description: "Alex Younger - Web Developer, Data Scientist, Investor, Entrepreneur",

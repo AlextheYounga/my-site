@@ -3,168 +3,317 @@
     <div class="flex bg-white" style="height:600px;">
       <div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
         <div>
-          <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl">Build Your New
-            <span class="text-indigo-600">Idea</span></h2>
-          <p class="mt-2 text-sm text-gray-500 md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis commodi cum cupiditate ducimus, fugit harum id necessitatibus odio quam quasi, quibusdam rem tempora voluptates. Cumque debitis dignissimos id quam vel!</p>
+          <h2 class="text-3xl font-semibold text-indigo-600 md:text-4xl">Alex Younger</h2>
+          <p class="text-gray-900 font-medium title-font tracking-wider text-md pt-4">Web Developer, Investor, Data Scientist, Entrepreneur</p>
+          <p class="mt-2 text-sm text-gray-500 md:text-base">I build and maintain websites for an extensive list of small and large companies. I build big data calculators for financial markets, because I'm fascinated with complexity. I recently created a side-business startup called Hazlitt Tech LLC that specializes in scientific financial data and accounting software. My favorite thing is learning; I truly enjoy the process of getting better at something. If you want to see some more cool things I've built, check out my
+            <a href="<%= root_path %>" class="text-indigo-600">website</a>.</p>
           <div class="flex justify-center lg:justify-start mt-6">
-            <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="#">Get Started</a>
-            <a class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="#">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="hidden lg:block lg:w-1/2" style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
-        <div class="h-full object-cover" style="background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80)">
-          <div class="h-full bg-black opacity-25"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="stats text-gray-700 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
-    </div>
-    <div class="language-stats">
-    <h2 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 sm:px-8">Skills</h2>
-      <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
-    </div>
-  </div>
-</section>
-<section class="project-gallery text-gray-700 body-font">
-  <div class="container px-5 py-24 mx-auto flex flex-wrap">
-    <div class="lg:w-2/3 mx-auto">
-      <div class="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4">
-        <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/820x340">
-        <div class="text-center relative z-10 w-full">
-          <h2 class="text-2xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-          <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
-          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="flex flex-wrap -mx-2">
-        <div class="px-2 w-1/2">
-          <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
-            <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/542x460">
-            <div class="text-center relative z-10 w-full">
-              <h2 class="text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-              <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
-              <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
+            <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="mailto:alex.christian.younger@gmail.com">Work with me</a>
+            <%# <a class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="#">Learn More</a> %>
             </div>
           </div>
         </div>
-        <div class="px-2 w-1/2">
-          <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
-            <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/542x420">
-            <div class="text-center relative z-10 w-full">
-              <h2 class="text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-              <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
-              <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            </div>
+        <div class="hidden lg:block lg:w-1/2" style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
+          <div class="h-full object-cover" style="background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80)">
+            <div class="h-full bg-black opacity-25"></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="resume-timeline">
-  <div class="container bg-gray-200 mx-auto w-full h-full">
-    <div class="relative wrap overflow-hidden p-10 h-full">
-      <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
-      <!-- right timeline -->
-      <div class="mb-8 flex justify-between items-center w-full right-timeline">
-        <div class="order-1 w-5/12"></div>
-        <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-          <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
+  </section>
+  <section class="stats text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Skills</h1>
+        <%# <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p> %>
         </div>
-        <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-          <h3 class="mb-3 font-bold text-gray-800 text-xl">Lorem Ipsum</h3>
-          <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <div class="language-stats">
+          <%# <h2 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900 sm:px-8">Skills</h2> %>
+            <%= render partial: "language_bar/language_bar", locals: {languageStats: @languageStats} %>
+          </div>
         </div>
-      </div>
-
-      <!-- left timeline -->
-      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-        <div class="order-1 w-5/12"></div>
-        <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-          <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
-        </div>
-        <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-          <h3 class="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
-          <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
-      </div>
-
-      <!-- right timeline -->
-      <div class="mb-8 flex justify-between items-center w-full right-timeline">
-        <div class="order-1 w-5/12"></div>
-        <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-          <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
-        </div>
-        <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-          <h3 class="mb-3 font-bold text-gray-800 text-xl">Lorem Ipsum</h3>
-          <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
-      </div>
-
-      <!-- left timeline -->
-      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-        <div class="order-1 w-5/12"></div>
-        <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
-          <h1 class="mx-auto text-white font-semibold text-lg">4</h1>
-        </div>
-        <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
-          <h3 class="mb-3 font-bold text-white text-xl">Lorem Ipsum</h3>
-          <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="testimonials text-gray-700 body-font">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="flex flex-wrap -m-4">
-      <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-        <div class="h-full text-center">
-          <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/302x302">
-          <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-          <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-          <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
-          <p class="text-gray-500">Senior Product Designer</p>
-        </div>
-      </div>
-      <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-        <div class="h-full text-center">
-          <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300">
-          <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-          <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-          <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">ALPER KAMU</h2>
-          <p class="text-gray-500">UI Develeoper</p>
-        </div>
-      </div>
-      <div class="lg:w-1/3 lg:mb-0 p-4">
-        <div class="h-full text-center">
-          <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/305x305">
-          <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-          <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
-          <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HENRY LETHAM</h2>
-          <p class="text-gray-500">CTO</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- <div class="flex flex-wrap -m-4 text-center"> <div class="p-4 md:w-1/4 sm:w-1/2 w-full"> <div class="border-2 border-gray-200 px-4 py-6 rounded-lg"> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewbox="0 0 24 24"> <path d="M8 17l4 4 4-4m-4-5v9"></path> <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path> </svg> <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2> <p class="leading-relaxed">Downloads</p> </div> </div> <div class="p-4 md:w-1/4 sm:w-1/2 w-full"> <div class="border-2 border-gray-200 px-4 py-6 rounded-lg"> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewbox="0 0 24 24"> <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path> <circle cx="9" cy="7" r="4"></circle> <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path> </svg> <h2 class="title-font font-medium text-3xl text-gray-900">1.3K</h2> <p class="leading-relaxed">Users</p> </div> </div> <div class="p-4 md:w-1/4 sm:w-1/2 w-full"> <div class="border-2 border-gray-200 px-4 py-6 rounded-lg"> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewbox="0 0 24 24"> <path d="M3 18v-6a9 9 0 0118 0v6"></path> <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path> </svg> <h2 class="title-font font-medium text-3xl text-gray-900">74</h2> <p class="leading-relaxed">Files</p> </div> </div> <div class="p-4 md:w-1/4 sm:w-1/2 w-full"> <div class="border-2 border-gray-200 px-4 py-6 rounded-lg"> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewbox="0 0 24 24"> <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path> </svg> <h2 class="title-font font-medium text-3xl text-gray-900">46</h2> <p class="leading-relaxed">Places</p> </div> </div> </div> -->
+      </section>
+      <section class="text-gray-700 body-font">
+        <div class="container px-5 mx-auto">
+          <div class="text-center mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900">Experience with Other Tools and Frameworks</h1>
+            <%# <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug.</p> %>
+            </div>
+            <div class="flex flex-wrap -m-4">
+              <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Popular CMS's</h2>
+                <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 mx-auto">
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Wordpress
+                  </a>
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Shopify
+                  </a>
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Drupal
+                  </a>
+                </nav>
+              </div>
+              <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Data</h2>
+                <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1">
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>SQL
+                  </a>
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Matplotlib
+                  </a>
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Numpy
+                  </a>
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Excel
+                  </a>
+                </nav>
+              </div>
+              <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Frameworks</h2>
+                <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1">
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Laravel
+                  </a>
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Django
+                  </a>
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Ruby on Rails
+                  </a>
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>React
+                  </a>
+                </nav>
+              </div>
+              <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+                <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Marketing</h2>
+                <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1">
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Mailchimp
+                  </a>
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Hubspot
+                  </a>
+                  <a class="mb-2">
+                    <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Google Ads & Keywords
+                  </a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="project-gallery text-gray-700 body-font">
+          <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <div class="lg:w-2/3 mx-auto">
+              <div class="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4">
+                <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/820x340">
+                <div class="text-center relative z-10 w-full">
+                  <h2 class="text-2xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+                  <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
+                  <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-wrap -mx-2">
+                <div class="px-2 w-1/2">
+                  <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
+                    <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/542x460">
+                    <div class="text-center relative z-10 w-full">
+                      <h2 class="text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+                      <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
+                      <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
+                          <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-2 w-1/2">
+                  <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
+                    <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/542x420">
+                    <div class="text-center relative z-10 w-full">
+                      <h2 class="text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+                      <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
+                      <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
+                          <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-gray-700 body-font">
+          <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+              <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+              <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewbox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Shooting Stars</h2>
+                  <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+              <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+              <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewbox="0 0 24 24">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">The Catalyzer</h2>
+                  <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+              <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+              <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewbox="0 0 24 24">
+                    <circle cx="12" cy="5" r="3"></circle>
+                    <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">The 400 Blows</h2>
+                  <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+              <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+              <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+                <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewbox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                  <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Neptune</h2>
+                  <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="testimonials text-gray-700 body-font">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -m-4">
+              <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                <div class="h-full text-center">
+                  <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/302x302">
+                  <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                  <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+                  <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
+                  <p class="text-gray-500">Senior Product Designer</p>
+                </div>
+              </div>
+              <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+                <div class="h-full text-center">
+                  <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300">
+                  <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                  <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+                  <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">ALPER KAMU</h2>
+                  <p class="text-gray-500">UI Develeoper</p>
+                </div>
+              </div>
+              <div class="lg:w-1/3 lg:mb-0 p-4">
+                <div class="h-full text-center">
+                  <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/305x305">
+                  <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                  <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
+                  <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HENRY LETHAM</h2>
+                  <p class="text-gray-500">CTO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- <div class="flex flex-wrap -m-4 text-center"> <div class="p-4 md:w-1/4 sm:w-1/2 w-full"> <div class="border-2 border-gray-200 px-4 py-6 rounded-lg"> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewbox="0 0 24 24"> <path d="M8 17l4 4 4-4m-4-5v9"></path> <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path> </svg> <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2> <p class="leading-relaxed">Downloads</p> </div> </div> <div class="p-4 md:w-1/4 sm:w-1/2 w-full"> <div class="border-2 border-gray-200 px-4 py-6 rounded-lg"> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewbox="0 0 24 24"> <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path> <circle cx="9" cy="7" r="4"></circle> <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path> </svg> <h2 class="title-font font-medium text-3xl text-gray-900">1.3K</h2> <p class="leading-relaxed">Users</p> </div> </div> <div class="p-4 md:w-1/4 sm:w-1/2 w-full"> <div class="border-2 border-gray-200 px-4 py-6 rounded-lg"> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewbox="0 0 24 24"> <path d="M3 18v-6a9 9 0 0118 0v6"></path> <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path> </svg> <h2 class="title-font font-medium text-3xl text-gray-900">74</h2> <p class="leading-relaxed">Files</p> </div> </div> <div class="p-4 md:w-1/4 sm:w-1/2 w-full"> <div class="border-2 border-gray-200 px-4 py-6 rounded-lg"> <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewbox="0 0 24 24"> <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path> </svg> <h2 class="title-font font-medium text-3xl text-gray-900">46</h2> <p class="leading-relaxed">Places</p> </div> </div> </div> -->

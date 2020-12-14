@@ -25,26 +25,35 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 gem 'redis'
 # Use ActiveModel has_secure_password
-gem 'jquery-rails'
 gem 'bcrypt'
+
+# Asset gems
+gem 'jquery-rails'
 gem 'material_icons'
 gem 'font-awesome-rails'
-gem 'stock_quote'
-gem 'iex-ruby-client'
-gem 'meta-tags'
-gem 'hirb'
-gem 'solargraph'
+gem 'webpacker'
 gem 'ckeditor'
 gem 'paperclip'
-gem 'webpacker'
+gem "lazyload-rails"
+
+# Web gems
 gem 'httparty'
 gem 'async-http'
-gem 'colorize'
+
+# Stock gems
+gem 'stock_quote'
+gem 'iex-ruby-client'
 
 # Image gems
 gem 'carrierwave-imageoptimizer'
 gem 'carrierwave'
 gem 'webp-ffi'
+
+# Misc gems
+gem 'meta-tags'
+gem 'hirb'
+gem 'solargraph'
+gem 'colorize'
 
 
 # Use ActiveStorage variant
