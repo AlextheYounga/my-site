@@ -1,0 +1,12 @@
+#resume {
+    .hero-image {
+        background-image: image-url('launch.jpg.webp');
+        background-size: cover;
+        background-position: 50% 99%;
+        height: 100vh;
+    }
+
+    .hero-overlay {
+        background-image: linear-gradient(to bottom, #131313, rgba(18, 18, 18, 0.15) 43%);
+    }
+}
