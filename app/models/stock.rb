@@ -1,4 +1,5 @@
 require "iex-ruby-client"
+require "descriptive-statistics"
 class Stock < ActiveRecord::Base
   belongs_to :user
   #TODO: Set up riskrange
@@ -27,16 +28,17 @@ class Stock < ActiveRecord::Base
 
         jsonResponse = JSON.parse response
         prices = Functions.extractData(jsonResponse, 'close')
+        dates = Functions.extractData(jsonResponse, 'date')
 
     rescue => e
         puts "Error retrieving stock #{e}".red
     end
 
-    return prices
+    return [prices, dates]
   end
 
   def calculateRange(ticker)
-    prices = Functions.extractData(self.getHistoricalData(ticker, '5d', false, true))
+    prices = Functions.extractData(self.getHistoricalData(ticker, '3m', false, true))
     client = IEX::Api::Client.new(publishable_token: Rails.application.credentials.iex_public_token)
 
     current_price = client.quote(ticker).latest_price
@@ -47,7 +49,9 @@ class Stock < ActiveRecord::Base
     donchianHigh = highs.max
     donchianLow = lows.min
 
-    # stDev = 
+    stats = DescriptiveStatistics::Stats.new()
+    stDev = standard_deviation
+
   end
 
   # def rangeRules(ticker):

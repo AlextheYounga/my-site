@@ -1,3 +1,4 @@
+require "iex-ruby-client"
 class PagesController < ApplicationController
   def home
     @projects = Project.order(:position)
@@ -23,6 +24,7 @@ class PagesController < ApplicationController
   def resume    
     @projects = Project.order(:position)
     @languageStats = GithubLanguage.calculateWidths
+    @chartData = Stock.getHistoricalData('TSLA', '3m', false, true)
     set_meta_tags title: "Resume",
                   site: "alextheyounger.me",
                   description: "Alex Younger - Web Developer, Data Scientist, Investor, Entrepreneur",

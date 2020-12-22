@@ -55,6 +55,8 @@ gem 'hirb'
 gem 'solargraph'
 gem 'colorize'
 
+# Scientific
+gem 'descriptive-statistics'
 
 # Use ActiveStorage variant
 gem "aws-sdk-s3", require: false
