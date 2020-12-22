@@ -37,22 +37,22 @@ class Stock < ActiveRecord::Base
     return [prices, dates]
   end
 
-  def calculateRange(ticker)
-    prices = Functions.extractData(self.getHistoricalData(ticker, '3m', false, true))
-    client = IEX::Api::Client.new(publishable_token: Rails.application.credentials.iex_public_token)
+  # def calculateRange(ticker)
+  #   prices = Functions.extractData(self.getHistoricalData(ticker, '3m', false, true))
+  #   client = IEX::Api::Client.new(publishable_token: Rails.application.credentials.iex_public_token)
 
-    current_price = client.quote(ticker).latest_price
-    highs = Functions.extractData(prices, 'high').reversed()
-    lows = Functions.extractData(prices, 'low').reversed()
-    dates = Functions.extractData(prices, 'date').reversed()
+  #   current_price = client.quote(ticker).latest_price
+  #   highs = Functions.extractData(prices, 'high').reversed()
+  #   lows = Functions.extractData(prices, 'low').reversed()
+  #   dates = Functions.extractData(prices, 'date').reversed()
 
-    donchianHigh = highs.max
-    donchianLow = lows.min
+  #   donchianHigh = highs.max
+  #   donchianLow = lows.min
 
-    stats = DescriptiveStatistics::Stats.new()
-    stDev = standard_deviation
+  #   stats = DescriptiveStatistics::Stats.new(prices.last())
+  #   stDev = standard_deviation
 
-  end
+  # end
 
   # def rangeRules(ticker):
 #     signalArray = {}
