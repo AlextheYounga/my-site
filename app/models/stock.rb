@@ -34,7 +34,7 @@ class Stock < ActiveRecord::Base
         puts "Error retrieving stock #{e}".red
     end
 
-    return [prices, dates]
+    return {'x': dates, 'y': prices}
   end
 
   # def calculateRange(ticker)

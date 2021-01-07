@@ -1,12 +1,23 @@
 #resume {
-    .hero-image {
-        background-image: image-url('city.jpg.webp');
-        background-size: cover;
-        background-position: 50% 99%;
-        height: 100vh;
-    }
+    // .hero-image {
+    //     background-image: image-url('city.jpg.webp');
+    //     background-size: cover;
+    //     background-position: 50% 99%;
+    //     height: 100vh;
+    // }
 
-    .hero-overlay {
-        background-image: linear-gradient(to bottom, #131313, rgba(18, 18, 18, 0.33) 43%);
+    // .hero-overlay {
+    //     background-image: linear-gradient(to bottom, #131313, rgba(18, 18, 18, 0.33) 43%);
+    // }
+    .chart-bg {
+        z-index: -1;       
+        overflow: hidden; 
+        canvas {
+            top: unset !important;
+            left: -15% !important;
+            width: 130vw !important;
+            height: 100vh !important;
+            bottom: -9% !important;
+        }
     }
 }
