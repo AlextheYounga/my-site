@@ -16,58 +16,6 @@ $(document).ready(function () {
     return false;
   });
 
-  if ($('.projects-home')[0]) {
-    var projects = $('#project-details');
-    var projectList = $('ul.project-list');
-
-    function showprojectDetails(element) {
-      var projectId = $(element).data('details');
-      var projectDetails = $(projects).find('#' + projectId);
-
-      if ($('#project-details #default').hasClass('hide') == false) {
-        $('#project-details #default').addClass('hide');
-      }
-
-      $(projects).find('.details').hide();
-      $('.arrow-pointer').hide();
-      $(projectDetails).show();
-      $(element).find('.arrow-pointer').show();
-
-      var hasVScroll = $(projectDetails)[0].scrollHeight > $(projectDetails)[0].clientHeight;
-      if (hasVScroll) {
-        $('#more-details').show()
-        $(projectDetails).on('scroll', function () {
-          if ($(projectDetails).scrollTop() > 0) {
-            $('#more-details').fadeOut();
-          } else {
-            $('#more-details').fadeIn();
-          }
-        });
-      } else {
-        $('#more-details').hide()
-      }
-    }
-
-    $(document).mouseup(function (e) {
-      if ((!projects.is(e.target) && projects.has(e.target).length === 0) &&
-        (!projectList.is(e.target) && projectList.has(e.target).length === 0)) {
-        if ($('#project-details #default').hasClass('hide')) {
-          $('#project-details #default').removeClass('hide');
-          $(projects).find('.details').hide();
-        }
-      }
-    });
-
-    $(projectList).on('scroll', function () {
-      if ($(projectList).scrollTop() > 0) {
-        $('#more-down').fadeOut();
-      } else {
-        $('#more-down').fadeIn();
-      }
-    });
-  }
-
-
   $(window).on('scroll', function () {
     if ($(window).scrollTop() > 0) {
       $('#admin-nav').addClass('fixed');
@@ -183,5 +131,124 @@ window.onload = function () {
       }
     }
   }
+  if ($('#resume')[0]) {
+
+    particlesJS.load('particles-js', 'assets/particles.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
+
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 180,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  }
 };
+
+
 

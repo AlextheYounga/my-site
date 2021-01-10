@@ -40,7 +40,7 @@ gem "lazyload-rails"
 gem 'httparty'
 gem 'async-http'
 
-# Stock gems
+# Market gems
 gem 'stock_quote'
 gem 'iex-ruby-client'
 
@@ -57,6 +57,7 @@ gem 'colorize'
 
 # Scientific
 gem 'descriptive-statistics'
+gem 'particles-js-rails'
 
 # Use ActiveStorage variant
 gem "aws-sdk-s3", require: false

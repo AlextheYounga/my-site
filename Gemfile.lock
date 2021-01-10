@@ -277,6 +277,7 @@ GEM
     parallel (1.20.0)
     parser (2.7.2.0)
       ast (~> 2.4.1)
+    particles-js-rails (2.0.0)
     pg (1.2.3)
     protocol-hpack (1.4.2)
     protocol-http (0.21.0)
@@ -484,6 +485,7 @@ DEPENDENCIES
   meta-tags
   mini_magick
   paperclip
+  particles-js-rails
   pg
   puma (~> 3.11)
   rails (~> 6.0.3.4)
