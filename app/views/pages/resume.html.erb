@@ -1,21 +1,20 @@
 <div id="resume">
   <section class="particles">
     <div id="particles-js"></div>
-    <div class="absolute top-1/4 w-full">
-      <div class="hero-overlay bg-white mx-auto p-5 rounded text-center w-3/5">
-        <h2 class="text-3xl font-semibold text-gray-900 md:text-4xl">Alex Younger</h2>
-        <p class="text-gray-800 font-medium title-font tracking-wider text-md pt-4">Web Developer, Investor, Data Scientist, Entrepreneur</p>
-        <p class="mt-2 text-sm text-gray-800 md:text-base">I build and maintain websites for an extensive list of small and large companies. I build big data calculators for financial markets, because I'm fascinated with complexity. I recently created a side-business startup called Hazlitt Tech LLC that specializes in scientific financial data and accounting software. My favorite thing is learning; I truly enjoy the process of getting better at something. If you want to see some more cool things I've built, check out my <a href="<%#= root_path %>" class="text-indigo-600">website</a>. </p>
+    <div class="absolute lg:top-1/4 sm:left-1/4 sm:right-1/4 z-20">
+      <div class="lg:bg-white hero-overlay p-5 rounded text-center">
+        <h2 class="text-3xl font-semibold text-gray-100 lg:text-gray-900 md:text-4xl">Alex Younger</h2>
+        <p class="text-gray-200 lg:text-gray-800 font-medium title-font tracking-wider text-md pt-4">Web Developer, Data Scientist, Investor, Entrepreneur</p>
+        <p class="mt-2 text-sm text-gray-200 lg:text-gray-800 md:text-base"> </p>
         <div class="flex justify-center lg:justify-start mt-6"> <a class="mx-auto px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="mailto:alex.christian.younger@gmail.com">Work with me</a> </div>
       </div>
     </div>
   </section>
 
-  <section class="stats text-gray-700 body-font">
+  <section class="stats text-gray-700 body-font relative">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
         <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Skills</h1>
-
       </div>
       <div class="language-stats">
         <%= render partial: "language_bar/language_bar" , locals: {languageStats: @languageStats} %>
@@ -152,53 +151,67 @@
   </section>
   <section class="project-gallery text-gray-700 body-font">
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
-      <div class="lg:w-2/3 mx-auto">
-        <div class="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4">
-          <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/820x340">
-          <div class="text-center relative z-10 w-full">
-            <h2 class="text-2xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-            <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
-            <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+      <div class="flex w-full mb-20 flex-wrap">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Projects</h1>
+        <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Take a look at a few of the projects I've worked on</p>
+      </div>
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-1/2 relative">
+            <picture>
+              <source srcset="<%= image_path("bluehawaiian.jpg.webp") %>" type="image/webp" class="w-full object-cover h-full object-center block">
+              <source srcset="<%= image_path("bluehawaiian.jpg") %>" type="image/jpg">
+              <img src="<%= image_path("bluehawaiian.jpg") %>" class="w-full object-cover h-full object-center block" alt="alex younger developer marketing about me"/>
+            </picture>
+            <!-- <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300"> -->
+          </div>
+          <div class="md:p-2 p-1 w-1/2 relative">
+            <picture>
+              <source srcset="<%= image_path("sundance.jpg.webp") %>" type="image/webp" class="w-full object-cover h-full object-center block">
+              <source srcset="<%= image_path("sundance.jpg") %>" type="image/jpg">
+              <img src="<%= image_path("sundance.jpg") %>" class="w-full object-cover h-full object-center block" alt="alex younger developer marketing about me"/>
+            </picture>
+            <!-- <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301"> -->
+          </div>
+          <div class="md:p-2 p-1 w-full relative">
+            <picture>
+              <source srcset="<%= image_path("bluehawaiian.jpg.webp") %>" type="image/webp" class="w-full object-cover h-full object-center block">
+              <source srcset="<%= image_path("bluehawaiian.jpg") %>" type="image/jpg">
+              <img src="<%= image_path("bluehawaiian.jpg") %>" class="w-full object-cover h-full object-center block" alt="alex younger developer marketing about me"/>
+            </picture>
+            <!-- <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360"> -->
           </div>
         </div>
-        <div class="flex flex-wrap -mx-2">
-          <div class="px-2 w-1/2">
-            <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
-              <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/542x460">
-              <div class="text-center relative z-10 w-full">
-                <h2 class="text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-                <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
-                <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-full relative">
+            <picture>
+              <source srcset="<%= image_path("io.jpg.webp") %>" type="image/webp" class="w-full object-cover h-full object-center block">
+              <source srcset="<%= image_path("io.jpg") %>" type="image/jpg">
+              <img src="<%= image_path("io.jpg") %>" class="w-full object-cover h-full object-center block" alt="alex younger developer marketing about me"/>
+            </picture>
+            <!-- <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361"> -->
           </div>
-          <div class="px-2 w-1/2">
-            <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
-              <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/542x420">
-              <div class="text-center relative z-10 w-full">
-                <h2 class="text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-                <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
-                <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+          <div class="md:p-2 p-1 w-1/2 relative">
+            <picture>
+              <source srcset="<%= image_path("bluehawaiian.jpg.webp") %>" type="image/webp" class="w-full object-cover h-full object-center block">
+              <source srcset="<%= image_path("bluehawaiian.jpg") %>" type="image/jpg">
+              <img src="<%= image_path("bluehawaiian.jpg") %>" class="w-full object-cover h-full object-center block" alt="alex younger developer marketing about me"/>
+            </picture>
+            <!-- <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302"> -->
+          </div>
+          <div class="md:p-2 p-1 w-1/2 relative">
+            <picture>
+              <source srcset="<%= image_path("bluehawaiian.jpg.webp") %>" type="image/webp" class="w-full object-cover h-full object-center block">
+              <source srcset="<%= image_path("bluehawaiian.jpg") %>" type="image/jpg">
+              <img src="<%= image_path("bluehawaiian.jpg") %>" class="w-full object-cover h-full object-center block" alt="alex younger developer marketing about me"/>
+            </picture>
+            <!-- <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303"> -->
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="text-gray-700 body-font">
+  <section class="timeline text-gray-700 body-font">
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
       <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
         <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
@@ -307,11 +320,8 @@
   </section>
 </div>
 
-<script>
-
-</script>
-
 <!-- Scrap -->
+<!-- I build and maintain websites for an extensive list of small and large companies. I'm fascinated with complexity. I am currently building a side-business startup called Hazlitt Tech LLC that specializes in scientific financial data and personal accounting software. If you want to see some more cool things I've built, check out my <a href="<%#= root_path %>" class="text-indigo-600">website</a>. -->
 <!-- <section class="hero relative">
     <div class="hero-image h-full w-full">
       <div class="hero-overlay w-full h-full">
@@ -343,3 +353,50 @@
     </div>
   </div>
 </section> -->
+
+<!-- <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="lg:w-2/3 mx-auto">
+        <div class="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4">
+          <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/820x340">
+          <div class="text-center relative z-10 w-full">
+            <h2 class="text-2xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+            <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
+            <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-2">
+          <div class="px-2 w-1/2">
+            <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
+              <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/542x460">
+              <div class="text-center relative z-10 w-full">
+                <h2 class="text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+                <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
+                <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="px-2 w-1/2">
+            <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
+              <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/542x420">
+              <div class="text-center relative z-10 w-full">
+                <h2 class="text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
+                <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
+                <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->

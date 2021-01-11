@@ -133,10 +133,6 @@ window.onload = function () {
   }
   if ($('#resume')[0]) {
 
-    particlesJS.load('particles-js', 'assets/particles.json', function () {
-      console.log('callback - particles.js config loaded');
-    });
-
     particlesJS("particles-js", {
       "particles": {
         "number": {
