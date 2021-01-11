@@ -30,9 +30,20 @@
         }
     }
 
-    // .project-gallery {
-    //     .project-img {
-    //         border: 1px solid black;
-    //     }
-    // }
+    .project-gallery {
+
+        .project-img {
+            .overlay {
+                display: none;
+            }
+            &:hover {
+                .overlay {
+                    display: block;
+                    background-color: rgba(40, 40, 40, 0.7);
+                }
+
+            }
+        }
+
+    }
 }

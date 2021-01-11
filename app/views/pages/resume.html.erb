@@ -153,53 +153,69 @@
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
       <div class="flex w-full mb-20 flex-wrap">
         <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Projects</h1>
-        <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Take a look at a few of the projects I've worked on</p>
+        <div class="lg:pl-6 lg:w-2/3 mx-auto">
+          <p class="leading-relaxed pb-2 text-base">I build and maintain websites for an extensive list of small and large companies. I am currently building a side-business startup called Hazlitt Tech LLC that specializes in scientific financial data and personal accounting software. If you want to see some more cool things I've built, check out my <a href="<%#= root_path %>" class="text-indigo-600">website</a>.</p>
+          <p class="leading-relaxed text-base">Here are some of the clients I've worked for, from ongoing maintenance to building from the ground up.</p>
+        </div>
       </div>
       <div class="flex flex-wrap md:-m-2 -m-1">
         <div class="flex flex-wrap w-1/2">
-          <div class="md:p-2 p-1 w-1/2 relative">
-            <picture>
-              <source srcset="<%= image_path("izoox.jpg.webp") %>" type="image/webp">
-              <source srcset="<%= image_path("izoox.jpg") %>" type="image/jpg">
-              <img src="<%= image_path("izoox.jpg") %>" class="w-full object-cover h-full object-center block project-img border border-gray-700" alt="alex younger developer marketing about me"/>
-            </picture>
+          <div class="project-img md:p-2 p-1 w-1/2 relative">
+            <div class="overlay absolute w-full h-full"></div>
+            <a href="https://www.izoox.com/" target="_blank">
+              <picture>
+                <source srcset="<%= image_path("izoox.jpg.webp") %>" type="image/webp">
+                <source srcset="<%= image_path("izoox.jpg") %>" type="image/jpg">
+                <img src="<%= image_path("izoox.jpg") %>" class="w-full object-cover h-full object-center block rounded border border-gray-700" alt="alex younger developer marketing about me"/>
+              </picture>
+            </a>
           </div>
           <div class="md:p-2 p-1 w-1/2 relative">
-            <picture>
-              <source srcset="<%= image_path("sundance.jpg.webp") %>">
-              <source srcset="<%= image_path("sundance.jpg") %>" type="image/jpg">
-              <img src="<%= image_path("sundance.jpg") %>" class="w-full object-cover h-full object-center block project-img border border-gray-700" alt="alex younger developer marketing about me"/>
-            </picture>
+            <a href="https://web.archive.org/web/20191121120344/https://www.sundancehelicopters.com/" target="_blank">
+              <picture>
+                <source srcset="<%= image_path("sundance.jpg.webp") %>">
+                <source srcset="<%= image_path("sundance.jpg") %>" type="image/jpg">
+                <img src="<%= image_path("sundance.jpg") %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me"/>
+              </picture>
+            </a>
           </div>
           <div class="md:p-2 p-1 w-full relative">
-            <picture>
-              <source srcset="<%= image_path("bluehawaiian.jpg.webp") %>">
-              <source srcset="<%= image_path("bluehawaiian.jpg") %>" type="image/jpg">
-              <img src="<%= image_path("bluehawaiian.jpg") %>" class="w-full object-cover h-full object-center block project-img border border-gray-700" alt="alex younger developer marketing about me"/>
-            </picture>
+            <a href="https://www.bluehawaiian.com/en" target="_blank">
+              <picture>
+                <source srcset="<%= image_path("bluehawaiian.jpg.webp") %>">
+                <source srcset="<%= image_path("bluehawaiian.jpg") %>" type="image/jpg">
+                <img src="<%= image_path("bluehawaiian.jpg") %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me"/>
+              </picture>
+            </a>
           </div>
         </div>
         <div class="flex flex-wrap w-1/2">
           <div class="md:p-2 p-1 w-full relative">
-            <picture>
-              <source srcset="<%= image_path("io.jpg.webp") %>" type="image/webp">
-              <source srcset="<%= image_path("io.jpg") %>" type="image/jpg">
-              <img src="<%= image_path("io.jpg") %>" class="w-full object-cover h-full object-center block project-img border border-gray-700" alt="alex younger developer marketing about me"/>
-            </picture>
+            <a href="https://www.intelligentoffice.com/" target="_blank">
+              <picture>
+                <source srcset="<%= image_path("io.jpg.webp") %>" type="image/webp">
+                <source srcset="<%= image_path("io.jpg") %>" type="image/jpg">
+                <img src="<%= image_path("io.jpg") %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me"/>
+              </picture>
+            </a>
           </div>
           <div class="md:p-2 p-1 w-1/2 relative">
-            <picture>
-              <source srcset="<%= image_path("mackinney.jpg.webp") %>" type="image/webp">
-              <source srcset="<%= image_path("mackinney.jpg") %>" type="image/jpg">
-              <img src="<%= image_path("mackinney.jpg") %>" class="w-full object-cover h-full object-center block project-img border border-gray-700" alt="alex younger developer marketing about me"/>
-            </picture>
+            <a href="https://www.mackinney.com/" target="_blank">
+              <picture>
+                <source srcset="<%= image_path("mackinney.jpg.webp") %>" type="image/webp">
+                <source srcset="<%= image_path("mackinney.jpg") %>" type="image/jpg">
+                <img src="<%= image_path("mackinney.jpg") %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me"/>
+              </picture>
+            </a>
           </div>
           <div class="md:p-2 p-1 w-1/2 relative">
-            <picture>
-              <source srcset="<%= image_path("irocks.jpg.webp") %>" type="image/webp">
-              <source srcset="<%= image_path("irocks.jpg") %>" type="image/jpg">
-              <img src="<%= image_path("irocks.jpg") %>" class="w-full object-cover h-full object-center block project-img border border-gray-700" alt="alex younger developer marketing about me"/>
-            </picture>
+            <a href="https://www.irocks.com/" target="_blank">
+              <picture>
+                <source srcset="<%= image_path("irocks.jpg.webp") %>" type="image/webp">
+                <source srcset="<%= image_path("irocks.jpg") %>" type="image/jpg">
+                <img src="<%= image_path("irocks.jpg") %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me"/>
+              </picture>
+            </a>
           </div>
         </div>
       </div>
@@ -214,13 +230,16 @@
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
           <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewbox="0 0 24 24">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
           </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Shooting Stars</h2>
-            <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Education</h2>
+            <p class="leading-relaxed">I attended college for two years in pursuit of an economics degree, a subject I still find fascinating. Like many I was pressured into college early on, I eventually decided it was a better financial decision to drop out; I regard this as one of the best decisions I've ever made.</p>
+            <p><a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="discoverpraxis.com">Praxis</a> is an organization that
+              connects driven, entrepreneurial-minded kids with startup companies to learn business skills through an
+              apprenticeship at startup industries. The program taught me self-marketing skills and crucial business skills.</p>
           </div>
         </div>
       </div>
@@ -230,14 +249,9 @@
         </div>
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-          <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewbox="0 0 24 24">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-          </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">The Catalyzer</h2>
-            <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Zipline Course Manager</h2>
+            <p class="leading-relaxed">I first started in ziplines with a company called Historic Banning Mills. I eventually went on to manage zipline courses throughout the southeast including courses in Georgia, Alabama, and South Carolina. I worked in this industry for about 6 years.</p>
           </div>
         </div>
       </div>
@@ -247,15 +261,13 @@
         </div>
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-          <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewbox="0 0 24 24">
-              <circle cx="12" cy="5" r="3"></circle>
-              <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
-            </svg>
-          </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">The 400 Blows</h2>
-            <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Khorus Software</h2>
+            <p class="leading-relaxed">
+            <p><a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="discoverpraxis.com">Praxis</a> connected me with <a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="https://en.wikipedia.org/wiki/Joel_Trammell">Joel Trammell</a>, Founder of Khorus Software and current CEO of BlackBox Network Services. I very much admired his management style and philosophy, I was honored to work for him.
+              I wore many hats at Khorus, but my main role was in marketing. I always found myself migrating to programming and I even modified an <a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="https://gist.github.com/AlextheYounga/26faf858c673f2ceb1efd5574cfbc5fe">Excel macro</a>
+              I found that helped increase our outbound marketing by 900%. This is when I started realizing I wanted to devote all my time to
+              developing.</p>
           </div>
         </div>
       </div>
@@ -265,15 +277,9 @@
         </div>
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-          <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewbox="0 0 24 24">
-              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Neptune</h2>
-            <p class="leading-relaxed">VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk bespoke try-hard cliche palo santo offal.</p>
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Izoox Hosting</h2>
+            <p class="leading-relaxed">I have worked at <a href="https://www.izoox.com/" target="_blank" rel="nofollow" class="no-underline text-indigo-600 hover:underline">Izoox</a> since late 2018. It has been a privilege to work here, havingn the opportunity to work on so many different projects, and learn a myriad of new languages and frameworks.</p>
           </div>
         </div>
       </div>
@@ -315,7 +321,7 @@
 </div>
 
 <!-- Scrap -->
-<!-- I build and maintain websites for an extensive list of small and large companies. I'm fascinated with complexity. I am currently building a side-business startup called Hazlitt Tech LLC that specializes in scientific financial data and personal accounting software. If you want to see some more cool things I've built, check out my <a href="<%#= root_path %>" class="text-indigo-600">website</a>. -->
+<!--  I'm fascinated with complexity.  -->
 <!-- <section class="hero relative">
     <div class="hero-image h-full w-full">
       <div class="hero-overlay w-full h-full">
