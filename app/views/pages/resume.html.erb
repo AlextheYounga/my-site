@@ -230,8 +230,8 @@
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
           <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-12 h-12" viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+              <img src="<%= image_path("book.svg") %>" class="w-14 h-14" />
             </svg>
           </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
@@ -249,6 +249,11 @@
         </div>
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+              <img src="<%= image_path("zipline.svg") %>" class="w-14 h-14" />
+            </svg>
+          </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
             <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Zipline Course Manager</h2>
             <p class="leading-relaxed">I first started in ziplines with a company called Historic Banning Mills. I eventually went on to manage zipline courses throughout the southeast including courses in Georgia, Alabama, and South Carolina. I worked in this industry for about 6 years.</p>
@@ -261,13 +266,18 @@
         </div>
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+              <img src="<%= image_path("building.svg") %>" class="w-14 text-indigo-600" />
+            </svg>
+          </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
             <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Khorus Software</h2>
             <p class="leading-relaxed">
             <p><a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="discoverpraxis.com">Praxis</a> connected me with <a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="https://en.wikipedia.org/wiki/Joel_Trammell">Joel Trammell</a>, Founder of Khorus Software and current CEO of BlackBox Network Services. I very much admired his management style and philosophy, I was honored to work for him.
               I wore many hats at Khorus, but my main role was in marketing. I always found myself migrating to programming and I even modified an <a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="https://gist.github.com/AlextheYounga/26faf858c673f2ceb1efd5574cfbc5fe">Excel macro</a>
               I found that helped increase our outbound marketing by 900%. This is when I started realizing I wanted to devote all my time to
-              developing.</p>
+              coding.</p>
           </div>
         </div>
       </div>
@@ -277,8 +287,13 @@
         </div>
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+              <img src="<%= image_path("coding.svg") %>" class="w-14 text-indigo-600" />
+            </svg>
+          </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Izoox Hosting</h2>
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Web Developer at Izoox</h2>
             <p class="leading-relaxed">I have worked at <a href="https://www.izoox.com/" target="_blank" rel="nofollow" class="no-underline text-indigo-600 hover:underline">Izoox</a> since late 2018. It has been a privilege to work here, havingn the opportunity to work on so many different projects, and learn a myriad of new languages and frameworks.</p>
           </div>
         </div>
@@ -322,81 +337,3 @@
 
 <!-- Scrap -->
 <!--  I'm fascinated with complexity.  -->
-<!-- <section class="hero relative">
-    <div class="hero-image h-full w-full">
-      <div class="hero-overlay w-full h-full">
-        <div class="absolute left-0 mx-auto right-0 text-center top-1/3 w-3/5">
-          <h2 class="text-3xl font-semibold text-gray-100 md:text-4xl">Alex Younger</h2>
-          <p class="text-gray-200 font-medium title-font tracking-wider text-md pt-4">Web Developer, Investor, Data Scientist, Entrepreneur</p>
-          <p class="mt-2 text-sm text-gray-200 md:text-base">I build and maintain websites for an extensive list of small and large companies. I build big data calculators for financial markets, because I'm fascinated with complexity. I recently created a side-business startup called Hazlitt Tech LLC that specializes in scientific financial data and accounting software. My favorite thing is learning; I truly enjoy the process of getting better at something. If you want to see some more cool things I've built, check out my <a href="<%#= root_path %>" class="text-indigo-600">website</a>. </p>
-          <div class="flex justify-center lg:justify-start mt-6"> <a class="mx-auto px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="mailto:alex.christian.younger@gmail.com">Work with me</a> </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-<!-- <section class="hero">
-  <div class="w-full">
-    <div class="flex bg-white" style="height:600px;">
-      <div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
-        <div>
-          <h2 class="text-3xl font-semibold text-indigo-600 md:text-4xl">Alex Younger</h2>
-          <p class="text-gray-900 font-medium title-font tracking-wider text-md pt-4">Web Developer, Investor, Data Scientist, Entrepreneur</p>
-          <p class="mt-2 text-sm text-gray-500 md:text-base">I build and maintain websites for an extensive list of small and large companies. I build big data calculators for financial markets, because I'm fascinated with complexity. I recently created a side-business startup called Hazlitt Tech LLC that specializes in scientific financial data and accounting software. My favorite thing is learning; I truly enjoy the process of getting better at something. If you want to see some more cool things I've built, check out my <a href="<%= root_path %>" class="text-indigo-600">website</a>. </p>
-          <div class="flex justify-center lg:justify-start mt-6"> <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="mailto:alex.christian.younger@gmail.com">Work with me</a> </div>
-        </div>
-      </div>
-      <div class="hidden lg:block lg:w-1/2" style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
-        <div class="h-full object-cover" style="background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80)">
-          <div class="h-full bg-black opacity-25"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<!-- <div class="container px-5 py-24 mx-auto flex flex-wrap">
-      <div class="lg:w-2/3 mx-auto">
-        <div class="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4">
-          <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/820x340">
-          <div class="text-center relative z-10 w-full">
-            <h2 class="text-2xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-            <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
-            <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="flex flex-wrap -mx-2">
-          <div class="px-2 w-1/2">
-            <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
-              <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/542x460">
-              <div class="text-center relative z-10 w-full">
-                <h2 class="text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-                <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
-                <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="px-2 w-1/2">
-            <div class="flex flex-wrap w-full bg-gray-100 sm:py-24 py-16 sm:px-10 px-6 relative">
-              <img alt="gallery" class="w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="https://dummyimage.com/542x420">
-              <div class="text-center relative z-10 w-full">
-                <h2 class="text-xl text-gray-900 font-medium title-font mb-2">Shooting Stars</h2>
-                <p class="leading-relaxed">Skateboard +1 mustache fixie paleo lumbersexual.</p>
-                <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewbox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->

@@ -32,18 +32,11 @@
 
     .project-gallery {
 
-        .project-img {
-            .overlay {
-                display: none;
-            }
-            &:hover {
-                .overlay {
-                    display: block;
-                    background-color: rgba(40, 40, 40, 0.7);
-                }
-
+        svg {
+            path {
+                fill: #6366F1;
+                color: #6366F1;
             }
         }
-
     }
 }
