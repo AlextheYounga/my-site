@@ -31,12 +31,34 @@
     }
 
     .project-gallery {
-
         svg {
             path {
                 fill: #6366F1;
                 color: #6366F1;
             }
+        }
+
+        .project-img {
+            .description {
+                display: none;
+            }
+            &:hover {
+                .description {
+                    display: block;
+                }
+                picture {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: calc(100% - 1rem);
+                        height: calc(100% - 1rem);
+                        border-radius: 3px;
+                        background-color: rgba(40, 40, 40, 0.7);
+                    }
+                }
+
+            }
+
         }
     }
 }
