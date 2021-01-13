@@ -136,7 +136,7 @@ window.onload = function () {
     particlesJS("particles-js", {
       "particles": {
         "number": {
-          "value": 2,
+          "value": 180,
           "density": {
             "enable": true,
             "value_area": 800
