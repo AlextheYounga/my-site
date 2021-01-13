@@ -1,0 +1,369 @@
+<div id="resume">
+  <section class="particles">
+    <div id="particles-js"></div>
+    <div class="absolute lg:top-1/4 sm:left-1/4 sm:right-1/4 z-20">
+      <div class="lg:bg-white hero-overlay p-5 rounded text-center">
+        <h2 class="text-3xl font-semibold text-gray-100 lg:text-gray-700 md:text-4xl">Alex Younger</h2>
+        <p class="text-gray-200 lg:text-gray-600 font-medium title-font tracking-wider text-md pt-4">Web Developer, Data Scientist, Investor, Entrepreneur</p>
+        <p class="mt-2 text-sm text-gray-200 lg:text-gray-600 md:text-base"> </p>
+        <div class="flex justify-center mt-6">
+          <a class="m-1 px-4 py-3 bg-indigo-900 text-gray-200 text-xs font-semibold rounded hover:bg-indigo-800" href="mailto:alex.christian.younger@gmail.com">Work with me</a>
+          <a class="m-1 px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="<%= root_path %>">My website</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Skills -->
+  <section class="stats text-gray-700 body-font relative">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Skills</h1>
+      </div>
+      <div class="language-stats">
+        <%= render partial: "language_bar/language_bar" , locals: {languageStats: @languageStats} %>
+      </div>
+    </div>
+  </section>
+  <!-- Other Skills -->
+  <section class="text-gray-700 body-font">
+    <div class="container px-5 mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900">Experience with Other Tools and Frameworks</h1>
+      </div>
+      <div class="flex flex-wrap -m-4 mx-auto">
+        <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+          <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Popular CMS's</h2>
+          <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 mx-auto">
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Wordpress
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Shopify
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Drupal (but do not recommend)
+            </a>
+          </nav>
+        </div>
+        <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+          <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Data</h2>
+          <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1">
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>SQL
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Postgres, MySQL, MariaDB
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Matplotlib
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Numpy
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Excel
+            </a>
+          </nav>
+        </div>
+        <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+          <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Frameworks</h2>
+          <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1">
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Laravel
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Django
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Ruby on Rails
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>React
+            </a>
+          </nav>
+        </div>
+        <div class="p-4 lg:w-1/4 sm:w-1/2 w-full">
+          <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Marketing</h2>
+          <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1">
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Mailchimp
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Hubspot
+            </a>
+            <a class="mb-2">
+              <span class="bg-indigo-100 text-indigo-500 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-3 h-3" viewbox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Google Ads & Keywords
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery -->
+  <section class="project-gallery text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex w-full mb-20 flex-wrap">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Projects</h1>
+        <div class="lg:pl-6 lg:w-2/3 mx-auto">
+          <p class="leading-relaxed pb-2 text-base">I build and maintain websites for an extensive list of small and large companies. I am currently building a side-business startup called Hazlitt Tech LLC that specializes in scientific financial data and personal accounting software. If you want to see some more cool things I've built, check out my <a href="<%#= root_path %>" class="text-indigo-600">website</a>.</p>
+          <p class="leading-relaxed text-base">Here are some of the clients I've worked for, from ongoing maintenance to building from the ground up.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <div class="flex flex-wrap lg:w-1/2">
+          <div class="project-img md:p-2 p-1 lg:w-1/2 relative">
+            <picture>
+              <source srcset="<%= image_path('izoox.jpg.webp') %>" type="image/webp">
+              <source srcset="<%= image_path('izoox.jpg') %>" type="image/jpg">
+              <img src="<%= image_path('izoox.jpg') %>" class="w-full object-cover h-full object-center block rounded border border-gray-700" alt="alex younger developer marketing about me" />
+            </picture>
+            <div class="absolute bottom-0 description left-0 pr-2 right-0 text-center force-vertical-align">
+              <p class="text-white w-full">Izoox LLC</p>
+              <p class="text-white w-full block mb-2">PHP/Laravel</p>
+              <a class="bg-indigo-900 font-semibold hover:bg-indigo-800 px-4 py-2 rounded text-gray-200 text-xs" href="https://www.izoox.com/">Visit</a>
+            </div>
+          </div>
+
+          <div class="project-img md:p-2 p-1 lg:w-1/2 relative">
+            <picture>
+              <source srcset="<%= image_path('mackinney.jpg.webp') %>">
+              <source srcset="<%= image_path('mackinney.jpg') %>" type="image/jpg">
+              <img src="<%= image_path('mackinney.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me" />
+            </picture>
+            <div class="absolute bottom-0 description left-0 pr-2 right-0 text-center force-vertical-align">
+              <p class="text-white w-full">Mackinney Systems</p>
+              <p class="text-white w-full block mb-2">PHP Laravel</p>
+              <a class="bg-indigo-900 font-semibold hover:bg-indigo-800 px-4 py-2 rounded text-gray-200 text-xs" href="https://www.mackinney.com/" target="_blank" rel="nofollow">Visit</a>
+            </div>
+          </div>
+
+          <div class="project-img md:p-2 p-1 w-full relative">
+            <picture>
+              <source srcset="<%= image_path('bluehawaiian.jpg.webp') %>">
+              <source srcset="<%= image_path('bluehawaiian.jpg') %>" type="image/jpg">
+              <img src="<%= image_path('bluehawaiian.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me" />
+            </picture>
+            <div class="absolute bottom-0 description left-0 pr-2 right-0 text-center force-vertical-align">
+              <p class="text-white w-full">Blue Hawaiian Helictopers</p>
+              <p class="text-white w-full block mb-2">PHP/Laravel</p>
+              <a class="bg-indigo-900 font-semibold hover:bg-indigo-800 px-4 py-2 rounded text-gray-200 text-xs" href="https://www.bluehawaiian.com/en" target="_blank" rel="nofollow">Visit</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap lg:w-1/2">
+          <div class="project-img md:p-2 p-1 w-full relative">
+            <picture>
+              <source srcset="<%= image_path('io.jpg.webp') %>" type="image/webp">
+              <source srcset="<%= image_path('io.jpg') %>" type="image/jpg">
+              <img src="<%= image_path('io.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me" />
+            </picture>
+            <div class="absolute bottom-0 description left-0 pr-2 right-0 text-center force-vertical-align">
+              <p class="text-white w-full">Intelligent Office</p>
+              <p class="text-white w-full block mb-2">.NET</p>
+              <a class="bg-indigo-900 font-semibold hover:bg-indigo-800 px-4 py-2 rounded text-gray-200 text-xs" href="https://www.intelligentoffice.com/" target="_blank" rel="nofollow">Visit</a>
+            </div>
+          </div>
+
+          <div class="project-img md:p-2 p-1 lg:w-1/2 relative">
+            <picture>
+              <source srcset="<%= image_path('fractalmarkets.jpg.webp') %>" type="image/webp">
+              <source srcset="<%= image_path('fractalmarkets.jpg') %>" type="image/jpg">
+              <img src="<%= image_path('fractalmarkets.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me" />
+            </picture>
+            <div class="absolute bottom-0 description left-0 pr-2 right-0 text-center force-vertical-align">
+              <p class="text-white w-full">Fractal Markets Lab</p>
+              <p class="text-white w-full">Python</p>
+              <small class="text-white w-full block mb-2">A repo of advanced stock market statistical tools</small>
+              <a class="bg-indigo-900 font-semibold hover:bg-indigo-800 px-4 py-2 rounded text-gray-200 text-xs" href="https://github.com/AlextheYounga/fractalMarketsLab/" target="_blank" rel="nofollow">Visit</a>
+            </div>
+          </div>
+
+          <div class="project-img md:p-2 p-1 lg:w-1/2 relative">
+            <picture>
+              <source srcset="<%= image_path('languagegithub.jpg.webp') %>" type="image/webp">
+              <source srcset="<%= image_path('languagegithub.jpg') %>" type="image/jpg">
+              <img src="<%= image_path('languagegithub.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me" />
+            </picture>
+            <div class="absolute bottom-0 description left-0 pr-2 right-0 text-center force-vertical-align">
+              <p class="text-white w-full">Github Language Statistics Gem</p>
+              <p class="text-white w-full block mb-2">Ruby on Rails</p>
+              <small class="text-white w-full block mb-2">A work in progress, but a proud one.</small>
+              <a class="bg-indigo-900 font-semibold hover:bg-indigo-800 px-4 py-2 rounded text-gray-200 text-xs" href="https://github.com/AlextheYounga/github_language_statistics" target="_blank" rel="nofollow">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Timeline -->
+  <section class="timeline text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 w-full mb-12">Background</h1>
+      <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
+        <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+          <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+        </div>
+        <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+        <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+              <img src="<%= image_path('book.svg') %>" class="w-14 h-14" />
+            </svg>
+          </div>
+          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Education</h2>
+            <p class="leading-relaxed">I attended college for two years in pursuit of an economics degree, a subject I still find fascinating. Like many I was pressured into college early on, I eventually decided it was a better financial decision to drop out; I regard this as one of the best decisions I've ever made.</p>
+            <p><a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="discoverpraxis.com">Praxis</a> is an organization that
+              connects driven, entrepreneurial-minded kids with startup companies to learn business skills through an
+              apprenticeship at startup industries. The program taught me self-marketing skills and crucial business skills.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+        <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+          <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+        </div>
+        <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+        <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+              <img src="<%= image_path('zipline.svg') %>" class="w-14 h-14" />
+            </svg>
+          </div>
+          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Zipline Course Manager</h2>
+            <p class="leading-relaxed">I first started in ziplines with a company called Historic Banning Mills. I eventually went on to manage zipline courses throughout the southeast including courses in Georgia, Alabama, and South Carolina. I worked in this industry for about 6 years.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
+        <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+          <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+        </div>
+        <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+        <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+              <img src="<%= image_path('building.svg') %>" class="w-14 text-indigo-600" />
+            </svg>
+          </div>
+          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Khorus Software</h2>
+            <p class="leading-relaxed">
+            <p><a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="discoverpraxis.com">Praxis</a> connected me with <a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="https://en.wikipedia.org/wiki/Joel_Trammell">Joel Trammell</a>, Founder of Khorus Software and current CEO of BlackBox Network Services. I very much admired his management style and philosophy, I was honored to work for him.
+              I wore many hats at Khorus, but my main role was in marketing. I always found myself migrating to programming and I even modified an <a class="no-underline text-indigo-600 hover:underline" target="_blank" rel="nofollow" href="https://gist.github.com/AlextheYounga/26faf858c673f2ceb1efd5574cfbc5fe">Excel macro</a>
+              I found that helped increase our outbound marketing by 900%. This is when I started realizing I wanted to devote all my time to
+              coding.</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+        <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+          <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+        </div>
+        <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+        <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+          <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+              <img src="<%= image_path('coding.svg') %>" class="w-14 text-indigo-600" />
+            </svg>
+          </div>
+          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+            <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Web Developer at Izoox</h2>
+            <p class="leading-relaxed">I have worked at <a href="https://www.izoox.com/" target="_blank" rel="nofollow" class="no-underline text-indigo-600 hover:underline">Izoox</a> since late 2018. It has been a privilege to work here, havingn the opportunity to work on so many different projects, and learn a myriad of new languages and frameworks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Me Personally -->
+  <section class="personally container mx-auto text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <h2 class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-1/5">Me, Personally</h2>
+      <div class="w-full mt-4 md:w-3/5 md:mt-0 md:pl-6">
+        <p class="leading-relaxed text-base">I love complexity, I love dark comedy, and I love learning. I have many opinions, but I don't think many would consider me opinionated; I'm very much open to your opinion. Here's a good way to learn about who I am: check out the books I read. Every book that has influenced my life in some way, I post to my website.</p>
+        <div class="flex md:mt-4 mt-6">
+          <a href="<%=books_path %>" class="inline-flex text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded">Reading List</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 relative text-center w-full bg-white">
+    <div class="container mx-auto">
+      <p class="block normal-font text-center text-sm">
+        No copyright, take what you want. <a href="https://alextheyounger.me" class="text-indigo-600">alexyounger.me</a> by Alex Younger. This site was built with Ruby on Rails and TailwindCSS.
+      </p>
+      <p class="block normal-font text-center text-sm">Particles animation adapted from <a href="https://github.com/wentaoliu/particles-js-rails" rel="nofollow" target="_blank" class="text-indigo-600">https://github.com/wentaoliu/particles-js-rails</a>.</p>
+      <div class="flex sm:block py-4 text-center w-full">
+        <a href="https://www.linkedin.com/in/alexyounger/" class="w-16 no-underline text-indigo-600 fa fa-lg fa-linkedin"></a>
+        <a href="https://www.facebook.com/alex.younger.7" class="w-16 no-underline text-indigo-600 fa fa-lg fa-facebook"></a>
+        <a href="https://twitter.com/AlextheYounga" class="w-16 no-underline text-indigo-600 fa fa-lg fa-twitter"></a>
+        <a href="https://github.com/AlextheYounga/alpha-blog" class="w-16 no-underline text-indigo-600 fa fa-lg fa-github"></a>
+        <a href="https://codepen.io/alextheyounger/" class="w-16 no-underline text-indigo-600 fa fa-lg fa-codepen"></a>
+        <a href="https://medium.com/@AlextheYounger" class="w-16 no-underline text-indigo-600 fa fa-lg fa-medium"></a>
+        <a href="mailto:alexyounger07@gmail.com" class="w-16 no-underline text-indigo-600 fa fa-lg fa-envelope-o"></a>
+      </div>
+    </div>
+  </footer>
+</div>

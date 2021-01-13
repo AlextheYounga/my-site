@@ -35,17 +35,4 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # TODO: Figure out dynamic admin routing
-  # def admin_routes
-  #   unnecessary = [
-  #     "rails",
-  #     "ckeditor",
-  #   ]
-
-  #   @admin_routes = Rails.application.routes.named_routes.helper_names.each do |route|
-  #     next if (unnecessary.each {|s| route.include?(s)})
-  #     route
-  #   end
-  # end
-
 end

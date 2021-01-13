@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   if (Rails.env.production?)
     # match "*path" => redirect("https://www.alextheyounger.me/%{path}"), :constraints => { :protocol => "http://" }
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root "pages#home"
+  get "/resume" => "pages#resume"
 
   resources :users, except: [:signup]
   resources :articles, except: [:signup]
@@ -20,9 +23,9 @@ Rails.application.routes.draw do
   resources :posts, only: [:index]
   resources :stocks
 
-  get "login", to: "sessions#login"
-  post "login", to: "sessions#create"
-  delete "logout", to: "sessions#destroy"
+  get "login" => "sessions#login"
+  post "login" => "sessions#create"
+  delete "logout" => "sessions#destroy"
 
   # get "resources", to: "pages#resources"
   # get "projects", to: "pages#projects"
