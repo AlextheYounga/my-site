@@ -1,3 +1,4 @@
+require "iex-ruby-client"
 class PagesController < ApplicationController
   def home
     @projects = Project.order(:position)
@@ -18,5 +19,27 @@ class PagesController < ApplicationController
                     card: "Alex Younger - My Space on the Internet",
                     site: "@AlextheYounga",
                   }
+  end
+
+  def resume    
+    @projects = Project.order(:position)
+    @languageStats = GithubLanguage.calculateWidths
+    @chartData = Stock.getHistoricalData('TSLA', '3m', false, true)
+    set_meta_tags title: "Resume",
+                  site: "alextheyounger.me",
+                  description: "Alex Younger - Web Developer, Data Scientist, Investor, Entrepreneur",
+                  reverse: true,
+                  image_src: ActionController::Base.helpers.asset_path("headshot_square.jpg"),
+                  og: {
+                    title: "Home",
+                    url: "#{Rails.root}/resume",
+                    image: ActionController::Base.helpers.asset_path("headshot_square.jpg"),
+                  },
+                  twitter: {
+                    card: "Alex Younger - Web Developer, Data Scientist, Investor, Entrepreneur",
+                    site: "@AlextheYounga",
+                  }
+                  
+    render layout: "landingpage"
   end
 end

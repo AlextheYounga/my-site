@@ -15,4 +15,5 @@
 //= require activestorage
 //= require modernizr-custom.js
 //= require custom.js
+//= require particles.js
 //= require_tree .

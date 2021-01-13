@@ -24,11 +24,7 @@
   </head>
 
   <body>
-    <% flash.each do |type, msg| %>
-      <div class="flash-msg fixed <%= type %> rounded p-3 mx-auto w-3/4 right-0 left-0 z-50 text-lg my-2">
-        <%= msg %>
-      </div>
-    <% end %>
+    <%= render 'shared/messages' %>
     <%= yield %>    
   </body>
   <%= render 'partials/footer' %>  
