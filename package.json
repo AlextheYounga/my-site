@@ -10,6 +10,7 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
   },
   "devDependencies": {
+    "postcss-loader": "^3.0.0",
     "webpack-dev-server": "^3.2.1"
   },
   "version": "1.0.0",
