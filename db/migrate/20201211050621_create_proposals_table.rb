@@ -1,6 +1,6 @@
 class CreateProposalsTable < ActiveRecord::Migration[6.0]
   def change
-    create_table :proposals_tables do |t|
+    create_table :proposals do |t|
       t.string :slug
       t.string :client
       t.string :title
