@@ -1,4 +1,11 @@
 module.exports = {
+  purge: [
+    'app/views/**/*.html.erb',
+    'app/assets/stylesheets/**/*.scss',
+    'app/assets/stylesheets/*.scss',
+    'app/assets/javascripts/**/*.js',
+    'app/assets/javascripts/*.js',
+  ],
     theme: {
       extend: {
         colors: {
