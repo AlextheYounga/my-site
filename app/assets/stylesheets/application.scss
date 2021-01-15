@@ -14,10 +14,6 @@
 *= require font-awesome
 */
 
-$breakpoint-sm: 576px;
-$burgandy: #800020;
-$burgandy-hover: #3d0303;
-
 .burgandy {
 color: #800020;
 }
@@ -84,5 +80,12 @@ span {
             background-color: transparent;
             color: #1f9d55;
         }
+    }
+}
+
+.form-description,
+.form-title {
+    &:focus {
+        outline-color: #800020;
     }
 }
