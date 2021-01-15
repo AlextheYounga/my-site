@@ -31,7 +31,7 @@ gem 'bcrypt'
 gem 'jquery-rails'
 gem 'material_icons'
 gem 'font-awesome-rails'
-gem 'webpacker'
+gem 'webpacker', '~> 5.x'
 gem 'ckeditor'
 gem 'paperclip'
 gem "lazyload-rails"
