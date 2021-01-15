@@ -2,7 +2,7 @@
   "name": "my-site",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^5.2.1",
+    "@rails/webpacker": "5.2.1",
     "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat@^2.0.2",
     "autoprefixer": "^9.8.6",
     "jquery": "^3.5.1",
