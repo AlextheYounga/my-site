@@ -20,5 +20,15 @@
             "name": "feature/resume",
             "base": "develop"
         }
+    ],
+    "gitflow4code.hotfixes": [
+        {
+            "name": "hotfix/resume-fix",
+            "base": "master"
+        },
+        {
+            "name": "hotfix/resume-fix-2",
+            "base": "master"
+        }
     ]
 }
