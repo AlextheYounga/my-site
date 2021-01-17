@@ -24,6 +24,9 @@
                 </picture>
               <% end %>
               <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
+                <% if master_logged_in? %>
+                  <a href="<%= edit_project_path(project) %>" class="absolute bg-blue-600 edit-project-link hover:bg-blue-700 hover:underline no-underline px-3 py-2 right-0 rounded-b shadow text-white top-0 w-12">Edit</a>
+                <%end %>
                 <h2 class="tracking-widest text-sm title-font font-medium text-red-500 mb-1"><%= project.framework%></h2>
                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3"><%= project.title%></h1>
                 <p class="leading-relaxed"><%= project.excerpt.present? ? project.excerpt : project.description %></p>
