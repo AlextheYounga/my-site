@@ -41,3 +41,5 @@ lib/tasks/webp.rake
 lib/assets/graveyard
 graveyard
 lib/assets/misc_storage
+settings.json
+.vscode

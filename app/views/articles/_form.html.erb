@@ -9,7 +9,7 @@
   </div>
   <div class="w-3/4 mx-auto">
     <%= f.text_field :title, placeholder: "Title of Article", autofocus: true,
-            class:"form-title fancy-font block border border-red-900 focus:border-red-900 focus:shadow-lg p-4 rounded shadow text-center w-full" %>
+            class:"form-title block border border-red-900 focus:border-red-900 focus:shadow-lg p-4 rounded shadow text-center w-full" %>
   </div>
 
   <div class="w-3/4 mx-auto block border border-red-900 focus:border-red-900 focus:shadow-lg my-12 rounded shadow">
@@ -18,13 +18,13 @@
   </div>
 
   <div class="category-boxes py-6 text-center">
-    <h3 class="fancy-font pb-6 burgandy text-2xl underline">Category</h3>
+    <h3 class="pb-6 burgandy text-2xl underline">Category</h3>
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
     <%= cb.label(class: "inline-flex mx-6 normal-font text-lg burgandy") {cb.check_box(class: "checkbox mr-2") + cb.text} %>
     <% end %>
   </div>
 
-  <%= f.submit class: "py-3 bg-white block border border-green-800hover:bg-green-900 hover:text-green-100 mx-auto my-4 no-underline normal-font rounded shadow-lg text-green-900 w-48" %>
+  <%= f.submit class: "py-3 bg-white block border border-green-800 hover:bg-green-900 hover:text-green-100 mx-auto my-4 no-underline normal-font rounded shadow-lg text-green-900 w-48" %>
   <% end %>
   <% end %>
 

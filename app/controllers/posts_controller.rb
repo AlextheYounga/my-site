@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   Post = Struct.new(:title, :content, :pubDate, :link)
 
   def index
+    # TODO: Decide what to do with posts
     feed = RSS::Parser.parse("https://medium.com/feed/@AlextheYounger/")
 
     @posts = feed.items.map do |post|
