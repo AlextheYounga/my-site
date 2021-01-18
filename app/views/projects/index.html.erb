@@ -25,7 +25,10 @@
               <% end %>
               <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
                 <% if master_logged_in? %>
-                  <a href="<%= edit_project_path(project) %>" class="absolute bg-blue-600 edit-project-link hover:bg-blue-700 hover:underline no-underline px-3 py-2 right-0 rounded-b shadow text-white top-0 w-12">Edit</a>
+                  <div class="absolute right-0 top-0 w-36 justify-between">
+                    <a href="<%= edit_project_path(project) %>" class="bg-blue-600 edit-project-link hover:bg-blue-700 hover:underline no-underline px-3 py-2 rounded-b shadow text-white w-12">Edit</a>
+                    <%= link_to "Destroy", project_path(project), method: :delete, data: {confirm: "Are you sure you want to destroy this project?"}, class: "bg-red-600 edit-project-link hover:bg-red-700 hover:underline no-underline px-3 py-2 rounded-b shadow text-white" %>
+                  </div>
                 <%end %>
                 <h2 class="tracking-widest text-sm title-font font-medium text-red-500 mb-1"><%= project.framework%></h2>
                 <h1 class="title-font text-lg font-medium text-gray-900 mb-3"><%= project.title%></h1>

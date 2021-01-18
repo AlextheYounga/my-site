@@ -48,6 +48,20 @@ class Project < ActiveRecord::Base
     end
   end
 
+  def update_screens(params)
+    if (params.present?)
+      webpObj = WebpConverter.generate_attachment_webp(params[:project][:screen])
+      self.screens.attach(params[:project][:screen])
+      self.screens.attach(io: File.open(webpObj.first), filename: webpObj.last, content_type: "image/webp")
+      if (self.screens.attached?)
+        puts "#{self.title} screens attached".green
+        return true
+      end
+
+      return false
+    end
+  end
+
   def seed_screens(img)
     if (img.present?)
       self.screens.attach(io: File.open("app/assets/images/#{img}"), filename: img, content_type: "image/jpg")
