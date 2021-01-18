@@ -49,6 +49,10 @@ class BooksController < ApplicationController
   def update
     if (@book.update(book_params))
       @book.reorder_positions
+      if (params[:book][:cover])
+        @book.covers.purge
+        @book.attach_covers(params)
+      end
       flash[:notice] = "Book was successfully updated"
       redirect_to books_path
     else
