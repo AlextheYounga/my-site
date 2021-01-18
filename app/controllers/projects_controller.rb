@@ -48,6 +48,10 @@ class ProjectsController < ApplicationController
   def update
     if (@project.update(project_params))
       @project.reorder_positions
+      if (params[:project][:screen])
+        @project.screens.purge
+        @project.attach_screens(params)
+      end
       flash[:notice] = "Project was successfully updated"
       redirect_to projects_path
     else
