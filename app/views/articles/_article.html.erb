@@ -19,7 +19,7 @@
       <% end %>
       <div class="justify-center mx-auto py-2 sm:flex sm:w-3/4 md:w-1/2">
         <% if logged_in? %>
-        <%= link_to "Edit", edit_article_path(article), class: "bg-white block border border-green-800hover:bg-green-900 hover:text-green-100 mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-900 w-48" %>
+        <%= link_to "Edit", edit_article_path(article), class: "bg-white block border border-green-800 hover:bg-green-900 hover:text-green-100 mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg text-green-900 w-48" %>
         <%= link_to "Destroy", article_path(article), method: :delete,
                               data: {confirm: "Are you sure you want to delete the article?"},
                               class: "bg-white block border border-red-800hover:bg-red-900 hover:text-red-600-100 mx-auto my-4 no-underline normal-font py-3 rounded shadow-lg w-48" %>
