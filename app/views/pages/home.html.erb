@@ -70,9 +70,8 @@
     }, false);
 
     function reveal() {
-      if (view == 'mobile') {
-        $('.home-content').fadeIn();
-
+      if (view == 'mobile') {    
+        $('.home-content').css('visibility','visible').hide().fadeIn('slow');
       } else {      
         sr.reveal('.home-content.js--fadeInLeft', {
           origin: 'left',
