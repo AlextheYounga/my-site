@@ -1,7 +1,7 @@
 <div id="resume">
   <section class="particles">
     <div id="particles-js"></div>
-    <div class="absolute lg:top-1/4 sm:left-1/4 sm:right-1/4 z-20">
+    <div class="absolute left-0 lg:top-1/4 right-0 sm:left-1/4 sm:right-1/4 top-0 z-20">
       <div class="lg:bg-white hero-overlay p-5 rounded text-center">
         <h2 class="text-3xl font-semibold text-gray-100 lg:text-gray-700 md:text-4xl">Alex Younger</h2>
         <p class="text-gray-200 lg:text-gray-600 font-medium title-font tracking-wider text-md pt-4">Web Developer, Data Scientist, Investor, Entrepreneur</p>
@@ -18,13 +18,23 @@
     <div class="container px-5 pt-24 mx-auto flex flex-wrap">
       <h2 class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-1/5">Introduction</h2>
       <div class="w-full mt-4 md:w-3/5 md:mt-0 md:pl-6 text-lg">
-        <p class="mb-6 font-light">I love learning, I love complexity, and I love buildings things. I own two businesses, I'm the Co-Founder of Purposals LLC, an online, business proposals SaaS that will be launching soon. And I'm the Founder of Hazlitt Tech LLC, which focuses on financial markets research and building accounting software.</p>
-      <p class="font-light">If I have reached out to you regarding employment, it is because you have met my two conditions:</p>
-      <ol class="conditions italic font tracking-normal pl-12 my-4">
-        <li class="list-decimal mb-4">I truly believe in your company's mission and I believe what you're setting out to do is good. You have persuaded me that, in your unique way, you are helping to make the world a better place. And I want to help you do it.</li>
-        <li class="list-decimal mb-8">I believe working for you will allow me the opportunity to learn exponentially.</li>        
-      </ol>
-      <p>Those are my two conditions, and if those two conditions are continuously satisfied, I will be your company's greatest asset.</p>
+        <div class="w-full flex flex-wrap-reverse">
+          <div class="w-full sm:w-7/12">
+            <p class="mb-6 font-light">I love learning, I love complexity, and I love buildings things. I own two businesses, I'm the Co-Founder of Purposals LLC, an online, business proposals SaaS that will be launching soon. And I'm the Founder of Hazlitt Tech LLC, which focuses on financial markets research and building accounting software.</p>
+            <p class="font-light">If I have reached out to you regarding employment, it is because you have met my two conditions:</p>
+            <ol class="conditions italic font tracking-normal pl-12 my-4">
+              <li class="list-decimal mb-4">I truly believe in your company's mission and I believe what you're setting out to do is good. You have persuaded me that, in your unique way, you are helping to make the world a better place. And I want to help you do it.</li>
+              <li class="list-decimal mb-8">I believe working for you will allow me the opportunity to learn exponentially.</li>
+            </ol>
+            <p>Those are my two conditions, and if those two conditions are continuously satisfied, I will be your company's greatest asset.</p>
+          </div>
+          <picture class="w-full sm:w-5/12 mb-6 sm:mb-0 sm:pl-3">
+            <source srcset="<%= image_path("bridge-standing.jpg.webp") %>" type="image/webp">
+            <source srcset="<%= image_path("bridge-standing.jpg") %>" type="image/jpg">
+            <img src="<%= image_path("bridge-standing.jpg") %>" alt="alex younger developer marketing about me"/>
+          </picture>
+        </div>
+
       </div>
     </div>
   </section>
@@ -192,7 +202,7 @@
             <picture>
               <source srcset="<%= image_path('izoox.jpg.webp') %>" type="image/webp">
               <source srcset="<%= image_path('izoox.jpg') %>" type="image/jpg">
-              <img src="<%= image_path('izoox.jpg') %>" class="w-full object-cover h-full object-center block rounded border border-gray-700" alt="alex younger developer marketing about me" />
+              <img src="<%= image_path('izoox.jpg') %>" class="w-full object-cover h-full object-center block rounded border border-gray-700" alt="alex younger developer marketing about me"/>
             </picture>
             <div class="absolute description left-0 pr-2 right-0 text-center force-vertical-align">
               <p class="text-white w-full">Izoox LLC</p>
@@ -205,7 +215,7 @@
             <picture>
               <source srcset="<%= image_path('mackinney.jpg.webp') %>">
               <source srcset="<%= image_path('mackinney.jpg') %>" type="image/jpg">
-              <img src="<%= image_path('mackinney.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me" />
+              <img src="<%= image_path('mackinney.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me"/>
             </picture>
             <div class="absolute description left-0 pr-2 right-0 text-center force-vertical-align">
               <p class="text-white w-full">Mackinney Systems</p>
@@ -218,7 +228,7 @@
             <picture>
               <source srcset="<%= image_path('bluehawaiian.jpg.webp') %>">
               <source srcset="<%= image_path('bluehawaiian.jpg') %>" type="image/jpg">
-              <img src="<%= image_path('bluehawaiian.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me" />
+              <img src="<%= image_path('bluehawaiian.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me"/>
             </picture>
             <div class="absolute description left-0 pr-2 right-0 text-center force-vertical-align">
               <p class="text-white w-full">Blue Hawaiian Helictopers</p>
@@ -232,7 +242,7 @@
             <picture>
               <source srcset="<%= image_path('io.jpg.webp') %>" type="image/webp">
               <source srcset="<%= image_path('io.jpg') %>" type="image/jpg">
-              <img src="<%= image_path('io.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me" />
+              <img src="<%= image_path('io.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me"/>
             </picture>
             <div class="absolute description left-0 pr-2 right-0 text-center force-vertical-align">
               <p class="text-white w-full">Intelligent Office</p>
@@ -245,7 +255,7 @@
             <picture>
               <source srcset="<%= image_path('fractalmarkets.jpg.webp') %>" type="image/webp">
               <source srcset="<%= image_path('fractalmarkets.jpg') %>" type="image/jpg">
-              <img src="<%= image_path('fractalmarkets.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me" />
+              <img src="<%= image_path('fractalmarkets.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me"/>
             </picture>
             <div class="absolute description left-0 pr-2 right-0 text-center force-vertical-align">
               <p class="text-white w-full">Fractal Markets Lab</p>
@@ -259,7 +269,7 @@
             <picture>
               <source srcset="<%= image_path('languagegithub.jpg.webp') %>" type="image/webp">
               <source srcset="<%= image_path('languagegithub.jpg') %>" type="image/jpg">
-              <img src="<%= image_path('languagegithub.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me" />
+              <img src="<%= image_path('languagegithub.jpg') %>" class="w-full object-cover h-full object-center block project-img rounded border border-gray-700" alt="alex younger developer marketing about me"/>
             </picture>
             <div class="absolute description left-0 pr-2 right-0 text-center force-vertical-align">
               <p class="text-white w-full">Github Language Statistics Gem</p>
@@ -283,7 +293,7 @@
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
           <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-            <img src="<%= image_path('book.svg') %>" class="w-14 h-14" />
+            <img src="<%= image_path('book.svg') %>" class="w-14 h-14"/>
           </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
             <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Education</h2>
@@ -302,7 +312,7 @@
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
           <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-            <img src="<%= image_path('zipline.svg') %>" class="w-14 h-14" />
+            <img src="<%= image_path('zipline.svg') %>" class="w-14 h-14"/>
           </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
             <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Zipline Course Manager</h2>
@@ -317,7 +327,7 @@
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
           <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-            <img src="<%= image_path('building.svg') %>" class="w-14 text-indigo-600" />
+            <img src="<%= image_path('building.svg') %>" class="w-14 text-indigo-600"/>
           </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
             <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Khorus Software</h2>
@@ -338,7 +348,7 @@
         <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
         <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
           <div class="flex-shrink-0 w-24 h-24 bg-indigo-100 text-indigo-500 rounded-full inline-flex items-center justify-center">
-            <img src="<%= image_path('coding.svg') %>" class="w-14 text-indigo-600" />
+            <img src="<%= image_path('coding.svg') %>" class="w-14 text-indigo-600"/>
           </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
             <h2 class="font-medium title-font text-gray-900 mb-1 text-xl">Web Developer at Izoox</h2>
