@@ -1,18 +1,20 @@
 .js--fadeInLeft {
     visibility: hidden;
 }
-.home-description {
-    .hero {
-        img,
-        picture {
-            max-width: 315px;
-        }
+.hero {                
+    img,
+    picture {
+        border-radius: 130px;         
+        // max-width: 315px;
     }
+}
+
+.home-description {    
     div.absolute {
         img,
         picture {
             border-radius: 100px;
-            max-width: 185px;
+            max-width: 200px;
             border: 8px white solid;
             padding: 0;
             margin: 0;
