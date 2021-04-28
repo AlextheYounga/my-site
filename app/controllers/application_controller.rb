@@ -5,6 +5,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user, :logged_in?, :master_logged_in?
 
+  $linkedin = 'https://www.linkedin.com/in/alexyounger/'
+  $facebook = 'https://www.facebook.com/alex.younger.7'
+  $twitter = 'https://twitter.com/AlextheYounga'
+  $github = 'https://github.com/AlextheYounga'
+  $codepen = 'https://codepen.io/alextheyounger/'
+  $medium = 'https://medium.com/@AlextheYounger'
+  $email = 'alex@alextheyounger.me'
+
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
     #the ||= prevents the session from bombing the database with repetitive hits
